@@ -1,0 +1,482 @@
+[
+  {
+    "name": "001B2_calibration",
+    "manifest": "/root/projects/UC_Treatment_Recovery/provenance/manifests/001B2_calibration.json",
+    "manifest_sha256": "d9533fc2526bd5e24ddfd17010ddac01fb072b6119d832865a242f0b90dc3901",
+    "entries_checked": 65,
+    "entries": [
+      {
+        "group": "inputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/discovery_preprocessed_v1.rds",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "inputs",
+        "path": "/root/projects/UC_Treatment_Recovery/config/001B2_001C.json",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "inputs",
+        "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/gene_sets_001B.rds",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "inputs",
+        "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/metadata_independent_v1_gsm_barcode.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "inputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/main_design.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "inputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/response_design.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "inputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/main_design.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "inputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/response_design.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "code",
+        "path": "/root/projects/UC_Treatment_Recovery/code/calibration_001B2.R",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/Hallmark_patient_delta.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/Hallmark_patient_effects_CI.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/all_Hallmark_tests.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_estimated/GLM_change.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_estimated/GLM_minus_Placebo.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_estimated/GLM_response_difference.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_estimated/Placebo_change.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_estimated/pooled_response_arm_adjusted.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_fixed001/GLM_change.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_fixed001/GLM_minus_Placebo.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_fixed001/GLM_response_difference.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_fixed001/Placebo_change.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_fixed001/pooled_response_arm_adjusted.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_ranks001/GLM_change.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_ranks001/GLM_minus_Placebo.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_ranks001/GLM_response_difference.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_ranks001/Placebo_change.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_ranks001/pooled_response_arm_adjusted.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/fry/GLM_change.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/fry/GLM_minus_Placebo.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/fry/GLM_response_difference.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/fry/Placebo_change.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/fry/pooled_response_arm_adjusted.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/pooled_design.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/pooled_response_fit.rds",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/pooled_response_genes.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/method_sensitivity_counts.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_estimated/GLM_change.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_estimated/GLM_minus_Placebo.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_estimated/GLM_response_difference.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_estimated/Placebo_change.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_estimated/pooled_response_arm_adjusted.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_fixed001/GLM_change.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_fixed001/GLM_minus_Placebo.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_fixed001/GLM_response_difference.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_fixed001/Placebo_change.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_fixed001/pooled_response_arm_adjusted.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_ranks001/GLM_change.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_ranks001/GLM_minus_Placebo.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_ranks001/GLM_response_difference.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_ranks001/Placebo_change.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_ranks001/pooled_response_arm_adjusted.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/fry/GLM_change.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/fry/GLM_minus_Placebo.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/fry/GLM_response_difference.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/fry/Placebo_change.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/fry/pooled_response_arm_adjusted.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/pooled_design.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/pooled_response_fit.rds",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/pooled_response_genes.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/rank_direction_stability.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/review_numeric_audit.json",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/sessionInfo.txt",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "environment",
+        "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "environment",
+        "path": "/root/projects/UC_Treatment_Recovery/provenance/environments/renv_packages.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "logs",
+        "path": "/root/projects/UC_Treatment_Recovery/logs/calibration_001B2.log",
+        "size_match": true,
+        "sha256_match": true
+      }
+    ],
+    "failures": []
+  },
+  {
+    "name": "001C_identity_qc",
+    "manifest": "/root/projects/UC_Treatment_Recovery/provenance/manifests/001C_identity_qc.json",
+    "manifest_sha256": "3561a36ebce30a8eab6995ff906237955fd05f720370d5281a46ba005e4d2e4d",
+    "entries_checked": 12,
+    "entries": [
+      {
+        "group": "inputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/discovery_preprocessed_v1.rds",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "inputs",
+        "path": "/root/projects/UC_Treatment_Recovery/config/001B2_001C.json",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "code",
+        "path": "/root/projects/UC_Treatment_Recovery/code/identity_qc_001C.R",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/identity_qc/all_pre_post_probe_correlations.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/identity_qc/identity_qc_summary.json",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/identity_qc/known_pair_diagnostic.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/identity_qc/sessionInfo.txt",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/identity_qc/sex_marker_expression.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/identity_qc/unmatched_candidate_diagnostic_only.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "environment",
+        "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "environment",
+        "path": "/root/projects/UC_Treatment_Recovery/provenance/environments/renv_packages.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "logs",
+        "path": "/root/projects/UC_Treatment_Recovery/logs/identity_qc_001C.log",
+        "size_match": true,
+        "sha256_match": true
+      }
+    ],
+    "failures": []
+  }
+]

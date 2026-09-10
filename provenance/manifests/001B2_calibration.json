@@ -1,0 +1,354 @@
+{
+  "run_id": "001B2_calibration",
+  "status": "COMPLETE",
+  "review_status": "PENDING",
+  "phase": "exploratory revision prompted by user-supplied critique",
+  "generated_utc": "2026-09-10T14:26:25.896294+00:00",
+  "cwd": "/root/projects/UC_Treatment_Recovery",
+  "command": "OPENBLAS_NUM_THREADS=4 OMP_NUM_THREADS=4 Rscript code/calibration_001B2.R",
+  "seed": 20260910,
+  "inputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/discovery_preprocessed_v1.rds",
+      "bytes": 54300911,
+      "sha256": "f7c3343f671b7178799c2c011cf26c3178f55dd4898d28fbeaff312680dbf216"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/config/001B2_001C.json",
+      "bytes": 1956,
+      "sha256": "39784ab2478a9be63ed59d6f2fb46101b17ab25f7ac9ffa91f910d696fc07df3"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/gene_sets_001B.rds",
+      "bytes": 3766442,
+      "sha256": "b1884c9b9c17b36d765503ac5f1bc6e0b257da11a81cdad694fbcb4a28dc80b3"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/metadata_independent_v1_gsm_barcode.tsv",
+      "bytes": 23689,
+      "sha256": "877c80e8cda4e8d23abf1137f9bd02c222f62f7c4ebd6b6734e1ab6ceaaa72df"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/main_design.tsv",
+      "bytes": 995,
+      "sha256": "6a8b95b30e34d7bc6f25bd285b0e2e9e33f1c1c0a03cfb4d784be3b8d9bcef7b"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/response_design.tsv",
+      "bytes": 1265,
+      "sha256": "fbbeff4b7bb119ed1f474dea9a10a3dc79c0b80210ec9cdc41d369539bd1431a"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/main_design.tsv",
+      "bytes": 1617,
+      "sha256": "93206b406c69a503868c9a698d15663681d220850d023fa013c89506b10ec7d8"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/response_design.tsv",
+      "bytes": 1887,
+      "sha256": "f05478e3275ab50daa824dba12b1864bf55d4df58dc888dab3da0ac447738d37"
+    }
+  ],
+  "code": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/calibration_001B2.R",
+      "bytes": 7714,
+      "sha256": "25d5300d0cabdccb7e1f4da2f52df266c8ebf1c20ea1b7657136b33b0c122ae1"
+    }
+  ],
+  "environment": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+      "bytes": 144982,
+      "sha256": "d0b866e9d3af3a81cb6d35f4eee3cba387946f2e6ade554e22057e24bdf2ed86"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/environments/renv_packages.tsv",
+      "bytes": 7405,
+      "sha256": "ff8484105ffca827a0acc26f131ffca8cfd05151760e8c4a02f509cd85cbecd4"
+    }
+  ],
+  "logs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/logs/calibration_001B2.log",
+      "bytes": 2543,
+      "sha256": "e5f8d6f9064579ba7dae7b95cea90da9d2d11ccd3be83d17160391dff0aedf5c"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/Hallmark_patient_delta.tsv",
+      "bytes": 64614,
+      "sha256": "ac7530dfc4dc4d2fdec4767d92ba6e3107a0c15a6b85ac30ee536c6c31ae801b"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/Hallmark_patient_effects_CI.tsv",
+      "bytes": 74868,
+      "sha256": "29cdd7c6c4d2b3579ef84c09d93a413eaa0c1a78792e0cab9af23905e37d78df"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/all_Hallmark_tests.tsv",
+      "bytes": 392639,
+      "sha256": "8f745bf0e3cfa24eed0ce369469cdad4f62cf51d07d0f13e3eeaa8d1c5cbfa84"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_estimated/GLM_change.tsv",
+      "bytes": 8867,
+      "sha256": "f4314fe606a9b4f3c3408c558826f104f93ecf7bae43a4b43692335fb246f5bc"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_estimated/GLM_minus_Placebo.tsv",
+      "bytes": 9198,
+      "sha256": "f5d9784c5537745ac6532d49c80b48b31fd3af05c6eadf611eed25fec39a8903"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_estimated/GLM_response_difference.tsv",
+      "bytes": 9513,
+      "sha256": "edd9b075d4646d395378f603618bc9394e552283b5e94bdf1d3a4aaf100a6283"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_estimated/Placebo_change.tsv",
+      "bytes": 9081,
+      "sha256": "e63c2f4a826018ebdf79b68d72b5ead56ec0bb0f450a51eb79c45a0e343e802f"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_estimated/pooled_response_arm_adjusted.tsv",
+      "bytes": 9783,
+      "sha256": "6242c7a9dd4bfbadf263558a466b661c6364fd8e19b3e0d1f335a008e13d774c"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_fixed001/GLM_change.tsv",
+      "bytes": 7950,
+      "sha256": "3ccff55409d9234b2f7d52e083078ff4fce4eb1c1ce231a82de424afdcb0c370"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_fixed001/GLM_minus_Placebo.tsv",
+      "bytes": 8243,
+      "sha256": "4b9d9fd3989e670054673363872003cf07578a207ae8a43300b631f78925d53f"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_fixed001/GLM_response_difference.tsv",
+      "bytes": 8589,
+      "sha256": "d6bc25c8c73d93987c211070259e0d5b9f0ecea429aa65bd612f6d9c0b0eb1b9"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_fixed001/Placebo_change.tsv",
+      "bytes": 8181,
+      "sha256": "d50eae55ed82b18267bb4f5a0e8ee75f7f2d204aaebed759bdc28c2abfdb80c2"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_fixed001/pooled_response_arm_adjusted.tsv",
+      "bytes": 8878,
+      "sha256": "f158f8c5d560c917e2889151608b1fff385e0a70926c83d39983c988d53344d7"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_ranks001/GLM_change.tsv",
+      "bytes": 7941,
+      "sha256": "be73f5f3b8d78fe82c78114372a3f2936d10d2c73455ad15ed3a29e8fa2116c0"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_ranks001/GLM_minus_Placebo.tsv",
+      "bytes": 8244,
+      "sha256": "30cd8038d30ffbb47da8dcdb8b8c4d6b27900314564d9f6139c5cd352c9ddfb7"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_ranks001/GLM_response_difference.tsv",
+      "bytes": 8591,
+      "sha256": "5211568c2c6bae44351eaedfc0046863d3c1356633b7a654039836bdc187c586"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_ranks001/Placebo_change.tsv",
+      "bytes": 8175,
+      "sha256": "942b0eb16822fc7ccaa984620ac0d27e379b90b2f40a79d95492dd647740af6c"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_ranks001/pooled_response_arm_adjusted.tsv",
+      "bytes": 8873,
+      "sha256": "6f47c40b008c2d72b782a9f116a3870b9b4d8eb1e813e4ea9a904cb7a78dad3f"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/fry/GLM_change.tsv",
+      "bytes": 9753,
+      "sha256": "e00cc54490c10b4ae7d15fdb4c0b6b41c4f0a630ef2678e99305bb0574451ccf"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/fry/GLM_minus_Placebo.tsv",
+      "bytes": 9813,
+      "sha256": "a9c3918592d8fecb3cd74e99ef83058e6a4d1bee8498dbd760e50b0a97eed06b"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/fry/GLM_response_difference.tsv",
+      "bytes": 10168,
+      "sha256": "29b5ee4a084867fc8404c2abf87fc9aa9c6cf12390e6448b86beb61eaeeacf02"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/fry/Placebo_change.tsv",
+      "bytes": 9725,
+      "sha256": "59e4be2bd977400625fae0674b08176b765797b98fda3b1168acd703b77ef273"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/fry/pooled_response_arm_adjusted.tsv",
+      "bytes": 10424,
+      "sha256": "02f93d071893839385895da297ec8120c600d6920080b8725693f2ebec66e905"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/pooled_design.tsv",
+      "bytes": 1772,
+      "sha256": "3220197fb9c2d0b4457d78c5a03ef2cbe3ee547d6f4d1e82fe91b1c1f47104f2"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/pooled_response_fit.rds",
+      "bytes": 2141459,
+      "sha256": "c4ea7a186d41b847823c6110b5ef020e3068e1df7a514def236c2371cc05dd15"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/pooled_response_genes.tsv",
+      "bytes": 3267041,
+      "sha256": "4483e0777954b71eb284bf46fd27521d30b406a8fb08489be7caef6799835aca"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/method_sensitivity_counts.tsv",
+      "bytes": 2505,
+      "sha256": "b1a338932509e997a57c8046d0e13a072a49516d8b49179596ea027b3b97946d"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_estimated/GLM_change.tsv",
+      "bytes": 8637,
+      "sha256": "22b0a7771cd1a782aed2e7443b41c9056d2f1cf40d513010a74a7c31c5aead98"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_estimated/GLM_minus_Placebo.tsv",
+      "bytes": 8982,
+      "sha256": "34d0b0bc97f4a16465df50c39e8414f599f7847003f79ba2f8c45d410156e47e"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_estimated/GLM_response_difference.tsv",
+      "bytes": 9249,
+      "sha256": "0c64458784053e93ffbe8fd98735e4cf4132c190d43835b7aeaec01bd0ea164d"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_estimated/Placebo_change.tsv",
+      "bytes": 8824,
+      "sha256": "a50e3cd5e1bcfa00f20c780c613a999fd4252ae8ca136d6ebf096d9b06ce5f12"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_estimated/pooled_response_arm_adjusted.tsv",
+      "bytes": 9513,
+      "sha256": "6ad5082d9e21bcd716eb34b8011190a8f4482c14f589bfcc130c4152959d9ab0"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_fixed001/GLM_change.tsv",
+      "bytes": 7713,
+      "sha256": "dc23084b32afc6498e125633646d4eeca874a47d76b3ae8fc1d41b0c7ab78e72"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_fixed001/GLM_minus_Placebo.tsv",
+      "bytes": 8016,
+      "sha256": "ae783d29cdcd91daf414ea154d24864b48ce0c4a204a3dc2498543ea50aff62b"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_fixed001/GLM_response_difference.tsv",
+      "bytes": 8327,
+      "sha256": "1d92e9ad9ab22ab63380a86055f4648b76d751afe0894fed65116457fc4168ac"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_fixed001/Placebo_change.tsv",
+      "bytes": 7917,
+      "sha256": "b71459646626f0754cce923d2ea1892b6593afacaa8a111bf7ef4f0cb344e9e3"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_fixed001/pooled_response_arm_adjusted.tsv",
+      "bytes": 8590,
+      "sha256": "2d8c689500e977ef38d5f3705d2cb0e29bcd779698ffc9139a3298a658696f75"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_ranks001/GLM_change.tsv",
+      "bytes": 7706,
+      "sha256": "c7df2a9ca41b18dc5636a491689db2d78795f68512bf2d3b891bf0ad732e7112"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_ranks001/GLM_minus_Placebo.tsv",
+      "bytes": 8018,
+      "sha256": "5c5a04dbb0bab38de3519face0b9fa491158e6a21938d2018b8c7f56d70f30fc"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_ranks001/GLM_response_difference.tsv",
+      "bytes": 8330,
+      "sha256": "5b941f52ae9579912c2ebd82319260c364e8e0e424cc1c3180b75b8365474058"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_ranks001/Placebo_change.tsv",
+      "bytes": 7917,
+      "sha256": "2cbb500f23f2768961ea34d48917345ada06e2bbd4afc15da5561d5c2afa9d36"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_ranks001/pooled_response_arm_adjusted.tsv",
+      "bytes": 8586,
+      "sha256": "0eece6dce9322b3927d11457be829b86779085d833d5c0ef52a778eaac9de07d"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/fry/GLM_change.tsv",
+      "bytes": 9521,
+      "sha256": "034a2272f208eef79083eac60fe17cc4a8da1f021d8b68af2e279ab6ceab8ccc"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/fry/GLM_minus_Placebo.tsv",
+      "bytes": 9557,
+      "sha256": "3aee2abc18fa29f94e1c7740597f8a29e26d48c9fe910bc16f21e5acca625be1"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/fry/GLM_response_difference.tsv",
+      "bytes": 9898,
+      "sha256": "a2e1d7402c97290a92f429d81f7c30427819f4debe8cbd73227cbe5148b237e7"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/fry/Placebo_change.tsv",
+      "bytes": 9490,
+      "sha256": "79a03ba52770d7475b2be08acf076cc6952ab0e5e440a6fb060ba669cbe9465f"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/fry/pooled_response_arm_adjusted.tsv",
+      "bytes": 10172,
+      "sha256": "231c5fc307da13fb08f4e6390ef33647c649a592f02c2648c1ceb68a97c7c223"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/pooled_design.tsv",
+      "bytes": 1150,
+      "sha256": "b100d8240ec958bbd9806dab408b8fd5f0e365ac0863f6349a0ed285bac64384"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/pooled_response_fit.rds",
+      "bytes": 2152779,
+      "sha256": "0313cae770e6a9d3bbefecb2b4d4dc505bc40e6fb9054a525b8f4f6120c44272"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/pooled_response_genes.tsv",
+      "bytes": 3260179,
+      "sha256": "2b44072ef6dc214b461a8c6d7be66b4e37b6370304ed50cac581ede4824ed80e"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/rank_direction_stability.tsv",
+      "bytes": 2671,
+      "sha256": "03cbbab2c4423c16527fff2424f66020fc8e62f2f5a057258f9a85af30dc5ff0"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/review_numeric_audit.json",
+      "bytes": 475,
+      "sha256": "47e68a3cf165f9c5fc8c356b33b1c1fba44ea3a0ef633cd384a71d8a2e7d492b"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/sessionInfo.txt",
+      "bytes": 988,
+      "sha256": "e7779b02ea2fbc2b16825c9354a789698a9a841e6848f40039d041b482bbe99a"
+    }
+  ],
+  "allowed_claims": [
+    "Observed paired transcript associations with confidence intervals",
+    "CAMERA parameter sensitivity and fry complementary null hypotheses"
+  ],
+  "limitations": [
+    "No new patient linkage",
+    "No independently validated signature",
+    "Pooled response is post hoc association, not treatment causality"
+  ]
+}

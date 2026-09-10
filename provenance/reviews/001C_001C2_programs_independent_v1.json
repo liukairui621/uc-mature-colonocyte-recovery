@@ -1,0 +1,895 @@
+{
+  "artifact_id": "001C_001C2_programs_independent_v1",
+  "status": "REVIEWED",
+  "reviewer": "independent quantitative and method reviewer /root/metadata_review",
+  "created_utc": "2026-09-10T14:49:48.586202+00:00",
+  "scope": "Discovery-cohort score reconstruction, 001C/001C2 OLS models, binomial incremental-association models, local BH families, fixed-candidate leave-one-patient-out and HC3 sensitivity. No validation expression was accessed by this reviewer, no production code or previous review file changed.",
+  "decision": {
+    "blocking_numerical_or_method_errors": false,
+    "ready_to_fix_exploratory_candidate_for_external_validation": true,
+    "meaning_of_ready": "The exact six-gene object can be locked for a subsequently held-out test; this does not confirm novelty, a new biological state, predictive utility or independent biological effect.",
+    "gene_list_changes_recommended": false,
+    "external_replication_completed": false
+  },
+  "candidate_definition_verified": {
+    "program": "MATURE_COLONOCYTE6_EXPLORATORY",
+    "genes": [
+      "AQP8",
+      "HMGCS2",
+      "GUCA2A",
+      "CA2",
+      "SLC26A3",
+      "MS4A12"
+    ],
+    "all_six_measured": true,
+    "weights": "All 1; no fitted or outcome-optimized weights",
+    "score": "Arithmetic mean of the six gene-level log2 expression values; post-minus-baseline for each exact-ID patient",
+    "gene_collapse": "Inherits the already reviewed fixed GPL13158 single-symbol probe-mean mapping",
+    "patients": 65,
+    "selection_timing": "After 001B and supplied critique, before external validation; openly exploratory"
+  },
+  "provenance_checks": [
+    {
+      "manifest": "/root/projects/UC_Treatment_Recovery/provenance/manifests/001C_programs.json",
+      "manifest_sha256": "4ec065fa1ae62a4cb3a776b4661c6e8bf808d5e474bd691c1a96b6bf650ac75f",
+      "entries": [
+        {
+          "group": "inputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/discovery_preprocessed_v1.rds",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "inputs",
+          "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/program_membership_001C.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "inputs",
+          "path": "/root/projects/UC_Treatment_Recovery/config/programs_001C.json",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "inputs",
+          "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/metadata_independent_v1_gsm_barcode.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "inputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/pooled_response_genes.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "code",
+          "path": "/root/projects/UC_Treatment_Recovery/code/programs_001C.R",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/candidate_gene_delta_correlations.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/incremental_response_association.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/leave_one_candidate_gene_out.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/leave_one_patient_out.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/patient_model_fits.rds",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_all_sample_scores.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_coverage.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_overlap_and_delta_correlations.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_patient_baseline.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_patient_delta.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_response_and_arm_effects_CI.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_scores.rds",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_summary.json",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_within_arm_change_CI.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/selected_gene_effects_exploratory.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/sessionInfo.txt",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "environment",
+          "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "logs",
+          "path": "/root/projects/UC_Treatment_Recovery/logs/programs_001C.log",
+          "size_match": true,
+          "sha256_match": true
+        }
+      ],
+      "entries_checked": 24,
+      "failures": []
+    },
+    {
+      "manifest": "/root/projects/UC_Treatment_Recovery/provenance/manifests/001C2_refinement.json",
+      "manifest_sha256": "9e2bf2d6efb2b5215bf3ed029761cfe819801466a7fa7039ac99d3939bf1fb89",
+      "entries": [
+        {
+          "group": "inputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_scores.rds",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "inputs",
+          "path": "/root/projects/UC_Treatment_Recovery/config/refinement_001C2.json",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "inputs",
+          "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/metadata_independent_v1_gsm_barcode.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "code",
+          "path": "/root/projects/UC_Treatment_Recovery/code/refinement_001C2.R",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001C2_refinement/barcode_program_change_sensitivity.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001C2_refinement/common_covariate_incremental_association.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001C2_refinement/refinement_leave_one_patient_out.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001C2_refinement/refinement_response_effects_CI.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001C2_refinement/refinement_summary.json",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001C2_refinement/sessionInfo.txt",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "environment",
+          "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "logs",
+          "path": "/root/projects/UC_Treatment_Recovery/logs/refinement_001C2.log",
+          "size_match": true,
+          "sha256_match": true
+        }
+      ],
+      "entries_checked": 12,
+      "failures": []
+    },
+    {
+      "manifest": "/root/projects/UC_Treatment_Recovery/provenance/manifests/001C2_HC3.json",
+      "manifest_sha256": "ce13eaf6351d9a0020b1e215dce6d19c4c8e1339d2e8807734c8c5def876314b",
+      "entries": [
+        {
+          "group": "inputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_scores.rds",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "code",
+          "path": "/root/projects/UC_Treatment_Recovery/code/robustness_001C2.R",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001C2_refinement/HC3_common_model_sensitivity.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001C2_refinement/HC3_sessionInfo.txt",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "environment",
+          "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "logs",
+          "path": "/root/projects/UC_Treatment_Recovery/logs/robustness_001C2.log",
+          "size_match": true,
+          "sha256_match": true
+        }
+      ],
+      "entries_checked": 6,
+      "failures": []
+    }
+  ],
+  "numeric_summary": {
+    "n_programs": 33,
+    "score_max_errors": {
+      "all_sample": 1.0658141036401503e-14,
+      "baseline": 1.0658141036401503e-14,
+      "post": 8.881784197001252e-15,
+      "delta": 1.2434497875801753e-14
+    },
+    "001C_OLS_models_checked": 237,
+    "001C_OLS_max_error": 3.3861802251067274e-14,
+    "001C2_OLS_models_checked": 21,
+    "001C2_OLS_max_error": 1.3489209749195652e-14,
+    "BH_max_error": 1.0269562977782698e-15,
+    "candidate_common_model": {
+      "estimate": 0.606207113508232,
+      "se": 0.22559228659202685,
+      "lower": 0.15495535397498406,
+      "upper": 1.05745887304148,
+      "p": 0.00931001046726441
+    },
+    "candidate_CT_correlation": {
+      "r": 0.9287221899883977,
+      "CI": [
+        0.8853728915519141,
+        0.9560598632478391
+      ],
+      "P": 7.685262648225094e-29,
+      "max_error": 8.881784197001252e-16,
+      "shared_genes": [
+        "AQP8",
+        "GUCA2A",
+        "SLC26A3",
+        "MS4A12"
+      ]
+    },
+    "coverage_identical": true
+  },
+  "candidate_OLS_recomputed": {
+    "001C response_arm_adjusted": {
+      "estimate": 0.6858124699519234,
+      "se": 0.2714016535312401,
+      "lower": 0.14328829486721306,
+      "upper": 1.2283366450366335,
+      "p": 0.014071873942704025
+    },
+    "001C response_baseline_adjusted": {
+      "estimate": 0.8933272297768066,
+      "se": 0.22931373664901047,
+      "lower": 0.4346314617998394,
+      "upper": 1.3520229977537737,
+      "p": 0.0002490623110722815
+    },
+    "001C response_barcode_adjusted": {
+      "estimate": 0.644351854935273,
+      "se": 0.2769413356967677,
+      "lower": 0.08999354118851799,
+      "upper": 1.198710168682028,
+      "p": 0.023497015472695677
+    },
+    "001C arm_response_interaction": {
+      "estimate": 0.5102882638888875,
+      "se": 0.5753550414406307,
+      "lower": -0.6402052467215382,
+      "upper": 1.6607817744993132,
+      "p": 0.37861070429970967
+    },
+    "001C Placebo_response_difference": {
+      "estimate": 0.3472558333333341,
+      "se": 0.5217720015175245,
+      "lower": -0.7378284448137818,
+      "upper": 1.4323401114804502,
+      "p": 0.5129547703511157
+    },
+    "001C golimumab_response_difference": {
+      "estimate": 0.8575440972222221,
+      "se": 0.3120786062146387,
+      "lower": 0.2268097063607335,
+      "upper": 1.4882784880837108,
+      "p": 0.008953982520493401
+    },
+    "001C arm_baseline_adjusted": {
+      "estimate": -0.02056779736193307,
+      "se": 0.2578808272912131,
+      "lower": -0.5362323817314493,
+      "upper": 0.49509678700758314,
+      "p": 0.9366916190932328
+    },
+    "001C response_plus_inflammation": {
+      "estimate": 0.6251307100661321,
+      "se": 0.2186538312243574,
+      "lower": 0.18760540438490098,
+      "upper": 1.0626560157473632,
+      "p": 0.005865495530532207
+    },
+    "001C response_plus_epithelial_proxy": {
+      "estimate": 0.8561721320198235,
+      "se": 0.23206825742352968,
+      "lower": 0.3918046215143424,
+      "upper": 1.3205396425253044,
+      "p": 0.0004920315879060279
+    },
+    "001C response_plus_both": {
+      "estimate": 0.5926524443128387,
+      "se": 0.22068248313591898,
+      "lower": 0.15090845937508357,
+      "upper": 1.0343964292505938,
+      "p": 0.009427553695523358
+    },
+    "001C2 common_baseline": {
+      "estimate": 0.8735242441660842,
+      "se": 0.23457009898451273,
+      "lower": 0.40447234190205517,
+      "upper": 1.3425761464301131,
+      "p": 0.000430364873121931
+    },
+    "001C2 common_baseline_inflammation": {
+      "estimate": 0.606207113508232,
+      "se": 0.22559228659202685,
+      "lower": 0.15495535397498406,
+      "upper": 1.05745887304148,
+      "p": 0.00931001046726441
+    },
+    "001C2 common_baseline_inflammation_epithelial": {
+      "estimate": 0.5766990682505938,
+      "se": 0.2282584112112663,
+      "lower": 0.11995504240707888,
+      "upper": 1.0334430940941086,
+      "p": 0.014222397270345943
+    },
+    "001C2 common_baseline_inflammation_barcode": {
+      "estimate": 0.534018918989503,
+      "se": 0.22173813584314886,
+      "lower": 0.0898240563470864,
+      "upper": 0.9782137816319196,
+      "p": 0.019342322156784088
+    },
+    "001C2 common_baseline_inflammation_MARS_TableS1_11": {
+      "estimate": 0.3721727985609975,
+      "se": 0.14846117724451685,
+      "lower": 0.07382889309536145,
+      "upper": 0.6705167040266335,
+      "p": 0.01554671455665421
+    },
+    "001C2 common_baseline_inflammation_MARS_v74_11": {
+      "estimate": 0.3628822254609431,
+      "se": 0.14792427619043258,
+      "lower": 0.06561726305838345,
+      "upper": 0.6601471878635028,
+      "p": 0.017765706537228306
+    },
+    "001C2 candidate_conditioned_on_CT_program": {
+      "estimate": 0.20946073747448002,
+      "se": 0.08191600495474183,
+      "lower": 0.045488038125245545,
+      "upper": 0.3734334368237145,
+      "p": 0.013195891273036862
+    }
+  },
+  "logistic_recomputed": {
+    "001C MATURE_COLONOCYTE6_EXPLORATORY arm_inflammation": {
+      "beta": 0.4676405639375157,
+      "se": 0.30684511119516006,
+      "LRT_p": 0.11613727172561482,
+      "OR_SD": 1.6779227826424747,
+      "OR_CI": [
+        0.8623941360530543,
+        3.264661419656802
+      ],
+      "all_values_max_error": 1.7910147187549796e-07,
+      "converged": true
+    },
+    "001C MATURE_COLONOCYTE6_EXPLORATORY arm_inflammation_baseline": {
+      "beta": 0.930638887355102,
+      "se": 0.37452556617685717,
+      "LRT_p": 0.007159754316954899,
+      "OR_SD": 2.8009969993405104,
+      "OR_CI": [
+        1.2430468310397977,
+        6.311575714127988
+      ],
+      "all_values_max_error": 6.337547666834809e-05,
+      "converged": true
+    },
+    "001C HALLMARK_OXIDATIVE_PHOSPHORYLATION arm_inflammation": {
+      "beta": 1.8997168696948201,
+      "se": 1.7193310388249674,
+      "LRT_p": 0.2572915248869006,
+      "OR_SD": 1.3810295294155965,
+      "OR_CI": [
+        0.778938001153174,
+        2.4485165164548377
+      ],
+      "all_values_max_error": 9.942172729537901e-08,
+      "converged": true
+    },
+    "001C HALLMARK_OXIDATIVE_PHOSPHORYLATION arm_inflammation_baseline": {
+      "beta": 5.823335228208715,
+      "se": 2.3587974324506917,
+      "LRT_p": 0.007968466706088542,
+      "OR_SD": 2.690134360894039,
+      "OR_CI": [
+        1.226240107794217,
+        5.901636093668889
+      ],
+      "all_values_max_error": 5.301361399645543e-06,
+      "converged": true
+    },
+    "001C2 MATURE_COLONOCYTE6_EXPLORATORY common_covariate": {
+      "beta": 0.8404025702693826,
+      "se": 0.36232621320793174,
+      "LRT_p": 0.012597484360588482,
+      "OR_SD": 2.534781067929988,
+      "OR_CI": [
+        1.1550686887175161,
+        5.562539375446285
+      ],
+      "all_values_max_error": 1.0917507848873242e-06,
+      "converged": true
+    },
+    "001C2 UC_Maciag2024_TableS2_CT_Colonocytes_reported_marker_mean_proxy common_covariate": {
+      "beta": 1.2724818085012335,
+      "se": 0.7303800690569222,
+      "LRT_p": 0.07037860268666422,
+      "OR_SD": 1.9030680515627532,
+      "OR_CI": [
+        0.9227272578147313,
+        3.924960467143831
+      ],
+      "all_values_max_error": 2.5394035096937273e-07,
+      "converged": true
+    },
+    "001C2 UC_IA13_JAKSTAT_2024_gene_mean_proxy common_covariate": {
+      "beta": -0.578122465720039,
+      "se": 0.4317936983067725,
+      "LRT_p": 0.17500725394709793,
+      "OR_SD": 0.6219705098018369,
+      "OR_CI": [
+        0.31036602008440517,
+        1.2464229007993604
+      ],
+      "all_values_max_error": 7.033658033783752e-08,
+      "converged": true
+    },
+    "001C2 HALLMARK_OXIDATIVE_PHOSPHORYLATION common_covariate": {
+      "beta": 5.313542710225138,
+      "se": 2.2934723467852973,
+      "LRT_p": 0.012488726292770938,
+      "OR_SD": 2.466892633418695,
+      "OR_CI": [
+        1.1492143036437719,
+        5.29540856350305
+      ],
+      "all_values_max_error": 1.1519297498097103e-06,
+      "converged": true
+    }
+  },
+  "logistic_numerical_tolerance_note": "Independent Newton/IRLS optimizes the same unpenalized binomial likelihood more tightly than default glm stopping. Coefficients and LRT agree; slight final-information-matrix differences yield at most 6.34e-5 absolute difference in an OR confidence endpoint. This is approximately 1e-5 relative and does not alter reported precision or inference. No model was changed to seek significance.",
+  "multiplicity": {
+    "family_sizes_verified": {
+      "001C response_arm_adjusted focused_and_reference_programs": 11,
+      "001C response_arm_adjusted MARS_MSigDB74": 11,
+      "001C response_arm_adjusted MARS_TableS1": 11,
+      "001C response_baseline_adjusted focused_and_reference_programs": 11,
+      "001C response_baseline_adjusted MARS_MSigDB74": 11,
+      "001C response_baseline_adjusted MARS_TableS1": 11,
+      "001C response_barcode_adjusted focused_and_reference_programs": 11,
+      "001C response_barcode_adjusted MARS_MSigDB74": 11,
+      "001C response_barcode_adjusted MARS_TableS1": 11,
+      "001C arm_response_interaction focused_and_reference_programs": 11,
+      "001C arm_response_interaction MARS_MSigDB74": 11,
+      "001C arm_response_interaction MARS_TableS1": 11,
+      "001C Placebo_response_difference focused_and_reference_programs": 11,
+      "001C Placebo_response_difference MARS_MSigDB74": 11,
+      "001C Placebo_response_difference MARS_TableS1": 11,
+      "001C golimumab_response_difference focused_and_reference_programs": 11,
+      "001C golimumab_response_difference MARS_MSigDB74": 11,
+      "001C golimumab_response_difference MARS_TableS1": 11,
+      "001C arm_baseline_adjusted focused_and_reference_programs": 11,
+      "001C arm_baseline_adjusted MARS_MSigDB74": 11,
+      "001C arm_baseline_adjusted MARS_TableS1": 11,
+      "001C response_plus_inflammation focused_and_reference_programs": 2,
+      "001C response_plus_epithelial_proxy focused_and_reference_programs": 2,
+      "001C response_plus_both focused_and_reference_programs": 2,
+      "001C2 common_baseline": 4,
+      "001C2 common_baseline_inflammation": 4,
+      "001C2 common_baseline_inflammation_epithelial": 4,
+      "001C2 common_baseline_inflammation_barcode": 4,
+      "001C2 common_baseline_inflammation_MARS_TableS1_11": 2,
+      "001C2 common_baseline_inflammation_MARS_v74_11": 2,
+      "001C2 candidate_conditioned_on_CT_program": 1
+    },
+    "BH_errors": {
+      "001C response_arm_adjusted focused_and_reference_programs": 8.326672684688674e-16,
+      "001C response_arm_adjusted MARS_MSigDB74": 2.7755575615628914e-16,
+      "001C response_arm_adjusted MARS_TableS1": 2.7755575615628914e-16,
+      "001C response_baseline_adjusted focused_and_reference_programs": 6.591949208711867e-17,
+      "001C response_baseline_adjusted MARS_MSigDB74": 8.881784197001252e-16,
+      "001C response_baseline_adjusted MARS_TableS1": 6.106226635438361e-16,
+      "001C response_barcode_adjusted focused_and_reference_programs": 3.7470027081099033e-16,
+      "001C response_barcode_adjusted MARS_MSigDB74": 8.326672684688674e-16,
+      "001C response_barcode_adjusted MARS_TableS1": 5.551115123125783e-16,
+      "001C arm_response_interaction focused_and_reference_programs": 0,
+      "001C arm_response_interaction MARS_MSigDB74": 1.1102230246251565e-16,
+      "001C arm_response_interaction MARS_TableS1": 0,
+      "001C Placebo_response_difference focused_and_reference_programs": 3.3306690738754696e-16,
+      "001C Placebo_response_difference MARS_MSigDB74": 0,
+      "001C Placebo_response_difference MARS_TableS1": 7.771561172376096e-16,
+      "001C golimumab_response_difference focused_and_reference_programs": 1.0269562977782698e-15,
+      "001C golimumab_response_difference MARS_MSigDB74": 4.996003610813204e-16,
+      "001C golimumab_response_difference MARS_TableS1": 3.3306690738754696e-16,
+      "001C arm_baseline_adjusted focused_and_reference_programs": 7.216449660063518e-16,
+      "001C arm_baseline_adjusted MARS_MSigDB74": 3.3306690738754696e-16,
+      "001C arm_baseline_adjusted MARS_TableS1": 4.440892098500626e-16,
+      "001C response_plus_inflammation focused_and_reference_programs": 0,
+      "001C response_plus_epithelial_proxy focused_and_reference_programs": 0,
+      "001C response_plus_both focused_and_reference_programs": 1.734723475976807e-17,
+      "001C2 common_baseline": 9.540979117872439e-18,
+      "001C2 common_baseline_inflammation": 1.0061396160665481e-16,
+      "001C2 common_baseline_inflammation_epithelial": 1.1102230246251565e-16,
+      "001C2 common_baseline_inflammation_barcode": 9.992007221626409e-16,
+      "001C2 common_baseline_inflammation_MARS_TableS1_11": 1.0061396160665481e-16,
+      "001C2 common_baseline_inflammation_MARS_v74_11": 0,
+      "001C2 candidate_conditioned_on_CT_program": 0,
+      "001C_logistic arm_inflammation": 0,
+      "001C_logistic arm_inflammation_baseline": 0,
+      "001C2_logistic": 9.71445146547012e-17,
+      "HC3 common_baseline": 8.673617379884035e-18,
+      "HC3 common_baseline_inflammation": 2.0816681711721685e-16
+    },
+    "interpretation": "These are declared local exploratory families, not global FDR across all programs, secondary models and post hoc choices. Discovery P/FDR and nominal 95% intervals do not account for choosing this candidate after seeing the discovery cohort.",
+    "specific_limits": [
+      "001C general models have 11-program families: focused/reference, MARS table and MARS v7.4 are separate.",
+      "001C inflammation/epithelial conditional models test only the candidate and OXPHOS, so their local family has 2 tests.",
+      "001C2 common models compare 4 programs; MARS conditional models compare 2 programs; candidate conditioned on CT has 1 test and BH equals the raw P.",
+      "HC3 adjustment is across 4 programs within each of its 2 model specifications.",
+      "A smaller P for the candidate than CT does not demonstrate superiority of the candidate."
+    ]
+  },
+  "covariate_review": [
+    "Primary 001C response association adjusts arm. The baseline sensitivity additionally includes own baseline score and baseline total Mayo; the barcode sensitivity includes four inferred barcode differences.",
+    "001C2 common model includes intercept, arm, response, own baseline score and inflammation-score delta, with 65 rows and rank 5. It intentionally omits baseline Mayo for the cross-cohort common specification while preserving the Mayo-adjusted 001C model.",
+    "Changing to the common specification after observing 001C is correctly labelled exploratory. Freeze this specification before reading GSE23597 expression; no model may be chosen retrospectively from external validation significance.",
+    "Adding contemporaneous inflammation or epithelial-marker change estimates a conditional association, not causal mediation or biological independence. The epithelial4 marker mean is not a calibrated cell proportion.",
+    "In models that include own baseline score, delta regression is equivalent to an ANCOVA contrast on follow-up with baseline adjustment. Coefficients should be presented as baseline-adjusted associations, not evidence that the omitted or included baseline model is biologically true.",
+    "Source-defined clinical response is post-treatment; these regressions and logistic LRTs describe contemporaneous association, not prospective prediction or a treatment-effect mechanism."
+  ],
+  "reference_program_limits": {
+    "CT_colonocytes": {
+      "coverage": "18/20 deposited marker genes measured",
+      "candidate_correlation": {
+        "r": 0.9287221899883977,
+        "CI": [
+          0.8853728915519141,
+          0.9560598632478391
+        ],
+        "P": 7.685262648225094e-29,
+        "max_error": 8.881784197001252e-16,
+        "shared_genes": [
+          "AQP8",
+          "GUCA2A",
+          "SLC26A3",
+          "MS4A12"
+        ]
+      },
+      "interpretation": "The six-gene candidate tracks an existing mature-colonocyte marker program closely and shares four genes. It must not be called a newly discovered state. Residual association after conditioning on CT still does not identify a separate biological process."
+    },
+    "MARS": "The two 11-component panels are measured-gene mean proxies for the supplied table and version-7.4 memberships. The original GSVA/clustering MARS procedure was not reproduced. Conditional associations against these proxies cannot establish superiority over the original MARS classifier or model.",
+    "IBrD": "Only 15 of 81 listed genes are measured under the fixed mapping; the available partial mean panel is diagnostic only, not the original IBrD PCA/SCE model and not a valid superiority comparator. It is excluded from formal 001C2 adjustment.",
+    "definition_verification_scope": "Exact supplied membership, weights and coverage were independently verified against the expression matrix. This review does not independently re-extract each reference gene list from its original publication; source curation has a separate evidence trail."
+  },
+  "HC3_review": {
+    "manifest": {
+      "manifest": "/root/projects/UC_Treatment_Recovery/provenance/manifests/001C2_HC3.json",
+      "manifest_sha256": "ce13eaf6351d9a0020b1e215dce6d19c4c8e1339d2e8807734c8c5def876314b",
+      "entries": [
+        {
+          "group": "inputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_scores.rds",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "code",
+          "path": "/root/projects/UC_Treatment_Recovery/code/robustness_001C2.R",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001C2_refinement/HC3_common_model_sensitivity.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001C2_refinement/HC3_sessionInfo.txt",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "environment",
+          "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "logs",
+          "path": "/root/projects/UC_Treatment_Recovery/logs/robustness_001C2.log",
+          "size_match": true,
+          "sha256_match": true
+        }
+      ],
+      "entries_checked": 6,
+      "failures": []
+    },
+    "all_recomputed": {
+      "MATURE_COLONOCYTE6_EXPLORATORY common_baseline": {
+        "estimate": 0.8735242441660842,
+        "HC3_se": 0.24719118334096848,
+        "CI": [
+          0.37923492395467556,
+          1.367813564377493
+        ],
+        "P": 0.0007878508916536909,
+        "condition_standardized": 1.3192486399787866,
+        "max_error": 3.3306690738754696e-15
+      },
+      "MATURE_COLONOCYTE6_EXPLORATORY common_baseline_inflammation": {
+        "estimate": 0.606207113508232,
+        "HC3_se": 0.24219210589607912,
+        "CI": [
+          0.12175077157525799,
+          1.090663455441206
+        ],
+        "P": 0.015055073497636153,
+        "condition_standardized": 1.593540499906447,
+        "max_error": 7.105427357601002e-15
+      },
+      "UC_Maciag2024_TableS2_CT_Colonocytes_reported_marker_mean_proxy common_baseline": {
+        "estimate": 0.294639886930096,
+        "HC3_se": 0.10947489214248869,
+        "CI": [
+          0.07573131063719848,
+          0.5135484632229935
+        ],
+        "P": 0.00916985515894814,
+        "condition_standardized": 1.3317933965039404,
+        "max_error": 1.0630385460785874e-14
+      },
+      "UC_Maciag2024_TableS2_CT_Colonocytes_reported_marker_mean_proxy common_baseline_inflammation": {
+        "estimate": 0.20155007067987862,
+        "HC3_se": 0.1130638137622579,
+        "CI": [
+          -0.024611229737391715,
+          0.42771137109714896
+        ],
+        "P": 0.07970703483511411,
+        "condition_standardized": 1.5829345596846416,
+        "max_error": 1.071365218763276e-14
+      },
+      "UC_IA13_JAKSTAT_2024_gene_mean_proxy common_baseline": {
+        "estimate": -0.4103199963269242,
+        "HC3_se": 0.18573536371243876,
+        "CI": [
+          -0.7817208101739299,
+          -0.038919182479918435
+        ],
+        "P": 0.030928556369481885,
+        "condition_standardized": 1.289348289427809,
+        "max_error": 2.1038726316646716e-14
+      },
+      "UC_IA13_JAKSTAT_2024_gene_mean_proxy common_baseline_inflammation": {
+        "estimate": -0.23708237399913373,
+        "HC3_se": 0.19503634066488956,
+        "CI": [
+          -0.6272131414447435,
+          0.15304839344647603
+        ],
+        "P": 0.22890612286323525,
+        "condition_standardized": 1.6306546423948116,
+        "max_error": 1.1546319456101628e-14
+      },
+      "HALLMARK_OXIDATIVE_PHOSPHORYLATION common_baseline": {
+        "estimate": 0.10338427807680668,
+        "HC3_se": 0.0356339035979901,
+        "CI": [
+          0.032129884016829646,
+          0.17463867213678372
+        ],
+        "P": 0.005162867548387268,
+        "condition_standardized": 1.3160658541009946,
+        "max_error": 2.0050627824730327e-13
+      },
+      "HALLMARK_OXIDATIVE_PHOSPHORYLATION common_baseline_inflammation": {
+        "estimate": 0.08820816517489267,
+        "HC3_se": 0.03758249077275029,
+        "CI": [
+          0.013031990736289259,
+          0.16338433961349608
+        ],
+        "P": 0.022240651128605016,
+        "condition_standardized": 1.51427082657057,
+        "max_error": 3.219646771412954e-14
+      }
+    },
+    "candidate_source_rows": [
+      {
+        "program": "MATURE_COLONOCYTE6_EXPLORATORY",
+        "model": "common_baseline",
+        "estimate": "0.873524244166084",
+        "HC3_se": "0.247191183340969",
+        "HC3_lower": "0.379234923954675",
+        "HC3_upper": "1.36781356437749",
+        "HC3_p": "0.000787850891653704",
+        "df": "61",
+        "scaled_design_condition_number": "1.31924863997879",
+        "max_leverage": "0.132603317175405",
+        "residual_response_sd_ratio": "1.00285130462618",
+        "HC3_FDR": "0.00315140356661481"
+      },
+      {
+        "program": "MATURE_COLONOCYTE6_EXPLORATORY",
+        "model": "common_baseline_inflammation",
+        "estimate": "0.606207113508235",
+        "HC3_se": "0.242192105896079",
+        "HC3_lower": "0.121750771575262",
+        "HC3_upper": "1.09066345544121",
+        "HC3_p": "0.0150550734976356",
+        "df": "60",
+        "scaled_design_condition_number": "1.59354049990644",
+        "max_leverage": "0.37707414088611",
+        "residual_response_sd_ratio": "1.02616931300024",
+        "HC3_FDR": "0.0444813022572026"
+      }
+    ],
+    "judgment": "HC3 sandwich variance and residual-df t intervals reproduce source exports. OLS remains the declared main analysis and HC3 is a separate sensitivity. Residual-df t inference with HC3 is approximate, not exact small-sample coverage.",
+    "conditioning_note": "The unstandardized model condition number is scale dependent. The common candidate model standardized condition number is approximately 1.594, so the old unscaled value alone is not evidence of severe multicollinearity. This does not automatically characterize all larger MARS/CT-conditioned designs."
+  },
+  "candidate_leave_one_patient_out": {
+    "001C": {
+      "max_error": 9.992007221626409e-16,
+      "estimate_range": [
+        0.6063739542906427,
+        0.7671268111254853
+      ],
+      "all_same_positive_sign": true
+    },
+    "001C2": {
+      "max_error": 4.3298697960381105e-15,
+      "estimate_range": [
+        0.5208404324711277,
+        0.6918807977144944
+      ],
+      "all_same_positive_sign": true
+    }
+  },
+  "interpretation_for_next_stage": "A reproducible, compact mature-colonocyte-related candidate can be taken to independent validation with its six genes, score formula, contrast orientation, required coverage, core covariates and external-test family frozen. Its main supported discovery statement is a response-associated longitudinal score change conditional on specified covariates. Claims of a new signature, new cell state, clinical benefit, superiority over full published models or externally validated increment remain unestablished.",
+  "review_artifacts": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/programs_refinement_recompute_v1.R",
+      "bytes": 10787,
+      "sha256": "17caa1ac47ad29144236e83306a5683de56591195dd115baf5c44959c6880de9"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/programs_refinement_recompute_v1.log",
+      "bytes": 838,
+      "sha256": "5241c6729abc981350491659a99de40b1e19a91a7f00c8dc2c0f162c6fc5bb55"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/programs_refinement_numeric_v1.json",
+      "bytes": 21215,
+      "sha256": "ed01c2dcf9d99ec867227685c4081785a9e8187a90fb4637b6cdb0da44d71eed"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/programs_refinement_manifest_checks_v1.json",
+      "bytes": 7794,
+      "sha256": "02a4a7b63809f74b1a86dcece4b6349b3d63ebcd1c9db0645b10e1b439508d00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/programs_refinement_HC3_manifest_check_v1.json",
+      "bytes": 1310,
+      "sha256": "c96ae58cf5131b7a4fcc931b91d2deb01c080ef80f9449df6d924a116218d225"
+    }
+  ],
+  "review_only_debugging_note": "Initial independent-review runs had data.table name-shadowing in coverage/family audit indexing; these reviewer-only issues were corrected without changing production files, models, samples or parameters. Initial scripts/logs and pre-fix numerical file are retained with explicit initial/pre_BH_name_fix names and must not be used as findings. The final program/refinement review uses only programs_refinement_numeric_v1.json whose BH agreement is within 1.1e-15.",
+  "old_review_files_modified": false
+}

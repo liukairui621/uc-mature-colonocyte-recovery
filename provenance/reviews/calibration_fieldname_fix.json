@@ -1,0 +1,7 @@
+{
+  "created_utc": "2026-09-10T14:24:47.499835+00:00",
+  "failure": "Named coefficients introduced estimate.Estimate and p.Pr(>|t|), preventing pooled score FDR from populating intended columns",
+  "fix": "Strip source vector names and assert every effect/p/CI is finite before output; preserve prior export and regenerate",
+  "scientific_choice_change": false,
+  "superseded_directory": "runs/001B2_calibration_export_v1"
+}

@@ -1,0 +1,198 @@
+{
+  "reviewer": "independent methods and numerical reviewer /root/metadata_review",
+  "created_utc": "2026-09-10T14:33:18.925233+00:00",
+  "status": "REVIEWED",
+  "scope": "Numerical reproduction of specified current artifacts only; no candidate changes, external validation or new pairs.",
+  "review_command": "OPENBLAS_NUM_THREADS=4 OMP_NUM_THREADS=4 Rscript provenance/reviews/calibration_identity_recompute_v1.R > provenance/reviews/calibration_identity_recompute_v1.log 2>&1",
+  "review_artifacts": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/calibration_identity_recompute_v1.R",
+      "bytes": 9421,
+      "sha256": "6eb6729f867c4c7468407ed7b3eecae4aeefe59b22f55ffb8ae5c7e11d10f1d3"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/calibration_identity_recompute_v1.log",
+      "bytes": 1351,
+      "sha256": "00984a089bc7e6360f0e9a98d0fc566ac192b1afbb1679c18b852c8cedcffc28"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/calibration_identity_numeric_v1.json",
+      "bytes": 7405,
+      "sha256": "2ad85746ef59716d2fe23a1e41d8739b9c19196b16762319ffc5632034331433"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/calibration_effects_independent_v1.tsv",
+      "bytes": 51622,
+      "sha256": "22eddafa563b6326e0793254a9ab8e2cb5bc204c86d808fd8e1b48e797b65056"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/calibration_identity_manifest_checks_v1.json",
+      "bytes": 17584,
+      "sha256": "94eb725fc6d9ea0c84c6acbba34b20a16d1056c7447755d7b49425d69c600f5e"
+    }
+  ],
+  "environment_consistency_evidence": {
+    "path": "/root/projects/UC_Treatment_Recovery/provenance/environments/renv_status_001C.txt",
+    "bytes": 57,
+    "sha256": "10564bf6ed2f6fe080a88c40e411b348ffe132d5721f7378eae62e7d7211ed39"
+  },
+  "environment_status_text": "No issues found -- the project is in a consistent state.",
+  "prior_method_review": {
+    "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/methods_001B2_001C_independent_precheck_v1.json",
+    "bytes": 8216,
+    "sha256": "ad4240e11b2f8709697d327f8a0742d0cb891c5b847addb9ee1d922b85b95c74"
+  },
+  "artifact_id": "001C_identity_independent_v1",
+  "source_manifest_check": {
+    "name": "001C_identity_qc",
+    "manifest": "/root/projects/UC_Treatment_Recovery/provenance/manifests/001C_identity_qc.json",
+    "manifest_sha256": "3561a36ebce30a8eab6995ff906237955fd05f720370d5281a46ba005e4d2e4d",
+    "entries_checked": 12,
+    "entries": [
+      {
+        "group": "inputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/discovery_preprocessed_v1.rds",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "inputs",
+        "path": "/root/projects/UC_Treatment_Recovery/config/001B2_001C.json",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "code",
+        "path": "/root/projects/UC_Treatment_Recovery/code/identity_qc_001C.R",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/identity_qc/all_pre_post_probe_correlations.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/identity_qc/identity_qc_summary.json",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/identity_qc/known_pair_diagnostic.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/identity_qc/sessionInfo.txt",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/identity_qc/sex_marker_expression.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/identity_qc/unmatched_candidate_diagnostic_only.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "environment",
+        "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "environment",
+        "path": "/root/projects/UC_Treatment_Recovery/provenance/environments/renv_packages.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "logs",
+        "path": "/root/projects/UC_Treatment_Recovery/logs/identity_qc_001C.log",
+        "size_match": true,
+        "sha256_match": true
+      }
+    ],
+    "failures": []
+  },
+  "decision": {
+    "blocking_errors": false,
+    "accepted_source_ID_pairs": 65,
+    "additional_pairs_accepted": 0,
+    "identity_recovery_authorized_by_expression": false
+  },
+  "numerical_checks": {
+    "all_pairwise_correlations_checked": 6525,
+    "correlation_max_error": 2.5202062658991053e-14,
+    "marker_max_error": 1.7763568394002505e-15,
+    "rank_mismatches": [],
+    "documented_pairs": 65,
+    "top_all": 12,
+    "top_same_arm": 15,
+    "top_same_center_arm": 52,
+    "declared_new_pairs": 0,
+    "known_vs_other_cor_ranges": {
+      "known": [
+        0.935160745893601,
+        0.993099753963365
+      ],
+      "other": [
+        0.876071677960206,
+        0.991717507716704
+      ]
+    }
+  },
+  "restricted_candidate_count_check": {
+    "documented_pairs_with_only_one_same_center_same_arm_baseline": 26,
+    "post_gsms": [
+      "GSM2429410",
+      "GSM2429415",
+      "GSM2429421",
+      "GSM2429423",
+      "GSM2429425",
+      "GSM2429427",
+      "GSM2429435",
+      "GSM2429436",
+      "GSM2429449",
+      "GSM2429450",
+      "GSM2429453",
+      "GSM2429504",
+      "GSM2429505",
+      "GSM2429506",
+      "GSM2429507",
+      "GSM2429508",
+      "GSM2429509",
+      "GSM2429512",
+      "GSM2429514",
+      "GSM2429517",
+      "GSM2429520",
+      "GSM2429521",
+      "GSM2429523",
+      "GSM2429524",
+      "GSM2429525",
+      "GSM2429528"
+    ],
+    "implication": "26 of 52 top ranks under the same-center/same-arm restriction are guaranteed by a single candidate; 52/65 is not an identity-classification accuracy."
+  },
+  "verified_semantics": [
+    "All 6525 baseline-post probe correlations were independently reproduced using centred dot products rather than cor(). All exported ranks were reconstructed from these values and matched.",
+    "All XIST, RPS4Y1 and KDM5D marker values match source gene expression. The production code does not convert these into asserted biological sex or a linkage decision.",
+    "Only 12 of 65 source-ID pairs are highest-correlation matches across all available baselines; 15 of 65 are highest within treatment. This illustrates why nearest whole-transcriptome correlation is not reliable individual identity evidence here.",
+    "Known-pair and different-ID correlation ranges overlap substantially. Even a high unmatched-pair correlation cannot prove the same patient.",
+    "All 10 unmatched post samples and 22 unmatched baseline samples remain diagnostic candidates only. No pair was reconstructed and model sample count remains 65."
+  ],
+  "remaining_claim_limits": [
+    "Same-center/same-arm top rank is partly trivial under singleton candidate sets.",
+    "Expression markers/correlations are QC diagnostics, not genotype fingerprints.",
+    "The review does not adjudicate suspected swaps or new patient identities."
+  ]
+}

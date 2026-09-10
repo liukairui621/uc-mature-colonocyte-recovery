@@ -1,0 +1,116 @@
+{
+  "version": "1.0",
+  "status": "DRAFT_PENDING_INDEPENDENT_REVIEW",
+  "phase": "candidate object and independent-test plan; not frozen biological conclusion",
+  "discovery": "GSE92415",
+  "discovery_independent_pairs": 65,
+  "selection_timing": "Post hoc candidate from supplied review and exploratory 001C; all discovery P values exploratory",
+  "candidate": {
+    "id": "MATURE_COLONOCYTE6_EXPLORATORY",
+    "genes": [
+      "AQP8",
+      "HMGCS2",
+      "GUCA2A",
+      "CA2",
+      "SLC26A3",
+      "MS4A12"
+    ],
+    "weights": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "score": "Arithmetic mean of log2 gene expression; post minus baseline per source-ID patient",
+    "primary_coverage_rule": "All six genes required for the prespecified primary score. If unavailable, record technical non-evaluability; do not substitute genes using validation outcomes.",
+    "claim_boundary": "Known mature-colonocyte-associated genes; no claim of novel state, new mechanism, direct barrier function, prediction or causality"
+  },
+  "annotation_rule": "Use deposited normalized expression and GPL annotation; only unambiguous one-gene probe mappings; mean log2 probes per gene. Do not repeat log transform or normalization when already performed. Preserve ambiguity exclusions. No expression-based patient identity.",
+  "primary_validation": {
+    "cohort": "GSE23597",
+    "timepoint": "Week8",
+    "endpoint": "Deposited week8 clinical response Yes versus No; not automatically endoscopic or histologic healing",
+    "model": "delta_candidate ~ response + treatment_dose + baseline_candidate + delta_inflammatory_response",
+    "treatment_dose": "Factor with Placebo, IFX_5mgkg, IFX_10mgkg from source exposure/dose; if a group is absent, drop only unused level and record it",
+    "estimand": "ResponseYes coefficient: conditional difference in paired candidate change",
+    "expected_direction": "Positive",
+    "test": "One prespecified two-sided OLS t test with 95% CI at alpha .05",
+    "n_primary_tests": 1,
+    "sensitivity": [
+      "HC3 standard errors and approximate residual-df t CI",
+      "Model without inflammation change",
+      "IFX-only association with dose adjustment, descriptive if rank/sample constraints",
+      "Leave-one-patient-out coefficient stability"
+    ],
+    "missing_covariates": "Complete case for model fields; do not impute response or unavailable baseline Mayo. Baseline Mayo is not required because absent from released metadata.",
+    "sample_rules": [
+      "Exact source-ID W0-W8 pairs only",
+      "Exclude P13 from primary analysis because two W0 arrays are unresolved",
+      "Do not infer new pairing from expression or adjacent numeric IDs",
+      "Treat verified technical replicates only under a documented identity-based rule; new information produces an explicit sample amendment before outcome analysis"
+    ],
+    "support_rule": "The prespecified coefficient for ResponseYes is positive and its two-sided OLS P<0.05; report estimate,95%CI and exact P regardless of outcome.",
+    "non_evaluable_rule": "If all6 candidate genes are not measured, frozen inflammation membership coverage is below80%, response is not estimable, essential covariates are missing/constant or the fixed model is rank deficient, record the primary test as non-evaluable. Do not remove substantive covariates or alter score genes to obtain significance. Dropping an unused factor level does not authorize dropping the treatment covariate.",
+    "robustness_reporting": "OLS is primary; HC3 is sensitivity. Discordant HC3 intervals are reported as a limitation and do not trigger switching the primary method."
+  },
+  "secondary_reference_programs": [
+    "UC_Maciag2024_TableS2_CT_Colonocytes_reported_marker_mean_proxy",
+    "UC_IA13_JAKSTAT_2024_gene_mean_proxy",
+    "HALLMARK_OXIDATIVE_PHOSPHORYLATION"
+  ],
+  "reference_program_rules": "Use input membership_001C, no feature selection from validation. Require at least80% source gene coverage for formal secondary reference tests; report measured genes and missing genes. BH across three secondary program tests. Inflammation covariate requires at least80% of frozen Hallmark200 genes.",
+  "prior_score_limits": {
+    "MARS": "Only component gene-mean comparators have been computed, in two fixed membership variants; no original MARS classifier performance claim",
+    "IBrD": "Only15/81 measured in discovery and author-trained PCA/SCE objects unavailable; no superiority or full IBrD incremental claim"
+  },
+  "additional_validation_roles": {
+    "GSE73661": "Independent treatment-context and endoscopic association support; preserve actual dosing path and visit windows",
+    "GSE282122": "UC colon single-cell source and patient-level state/composition interpretation; independent of discovery signature choice"
+  },
+  "no_tuning_after_validation": "Do not change genes, weights, score direction, endpoint, main covariates or thresholds to improve held-out results. Any changed object is a new exploratory version with separate independent evidence.",
+  "allowed_publication_increment": "A reproducible longitudinal association of a known mature-epithelial transcriptional candidate beyond specified measured covariates, with cross-cohort and cellular contextual support if subsequently obtained",
+  "forbidden_claims": [
+    "Clinical response drives recovery",
+    "Equivalent drug and placebo effects",
+    "New cell state established",
+    "Drug-specific epithelial repair mechanism",
+    "Beats original MARS or IBrD",
+    "Baseline clinical prediction established",
+    "Independent validation already successful"
+  ],
+  "draft_created_utc": "2026-09-10T14:50:09.107396+00:00",
+  "frozen_input_candidates": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/program_membership_001C.tsv",
+      "sha256": "7595f24cf2f737c75dd40c795fa4d2c152e83d05e26559a8cee7326b2b70dafe"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/h.all.v2025.1.Hs.symbols.gmt",
+      "sha256": "f22066af72e215ccb7b89d88e492c07e1eef17534c2ca7b0f9902cfecbbdd8e9"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_scores.rds",
+      "sha256": "cdbac51aa6c86cdb47e34a4b8a71cf0260f6d4d8458bf7865bae69ab790deed7"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/config/001B2_001C.json",
+      "sha256": "39784ab2478a9be63ed59d6f2fb46101b17ab25f7ac9ffa91f910d696fc07df3"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/config/programs_001C.json",
+      "sha256": "fb9bf81b5197cc005f2cb47d0a70be656dbb8c596f5c00243a2a0f3a8e37139a"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/config/refinement_001C2.json",
+      "sha256": "f969a73ff4148f3e04afcd695e7cd8baa901ac2974d5348759298ce005796dbd"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+      "sha256": "d0b866e9d3af3a81cb6d35f4eee3cba387946f2e6ade554e22057e24bdf2ed86"
+    }
+  ],
+  "coverage_threshold_timing": "Coverage rules fixed on2026-09-10 before accessing independent validation expression; they were not tuned against held-out results.",
+  "draft_updated_utc": "2026-09-10T14:53:07.800584+00:00"
+}

@@ -1,0 +1,57 @@
+{
+  "run_id": "001C2_HC3",
+  "phase": "exploratory",
+  "status": "COMPLETE",
+  "review_status": "PENDING",
+  "generated_utc": "2026-09-10T14:44:08.709490+00:00",
+  "cwd": "/root/projects/UC_Treatment_Recovery",
+  "command": "OPENBLAS_NUM_THREADS=4 OMP_NUM_THREADS=4 Rscript code/robustness_001C2.R",
+  "seed": 20260910,
+  "inputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_scores.rds",
+      "bytes": 95893,
+      "sha256": "cdbac51aa6c86cdb47e34a4b8a71cf0260f6d4d8458bf7865bae69ab790deed7"
+    }
+  ],
+  "code": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/robustness_001C2.R",
+      "bytes": 1813,
+      "sha256": "8d1003e3088bc6e6482fd924c687973ea8102b1590e3d9d3e5d10398de18012f"
+    }
+  ],
+  "environment": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+      "bytes": 144982,
+      "sha256": "d0b866e9d3af3a81cb6d35f4eee3cba387946f2e6ade554e22057e24bdf2ed86"
+    }
+  ],
+  "logs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/logs/robustness_001C2.log",
+      "bytes": 13,
+      "sha256": "c05e6ebff2a42566f96a1384b9d4d4df67b14ecff12562b6f84721142e761ef7"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C2_refinement/HC3_common_model_sensitivity.tsv",
+      "bytes": 1976,
+      "sha256": "3f045896000310b6617bffcddd49617ca280ca4011fa1f8dc34d6def7f0a2518"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C2_refinement/HC3_sessionInfo.txt",
+      "bytes": 948,
+      "sha256": "bb98082e78596165a34f64c5253c191b8dd5a0c525a4076f2ce50032ccd350a0"
+    }
+  ],
+  "allowed_claims": [
+    "Effect estimates and uncertainty; exploratory comparisons"
+  ],
+  "limitations": [
+    "No causal or predictive claim",
+    "Original MARS/IBrD scores not reproduced"
+  ]
+}

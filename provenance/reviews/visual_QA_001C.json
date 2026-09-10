@@ -1,0 +1,39 @@
+{
+  "created_utc": "2026-09-10T14:52:16.947933+00:00",
+  "reviewer": "root visual inspection; numerical figure-source check delegated independently",
+  "status": "COMPLETE",
+  "figures": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_figures/Revision01_WithinArm_CI.png",
+      "bytes": 69304,
+      "sha256": "35009ddc2b346d73c54456a7f73d4e19fd1101abd02d023691a5436b2148a2b3"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_figures/Revision02_ArmDifference_CI.png",
+      "bytes": 54740,
+      "sha256": "bd2a581203312fd78bf840e94afcf0fc4bb5558bcb09f43f143fa89d50267e07"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_figures/Exploratory03_CandidateConditional_CI.png",
+      "bytes": 84201,
+      "sha256": "7ea204bbc42c19ea4960dbb2006823f2fb12051d94d9359c3e76b43f217e5032"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_figures/Exploratory04_CandidateRelations.png",
+      "bytes": 108891,
+      "sha256": "0abddceb9122fd7128727e5befedb650d81f55bea8d770c3dada97016acadf91"
+    }
+  ],
+  "checks": [
+    "All four PNGs inspected; PDF vector companions exported from same plots",
+    "Patient scatter has65points per panel, no cells counted as samples",
+    "Common font, palette and CI line styles",
+    "Facet gap enlarged to separate adjacent endpoint tick labels",
+    "Review-selected Hallmarks labeled as review highlights, not prospectively prespecified",
+    "CT conditional model label states added change and baseline"
+  ],
+  "limitations": [
+    "Exploratory figures, not final manuscript panels",
+    "CI models/covariates differ only as explicitly labeled"
+  ]
+}

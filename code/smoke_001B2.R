@@ -1,0 +1,15 @@
+options(stringsAsFactors=FALSE);set.seed(20260910)
+suppressPackageStartupMessages({library(limma);library(data.table);library(jsonlite)})
+root<-"/root/projects/UC_Treatment_Recovery";setwd(root)
+o<-readRDS("runs/001A_qc/discovery_preprocessed_v1.rds");p<-o$pairs;y<-o$delta
+p$arm<-factor(p$arm,levels=c("Placebo","golimumab"));p$response<-factor(p$response,levels=c("No","Yes"))
+X<-model.matrix(~arm+response,p);ii<-list(A=1:30,B=31:80);yt<-y[1:500,,drop=FALSE]
+for(co in c(.01,NA))stopifnot(nrow(camera(yt,ii,X,contrast=3,inter.gene.cor=co))==2)
+stopifnot(nrow(camera(yt,ii,X,contrast=3,use.ranks=TRUE))==2)
+stopifnot(nrow(fry(yt,ii,X,contrast=3,sort="none",standardize="residual.sd"))==2)
+f<-lmFit(yt,X);z<-lm(as.numeric(yt[1,])~p$arm+p$response)
+stopifnot(max(abs(coef(z)-f$coefficients[1,]))<1e-10)
+parse("code/calibration_001B2.R")
+write_json(list(status="TESTED",checks=c("camera fixed/estimated/rank and fry execute","pooled OLS coefficients agree","script parses"),seed=20260910), "tests/smoke_001B2.json",auto_unbox=TRUE,pretty=TRUE)
+capture.output(sessionInfo(),file="tests/smoke_001B2_sessionInfo.txt")
+cat("SMOKE_COMPLETE\n")

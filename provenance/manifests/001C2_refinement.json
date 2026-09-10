@@ -1,0 +1,90 @@
+{
+  "run_id": "001C2_refinement",
+  "status": "COMPLETE",
+  "review_status": "PENDING",
+  "phase": "exploratory patient-level refinement",
+  "generated_utc": "2026-09-10T14:37:37.785446+00:00",
+  "cwd": "/root/projects/UC_Treatment_Recovery",
+  "command": "OPENBLAS_NUM_THREADS=4 OMP_NUM_THREADS=4 Rscript code/refinement_001C2.R",
+  "seed": 20260910,
+  "inputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_scores.rds",
+      "bytes": 95893,
+      "sha256": "cdbac51aa6c86cdb47e34a4b8a71cf0260f6d4d8458bf7865bae69ab790deed7"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/config/refinement_001C2.json",
+      "bytes": 758,
+      "sha256": "f969a73ff4148f3e04afcd695e7cd8baa901ac2974d5348759298ce005796dbd"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/metadata_independent_v1_gsm_barcode.tsv",
+      "bytes": 23689,
+      "sha256": "877c80e8cda4e8d23abf1137f9bd02c222f62f7c4ebd6b6734e1ab6ceaaa72df"
+    }
+  ],
+  "code": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/refinement_001C2.R",
+      "bytes": 5535,
+      "sha256": "7f17d77fde9837bd36363f7ef46f1075304ce8de7165db6acd6e263698efe772"
+    }
+  ],
+  "environment": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+      "bytes": 144982,
+      "sha256": "d0b866e9d3af3a81cb6d35f4eee3cba387946f2e6ade554e22057e24bdf2ed86"
+    }
+  ],
+  "logs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/logs/refinement_001C2.log",
+      "bytes": 20,
+      "sha256": "c7200988ec6d42a57545bbcb1aede9997ec721e5cd19ae3f7c55568cee41f26c"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C2_refinement/barcode_program_change_sensitivity.tsv",
+      "bytes": 2434,
+      "sha256": "db4aa52b1af9134c935f969394e2e8f0a75cb72182d0c1997d5e7f39620bc52c"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C2_refinement/common_covariate_incremental_association.tsv",
+      "bytes": 768,
+      "sha256": "e44e59ecb309918ce3e86966fae086d13150911c5b6dd797b5a478c7e0a72cdf"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C2_refinement/refinement_leave_one_patient_out.tsv",
+      "bytes": 18529,
+      "sha256": "9ecef4db087c5ec3a78d09c95f0a60aea4c8a97a25aac42ca142b941f440a950"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C2_refinement/refinement_response_effects_CI.tsv",
+      "bytes": 4551,
+      "sha256": "afdaae2e015b226ffe0b9e104967f248b05b06cf8ded5430d36f430121b1c380"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C2_refinement/refinement_summary.json",
+      "bytes": 767,
+      "sha256": "8fe11d93647426207624294e9ae085d9a63523d0ee5b234ea35211ecb8b39cb4"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C2_refinement/sessionInfo.txt",
+      "bytes": 948,
+      "sha256": "bb98082e78596165a34f64c5253c191b8dd5a0c525a4076f2ce50032ccd350a0"
+    }
+  ],
+  "allowed_claims": [
+    "Conditional contemporaneous associations and uncertainty",
+    "Similarity to published cell states; not new-state discovery"
+  ],
+  "limitations": [
+    "No prediction, equivalence or causal mediation",
+    "No original MARS/IBrD score reproduced",
+    "IBrD partial panel only15/81 measured",
+    "All candidate choices exploratory; held-out expression unused"
+  ]
+}

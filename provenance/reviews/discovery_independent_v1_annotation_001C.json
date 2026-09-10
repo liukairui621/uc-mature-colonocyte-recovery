@@ -1,0 +1,724 @@
+{
+  "artifact_id": "discovery_independent_v1",
+  "reviewer": "independent statistics and artifact reviewer /root/metadata_review",
+  "created_utc": "2026-09-10T08:26:46.827238+00:00",
+  "status": "REVIEWED",
+  "reviewed_scope": "GSE92415 source identity, preprocessing, patient-level paired gene models and exported exploratory CAMERA statistics. No external validation expression read. Plot rendering and final manuscript claims are outside this numerical review.",
+  "decision": {
+    "blocking_statistical_errors": false,
+    "unresolved_blocking_items": [],
+    "can_continue_discovery": true,
+    "candidate_frozen": false,
+    "qualification": "Review confirms computational consistency under declared models, not a novel biological conclusion or guaranteed external replication."
+  },
+  "commands": [
+    "OPENBLAS_NUM_THREADS=4 OMP_NUM_THREADS=4 Rscript provenance/reviews/discovery_independent_recompute_v1.R > provenance/reviews/discovery_independent_recompute_v1.log 2>&1",
+    "Independent Python gzip/csv parsing of raw matrix header; compare all selected pair identity, age and Mayo values against deposited metadata.",
+    "Independent Python SHA-256/size verification of every declared qc_001A, discovery_001B and pathways_001B manifest item."
+  ],
+  "provenance_checks": [
+    {
+      "manifest": "/root/projects/UC_Treatment_Recovery/provenance/manifests/qc_001A.json",
+      "manifest_sha256_at_review": "c4ef5f7393967d54a160c2d9149729a6efa77a89da813efec96f61a8364a4b42",
+      "entries_checked": 19,
+      "failures": [],
+      "entries": [
+        {
+          "group": "inputs",
+          "path": "/root/projects/UC_Treatment_Recovery/inputs/discovery/GSE92415_series_matrix.relay.txt.gz",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "inputs",
+          "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/GPL13158.annot.gz",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "inputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001A_metadata/sample_registry_v1.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "inputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001A_metadata/discovery_pairs_v1.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "code",
+          "path": "/root/projects/UC_Treatment_Recovery/code/qc_001A.R",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/sample_correlations.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/sample_qc_and_pca.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/sessionInfo.txt",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/qc_summary.json",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/QC01_PCA.pdf",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/probe_gene_mapping.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/QC02_Medians.png",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/discovery_preprocessed_v1.rds",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/QC02_Medians.pdf",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/pca_variance.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/QC01_PCA.png",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "environment",
+          "path": "/root/projects/UC_Treatment_Recovery/provenance/environments/R_packages.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "environment",
+          "path": "/root/projects/UC_Treatment_Recovery/provenance/environments/sessionInfo.txt",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "log",
+          "path": "/root/projects/UC_Treatment_Recovery/logs/qc_001A.log",
+          "size_match": true,
+          "sha256_match": true
+        }
+      ]
+    },
+    {
+      "manifest": "/root/projects/UC_Treatment_Recovery/provenance/manifests/discovery_001B.json",
+      "manifest_sha256_at_review": "46d00329660c1040e6fb1c3d42f1c04882b57afe9cb08b76c55b56c2c44f26eb",
+      "entries_checked": 26,
+      "failures": [],
+      "entries": [
+        {
+          "group": "inputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/discovery_preprocessed_v1.rds",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "inputs",
+          "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/metadata_independent_v1_gsm_barcode.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "code",
+          "path": "/root/projects/UC_Treatment_Recovery/code/discovery_001B.R",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "code",
+          "path": "/root/projects/UC_Treatment_Recovery/config/discovery_001B.json",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/GLM_response_difference.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/GLM_change.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/GLM_minus_Placebo.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/GLM_response_difference.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/GLM_change.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/GLM_minus_Placebo.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/Placebo_response_difference.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/Placebo_change.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/Placebo_response_difference.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/Placebo_change.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/response_difference_interaction.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/response_difference_interaction.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/limma_fits.rds",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/limma_fits.rds",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/model_summary.json",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/model_summary.json",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/pathway_summary.json",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/discovery_model_summary.json",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/tests/model_smoke_001B.json",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "environment",
+          "path": "/root/projects/UC_Treatment_Recovery/provenance/environments/R_packages.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "environment",
+          "path": "/root/projects/UC_Treatment_Recovery/provenance/environments/sessionInfo.txt",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "log",
+          "path": "/root/projects/UC_Treatment_Recovery/logs/discovery_001B.log",
+          "size_match": true,
+          "sha256_match": true
+        }
+      ]
+    },
+    {
+      "manifest": "/root/projects/UC_Treatment_Recovery/provenance/manifests/pathways_001B.json",
+      "manifest_sha256_at_review": "117d2894cdd1d0d4690e4e94576eb3f4f3162ef99e63a71f4734c13e7204124e",
+      "entries_checked": 43,
+      "failures": [],
+      "entries": [
+        {
+          "group": "inputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/discovery_preprocessed_v1.rds",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "inputs",
+          "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/h.all.v2025.1.Hs.symbols.gmt",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "inputs",
+          "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/gene_sets_001B.rds",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "inputs",
+          "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/OrgDb_metadata.txt",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "inputs",
+          "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/GOdb_metadata.txt",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "inputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/main_design.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "inputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/response_design.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "inputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/main_design.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "inputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/response_design.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "code",
+          "path": "/root/projects/UC_Treatment_Recovery/code/pathways_001B.R",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "code",
+          "path": "/root/projects/UC_Treatment_Recovery/code/plot_program_overview_001B.R",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "code",
+          "path": "/root/projects/UC_Treatment_Recovery/code/clarify_go_membership.py",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/camera_Hallmark_GLM_minus_Placebo.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/camera_Hallmark_all.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/camera_Hallmark_GLM_response_difference.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/camera_GO_BP_all.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/camera_GO_BP_Placebo_change.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/camera_GO_BP_GLM_change.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/camera_Hallmark_GLM_change.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/camera_GO_BP_GLM_minus_Placebo.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/camera_Hallmark_Placebo_change.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/camera_GO_BP_GLM_response_difference.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/Hallmark_coverage.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/GO_BP_coverage.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/GO_BP_membership_scope_v2.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/camera_Hallmark_GLM_minus_Placebo.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/camera_Hallmark_all.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/camera_Hallmark_GLM_response_difference.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/camera_GO_BP_all.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/camera_GO_BP_Placebo_change.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/camera_GO_BP_GLM_change.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/camera_Hallmark_GLM_change.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/camera_GO_BP_GLM_minus_Placebo.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/camera_Hallmark_Placebo_change.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/camera_GO_BP_GLM_response_difference.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/Hallmark_coverage.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/GO_BP_coverage.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/GO_BP_membership_scope_v2.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/Exploratory01_All_Hallmark.pdf",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/Exploratory01_All_Hallmark_source.tsv",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/Exploratory01_All_Hallmark.png",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "outputs",
+          "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/pathway_summary.json",
+          "size_match": true,
+          "sha256_match": true
+        },
+        {
+          "group": "environment",
+          "path": "/root/projects/UC_Treatment_Recovery/provenance/environments/installed_R_packages.tsv",
+          "size_match": true,
+          "sha256_match": true
+        }
+      ]
+    }
+  ],
+  "original_source_metadata_checks": {
+    "raw_matrix_header_vs_independent_previous_header_differences": [],
+    "pair_registry_fields_vs_raw_matrix_header_differences": [],
+    "verified_exact_pairs": 65
+  },
+  "numerical_summary": {
+    "raw_matrix_vs_RDS_max_abs_error": 0,
+    "probe_average_vs_RDS_max_abs_error": 0,
+    "paired_delta_vs_RDS_max_abs_error": 0,
+    "independently_checked_genes": [
+      "A1BG",
+      "C1orf111",
+      "CTNNA2",
+      "FDXR",
+      "IFT88",
+      "LOC100130429",
+      "MALSU1",
+      "OR10A5",
+      "RAB9A",
+      "SMG1",
+      "TRAPPC6B",
+      "ZZZ3"
+    ],
+    "maximum_OLS_coefficient_error": 4.996003610813204e-16,
+    "maximum_moderated_P_error": 5.551115123125783e-16,
+    "maximum_gene_BH_error": 3.885780586188048e-15,
+    "gene_summary_count_mismatches": [],
+    "pathway_summary_count_mismatches": [],
+    "all_exported_pathway_sizes_match": true,
+    "CAMERA_identical_parameter_repeat": {
+      "test": "Full Hallmark primary GLM_change repeated at identical parameters",
+      "P_max_abs_error": 4.996003610813204e-16,
+      "FDR_max_abs_error": 5.551115123125783e-16,
+      "direction_identical": true
+    }
+  },
+  "method_judgments": [
+    {
+      "topic": "Normalization and scale",
+      "judgment": "Source header explicitly says ArrayStudio v9 RMA. Deposited probe range 2.3167 to 14.1736 is compatible with log2 RMA; source values were retained exactly without a second log transform or normalization."
+    },
+    {
+      "topic": "GPL13158 annotation and probe collapse",
+      "judgment": "Independent GPL parsing and base-R rowsum/count averaging exactly reproduce 43185 retained probes and 21117 genes. Ambiguous symbols and AFFX controls are excluded as declared; no placeholder symbol was retained. Mean log2 probe aggregation is an explicit frozen preprocessing choice and does not itself constitute a new biological measurement."
+    },
+    {
+      "topic": "Unit and pairing",
+      "judgment": "65 exact UC patients each contribute one post-minus-baseline delta. All baseline/post GSM, arm, response, age and Mayo values match the deposited source. There is no cell- or biopsy-level pseudoreplication in the delta models. Healthy and unpaired arrays are not model units in these contrasts."
+    },
+    {
+      "topic": "Main and nuisance-factor branches",
+      "judgment": "Primary paired-delta arm design is rank 2; response design rank 4. The prespecified inferred-CEL-barcode branch adds four delta indicators, producing ranks 6 and 8. Coefficients checked with independent QR OLS are consistent. Barcode remains an inferred filename factor, not a verified processing batch; primary and sensitivity results must both remain visible."
+    },
+    {
+      "topic": "Variance and moderation",
+      "judgment": "limma empirical Bayes with robust=TRUE and trend=FALSE matches code. Independent residual SD, coefficient SE factors, moderated t/P and confidence intervals match stored fits and TSV exports. Moderated variances themselves were taken from the stored eBayes fit; this review does not independently reimplement robust prior estimation. The within-gene residual variance is shared across design groups; robust eBayes does not imply sample-outlier-robust regression."
+    },
+    {
+      "topic": "Clinical response comparisons",
+      "judgment": "G_Yes minus G_No estimates a difference in paired transcript changes between eventual response groups. It is not a baseline predictive model, not a causal effect of response, and not endoscopic healing. The response-by-arm contrast is a post-treatment-stratified association contrast."
+    },
+    {
+      "topic": "Multiple testing",
+      "judgment": "All gene tables correctly apply BH across 21117 genes separately per declared contrast and branch. CAMERA FDR is per library/contrast/branch; FDR_across_four_contrasts is an additional BH within a library and branch across four contrasts. It is not a single experiment-wide FDR across libraries, branches and all exploratory hypotheses."
+    },
+    {
+      "topic": "CAMERA interpretation",
+      "judgment": "CAMERA is a competitive gene-set test with fixed inter-gene correlation 0.01 and use.ranks=FALSE. It measures coordinated relative transcriptional association versus the assayed background under that correlation assumption. Direction does not establish functional pathway activity, cell-intrinsic state, causal drug specificity, barrier restoration, or a new cell population. Coherent small effects can yield gene-set significance when no individual gene passes BH."
+    },
+    {
+      "topic": "Drug versus placebo inference",
+      "judgment": "The fact that a within-golimumab contrast is significant and a placebo contrast is not does not establish a significant drug-placebo difference. The direct GLM_minus_Placebo contrast must support that statement. Complete-case biospecimen analysis is not the original trial intention-to-treat estimand."
+    }
+  ],
+  "resolved_findings": [
+    {
+      "original_severity": "BLOCKING_FOR_PATHWAY_ARTIFACT_ADOPTION",
+      "item": "Pathway code, input set version and full statistics were absent from initial discovery manifest.",
+      "resolution": "Separate pathways_001B manifest added; its 43 declared entries were independently checked and all hashes/sizes matched."
+    },
+    {
+      "original_severity": "MINOR",
+      "item": "GO coverage original_size had been restricted to assayed-gene membership.",
+      "resolution": "New GO_BP_membership_scope_v2.tsv retains original output and explicitly labels tested-universe membership and retained fraction. Values must not be described as full-database pathway coverage."
+    }
+  ],
+  "remaining_presentation_boundaries": [
+    {
+      "severity": "MINOR",
+      "item": "AveExpr in gene TSV is the mean paired delta over all included patients, because the fitted matrix is delta.",
+      "action": "Do not interpret this field as baseline or absolute average gene expression; rename in downstream display or document its meaning.",
+      "resolution": "Meaning explicitly documented in runs/001B_discovery/contrast_dictionary.md; verified by independent reviewer. Downstream tables should retain these semantics."
+    },
+    {
+      "severity": "MINOR",
+      "item": "mean_log2_change in pathway TSV is the mean gene contrast coefficient. For between-arm or response-difference contrasts it is a difference in changes.",
+      "action": "Use mean contrast coefficient as a common display label and retain explicit contrast labels; this is a semantic clarification only.",
+      "resolution": "Meaning explicitly documented in runs/001B_discovery/contrast_dictionary.md; verified by independent reviewer. Downstream tables should retain these semantics."
+    },
+    {
+      "severity": "MINOR",
+      "item": "pathway_summary JSON table omits contrast keys with zero discoveries.",
+      "action": "Treat absent keys as zero for that precomputed contrast or explicitly display zeros; do not confuse omission with an unrun analysis."
+    }
+  ],
+  "limitations": [
+    "No external validation or new pathway selection was performed.",
+    "No raw CEL re-normalization, molecular fingerprint identity test or separate microarray probe-quality model was performed; the submitted processed RMA values are the declared input.",
+    "This numerical audit did not visually inspect plots; a figure-specific display check remains separate.",
+    "No frozen signature or biological functionality is approved by this review."
+  ],
+  "review_execution_note": "The independent reviewer first used fread with automatic separator detection for GPL annotation, which failed on textual annotation. The review reader was corrected to explicit tab separator, preserving initial script/log. Production code already used explicit TSV parsing and was unaffected. No scientific parameters or production outputs changed.",
+  "review_artifacts": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/discovery_independent_recompute_v1.R",
+      "bytes": 11066,
+      "sha256": "33a7c128d46076f0e32c3a99759ff9d7e0422708d569969c20d6e794c372ce4f"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/discovery_independent_recompute_v1.log",
+      "bytes": 586,
+      "sha256": "9bc843c3681a6030e276c3b35793e36ee9cd8f491918d14a8112bbb1fe44db50"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/discovery_independent_numeric_v1.json",
+      "bytes": 15872,
+      "sha256": "0acbf3f4c6f709b2182c5deefac753510b781b86395f425d927c553bbbb4139d"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/discovery_independent_coefficients_v1.tsv",
+      "bytes": 22599,
+      "sha256": "6e110df73586feecbb2cafe4ecf8f3e527cac24c468885fa2c789a77957a4446"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/discovery_independent_recompute_v1_initial.R",
+      "bytes": 11057,
+      "sha256": "2ea5d084cfb8a56c2aeaf8601f8ec60b38f9bc469332a9156513f1d38af1a8d6"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/discovery_independent_recompute_v1_initial.log",
+      "bytes": 1188,
+      "sha256": "52fb63131f65686744547424fe54dfe6c91d0a83344dfeacc36ac1923d6a7ede"
+    }
+  ],
+  "contrast_dictionary_clarification": {
+    "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/contrast_dictionary.md",
+    "sha256": "f0f9ca582609050546a21acfc46c751947bbaa635d4cf8cc347d830b43681253",
+    "verified_utc": "2026-09-10T14:18:40.802388+00:00",
+    "AveExpr_mean_delta_confirmed": true,
+    "mean_coefficient_semantics_confirmed": true
+  }
+}

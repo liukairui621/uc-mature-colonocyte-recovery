@@ -1,0 +1,43 @@
+{
+  "score_error": 5.5511151231257827e-16,
+  "effects_checked": 350,
+  "effects_max_error": 7.7715611723760958e-16,
+  "pooled": {
+    "primary_paired": {
+      "design_max_error": 0,
+      "rank": 3,
+      "coefficient_max_error": 5.1070259132757201e-15,
+      "sigma_max_error": 4.4408920985006262e-16,
+      "P_max_error": 9.4368957093138306e-16,
+      "CI_max_error": 5.1070259132757201e-15,
+      "BH_max_error": 3.4416913763379853e-15,
+      "fdr05": 0
+    },
+    "barcode_sensitivity": {
+      "design_max_error": 0,
+      "rank": 7,
+      "coefficient_max_error": 4.6629367034256575e-15,
+      "sigma_max_error": 4.4408920985006262e-16,
+      "P_max_error": 8.3266726846886741e-16,
+      "CI_max_error": 5.1070259132757201e-15,
+      "BH_max_error": 4.2188474935755949e-15,
+      "fdr05": 0
+    }
+  },
+  "method_repeat_max_P_error": 5.5511151231257827e-16,
+  "identity": {
+    "all_pairwise_correlations_checked": 6525,
+    "correlation_max_error": 2.5202062658991053e-14,
+    "marker_max_error": 1.7763568394002505e-15,
+    "rank_mismatches": [],
+    "documented_pairs": 65,
+    "top_all": 12,
+    "top_same_arm": 15,
+    "top_same_center_arm": 52,
+    "declared_new_pairs": 0,
+    "known_vs_other_cor_ranges": {
+      "known": [0.93516074589360099, 0.99309975396336503],
+      "other": [0.87607167796020602, 0.99171750771670397]
+    }
+  }
+} 

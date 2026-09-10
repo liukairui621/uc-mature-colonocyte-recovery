@@ -1,0 +1,503 @@
+{
+  "status": "REVIEWED",
+  "review_scope": "Independent primary-literature identity, exact gene membership, scoring definition, prior cohort use and claim-boundary check for 001C. No expression analyses; no independent validation expression downloaded.",
+  "inputs_directory": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C",
+  "reviewer_channel": "prior_program_review",
+  "articles": [
+    {
+      "short_name": "MARS",
+      "title": "Metabolism and response to stress gene signatures reveal ulcerative colitis heterogeneity and identify patients with increased response to therapy",
+      "doi": "10.1093/ecco-jcc/jjaf092",
+      "pmid": "40488582",
+      "pmcid": "PMC12203003",
+      "published": "2025-06-09 publisher online date; EuropePMC firstPublicationDate 2025-06-01 is month-level metadata",
+      "source_url": "https://academic.oup.com/ecco-jcc/article/19/6/jjaf092/8158685",
+      "gene_source": "MARS_TableS1.pdf",
+      "original_definition": "11 separate Reactome components, derived from MSigDB v7.4 signature scores. GSVA/GSEA used; 5 components correlate negatively with RHI, 6 positively. Unsupervised Euclidean complete-linkage clustering of baseline multicomponent profiles; not one weighted small-gene score.",
+      "original_score_reproducibility": "Exact 11 named components and published membership retained. Exact numerical GSVA/clustering recreation not established: method options not fully specified, original andecaliximab source data supplied by Gilead, no complete source-model object in retrieved materials. Our gene means are explicitly comparator proxies.",
+      "public_cohorts_used": [
+        "GSE206285",
+        "GSE16879",
+        "GSE23597",
+        "GSE73661",
+        "GSE92415"
+      ],
+      "public_cohort_use": "Baseline anti-TNF datasets combined by ComBat for therapy-response subgroup analysis; GSE73661 infliximab portion was used, not a claim that all vedolizumab trajectories were analyzed.",
+      "private_original_data": "Andecaliximab trial GS-US-326-1100 mucosal RNAseq, baseline and week 8, provided by Gilead; public signature files do not make this source dataset anonymously accessible.",
+      "known_conclusion": "Metabolic/stress dimensions beyond a single inflammation score stratify UC and associate with treatment response; simple metabolic recovery or low-inflammatory/high-nondisease baseline profiles are not new by themselves.",
+      "six_candidate_overlap": [],
+      "membership_issues": "Literal PDF columns misplace FOS, GSTK1, LONP2, STAT2, JAK3 and TBK1 to preceding columns. Six explicitly documented layout-reassignment hypotheses yield 10/11 sets identical to MSigDB 7.4. SARS: literal column 35, layout-aligned 37, original-version GMT 81; cannot silently declare these equivalent.",
+      "usable_variants": [
+        "program_gene_membership.tsv: MARS_TableS1_column_* faithful printed columns",
+        "program_gene_membership.tsv: MARS_MSigDB74_* independent original-version sensitivity",
+        "program_gene_membership_layout_sensitivity.tsv: MARS_TableS1_layout_inference_* proposed column alignment; not author-confirmed"
+      ]
+    },
+    {
+      "short_name": "IBrD",
+      "title": "Endoscopic healing in pediatric IBD perpetuates a persistent signature defined by Th17 cells with molecular and microbial drivers of disease",
+      "doi": "10.1016/j.xcrm.2025.102236",
+      "pmid": "40669446",
+      "pmcid": "PMC12281438",
+      "published": "2025-07-15 issue/article date",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12281438/",
+      "gene_source": "IBrD_TableS8_Elsevier.csv",
+      "n_signature_genes": 81,
+      "direction": "Persistently upregulated tissue genes; higher original IBrD values mean greater residual molecular disease.",
+      "original_definition": "81 network-selected persistent genes -> PCA -> minimum PCs explaining 80% variance -> slingshot principal curve -> normalized pseudotime on [0,1]. New samples require original feature centers/scales, PCA rotations and fitted curve; author code projects to the original trajectory.",
+      "original_score_reproducibility": "Not currently reproducible as original fitted score: authors' public README says contact lead authors for SCE and prcomp objects. Code also has argument/global-object inconsistencies (sce_obj/pca_obj versus sce/pca); no execution was attempted. A simple mean/GSVA is not the original IBrD score.",
+      "author_code_url": "https://github.com/nklkhlr/persistent-ibd-analysis",
+      "author_repository_doi": "10.14459/2025mp1771962",
+      "author_repository_access": "Public guest FTP code obtained using credentials explicitly published on repository landing page; main code, README, license and sessionInfo saved. No Data directory files downloaded.",
+      "public_cohorts_used": [
+        "GSE73661"
+      ],
+      "cohort_use": "External validation of molecular residual disease versus non-IBD and Mayo endoscopic groups; 26 of 81 genes identified on that external technical platform in the original report.",
+      "other_two_GSEs": "No use of GSE92415 or GSE23597 identified in retrieved full text or signature supplement.",
+      "known_conclusion": "Endoscopic healing does not imply complete molecular normalization; persistent epithelial/immune stress and Th17-related disease features already established. Residual disease after apparent healing is not a novel overarching concept.",
+      "six_candidate_overlap": [],
+      "usable_proxy": "IBrD_unweighted_gene_mean_proxy; report actual assay coverage; use association/overlap comparison only, not original IBrD reproduction or calibrated 0-1 score."
+    },
+    {
+      "short_name": "Maciag2024",
+      "title": "JAK/STAT signaling promotes the emergence of unique cell states in ulcerative colitis",
+      "doi": "10.1016/j.stemcr.2024.06.006",
+      "pmid": "39029458",
+      "pmcid": "PMC11368673",
+      "published": "2024-07-18 online; 2024-08-13 issue",
+      "source_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11368673/",
+      "gene_source": [
+        "UC_JAKSTAT_2024_TableS2.xlsx",
+        "UC_JAKSTAT_2024_full.pdf Figure4D p1179"
+      ],
+      "exact_IA13": [
+        "REG1A",
+        "REG1B",
+        "LYZ",
+        "DMBT1",
+        "REG3A",
+        "REG4",
+        "SERPINA1",
+        "RPS17",
+        "C4BPB",
+        "ALDH1A1",
+        "ALDOB",
+        "IFITM1",
+        "L1TD1"
+      ],
+      "IA13_direction": "Upregulated in inflammation-associated colonocytes and goblet cells relative to their respective lineages. Authors functionally relate these states to IL22/JAKSTAT and increased regenerative properties in organoids.",
+      "author_marker_sets": "All reported Table S2 markers for exact Celltype Colonocytes or CT Colonocytes, 20 each. No expression-derived rescreening or extra P/logFC cutoffs. Complete as reported in table, not claimed to be entire source list of every significant gene.",
+      "six_gene_prior_markers": {
+        "CA2": [
+          "Colonocytes"
+        ],
+        "SLC26A3": [
+          "Colonocytes",
+          "CT Colonocytes"
+        ],
+        "AQP8": [
+          "CT Colonocytes"
+        ],
+        "MS4A12": [
+          "CT Colonocytes"
+        ],
+        "GUCA2A": [
+          "CT Colonocytes",
+          "BEST4+",
+          "CT BEST4+"
+        ]
+      },
+      "HMGCS2_scope": "Not among the 20 reported markers per cell type in this supplement; absence does not establish novelty or no relationship to mature colonocytes.",
+      "known_conclusion": "Inflammation-associated epithelial states can have increased regenerative capacity while lineage-differentiation markers decline. Thus inflammation/stress, regeneration and terminal maturation must not be treated as the same axis.",
+      "usable_proxies": [
+        "UC_IA13_JAKSTAT_2024_gene_mean_proxy",
+        "UC_Maciag2024_TableS2_Colonocytes_reported_marker_mean_proxy",
+        "UC_Maciag2024_TableS2_CT_Colonocytes_reported_marker_mean_proxy"
+      ],
+      "source_defined_not_new": "IA13 is author-published. The full 20-marker lineage sets are author-reported. The optional four-marker CA1/CA2/KRT20/CEACAM1 proxy is assembled here from individual source markers and is not an author score; KRT20/CEACAM1 are shared crypt-top differentiation markers rather than exclusively colonocyte abundance."
+    }
+  ],
+  "claim_boundary": {
+    "already_known": [
+      "Five of six candidate genes already annotate differentiated colonocyte states in a primary UC single-cell study.",
+      "MARS already linked non-inflammatory metabolism/stress programs to baseline UC treatment-response heterogeneity, using all three intended bulk cohorts.",
+      "IBrD already established persistent molecular disease after endoscopic healing and validated this in GSE73661.",
+      "Inflammation-associated/regenerative cell programs and terminal differentiation are biologically distinct in primary UC experiments."
+    ],
+    "not_sufficient_for_novelty": [
+      "No gene overlap with MARS/IBrD does not prove independent biological information.",
+      "Renaming existing lineage markers as a new recovery signature is not a genuine increment.",
+      "GSE73661 is independent of our discovery patients, but not a never-used novelty cohort; same cohort reuse needs a different relation/question.",
+      "A mean expression proxy cannot be compared as if it reproduced the authors' original calibrated score."
+    ],
+    "testable_increment": [
+      "A defined patient-level longitudinal relationship between inflammatory decline and mature-colonocyte restoration after therapy, if it remains distinct from published lineage, IA13 and MARS component proxies and survives held-out validation.",
+      "Whether the six-gene candidate is simply a compressed mature-colonocyte marker average can be tested directly against the unchanged author-reported 20-marker sets.",
+      "Biopsy composition versus cell-intrinsic expression should be distinguished in later single-cell work; bulk association alone cannot settle this."
+    ],
+    "novelty_search_limit": "This is a bounded prior-definition/citation audit, not exhaustive proof that the exact longitudinal relationship has never been published. Do not freeze a novel signature on this audit alone."
+  },
+  "outstanding_scoring_limits": [
+    "IBrD original fitted PCA/SCE/curve objects not supplied publicly; authors request needed for authentic projection.",
+    "MARS exact score options and SARS membership discrepancy unresolved; proxies and named membership sensitivities are acceptable if labeled.",
+    "No validation expression used or new statistical result created in this review."
+  ],
+  "created_utc": "2026-09-10T14:33:24.627509+00:00",
+  "environment": {
+    "python": "3.12.3",
+    "platform": "Linux-6.8.0-100-generic-x86_64-with-glibc2.39"
+  },
+  "verification_command": "python3 /root/projects/UC_Treatment_Recovery/inputs/literature_001C/verify_program_definitions.py",
+  "definition_verification": {
+    "status": "REVIEWED",
+    "scope": "Membership transcription and direct source comparison only; no expression statistics or original scoring reproduction",
+    "utc": "2026-09-10T14:31:53.064484+00:00",
+    "programs_in_primary_membership": 25,
+    "gene_membership_rows": 1020,
+    "literal_MARS_columns_reproduced": true,
+    "IBrD_81_reproduced": true,
+    "author_TableS2_rows_reproduced": true,
+    "author_lineages_each_reported_n": {
+      "Colonocytes": 20,
+      "CT Colonocytes": 20
+    },
+    "six_gene_overlap_MARS_or_IBrD": [],
+    "input_manifest": [
+      {
+        "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/MARS_TableS1.pdf",
+        "bytes": 2194674,
+        "sha256": "40abdad5bbfab2fc5eafdd68c26884dd2a8a36cd58d5f9c859384a592db2c7da"
+      },
+      {
+        "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/MARS_TableS1_bbox.html",
+        "bytes": 105653,
+        "sha256": "a9d9a5d5f635b9ea4e62a81b3bc70913e7a91b6ab239fdcebe6056c81c3aca47"
+      },
+      {
+        "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/MARS_TableS1_as_printed.json",
+        "bytes": 6121,
+        "sha256": "d54ded701aabc0db52830a1dae9611beaf2efb1a622d63ea88fc4920e90b5b16"
+      },
+      {
+        "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/MARS_MSigDB_7.4_Reactome.gmt",
+        "bytes": 768799,
+        "sha256": "249fdbf2ef7f17767c1a5c6e4142ba6a9fe6d3643a16e3e5adb83a29c5e203e4"
+      },
+      {
+        "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/IBrD_TableS8_Elsevier.csv",
+        "bytes": 779,
+        "sha256": "ef659e630046c14d73e8cd1c093ecb8a13cd922d433b91f54d2779b16ae673e3"
+      },
+      {
+        "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/UC_JAKSTAT_2024_TableS2.xlsx",
+        "bytes": 27048,
+        "sha256": "306b5ba2fc4fd6bd4314790f28158591a0858f93f45972020771c9af34906c10"
+      },
+      {
+        "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/UC_JAKSTAT_2024_Fig4.png",
+        "bytes": 784921,
+        "sha256": "7e04a083ca9c73bdb5fda4a5476af3b3dd85ec66ca6cd18b623d58705e59c285"
+      },
+      {
+        "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/program_definitions.json",
+        "bytes": 31280,
+        "sha256": "c4b038579e98f0edf697288dacecd6e69962865f006201b4743ce648cdf854ed"
+      },
+      {
+        "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/program_gene_membership.tsv",
+        "bytes": 360016,
+        "sha256": "44c25068d2c0b60428b0620a7413ffb3a31716c5eb41ee78d42b130f5d9ad268"
+      },
+      {
+        "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/program_gene_membership_author_colonocytes.tsv",
+        "bytes": 11719,
+        "sha256": "1c1a9ff84b439fbdaacda2d2fae6035b78a9b711b69968f8b9991b990fdd21d9"
+      }
+    ]
+  },
+  "file_manifest": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/IBrD_TableS8.csv",
+      "bytes": 1817,
+      "sha256": "3a9bf0418ff72fd40c464679733346e2102e33929ab7989d523f5370055979e6"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/IBrD_TableS8_Elsevier.csv",
+      "bytes": 779,
+      "sha256": "ef659e630046c14d73e8cd1c093ecb8a13cd922d433b91f54d2779b16ae673e3"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/IBrD_TableS8_identity_check.json",
+      "bytes": 737,
+      "sha256": "bc857fc60470f8cf519bed240abb63ca3f8cff8d16ac47d88ef0f6483ca909e9"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/IBrD_author_GitHub.txt",
+      "bytes": 114,
+      "sha256": "52844b6b18560ebf1050f91495d41eb975170794e23130d64386b2b07ad3d151"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/IBrD_author_IBrD_predict_new_samples.R",
+      "bytes": 3775,
+      "sha256": "3495992bb1a6cd363ae174c6210364aa8aa61257ffea25b365b93a1b7b278369"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/IBrD_author_MIT_License.txt",
+      "bytes": 1091,
+      "sha256": "7bb76c96a89d58ba2ddef6c0a9e8fc04f6d045992ddfb1b8d3a3bab90cb62c89"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/IBrD_author_README.md",
+      "bytes": 901,
+      "sha256": "c616c14fb24a0228aed85942e927f79feff4d4ed6e6381e3cc9f7ccfc9d5ebea"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/IBrD_author_sessionInfo.txt",
+      "bytes": 3217,
+      "sha256": "1ec894e7a6bc0a165892d9ee6b067df88d1e6929e0943b78f53315e1b440517d"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/IBrD_code_listing.json",
+      "bytes": 107,
+      "sha256": "6ecddf661e51b7b67c52ed8988ad3e99215a2309277295637591884cf760ff44"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/IBrD_fulltext.xml",
+      "bytes": 247387,
+      "sha256": "848bddeb1ff21e58b2b8d8321626d26ee7a517aa1413339757950ea68f2d24cb"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/IBrD_identity.json",
+      "bytes": 12824,
+      "sha256": "87d94c69320a8edefe02a13163f5e4934134822ae1c7d69b0f8f4841b8db23ba"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/IBrD_repository.html",
+      "bytes": 29226,
+      "sha256": "5207855f1a8429f1d2f3535ddbaa78a1232859d3adbfd585f9566ddc0ea7904d"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/IBrD_repository_filelist.html",
+      "bytes": 25025,
+      "sha256": "5dd329b22d971fb0ddc3058a1c8fd616a59290248301748a7712e2a273597a95"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/IBrD_repository_ftp_listing.json",
+      "bytes": 44,
+      "sha256": "286d5d6fab2e3fe30de2713b4fe602deac1db8457a64e1bb5b2ad9cbca5d2cf5"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/IBrD_repository_list.xml",
+      "bytes": 189,
+      "sha256": "639000baba78cd3af1b3a16e3e1082267f12c4323fc18d86f786eedcee9951f3"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/IBrD_text.txt",
+      "bytes": 95663,
+      "sha256": "0bcd88b5b14283faa4900ccadbb1f5fdda1fc5ce968473d372579444f300e768"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/MARS_MSigDB_7.4_Reactome.gmt",
+      "bytes": 768799,
+      "sha256": "249fdbf2ef7f17767c1a5c6e4142ba6a9fe6d3643a16e3e5adb83a29c5e203e4"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/MARS_TableS1.pdf",
+      "bytes": 2194674,
+      "sha256": "40abdad5bbfab2fc5eafdd68c26884dd2a8a36cd58d5f9c859384a592db2c7da"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/MARS_TableS1.txt",
+      "bytes": 16029,
+      "sha256": "e146bbf101e92b70a539ff6780d56a657df5d73a03faabb3d36228848637e04c"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/MARS_TableS1_as_printed.json",
+      "bytes": 6121,
+      "sha256": "d54ded701aabc0db52830a1dae9611beaf2efb1a622d63ea88fc4920e90b5b16"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/MARS_TableS1_bbox.html",
+      "bytes": 105653,
+      "sha256": "a9d9a5d5f635b9ea4e62a81b3bc70913e7a91b6ab239fdcebe6056c81c3aca47"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/MARS_TableS1_coordinates.json",
+      "bytes": 60611,
+      "sha256": "aa504cea9892a6e5ab8cc7139e65f4f94523f2e7c29ef7a0888bcb731d013d3f"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/MARS_fulltext.html",
+      "bytes": 348752,
+      "sha256": "3d75e5485fdb00eadaca3b4f0dd45b03b993c0a74aa18435074a0c5e9c5c62d7"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/MARS_identity.json",
+      "bytes": 9014,
+      "sha256": "9f3280cda4a030eb82378417b8f75444d9d086a1e16822957349bf23ef7cacdc"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/MARS_layout_sensitivity.json",
+      "bytes": 10423,
+      "sha256": "bb95619638b6f850bc367e3845403b84dc9d9ae8d152a4832a765b8ff2c02697"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/MARS_text.txt",
+      "bytes": 92807,
+      "sha256": "81dd5609bb0c66b6236bcd295ddac120979ed966a7ade6ad22f2aebb7648e864"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/Parikh_2019.html",
+      "bytes": 530263,
+      "sha256": "4980cce90e2e0e5832aafce754476dcdb11d2b2900980922083174edf9cebfaf"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/Parikh_2019.txt",
+      "bytes": 44825,
+      "sha256": "1e9f92568e07ea4bb9a806bd4847028c978eba986ad12a1d64a28a0ca75f21d4"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/UC_JAKSTAT_2024.txt",
+      "bytes": 61516,
+      "sha256": "67647786ac5bf0d96febf398990cad8d850d2dcd55bd3feff9e3a410a12064ba"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/UC_JAKSTAT_2024.xml",
+      "bytes": 119235,
+      "sha256": "98cfcd2c00b2fdf9ae70dbe3ac7b40346298e60040c1a00bfc8601484e0116c1"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/UC_JAKSTAT_2024_Fig4.png",
+      "bytes": 784921,
+      "sha256": "7e04a083ca9c73bdb5fda4a5476af3b3dd85ec66ca6cd18b623d58705e59c285"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/UC_JAKSTAT_2024_TableS2.xlsx",
+      "bytes": 27048,
+      "sha256": "306b5ba2fc4fd6bd4314790f28158591a0858f93f45972020771c9af34906c10"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/UC_JAKSTAT_2024_full.pdf",
+      "bytes": 37459094,
+      "sha256": "779cf39ae521c16cd602b76e2f3814d05de3e72b77f9b42b2a49157cee0db102"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/UC_JAKSTAT_2024_full.txt",
+      "bytes": 211974,
+      "sha256": "caa1780218ccde7c3aaf0790e8e59a6cb20212260e547516462ca49ca886f2d4"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/UC_JAKSTAT_2024_identity.json",
+      "bytes": 11480,
+      "sha256": "921adf63f1de04f2201a4d0181d6e83919d26b50987e1cde4422d05205940cc4"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/author_colonocyte_marker_extraction.json",
+      "bytes": 747,
+      "sha256": "f005751d37f0bc077912c47396a9e8a662a197cbba50d40df536d5ef5c02d93a"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/author_colonocyte_marker_source_rows.tsv",
+      "bytes": 2823,
+      "sha256": "d7e4e558a8ca74c1a0104749d20cb56f2e5ee9dafde91fd61ded0ec4e279682b"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/candidate6_overlap.json",
+      "bytes": 3168,
+      "sha256": "80143afb13abe22f5df658026e70a29f6c5dfa37a5ef975171a488904d806058"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/candidate6_prior_cell_markers.tsv",
+      "bytes": 606,
+      "sha256": "c247840b60591cc424f6dd36f28e771003e9c2183e40cb56ea9e9adcb4ff5a1d"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/download_manifest_IBrD_code.json",
+      "bytes": 2050,
+      "sha256": "740a2a7860e7d7c153105c16bfcfc268305eab19b922c8acaf529fcc09a6e074"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/download_manifest_S8.json",
+      "bytes": 387,
+      "sha256": "fd20e94d96dfae1d9ba1cd7f7c66fe8237c91b60c205b3d157695d490af5673c"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/download_manifest_UC_markers_supp.json",
+      "bytes": 842,
+      "sha256": "96a64189ae14102b8c980f9d5aebfda3e05d5c70a2f0ace6626901f68815a961"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/download_manifest_identities.json",
+      "bytes": 2003,
+      "sha256": "a59f2ad6bb96abfbea7a815ae642401aa7e5376e9860792cd5d4ca2e32821e8d"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/download_manifest_initial.json",
+      "bytes": 728,
+      "sha256": "ec8df464ddd1daf1e10ada4615b1dbb12c7d8ab0ab9db359b2f540c14d30a490"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/download_manifest_markers.json",
+      "bytes": 1247,
+      "sha256": "bb83a5a61678051abef64445641b5df1f45de36af238bca092bcc798435c790d"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/download_manifest_supp.json",
+      "bytes": 1725,
+      "sha256": "e106f4ab8807d5bc54feb544b83da9c0c527687c1d4cfa8810ab291bc8af15cc"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/program_definition_qc.json",
+      "bytes": 2778,
+      "sha256": "199799e6e4109c6213053acd72e6d08a638d3dbb27fe3be6942f33757bdb33b0"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/program_definitions.json",
+      "bytes": 31280,
+      "sha256": "c4b038579e98f0edf697288dacecd6e69962865f006201b4743ce648cdf854ed"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/program_gene_membership.tsv",
+      "bytes": 360016,
+      "sha256": "44c25068d2c0b60428b0620a7413ffb3a31716c5eb41ee78d42b130f5d9ad268"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/program_gene_membership_author_colonocytes.tsv",
+      "bytes": 11719,
+      "sha256": "1c1a9ff84b439fbdaacda2d2fae6035b78a9b711b69968f8b9991b990fdd21d9"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/program_gene_membership_layout_sensitivity.tsv",
+      "bytes": 141198,
+      "sha256": "b1e25ff545f3e044b599fc9a753a75c1773a50f28d83b875647b37ca1182d530"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/query_log.json",
+      "bytes": 1730,
+      "sha256": "6bab83839246109c14bec98657917c5f12db1f923a67f90f162a51db75d43215"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/verify_program_definitions.log",
+      "bytes": 522,
+      "sha256": "52456af553943ea8e4b9f4d5381968e71f38a6b66774c4a2678409f3d9d3f5b0"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/verify_program_definitions.py",
+      "bytes": 3189,
+      "sha256": "450b535aa14a454ef42f2e7cc837f369b6cea802c5642e0cd9634fba5338324c"
+    }
+  ],
+  "IBrD_signature_identity_recheck": {
+    "utc": "2026-09-10T14:34:24.653965+00:00",
+    "status": "REVIEWED",
+    "article_xml_supplement_id": "mmc9",
+    "caption": "Table S8. IBrD signature, related to Figure 5",
+    "media_href": "mmc9.csv",
+    "download_url": "https://ars.els-cdn.com/content/image/1-s2.0-S266637912500309X-mmc9.csv",
+    "CSV_header": "IBrD Signature",
+    "n_unique": 81,
+    "csv_sha256": "ef659e630046c14d73e8cd1c093ecb8a13cd922d433b91f54d2779b16ae673e3",
+    "not_the_282_persistent_DEG_table": "That is Table S3 = mmc4.csv; not used for IBrD definition",
+    "coverage_interpretation": "When assay covers only a small subset, its unweighted mean is a partial-panel diagnostic and cannot establish incremental value versus the original 81-gene PCA/slingshot model."
+  }
+}

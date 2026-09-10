@@ -1,0 +1,184 @@
+_C_o_m_p_e_t_i_t_i_v_e _G_e_n_e _S_e_t _T_e_s_t _A_c_c_o_u_n_t_i_n_g _f_o_r _I_n_t_e_r-_g_e_n_e _C_o_r_r_e_l_a_t_i_o_n
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Test whether a set of genes is highly ranked relative to other
+     genes in terms of differential expression, accounting for
+     inter-gene correlation.
+
+_U_s_a_g_e:
+
+     ## Default S3 method:
+     camera(y, index, design, contrast = ncol(design), weights = NULL,
+            use.ranks = FALSE, allow.neg.cor=FALSE, inter.gene.cor=0.01, trend.var = FALSE,
+            sort = TRUE, ...)
+     ## Default S3 method:
+     cameraPR(statistic, index, use.ranks = FALSE, inter.gene.cor=0.01, sort = TRUE, ...)
+     interGeneCorrelation(y, design)
+     
+_A_r_g_u_m_e_n_t_s:
+
+       y: a numeric matrix of log-expression values or log-ratios of
+          expression values, or any data object containing such a
+          matrix.  Rows correspond to probes and columns to samples.
+          Any type of object that can be processed by ‘getEAWP’ is
+          acceptable.  ‘NA’ or infinite values are not allowed.
+
+statistic: a numeric vector of genewise statistics. If ‘index’ contains
+          gene IDs, then ‘statistic’ should be a named vector with the
+          gene IDs as names.
+
+   index: an index vector or a list of index vectors.  Can be any
+          vector such that ‘y[index,]’ of ‘statistic[index]’ selects
+          the rows corresponding to the test set.  The list can be made
+          using ‘ids2indices’.
+
+  design: design matrix.
+
+contrast: contrast of the linear model coefficients for which the test
+          is required. Can be an integer specifying a column of
+          ‘design’, or else a numeric vector of same length as the
+          number of columns of ‘design’.
+
+ weights: numeric matrix of precision weights. Can be a matrix of the
+          same size as ‘y’, or a numeric vector of array weights with
+          length equal to ‘ncol(y)’, or a numeric vector of gene
+          weights with length equal to ‘nrow(y)’.
+
+use.ranks: do a rank-based test (‘TRUE’) or a parametric test
+          (‘FALSE’)?
+
+allow.neg.cor: should reduced variance inflation factors be allowed for
+          negative correlations?
+
+inter.gene.cor: numeric, optional preset value for the inter-gene
+          correlation within tested sets.  If ‘NA’ or ‘NULL’, then an
+          inter-gene correlation will be estimated for each tested set.
+
+trend.var: logical, should an empirical Bayes trend be estimated?  See
+          ‘eBayes’ for details.
+
+    sort: logical, should the results be sorted by p-value?
+
+     ...: other arguments are not currently used
+
+_D_e_t_a_i_l_s:
+
+     ‘camera’ and ‘interGeneCorrelation’ implement methods proposed by
+     Wu and Smyth (2012). ‘camera’ performs a _competitive_ test in the
+     sense defined by Goeman and Buhlmann (2007). It tests whether the
+     genes in the set are highly ranked in terms of differential
+     expression relative to genes not in the set. It has similar aims
+     to ‘geneSetTest’ but accounts for inter-gene correlation. See
+     ‘roast’ for an analogous _self-contained_ gene set test.
+
+     The function can be used for any microarray experiment which can
+     be represented by a linear model. The design matrix for the
+     experiment is specified as for the ‘lmFit’ function, and the
+     contrast of interest is specified as for the ‘contrasts.fit’
+     function. This allows users to focus on differential expression
+     for any coefficient or contrast in a linear model by giving the
+     vector of test statistic values.
+
+     ‘camera’ estimates p-values after adjusting the variance of test
+     statistics by an estimated variance inflation factor. The
+     inflation factor depends on estimated genewise correlation and the
+     number of genes in the gene set.
+
+     By default, ‘camera’ uses ‘interGeneCorrelation’ to estimate the
+     mean pair-wise correlation within each set of genes. ‘camera’ can
+     alternatively be used with a preset correlation specified by
+     ‘inter.gene.cor’ that is shared by all sets. This usually works
+     best with a small value, say ‘inter.gene.cor=0.01’.
+
+     If ‘inter.gene.cor=NA’, then ‘camera’ will estimate the inter-gene
+     correlation for each set. In this mode, ‘camera’ gives rigorous
+     error rate control for all sample sizes and all gene sets.
+     However, in this mode, highly co-regulated gene sets that are
+     biological interpretable may not always be ranked at the top of
+     the list.
+
+     With the default value ‘inter.gene.cor=0.01’, ‘camera’ will rank
+     biologically interpretable sets more highly. This gives a useful
+     compromise between strict error rate control and interpretable
+     gene set rankings.
+
+     ‘cameraPR’ is a "pre-ranked" version of ‘camera’ where the genes
+     are pre-ranked according to a pre-computed statistic.
+
+_V_a_l_u_e:
+
+     ‘camera’ and ‘cameraPR’ return a data.frame with a row for each
+     set and the following columns:
+
+  NGenes: number of genes in set.
+
+Correlation: inter-gene correlation (only included if the
+          ‘inter.gene.cor’ was not preset).
+
+Direction: direction of change (‘"Up"’ or ‘"Down"’).
+
+  PValue: two-tailed p-value.
+
+     FDR: Benjamini and Hochberg FDR adjusted p-value.
+
+     ‘interGeneCorrelation’ returns a list with components:
+
+     vif: variance inflation factor.
+
+correlation: inter-gene correlation.
+
+_N_o_t_e:
+
+     The default settings for ‘inter.gene.cor’ and ‘allow.neg.cor’ were
+     changed to the current values in limma 3.29.6. Previously, the
+     default was to estimate an inter-gene correlation for each set. To
+     reproduce the earlier default, use ‘allow.neg.cor=TRUE’ and
+     ‘inter.gene.cor=NA’.
+
+_A_u_t_h_o_r(_s):
+
+     Di Wu and Gordon Smyth
+
+_R_e_f_e_r_e_n_c_e_s:
+
+     Wu, D, and Smyth, GK (2012). Camera: a competitive gene set test
+     accounting for inter-gene correlation. _Nucleic Acids Research_
+     40, e133. doi:10.1093/nar/gks461
+     <https://doi.org/10.1093/nar/gks461>
+
+     Goeman, JJ, and Buhlmann, P (2007). Analyzing gene expression data
+     in terms of gene sets: methodological issues. _Bioinformatics_ 23,
+     980-987.
+
+_S_e_e _A_l_s_o:
+
+     ‘getEAWP’
+
+     ‘rankSumTestWithCorrelation’, ‘geneSetTest’, ‘roast’, ‘fry’,
+     ‘romer’, ‘ids2indices’.
+
+     There is a topic page on 10.GeneSetTests.
+
+_E_x_a_m_p_l_e_s:
+
+     y <- matrix(rnorm(1000*6),1000,6)
+     design <- cbind(Intercept=1,Group=c(0,0,0,1,1,1))
+     
+     # First set of 20 genes are genuinely differentially expressed
+     index1 <- 1:20
+     y[index1,4:6] <- y[index1,4:6]+1
+     
+     # Second set of 20 genes are not DE
+     index2 <- 21:40
+      
+     camera(y, index1, design)
+     camera(y, index2, design)
+     
+     camera(y, list(set1=index1,set2=index2), design, inter.gene.cor=NA)
+     camera(y, list(set1=index1,set2=index2), design, inter.gene.cor=0.01)
+     
+     # Pre-ranked version
+     fit <- eBayes(lmFit(y, design))
+     cameraPR(fit$t[,2], list(set1=index1,set2=index2))
+     

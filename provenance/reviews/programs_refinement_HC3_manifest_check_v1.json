@@ -1,0 +1,44 @@
+{
+  "manifest": "/root/projects/UC_Treatment_Recovery/provenance/manifests/001C2_HC3.json",
+  "manifest_sha256": "ce13eaf6351d9a0020b1e215dce6d19c4c8e1339d2e8807734c8c5def876314b",
+  "entries": [
+    {
+      "group": "inputs",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_scores.rds",
+      "size_match": true,
+      "sha256_match": true
+    },
+    {
+      "group": "code",
+      "path": "/root/projects/UC_Treatment_Recovery/code/robustness_001C2.R",
+      "size_match": true,
+      "sha256_match": true
+    },
+    {
+      "group": "outputs",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C2_refinement/HC3_common_model_sensitivity.tsv",
+      "size_match": true,
+      "sha256_match": true
+    },
+    {
+      "group": "outputs",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C2_refinement/HC3_sessionInfo.txt",
+      "size_match": true,
+      "sha256_match": true
+    },
+    {
+      "group": "environment",
+      "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+      "size_match": true,
+      "sha256_match": true
+    },
+    {
+      "group": "logs",
+      "path": "/root/projects/UC_Treatment_Recovery/logs/robustness_001C2.log",
+      "size_match": true,
+      "sha256_match": true
+    }
+  ],
+  "entries_checked": 6,
+  "failures": []
+}

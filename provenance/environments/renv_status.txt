@@ -1,0 +1,21 @@
+The following package(s) are in an inconsistent state:
+
+ package     installed recorded used
+ boot        y         y        n   
+ class       y         y        n   
+ cluster     y         y        n   
+ codetools   y         y        n   
+ foreign     y         y        n   
+ KernSmooth  y         y        n   
+ lattice     y         y        n   
+ MASS        y         y        n   
+ Matrix      y         y        n   
+ matrixStats y         y        n   
+ mgcv        y         y        n   
+ nlme        y         y        n   
+ nnet        y         y        n   
+ rpart       y         y        n   
+ spatial     y         y        n   
+ survival    y         y        n   
+
+See `?renv::status` for advice on resolving these issues.

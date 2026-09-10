@@ -1,0 +1,150 @@
+{
+  "run_id": "001C_programs",
+  "status": "COMPLETE",
+  "review_status": "PENDING",
+  "phase": "exploratory patient-level refinement",
+  "generated_utc": "2026-09-10T14:37:37.713629+00:00",
+  "cwd": "/root/projects/UC_Treatment_Recovery",
+  "command": "OPENBLAS_NUM_THREADS=4 OMP_NUM_THREADS=4 Rscript code/programs_001C.R",
+  "seed": 20260910,
+  "inputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/discovery_preprocessed_v1.rds",
+      "bytes": 54300911,
+      "sha256": "f7c3343f671b7178799c2c011cf26c3178f55dd4898d28fbeaff312680dbf216"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/program_membership_001C.tsv",
+      "bytes": 492800,
+      "sha256": "7595f24cf2f737c75dd40c795fa4d2c152e83d05e26559a8cee7326b2b70dafe"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/config/programs_001C.json",
+      "bytes": 1088,
+      "sha256": "fb9bf81b5197cc005f2cb47d0a70be656dbb8c596f5c00243a2a0f3a8e37139a"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/metadata_independent_v1_gsm_barcode.tsv",
+      "bytes": 23689,
+      "sha256": "877c80e8cda4e8d23abf1137f9bd02c222f62f7c4ebd6b6734e1ab6ceaaa72df"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/pooled_response_genes.tsv",
+      "bytes": 3260179,
+      "sha256": "2b44072ef6dc214b461a8c6d7be66b4e37b6370304ed50cac581ede4824ed80e"
+    }
+  ],
+  "code": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/programs_001C.R",
+      "bytes": 9907,
+      "sha256": "a560524815853ec6292db8721d4f8a22994239164c6addb2cc3262715f7977ed"
+    }
+  ],
+  "environment": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+      "bytes": 144982,
+      "sha256": "d0b866e9d3af3a81cb6d35f4eee3cba387946f2e6ade554e22057e24bdf2ed86"
+    }
+  ],
+  "logs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/logs/programs_001C.log",
+      "bytes": 1010,
+      "sha256": "7aa9c42e87f8191bd24537a8e8f5431102018bc3b87d8a6c8b64b086f5a58c28"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/candidate_gene_delta_correlations.tsv",
+      "bytes": 631,
+      "sha256": "52856d5dce585d70220c777c9271057f6a2f5a6ec4ac9d9e61b4561d2e4f1876"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/incremental_response_association.tsv",
+      "bytes": 1098,
+      "sha256": "4690c68669009aa3aaa8d82229274a5dc4b950acef6d5018062e84e4ba1e8baa"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/leave_one_candidate_gene_out.tsv",
+      "bytes": 661,
+      "sha256": "31f1e9ee671c9bfcecaf98aacfc6b7ad36b5eb56c586eb99eea0f6cee8af897c"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/leave_one_patient_out.tsv",
+      "bytes": 8150,
+      "sha256": "2355cf9ad42a21c5f13ae73b15a55cd43e2d107c87e887eeb0e32819b5a35031"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/patient_model_fits.rds",
+      "bytes": 78780,
+      "sha256": "5b37b4a26075033154c33f4c41f280367be1f45344832423424a2bac0d0329d6"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_all_sample_scores.tsv",
+      "bytes": 99896,
+      "sha256": "32188d8b9c235d1670baa751f6c616a436be2cd340b1d239847bf26ff9b1165a"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_coverage.tsv",
+      "bytes": 3078,
+      "sha256": "1c9589a52fd6ea3cf7bbff87410436366023b3d7176a024954e656bcb62945a8"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_overlap_and_delta_correlations.tsv",
+      "bytes": 15136,
+      "sha256": "d9604b6e801ff8ad36578019f61a5a2aaa884a1b0ffdf52a2c116c36608c43aa"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_patient_baseline.tsv",
+      "bytes": 36439,
+      "sha256": "9182789d523c29a7e7bf12ee9d43da14f4af8283d5a389218e5069d9c5c67a23"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_patient_delta.tsv",
+      "bytes": 42568,
+      "sha256": "8112aac842fb18ec3ea9d5c6865bb81599f049a6036fc7c8a92d6e756b7a9a94"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_response_and_arm_effects_CI.tsv",
+      "bytes": 52895,
+      "sha256": "ae2f3f4fee4b86674c474b94bef693553e1693e72485a816790a76045d8386e8"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_scores.rds",
+      "bytes": 95893,
+      "sha256": "cdbac51aa6c86cdb47e34a4b8a71cf0260f6d4d8458bf7865bae69ab790deed7"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_summary.json",
+      "bytes": 991,
+      "sha256": "002982a5b97d46f9887b84955ae9778d30cadd731f8af293f2db663d40862ff2"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_within_arm_change_CI.tsv",
+      "bytes": 13410,
+      "sha256": "97b5af6d565d8d982d123186bff4e5dbddacbb4b94f3aabc04a23561f146aa1f"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/selected_gene_effects_exploratory.tsv",
+      "bytes": 1474,
+      "sha256": "2f43e805f60a368adbcf981292610bfb7e740b21b0ea3cb43d6ae3f300b7a079"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/sessionInfo.txt",
+      "bytes": 948,
+      "sha256": "bb98082e78596165a34f64c5253c191b8dd5a0c525a4076f2ce50032ccd350a0"
+    }
+  ],
+  "allowed_claims": [
+    "Conditional contemporaneous associations and uncertainty",
+    "Similarity to published cell states; not new-state discovery"
+  ],
+  "limitations": [
+    "No prediction, equivalence or causal mediation",
+    "No original MARS/IBrD score reproduced",
+    "IBrD partial panel only15/81 measured",
+    "All candidate choices exploratory; held-out expression unused"
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "run_id": "001C_figures",
+  "phase": "exploratory",
+  "status": "COMPLETE",
+  "review_status": "PENDING",
+  "generated_utc": "2026-09-10T14:44:08.712508+00:00",
+  "cwd": "/root/projects/UC_Treatment_Recovery",
+  "command": "OPENBLAS_NUM_THREADS=4 OMP_NUM_THREADS=4 Rscript code/plots_001C.R",
+  "seed": 20260910,
+  "inputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_scores.rds",
+      "bytes": 95893,
+      "sha256": "cdbac51aa6c86cdb47e34a4b8a71cf0260f6d4d8458bf7865bae69ab790deed7"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/Hallmark_patient_effects_CI.tsv",
+      "bytes": 74868,
+      "sha256": "29cdd7c6c4d2b3579ef84c09d93a413eaa0c1a78792e0cab9af23905e37d78df"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C2_refinement/refinement_response_effects_CI.tsv",
+      "bytes": 4551,
+      "sha256": "afdaae2e015b226ffe0b9e104967f248b05b06cf8ded5430d36f430121b1c380"
+    }
+  ],
+  "code": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/plots_001C.R",
+      "bytes": 5007,
+      "sha256": "808c23ca51d8e92c2c69efee1af7f3f2d9a90fd3a967e0c2d9f71c684d245098"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/figure_theme.R",
+      "bytes": 756,
+      "sha256": "13b2aafacd809b9a72a19e8890e604466fa3fcc5620f02646f42f7d4f44f6eec"
+    }
+  ],
+  "environment": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+      "bytes": 144982,
+      "sha256": "d0b866e9d3af3a81cb6d35f4eee3cba387946f2e6ade554e22057e24bdf2ed86"
+    }
+  ],
+  "logs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/logs/plots_001C.log",
+      "bytes": 17,
+      "sha256": "988a3163d15fe0a66e81f2ca7464eea0ae4546d7ddba08213f7f342e14b6a687"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_figures/Exploratory03_CandidateConditional_CI.pdf",
+      "bytes": 25878,
+      "sha256": "3919e7d367ce91064cd8c6a45fb15ac7fb0392ed81980e0212c5c34f2161ffd8"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_figures/Exploratory03_CandidateConditional_CI.png",
+      "bytes": 84201,
+      "sha256": "7ea204bbc42c19ea4960dbb2006823f2fb12051d94d9359c3e76b43f217e5032"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_figures/Exploratory03_CandidateConditional_CI_source.tsv",
+      "bytes": 1706,
+      "sha256": "6f38a4242c016c8302a2c2ca2ba0e2c9723fdf10dd22086ee1aa3fb8ddf7c674"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_figures/Exploratory04_CandidateRelations.pdf",
+      "bytes": 29030,
+      "sha256": "67b75dbbc5145a96a5f654792571542e6f8030503bdd5344456a363e8f6c92fb"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_figures/Exploratory04_CandidateRelations.png",
+      "bytes": 108891,
+      "sha256": "0abddceb9122fd7128727e5befedb650d81f55bea8d770c3dada97016acadf91"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_figures/Exploratory04_CandidateRelations_source.tsv",
+      "bytes": 15633,
+      "sha256": "77963366ecc744c8a481df78b9596579735cd6eab0bca5270caa4de2b2cc75e4"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_figures/Revision01_WithinArm_CI.pdf",
+      "bytes": 25509,
+      "sha256": "8133b3299726dc950a0cfb0b84571588168e9050a30d734b617e1af82968d9e0"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_figures/Revision01_WithinArm_CI.png",
+      "bytes": 69304,
+      "sha256": "35009ddc2b346d73c54456a7f73d4e19fd1101abd02d023691a5436b2148a2b3"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_figures/Revision01_WithinArm_CI_source.tsv",
+      "bytes": 2514,
+      "sha256": "506317fad01f9389c8ccb5bb2c38f9a3ab1e6b82c204600ab4f7890eed510a87"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_figures/Revision02_ArmDifference_CI.pdf",
+      "bytes": 31493,
+      "sha256": "367abc3b49adeffb69ba529abbd438859a5d5e33e6c86ef938b9d2720608b570"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_figures/Revision02_ArmDifference_CI.png",
+      "bytes": 54740,
+      "sha256": "bd2a581203312fd78bf840e94afcf0fc4bb5558bcb09f43f143fa89d50267e07"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_figures/Revision02_ArmDifference_CI_source.tsv",
+      "bytes": 1257,
+      "sha256": "009044502aca99ac6c4ba3663e36602de53ce187dc3648eb7986ada306f16706"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_figures/sessionInfo.txt",
+      "bytes": 1269,
+      "sha256": "8277fa01f59943b90baa0668bedad44a03f5b2813ff3ab0fbb5e923004cbb349"
+    }
+  ],
+  "allowed_claims": [
+    "Effect estimates and uncertainty; exploratory comparisons"
+  ],
+  "limitations": [
+    "No causal or predictive claim",
+    "Original MARS/IBrD scores not reproduced"
+  ]
+}

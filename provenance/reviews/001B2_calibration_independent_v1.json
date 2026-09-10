@@ -1,0 +1,1269 @@
+{
+  "reviewer": "independent methods and numerical reviewer /root/metadata_review",
+  "created_utc": "2026-09-10T14:33:18.925233+00:00",
+  "status": "REVIEWED",
+  "scope": "Numerical reproduction of specified current artifacts only; no candidate changes, external validation or new pairs.",
+  "review_command": "OPENBLAS_NUM_THREADS=4 OMP_NUM_THREADS=4 Rscript provenance/reviews/calibration_identity_recompute_v1.R > provenance/reviews/calibration_identity_recompute_v1.log 2>&1",
+  "review_artifacts": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/calibration_identity_recompute_v1.R",
+      "bytes": 9421,
+      "sha256": "6eb6729f867c4c7468407ed7b3eecae4aeefe59b22f55ffb8ae5c7e11d10f1d3"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/calibration_identity_recompute_v1.log",
+      "bytes": 1351,
+      "sha256": "00984a089bc7e6360f0e9a98d0fc566ac192b1afbb1679c18b852c8cedcffc28"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/calibration_identity_numeric_v1.json",
+      "bytes": 7405,
+      "sha256": "2ad85746ef59716d2fe23a1e41d8739b9c19196b16762319ffc5632034331433"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/calibration_effects_independent_v1.tsv",
+      "bytes": 51622,
+      "sha256": "22eddafa563b6326e0793254a9ab8e2cb5bc204c86d808fd8e1b48e797b65056"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/calibration_identity_manifest_checks_v1.json",
+      "bytes": 17584,
+      "sha256": "94eb725fc6d9ea0c84c6acbba34b20a16d1056c7447755d7b49425d69c600f5e"
+    }
+  ],
+  "environment_consistency_evidence": {
+    "path": "/root/projects/UC_Treatment_Recovery/provenance/environments/renv_status_001C.txt",
+    "bytes": 57,
+    "sha256": "10564bf6ed2f6fe080a88c40e411b348ffe132d5721f7378eae62e7d7211ed39"
+  },
+  "environment_status_text": "No issues found -- the project is in a consistent state.",
+  "prior_method_review": {
+    "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/methods_001B2_001C_independent_precheck_v1.json",
+    "bytes": 8216,
+    "sha256": "ad4240e11b2f8709697d327f8a0742d0cb891c5b847addb9ee1d922b85b95c74"
+  },
+  "artifact_id": "001B2_calibration_independent_v1",
+  "source_manifest_check": {
+    "name": "001B2_calibration",
+    "manifest": "/root/projects/UC_Treatment_Recovery/provenance/manifests/001B2_calibration.json",
+    "manifest_sha256": "d9533fc2526bd5e24ddfd17010ddac01fb072b6119d832865a242f0b90dc3901",
+    "entries_checked": 65,
+    "entries": [
+      {
+        "group": "inputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/discovery_preprocessed_v1.rds",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "inputs",
+        "path": "/root/projects/UC_Treatment_Recovery/config/001B2_001C.json",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "inputs",
+        "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/gene_sets_001B.rds",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "inputs",
+        "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/metadata_independent_v1_gsm_barcode.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "inputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/main_design.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "inputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/response_design.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "inputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/main_design.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "inputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/response_design.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "code",
+        "path": "/root/projects/UC_Treatment_Recovery/code/calibration_001B2.R",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/Hallmark_patient_delta.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/Hallmark_patient_effects_CI.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/all_Hallmark_tests.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_estimated/GLM_change.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_estimated/GLM_minus_Placebo.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_estimated/GLM_response_difference.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_estimated/Placebo_change.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_estimated/pooled_response_arm_adjusted.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_fixed001/GLM_change.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_fixed001/GLM_minus_Placebo.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_fixed001/GLM_response_difference.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_fixed001/Placebo_change.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_fixed001/pooled_response_arm_adjusted.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_ranks001/GLM_change.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_ranks001/GLM_minus_Placebo.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_ranks001/GLM_response_difference.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_ranks001/Placebo_change.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/camera_ranks001/pooled_response_arm_adjusted.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/fry/GLM_change.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/fry/GLM_minus_Placebo.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/fry/GLM_response_difference.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/fry/Placebo_change.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/fry/pooled_response_arm_adjusted.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/pooled_design.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/pooled_response_fit.rds",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/barcode_sensitivity/pooled_response_genes.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/method_sensitivity_counts.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_estimated/GLM_change.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_estimated/GLM_minus_Placebo.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_estimated/GLM_response_difference.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_estimated/Placebo_change.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_estimated/pooled_response_arm_adjusted.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_fixed001/GLM_change.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_fixed001/GLM_minus_Placebo.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_fixed001/GLM_response_difference.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_fixed001/Placebo_change.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_fixed001/pooled_response_arm_adjusted.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_ranks001/GLM_change.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_ranks001/GLM_minus_Placebo.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_ranks001/GLM_response_difference.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_ranks001/Placebo_change.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/camera_ranks001/pooled_response_arm_adjusted.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/fry/GLM_change.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/fry/GLM_minus_Placebo.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/fry/GLM_response_difference.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/fry/Placebo_change.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/fry/pooled_response_arm_adjusted.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/pooled_design.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/pooled_response_fit.rds",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/pooled_response_genes.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/rank_direction_stability.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/review_numeric_audit.json",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/sessionInfo.txt",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "environment",
+        "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "environment",
+        "path": "/root/projects/UC_Treatment_Recovery/provenance/environments/renv_packages.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "logs",
+        "path": "/root/projects/UC_Treatment_Recovery/logs/calibration_001B2.log",
+        "size_match": true,
+        "sha256_match": true
+      }
+    ],
+    "failures": []
+  },
+  "decision": {
+    "blocking_errors": false,
+    "can_use_current_calibration_artifacts": true,
+    "retired_export_read": false,
+    "retired_directory": "runs/001B2_calibration_export_v1",
+    "approved_current_directory": "runs/001B2_calibration"
+  },
+  "numerical_checks": {
+    "Hallmark_patient_delta_max_error": 5.551115123125783e-16,
+    "effects_checked": 350,
+    "effect_CI_max_error": 7.771561172376096e-16,
+    "patient_effect_BH_max_error": 1.2212453270876722e-15,
+    "pooled_gene_model_checks": {
+      "primary_paired": {
+        "design_max_error": 0,
+        "rank": 3,
+        "coefficient_max_error": 5.10702591327572e-15,
+        "sigma_max_error": 4.440892098500626e-16,
+        "P_max_error": 9.43689570931383e-16,
+        "CI_max_error": 5.10702591327572e-15,
+        "BH_max_error": 3.4416913763379853e-15,
+        "fdr05": 0
+      },
+      "barcode_sensitivity": {
+        "design_max_error": 0,
+        "rank": 7,
+        "coefficient_max_error": 4.6629367034256575e-15,
+        "sigma_max_error": 4.440892098500626e-16,
+        "P_max_error": 8.326672684688674e-16,
+        "CI_max_error": 5.10702591327572e-15,
+        "BH_max_error": 4.218847493575595e-15,
+        "fdr05": 0
+      }
+    },
+    "method_repeat_checks": {
+      "primary_paired camera_fixed001 GLM_change": {
+        "P_max_error": 4.996003610813204e-16,
+        "FDR_max_error": 5.551115123125783e-16,
+        "direction_identical": true,
+        "FDR05": 17,
+        "correlation_max_error": {},
+        "mixed_P_max_error": {}
+      },
+      "primary_paired camera_fixed001 pooled_response_arm_adjusted": {
+        "P_max_error": 4.579669976578771e-16,
+        "FDR_max_error": 4.440892098500626e-16,
+        "direction_identical": true,
+        "FDR05": 14,
+        "correlation_max_error": {},
+        "mixed_P_max_error": {}
+      },
+      "primary_paired camera_estimated GLM_change": {
+        "P_max_error": 4.996003610813204e-16,
+        "FDR_max_error": 4.440892098500626e-16,
+        "direction_identical": true,
+        "FDR05": 0,
+        "correlation_max_error": 4.718447854656915e-16,
+        "mixed_P_max_error": {}
+      },
+      "primary_paired camera_estimated pooled_response_arm_adjusted": {
+        "P_max_error": 5.551115123125783e-16,
+        "FDR_max_error": 2.220446049250313e-16,
+        "direction_identical": true,
+        "FDR05": 0,
+        "correlation_max_error": 4.440892098500626e-16,
+        "mixed_P_max_error": {}
+      },
+      "primary_paired camera_ranks001 GLM_change": {
+        "P_max_error": 5.551115123125783e-16,
+        "FDR_max_error": 5.551115123125783e-16,
+        "direction_identical": true,
+        "FDR05": 15,
+        "correlation_max_error": {},
+        "mixed_P_max_error": {}
+      },
+      "primary_paired camera_ranks001 pooled_response_arm_adjusted": {
+        "P_max_error": 5.551115123125783e-16,
+        "FDR_max_error": 5.551115123125783e-16,
+        "direction_identical": true,
+        "FDR05": 14,
+        "correlation_max_error": {},
+        "mixed_P_max_error": {}
+      },
+      "primary_paired fry GLM_change": {
+        "P_max_error": 5.551115123125783e-16,
+        "FDR_max_error": 4.440892098500626e-16,
+        "direction_identical": true,
+        "FDR05": 7,
+        "correlation_max_error": {},
+        "mixed_P_max_error": 4.996003610813204e-16
+      },
+      "primary_paired fry pooled_response_arm_adjusted": {
+        "P_max_error": 5.551115123125783e-16,
+        "FDR_max_error": 5.551115123125783e-16,
+        "direction_identical": true,
+        "FDR05": 0,
+        "correlation_max_error": {},
+        "mixed_P_max_error": 4.996003610813204e-16
+      },
+      "barcode_sensitivity camera_fixed001 GLM_change": {
+        "P_max_error": 4.718447854656915e-16,
+        "FDR_max_error": 5.551115123125783e-16,
+        "direction_identical": true,
+        "FDR05": 14,
+        "correlation_max_error": {},
+        "mixed_P_max_error": {}
+      },
+      "barcode_sensitivity camera_fixed001 pooled_response_arm_adjusted": {
+        "P_max_error": 5.551115123125783e-16,
+        "FDR_max_error": 4.996003610813204e-16,
+        "direction_identical": true,
+        "FDR05": 19,
+        "correlation_max_error": {},
+        "mixed_P_max_error": {}
+      },
+      "barcode_sensitivity camera_estimated GLM_change": {
+        "P_max_error": 5.551115123125783e-16,
+        "FDR_max_error": 4.440892098500626e-16,
+        "direction_identical": true,
+        "FDR05": 0,
+        "correlation_max_error": 5.273559366969494e-16,
+        "mixed_P_max_error": {}
+      },
+      "barcode_sensitivity camera_estimated pooled_response_arm_adjusted": {
+        "P_max_error": 5.551115123125783e-16,
+        "FDR_max_error": 4.440892098500626e-16,
+        "direction_identical": true,
+        "FDR05": 0,
+        "correlation_max_error": 3.885780586188048e-16,
+        "mixed_P_max_error": {}
+      },
+      "barcode_sensitivity camera_ranks001 GLM_change": {
+        "P_max_error": 4.996003610813204e-16,
+        "FDR_max_error": 6.661338147750939e-16,
+        "direction_identical": true,
+        "FDR05": 13,
+        "correlation_max_error": {},
+        "mixed_P_max_error": {}
+      },
+      "barcode_sensitivity camera_ranks001 pooled_response_arm_adjusted": {
+        "P_max_error": 4.440892098500626e-16,
+        "FDR_max_error": 5.551115123125783e-16,
+        "direction_identical": true,
+        "FDR05": 19,
+        "correlation_max_error": {},
+        "mixed_P_max_error": {}
+      },
+      "barcode_sensitivity fry GLM_change": {
+        "P_max_error": 5.551115123125783e-16,
+        "FDR_max_error": 5.551115123125783e-16,
+        "direction_identical": true,
+        "FDR05": 3,
+        "correlation_max_error": {},
+        "mixed_P_max_error": 4.85722573273506e-16
+      },
+      "barcode_sensitivity fry pooled_response_arm_adjusted": {
+        "P_max_error": 5.551115123125783e-16,
+        "FDR_max_error": 4.440892098500626e-16,
+        "direction_identical": true,
+        "FDR05": 0,
+        "correlation_max_error": {},
+        "mixed_P_max_error": 4.996003610813204e-16
+      }
+    },
+    "method_summary_count_mismatches": [],
+    "all_test_BH_max_error": 1.7208456881689926e-15,
+    "five_contrast_BH_max_error": 2.55351295663786e-15,
+    "fry_mixed_BH_max_error": 1.0269562977782698e-15
+  },
+  "independently_recomputed_primary_five_program_effects": [
+    {
+      "set": "HALLMARK_IL6_JAK_STAT3_SIGNALING",
+      "contrast": "Placebo_within_change",
+      "estimate": -0.136951844929184,
+      "se": 0.0475024596192135,
+      "lower": -0.235465916592669,
+      "upper": -0.0384377732656984,
+      "p": 0.00863463364276682
+    },
+    {
+      "set": "HALLMARK_IL6_JAK_STAT3_SIGNALING",
+      "contrast": "Placebo_response_difference",
+      "estimate": -0.107561135220622,
+      "se": 0.0993483314276835,
+      "lower": -0.314167300708227,
+      "upper": 0.0990450302669825,
+      "p": 0.291231850665031
+    },
+    {
+      "set": "HALLMARK_IL6_JAK_STAT3_SIGNALING",
+      "contrast": "golimumab_within_change",
+      "estimate": -0.183781400607694,
+      "se": 0.0441054725280971,
+      "lower": -0.272854209398862,
+      "upper": -0.094708591816525,
+      "p": 0.000155282288204735
+    },
+    {
+      "set": "HALLMARK_IL6_JAK_STAT3_SIGNALING",
+      "contrast": "golimumab_response_difference",
+      "estimate": -0.167204225079412,
+      "se": 0.0862724127111679,
+      "lower": -0.341567275272299,
+      "upper": 0.00715882511347579,
+      "p": 0.0596923495750837
+    },
+    {
+      "set": "HALLMARK_IL6_JAK_STAT3_SIGNALING",
+      "contrast": "GLM_minus_Placebo",
+      "estimate": -0.0468295556785099,
+      "se": 0.0648211105798237,
+      "lower": -0.17675889060693,
+      "upper": 0.0830997792499103,
+      "p": 0.473108975452267
+    },
+    {
+      "set": "HALLMARK_IL6_JAK_STAT3_SIGNALING",
+      "contrast": "pooled_response_arm_adjusted",
+      "estimate": -0.147132031376935,
+      "se": 0.0657553057610562,
+      "lower": -0.278575014687107,
+      "upper": -0.0156890480667625,
+      "p": 0.0288523141238486
+    },
+    {
+      "set": "HALLMARK_IL6_JAK_STAT3_SIGNALING",
+      "contrast": "arm_response_interaction",
+      "estimate": -0.0596430898587894,
+      "se": 0.140085169300192,
+      "lower": -0.339760698299463,
+      "upper": 0.220474518581884,
+      "p": 0.671779001593807
+    },
+    {
+      "set": "HALLMARK_INFLAMMATORY_RESPONSE",
+      "contrast": "Placebo_within_change",
+      "estimate": -0.116864458784606,
+      "se": 0.0460592304717928,
+      "lower": -0.212385456388442,
+      "upper": -0.0213434611807708,
+      "p": 0.0187711134065333
+    },
+    {
+      "set": "HALLMARK_INFLAMMATORY_RESPONSE",
+      "contrast": "Placebo_response_difference",
+      "estimate": -0.105333555106884,
+      "se": 0.0962759915811883,
+      "lower": -0.305550440114008,
+      "upper": 0.0948833299002412,
+      "p": 0.286311414265157
+    },
+    {
+      "set": "HALLMARK_INFLAMMATORY_RESPONSE",
+      "contrast": "golimumab_within_change",
+      "estimate": -0.131887579251131,
+      "se": 0.0412646588671848,
+      "lower": -0.215223248464698,
+      "upper": -0.0485519100375643,
+      "p": 0.00268119984949059
+    },
+    {
+      "set": "HALLMARK_INFLAMMATORY_RESPONSE",
+      "contrast": "golimumab_response_difference",
+      "estimate": -0.15427869640863,
+      "se": 0.0808193213479216,
+      "lower": -0.317620637846169,
+      "upper": 0.00906324502890829,
+      "p": 0.0634634799124306
+    },
+    {
+      "set": "HALLMARK_INFLAMMATORY_RESPONSE",
+      "contrast": "GLM_minus_Placebo",
+      "estimate": -0.0150231204665247,
+      "se": 0.0618403168093345,
+      "lower": -0.139052280709199,
+      "upper": 0.10900603977615,
+      "p": 0.808992012564281
+    },
+    {
+      "set": "HALLMARK_INFLAMMATORY_RESPONSE",
+      "contrast": "pooled_response_arm_adjusted",
+      "estimate": -0.137806773855158,
+      "se": 0.0621373575992855,
+      "lower": -0.262017581839847,
+      "upper": -0.0135959658704686,
+      "p": 0.0302433844255807
+    },
+    {
+      "set": "HALLMARK_INFLAMMATORY_RESPONSE",
+      "contrast": "arm_response_interaction",
+      "estimate": -0.0489451413017467,
+      "se": 0.132425838158105,
+      "lower": -0.313746970545416,
+      "upper": 0.215856687941923,
+      "p": 0.712957485476501
+    },
+    {
+      "set": "HALLMARK_INTERFERON_ALPHA_RESPONSE",
+      "contrast": "Placebo_within_change",
+      "estimate": -0.140403025171625,
+      "se": 0.0585353966969689,
+      "lower": -0.261798007900547,
+      "upper": -0.0190080424427027,
+      "p": 0.0253723001863358
+    },
+    {
+      "set": "HALLMARK_INTERFERON_ALPHA_RESPONSE",
+      "contrast": "Placebo_response_difference",
+      "estimate": -0.0932237578738513,
+      "se": 0.124137464716524,
+      "lower": -0.351381748147729,
+      "upper": 0.164934232400027,
+      "p": 0.461002582212915
+    },
+    {
+      "set": "HALLMARK_INTERFERON_ALPHA_RESPONSE",
+      "contrast": "golimumab_within_change",
+      "estimate": -0.130352880236305,
+      "se": 0.043794138814016,
+      "lower": -0.218796937836407,
+      "upper": -0.041908822636203,
+      "p": 0.00487429822975317
+    },
+    {
+      "set": "HALLMARK_INTERFERON_ALPHA_RESPONSE",
+      "contrast": "golimumab_response_difference",
+      "estimate": -0.159437560394041,
+      "se": 0.0859756566842701,
+      "lower": -0.33320084428404,
+      "upper": 0.0143257234959586,
+      "p": 0.0710575839794867
+    },
+    {
+      "set": "HALLMARK_INTERFERON_ALPHA_RESPONSE",
+      "contrast": "GLM_minus_Placebo",
+      "estimate": 0.0100501449353196,
+      "se": 0.0731048511450014,
+      "lower": -0.137117987311725,
+      "upper": 0.157218277182364,
+      "p": 0.891257110836985
+    },
+    {
+      "set": "HALLMARK_INTERFERON_ALPHA_RESPONSE",
+      "contrast": "pooled_response_arm_adjusted",
+      "estimate": -0.137154069161285,
+      "se": 0.0702592285378942,
+      "lower": -0.277600265817274,
+      "upper": 0.00329212749470453,
+      "p": 0.0554443114731366
+    },
+    {
+      "set": "HALLMARK_INTERFERON_ALPHA_RESPONSE",
+      "contrast": "arm_response_interaction",
+      "estimate": -0.0662138025201893,
+      "se": 0.149662643834838,
+      "lower": -0.365482754925029,
+      "upper": 0.23305514988465,
+      "p": 0.659749816612785
+    },
+    {
+      "set": "HALLMARK_INTERFERON_GAMMA_RESPONSE",
+      "contrast": "Placebo_within_change",
+      "estimate": -0.143146238882199,
+      "se": 0.051490386103788,
+      "lower": -0.249930763878824,
+      "upper": -0.0363617138855733,
+      "p": 0.0109184319436869
+    },
+    {
+      "set": "HALLMARK_INTERFERON_GAMMA_RESPONSE",
+      "contrast": "Placebo_response_difference",
+      "estimate": -0.082670142895948,
+      "se": 0.109173009558567,
+      "lower": -0.309707845044532,
+      "upper": 0.144367559252636,
+      "p": 0.457319268181163
+    },
+    {
+      "set": "HALLMARK_INTERFERON_GAMMA_RESPONSE",
+      "contrast": "golimumab_within_change",
+      "estimate": -0.136213684869923,
+      "se": 0.0414170774836275,
+      "lower": -0.219857169724054,
+      "upper": -0.0525702000157922,
+      "p": 0.00207107385898164
+    },
+    {
+      "set": "HALLMARK_INTERFERON_GAMMA_RESPONSE",
+      "contrast": "golimumab_response_difference",
+      "estimate": -0.165609157406845,
+      "se": 0.0805847156094535,
+      "lower": -0.328476942959941,
+      "upper": -0.00274137185374876,
+      "p": 0.0464405183565654
+    },
+    {
+      "set": "HALLMARK_INTERFERON_GAMMA_RESPONSE",
+      "contrast": "GLM_minus_Placebo",
+      "estimate": 0.00693255401227583,
+      "se": 0.0660805127734491,
+      "lower": -0.125879718322818,
+      "upper": 0.13974482634737,
+      "p": 0.916877282272567
+    },
+    {
+      "set": "HALLMARK_INTERFERON_GAMMA_RESPONSE",
+      "contrast": "pooled_response_arm_adjusted",
+      "estimate": -0.137696989061832,
+      "se": 0.0645214872402119,
+      "lower": -0.266673604291648,
+      "upper": -0.00872037383201552,
+      "p": 0.0367947956985866
+    },
+    {
+      "set": "HALLMARK_INTERFERON_GAMMA_RESPONSE",
+      "contrast": "arm_response_interaction",
+      "estimate": -0.0829390145108969,
+      "se": 0.137250530330419,
+      "lower": -0.357388412012666,
+      "upper": 0.191510382990872,
+      "p": 0.547892426612434
+    },
+    {
+      "set": "HALLMARK_OXIDATIVE_PHOSPHORYLATION",
+      "contrast": "Placebo_within_change",
+      "estimate": 0.0709737559073724,
+      "se": 0.0308591753773679,
+      "lower": 0.00697574319452195,
+      "upper": 0.134971768620223,
+      "p": 0.0313137208695671
+    },
+    {
+      "set": "HALLMARK_OXIDATIVE_PHOSPHORYLATION",
+      "contrast": "Placebo_response_difference",
+      "estimate": 0.0344938329559179,
+      "se": 0.0658881839221697,
+      "lower": -0.10252814653259,
+      "upper": 0.171515812444426,
+      "p": 0.606093056275303
+    },
+    {
+      "set": "HALLMARK_OXIDATIVE_PHOSPHORYLATION",
+      "contrast": "golimumab_within_change",
+      "estimate": 0.0376828146566598,
+      "se": 0.0279981220059262,
+      "lower": -0.0188605398297245,
+      "upper": 0.0942261691430441,
+      "p": 0.185728600959074
+    },
+    {
+      "set": "HALLMARK_OXIDATIVE_PHOSPHORYLATION",
+      "contrast": "golimumab_response_difference",
+      "estimate": 0.0881504450986312,
+      "se": 0.0555577536140537,
+      "lower": -0.024135963471432,
+      "upper": 0.200436853668695,
+      "p": 0.120467732454243
+    },
+    {
+      "set": "HALLMARK_OXIDATIVE_PHOSPHORYLATION",
+      "contrast": "GLM_minus_Placebo",
+      "estimate": -0.0332909412507126,
+      "se": 0.0416675358142269,
+      "lower": -0.116842594738136,
+      "upper": 0.0502607122367103,
+      "p": 0.427834610886369
+    },
+    {
+      "set": "HALLMARK_OXIDATIVE_PHOSPHORYLATION",
+      "contrast": "pooled_response_arm_adjusted",
+      "estimate": 0.0700929313967566,
+      "se": 0.0427368379794337,
+      "lower": -0.0153367904522016,
+      "upper": 0.155522653245715,
+      "p": 0.106047641405675
+    },
+    {
+      "set": "HALLMARK_OXIDATIVE_PHOSPHORYLATION",
+      "contrast": "arm_response_interaction",
+      "estimate": 0.0536566121427132,
+      "se": 0.0909226071927972,
+      "lower": -0.128154377609235,
+      "upper": 0.235467601894661,
+      "p": 0.557280039057307
+    }
+  ],
+  "verified_method_count_table": [
+    {
+      "branch": "primary_paired",
+      "contrast": "GLM_change",
+      "method": "camera_fixed001",
+      "sets": "50",
+      "FDR05": "17",
+      "median_estimated_correlation": ""
+    },
+    {
+      "branch": "primary_paired",
+      "contrast": "GLM_change",
+      "method": "camera_estimated",
+      "sets": "50",
+      "FDR05": "0",
+      "median_estimated_correlation": "0.0673924102152325"
+    },
+    {
+      "branch": "primary_paired",
+      "contrast": "GLM_change",
+      "method": "camera_ranks001",
+      "sets": "50",
+      "FDR05": "15",
+      "median_estimated_correlation": ""
+    },
+    {
+      "branch": "primary_paired",
+      "contrast": "GLM_change",
+      "method": "fry",
+      "sets": "50",
+      "FDR05": "7",
+      "median_estimated_correlation": ""
+    },
+    {
+      "branch": "primary_paired",
+      "contrast": "Placebo_change",
+      "method": "camera_fixed001",
+      "sets": "50",
+      "FDR05": "17",
+      "median_estimated_correlation": ""
+    },
+    {
+      "branch": "primary_paired",
+      "contrast": "Placebo_change",
+      "method": "camera_estimated",
+      "sets": "50",
+      "FDR05": "0",
+      "median_estimated_correlation": "0.0673924102152325"
+    },
+    {
+      "branch": "primary_paired",
+      "contrast": "Placebo_change",
+      "method": "camera_ranks001",
+      "sets": "50",
+      "FDR05": "16",
+      "median_estimated_correlation": ""
+    },
+    {
+      "branch": "primary_paired",
+      "contrast": "Placebo_change",
+      "method": "fry",
+      "sets": "50",
+      "FDR05": "0",
+      "median_estimated_correlation": ""
+    },
+    {
+      "branch": "primary_paired",
+      "contrast": "GLM_minus_Placebo",
+      "method": "camera_fixed001",
+      "sets": "50",
+      "FDR05": "0",
+      "median_estimated_correlation": ""
+    },
+    {
+      "branch": "primary_paired",
+      "contrast": "GLM_minus_Placebo",
+      "method": "camera_estimated",
+      "sets": "50",
+      "FDR05": "0",
+      "median_estimated_correlation": "0.0673924102152325"
+    },
+    {
+      "branch": "primary_paired",
+      "contrast": "GLM_minus_Placebo",
+      "method": "camera_ranks001",
+      "sets": "50",
+      "FDR05": "0",
+      "median_estimated_correlation": ""
+    },
+    {
+      "branch": "primary_paired",
+      "contrast": "GLM_minus_Placebo",
+      "method": "fry",
+      "sets": "50",
+      "FDR05": "0",
+      "median_estimated_correlation": ""
+    },
+    {
+      "branch": "primary_paired",
+      "contrast": "GLM_response_difference",
+      "method": "camera_fixed001",
+      "sets": "50",
+      "FDR05": "13",
+      "median_estimated_correlation": ""
+    },
+    {
+      "branch": "primary_paired",
+      "contrast": "GLM_response_difference",
+      "method": "camera_estimated",
+      "sets": "50",
+      "FDR05": "0",
+      "median_estimated_correlation": "0.0686184712491559"
+    },
+    {
+      "branch": "primary_paired",
+      "contrast": "GLM_response_difference",
+      "method": "camera_ranks001",
+      "sets": "50",
+      "FDR05": "12",
+      "median_estimated_correlation": ""
+    },
+    {
+      "branch": "primary_paired",
+      "contrast": "GLM_response_difference",
+      "method": "fry",
+      "sets": "50",
+      "FDR05": "0",
+      "median_estimated_correlation": ""
+    },
+    {
+      "branch": "primary_paired",
+      "contrast": "pooled_response_arm_adjusted",
+      "method": "camera_fixed001",
+      "sets": "50",
+      "FDR05": "14",
+      "median_estimated_correlation": ""
+    },
+    {
+      "branch": "primary_paired",
+      "contrast": "pooled_response_arm_adjusted",
+      "method": "camera_estimated",
+      "sets": "50",
+      "FDR05": "0",
+      "median_estimated_correlation": "0.0686589233298242"
+    },
+    {
+      "branch": "primary_paired",
+      "contrast": "pooled_response_arm_adjusted",
+      "method": "camera_ranks001",
+      "sets": "50",
+      "FDR05": "14",
+      "median_estimated_correlation": ""
+    },
+    {
+      "branch": "primary_paired",
+      "contrast": "pooled_response_arm_adjusted",
+      "method": "fry",
+      "sets": "50",
+      "FDR05": "0",
+      "median_estimated_correlation": ""
+    },
+    {
+      "branch": "barcode_sensitivity",
+      "contrast": "GLM_change",
+      "method": "camera_fixed001",
+      "sets": "50",
+      "FDR05": "14",
+      "median_estimated_correlation": ""
+    },
+    {
+      "branch": "barcode_sensitivity",
+      "contrast": "GLM_change",
+      "method": "camera_estimated",
+      "sets": "50",
+      "FDR05": "0",
+      "median_estimated_correlation": "0.0636157195954449"
+    },
+    {
+      "branch": "barcode_sensitivity",
+      "contrast": "GLM_change",
+      "method": "camera_ranks001",
+      "sets": "50",
+      "FDR05": "13",
+      "median_estimated_correlation": ""
+    },
+    {
+      "branch": "barcode_sensitivity",
+      "contrast": "GLM_change",
+      "method": "fry",
+      "sets": "50",
+      "FDR05": "3",
+      "median_estimated_correlation": ""
+    },
+    {
+      "branch": "barcode_sensitivity",
+      "contrast": "Placebo_change",
+      "method": "camera_fixed001",
+      "sets": "50",
+      "FDR05": "19",
+      "median_estimated_correlation": ""
+    },
+    {
+      "branch": "barcode_sensitivity",
+      "contrast": "Placebo_change",
+      "method": "camera_estimated",
+      "sets": "50",
+      "FDR05": "0",
+      "median_estimated_correlation": "0.0636157195954449"
+    },
+    {
+      "branch": "barcode_sensitivity",
+      "contrast": "Placebo_change",
+      "method": "camera_ranks001",
+      "sets": "50",
+      "FDR05": "17",
+      "median_estimated_correlation": ""
+    },
+    {
+      "branch": "barcode_sensitivity",
+      "contrast": "Placebo_change",
+      "method": "fry",
+      "sets": "50",
+      "FDR05": "0",
+      "median_estimated_correlation": ""
+    },
+    {
+      "branch": "barcode_sensitivity",
+      "contrast": "GLM_minus_Placebo",
+      "method": "camera_fixed001",
+      "sets": "50",
+      "FDR05": "6",
+      "median_estimated_correlation": ""
+    },
+    {
+      "branch": "barcode_sensitivity",
+      "contrast": "GLM_minus_Placebo",
+      "method": "camera_estimated",
+      "sets": "50",
+      "FDR05": "0",
+      "median_estimated_correlation": "0.0636157195954449"
+    },
+    {
+      "branch": "barcode_sensitivity",
+      "contrast": "GLM_minus_Placebo",
+      "method": "camera_ranks001",
+      "sets": "50",
+      "FDR05": "8",
+      "median_estimated_correlation": ""
+    },
+    {
+      "branch": "barcode_sensitivity",
+      "contrast": "GLM_minus_Placebo",
+      "method": "fry",
+      "sets": "50",
+      "FDR05": "0",
+      "median_estimated_correlation": ""
+    },
+    {
+      "branch": "barcode_sensitivity",
+      "contrast": "GLM_response_difference",
+      "method": "camera_fixed001",
+      "sets": "50",
+      "FDR05": "12",
+      "median_estimated_correlation": ""
+    },
+    {
+      "branch": "barcode_sensitivity",
+      "contrast": "GLM_response_difference",
+      "method": "camera_estimated",
+      "sets": "50",
+      "FDR05": "0",
+      "median_estimated_correlation": "0.0645865652904037"
+    },
+    {
+      "branch": "barcode_sensitivity",
+      "contrast": "GLM_response_difference",
+      "method": "camera_ranks001",
+      "sets": "50",
+      "FDR05": "12",
+      "median_estimated_correlation": ""
+    },
+    {
+      "branch": "barcode_sensitivity",
+      "contrast": "GLM_response_difference",
+      "method": "fry",
+      "sets": "50",
+      "FDR05": "0",
+      "median_estimated_correlation": ""
+    },
+    {
+      "branch": "barcode_sensitivity",
+      "contrast": "pooled_response_arm_adjusted",
+      "method": "camera_fixed001",
+      "sets": "50",
+      "FDR05": "19",
+      "median_estimated_correlation": ""
+    },
+    {
+      "branch": "barcode_sensitivity",
+      "contrast": "pooled_response_arm_adjusted",
+      "method": "camera_estimated",
+      "sets": "50",
+      "FDR05": "0",
+      "median_estimated_correlation": "0.0644517844949412"
+    },
+    {
+      "branch": "barcode_sensitivity",
+      "contrast": "pooled_response_arm_adjusted",
+      "method": "camera_ranks001",
+      "sets": "50",
+      "FDR05": "19",
+      "median_estimated_correlation": ""
+    },
+    {
+      "branch": "barcode_sensitivity",
+      "contrast": "pooled_response_arm_adjusted",
+      "method": "fry",
+      "sets": "50",
+      "FDR05": "0",
+      "median_estimated_correlation": ""
+    }
+  ],
+  "verified_semantics": [
+    "All 50 programs across seven patient-level contrasts were recomputed independently: 350 estimates with SE, 95% CI and P. Current columns have explicit numeric names and finite values; the deprecated serialization output was not read.",
+    "Between-arm score CI is a Welch CI; within-arm score CI uses a one-sample t distribution. Pooled and interaction score CI use ordinary linear models, not gene-level empirical Bayes variances.",
+    "Pooled gene model is a newly declared common response association adjusted for arm; independent all-gene QR OLS coefficients agree in both rank-3 and rank-7 branches. Moderated P/CI were checked using stored eBayes posterior variances; robust-prior estimation was not reimplemented.",
+    "All 2000 method/set/contrast/branch records have correct within-contrast BH and combined five-contrast BH. fry directional and mixed FDR are separate families; method_sensitivity_counts counts directional FDR.",
+    "Identical-parameter recomputation covered all 50 sets for GLM_change and pooled_response_arm_adjusted across two branches and four methods, a total of 16 full method calls. All P, FDR, direction and available correlation/mixed P checks agree within floating-point tolerance.",
+    "camera_fixed001 and camera_ranks001 are competitive tests at fixed correlation .01. camera_estimated uses per-set residual correlation with allow.neg.cor default FALSE. fry uses the self-contained null with standardize=residual.sd, an explicit nondefault standardization choice; it is not the CAMERA null.",
+    "Method count differences represent assumption/method sensitivity and cannot be converted into an assertion that one method proves the others false. A pooled response CAMERA association is not externally confirmed or causally identified."
+  ],
+  "remaining_claim_limits": [
+    "The IFNG GLM-minus-placebo estimate is positive +0.00693255 with CI [-0.12587972,+0.13974483]; do not copy the sign error from the supplied critique.",
+    "Nonsignificant pooled gene-level or estimated-correlation results do not establish no effect, equivalence, or certain lack of power.",
+    "A shared response slope is an exploratory modeling assumption, not a consequence of nonsignificant interaction.",
+    "GO term counts from the earlier run are redundant screening output; this calibration is the declared full 50-Hallmark family.",
+    "No visual figure QA or later 001C patient-program model was reviewed in this artifact."
+  ]
+}

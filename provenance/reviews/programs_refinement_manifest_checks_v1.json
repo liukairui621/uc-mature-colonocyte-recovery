@@ -1,0 +1,234 @@
+[
+  {
+    "manifest": "/root/projects/UC_Treatment_Recovery/provenance/manifests/001C_programs.json",
+    "manifest_sha256": "4ec065fa1ae62a4cb3a776b4661c6e8bf808d5e474bd691c1a96b6bf650ac75f",
+    "entries": [
+      {
+        "group": "inputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/discovery_preprocessed_v1.rds",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "inputs",
+        "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/program_membership_001C.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "inputs",
+        "path": "/root/projects/UC_Treatment_Recovery/config/programs_001C.json",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "inputs",
+        "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/metadata_independent_v1_gsm_barcode.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "inputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/primary_paired/pooled_response_genes.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "code",
+        "path": "/root/projects/UC_Treatment_Recovery/code/programs_001C.R",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/candidate_gene_delta_correlations.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/incremental_response_association.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/leave_one_candidate_gene_out.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/leave_one_patient_out.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/patient_model_fits.rds",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_all_sample_scores.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_coverage.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_overlap_and_delta_correlations.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_patient_baseline.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_patient_delta.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_response_and_arm_effects_CI.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_scores.rds",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_summary.json",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_within_arm_change_CI.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/selected_gene_effects_exploratory.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/sessionInfo.txt",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "environment",
+        "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "logs",
+        "path": "/root/projects/UC_Treatment_Recovery/logs/programs_001C.log",
+        "size_match": true,
+        "sha256_match": true
+      }
+    ],
+    "entries_checked": 24,
+    "failures": []
+  },
+  {
+    "manifest": "/root/projects/UC_Treatment_Recovery/provenance/manifests/001C2_refinement.json",
+    "manifest_sha256": "9e2bf2d6efb2b5215bf3ed029761cfe819801466a7fa7039ac99d3939bf1fb89",
+    "entries": [
+      {
+        "group": "inputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_scores.rds",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "inputs",
+        "path": "/root/projects/UC_Treatment_Recovery/config/refinement_001C2.json",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "inputs",
+        "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/metadata_independent_v1_gsm_barcode.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "code",
+        "path": "/root/projects/UC_Treatment_Recovery/code/refinement_001C2.R",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C2_refinement/barcode_program_change_sensitivity.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C2_refinement/common_covariate_incremental_association.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C2_refinement/refinement_leave_one_patient_out.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C2_refinement/refinement_response_effects_CI.tsv",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C2_refinement/refinement_summary.json",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "outputs",
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001C2_refinement/sessionInfo.txt",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "environment",
+        "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+        "size_match": true,
+        "sha256_match": true
+      },
+      {
+        "group": "logs",
+        "path": "/root/projects/UC_Treatment_Recovery/logs/refinement_001C2.log",
+        "size_match": true,
+        "sha256_match": true
+      }
+    ],
+    "entries_checked": 12,
+    "failures": []
+  }
+]

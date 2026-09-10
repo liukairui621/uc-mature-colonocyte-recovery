@@ -1,0 +1,89 @@
+{
+  "run_id": "001C_identity_qc",
+  "status": "COMPLETE",
+  "review_status": "PENDING",
+  "phase": "exploratory revision prompted by user-supplied critique",
+  "generated_utc": "2026-09-10T14:26:25.956943+00:00",
+  "cwd": "/root/projects/UC_Treatment_Recovery",
+  "command": "OPENBLAS_NUM_THREADS=4 OMP_NUM_THREADS=4 Rscript code/identity_qc_001C.R",
+  "seed": 20260910,
+  "inputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/discovery_preprocessed_v1.rds",
+      "bytes": 54300911,
+      "sha256": "f7c3343f671b7178799c2c011cf26c3178f55dd4898d28fbeaff312680dbf216"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/config/001B2_001C.json",
+      "bytes": 1956,
+      "sha256": "39784ab2478a9be63ed59d6f2fb46101b17ab25f7ac9ffa91f910d696fc07df3"
+    }
+  ],
+  "code": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/identity_qc_001C.R",
+      "bytes": 3245,
+      "sha256": "d7caea096e71656135deaff6259373aa2fcba4b4afdaae8202c1467fac9b90f6"
+    }
+  ],
+  "environment": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+      "bytes": 144982,
+      "sha256": "d0b866e9d3af3a81cb6d35f4eee3cba387946f2e6ade554e22057e24bdf2ed86"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/environments/renv_packages.tsv",
+      "bytes": 7405,
+      "sha256": "ff8484105ffca827a0acc26f131ffca8cfd05151760e8c4a02f509cd85cbecd4"
+    }
+  ],
+  "logs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/logs/identity_qc_001C.log",
+      "bytes": 1568,
+      "sha256": "7e01626ff36399eda53cbe95b51aa0e776791c84b7c13f4c3f3121617cf193cb"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/identity_qc/all_pre_post_probe_correlations.tsv",
+      "bytes": 699237,
+      "sha256": "41ca0f618de7d87b75a17c371bc94c3d3994f4cfe36e45d545ec53c5d0d7649e"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/identity_qc/identity_qc_summary.json",
+      "bytes": 784,
+      "sha256": "78abd50bb85f86f2ba2b2acc2a094d400acb356f8aa5430b955aa886c29fed7b"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/identity_qc/known_pair_diagnostic.tsv",
+      "bytes": 7397,
+      "sha256": "a9249ce4846c3d131119d9795908ed013ca0b7652e6686f0688d8ddce0be6321"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/identity_qc/sessionInfo.txt",
+      "bytes": 948,
+      "sha256": "bb98082e78596165a34f64c5253c191b8dd5a0c525a4076f2ce50032ccd350a0"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/identity_qc/sex_marker_expression.tsv",
+      "bytes": 13473,
+      "sha256": "b45a359bc93a76891ec7f490cd9856a5c049076f832c03fe83954c003113e755"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/identity_qc/unmatched_candidate_diagnostic_only.tsv",
+      "bytes": 23826,
+      "sha256": "979e3cc89ad5046d4cae9f5446e594066037488743eefb887064ebc123eedcaf"
+    }
+  ],
+  "allowed_claims": [
+    "Observed paired transcript associations with confidence intervals",
+    "Diagnostic evidence only; no inferred identity"
+  ],
+  "limitations": [
+    "No new patient linkage",
+    "No independently validated signature",
+    "Pooled response is post hoc association, not treatment causality"
+  ]
+}

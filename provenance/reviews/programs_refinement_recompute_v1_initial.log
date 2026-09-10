@@ -1,0 +1,3 @@
+Error in coverage$program : $ operator is invalid for atomic vectors
+Calls: [ ... tryCatchList -> tryCatchOne -> <Anonymous> -> .checkTypos
+Execution halted

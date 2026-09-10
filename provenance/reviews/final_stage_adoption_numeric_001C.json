@@ -1,0 +1,212 @@
+{
+  "manifest": {
+    "path": "/root/projects/UC_Treatment_Recovery/provenance/manifests/001C_figures.json",
+    "bytes": 4952,
+    "sha256": "5dc03e2da50743213f4315d6ae62c6c3ffa7b7e864f4f23e007e9e2525a16e43"
+  },
+  "manifest_entries_checked": 20,
+  "manifest_failures": [],
+  "figure_source_checks": [
+    {
+      "file": "Revision01_WithinArm_CI_source.tsv",
+      "rows": 10,
+      "max_value_difference": 0.0,
+      "duplicate_estimates": false
+    },
+    {
+      "file": "Revision02_ArmDifference_CI_source.tsv",
+      "rows": 5,
+      "max_value_difference": 0.0,
+      "duplicate_estimates": false
+    },
+    {
+      "file": "Exploratory03_CandidateConditional_CI_source.tsv",
+      "rows": 7,
+      "max_value_difference": 0.0,
+      "duplicate_estimates": false
+    },
+    {
+      "file": "Exploratory04_CandidateRelations_source.tsv",
+      "rows": 130,
+      "points_by_panel": {
+        "Inflammatory response": 65,
+        "Published CT-colonocyte markers (18/20)": 65
+      },
+      "unique_subjects_each_panel": {
+        "Inflammatory response": 65,
+        "Published CT-colonocyte markers (18/20)": 65
+      },
+      "max_value_difference": 0.0
+    }
+  ],
+  "report_rounding_checks": [
+    {
+      "program": "HALLMARK_INTERFERON_GAMMA_RESPONSE",
+      "contrast": "golimumab_within_change",
+      "expected_text": "-0.136 [-0.220, -0.053]",
+      "found_in_report": true
+    },
+    {
+      "program": "HALLMARK_INTERFERON_GAMMA_RESPONSE",
+      "contrast": "Placebo_within_change",
+      "expected_text": "-0.143 [-0.250, -0.036]",
+      "found_in_report": true
+    },
+    {
+      "program": "HALLMARK_INTERFERON_GAMMA_RESPONSE",
+      "contrast": "GLM_minus_Placebo",
+      "expected_text": "0.007 [-0.126, 0.140]",
+      "found_in_report": true
+    },
+    {
+      "program": "HALLMARK_INTERFERON_ALPHA_RESPONSE",
+      "contrast": "golimumab_within_change",
+      "expected_text": "-0.130 [-0.219, -0.042]",
+      "found_in_report": true
+    },
+    {
+      "program": "HALLMARK_INTERFERON_ALPHA_RESPONSE",
+      "contrast": "Placebo_within_change",
+      "expected_text": "-0.140 [-0.262, -0.019]",
+      "found_in_report": true
+    },
+    {
+      "program": "HALLMARK_INTERFERON_ALPHA_RESPONSE",
+      "contrast": "GLM_minus_Placebo",
+      "expected_text": "0.010 [-0.137, 0.157]",
+      "found_in_report": true
+    },
+    {
+      "program": "HALLMARK_IL6_JAK_STAT3_SIGNALING",
+      "contrast": "golimumab_within_change",
+      "expected_text": "-0.184 [-0.273, -0.095]",
+      "found_in_report": true
+    },
+    {
+      "program": "HALLMARK_IL6_JAK_STAT3_SIGNALING",
+      "contrast": "Placebo_within_change",
+      "expected_text": "-0.137 [-0.235, -0.038]",
+      "found_in_report": true
+    },
+    {
+      "program": "HALLMARK_IL6_JAK_STAT3_SIGNALING",
+      "contrast": "GLM_minus_Placebo",
+      "expected_text": "-0.047 [-0.177, 0.083]",
+      "found_in_report": true
+    },
+    {
+      "program": "HALLMARK_INFLAMMATORY_RESPONSE",
+      "contrast": "golimumab_within_change",
+      "expected_text": "-0.132 [-0.215, -0.049]",
+      "found_in_report": true
+    },
+    {
+      "program": "HALLMARK_INFLAMMATORY_RESPONSE",
+      "contrast": "Placebo_within_change",
+      "expected_text": "-0.117 [-0.212, -0.021]",
+      "found_in_report": true
+    },
+    {
+      "program": "HALLMARK_INFLAMMATORY_RESPONSE",
+      "contrast": "GLM_minus_Placebo",
+      "expected_text": "-0.015 [-0.139, 0.109]",
+      "found_in_report": true
+    },
+    {
+      "program": "HALLMARK_OXIDATIVE_PHOSPHORYLATION",
+      "contrast": "golimumab_within_change",
+      "expected_text": "0.038 [-0.019, 0.094]",
+      "found_in_report": true
+    },
+    {
+      "program": "HALLMARK_OXIDATIVE_PHOSPHORYLATION",
+      "contrast": "Placebo_within_change",
+      "expected_text": "0.071 [0.007, 0.135]",
+      "found_in_report": true
+    },
+    {
+      "program": "HALLMARK_OXIDATIVE_PHOSPHORYLATION",
+      "contrast": "GLM_minus_Placebo",
+      "expected_text": "-0.033 [-0.117, 0.050]",
+      "found_in_report": true
+    },
+    {
+      "stat": "candidate_inflammation_r_CI",
+      "expected": [
+        -0.540364411540988,
+        -0.692938154178185,
+        -0.341469003304873
+      ],
+      "reported": [
+        -0.54,
+        -0.693,
+        -0.341
+      ],
+      "max_rounding_difference": 0.0004690033048729836
+    },
+    {
+      "stat": "runs/001C2_refinement/refinement_leave_one_patient_out.tsv",
+      "actual_range": [
+        0.520840432471132,
+        0.691880797714497
+      ],
+      "reported_range": [
+        0.521,
+        0.692
+      ],
+      "max_rounding_difference": 0.00015956752886803205
+    },
+    {
+      "stat": "runs/001C_programs/leave_one_candidate_gene_out.tsv",
+      "actual_range": [
+        0.520430332532051,
+        0.782493032852564
+      ],
+      "reported_range": [
+        0.52,
+        0.782
+      ],
+      "max_rounding_difference": 0.0004930328525639682
+    }
+  ],
+  "freeze_input_hash_checks": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/program_membership_001C.tsv",
+      "sha256_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/h.all.v2025.1.Hs.symbols.gmt",
+      "sha256_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_scores.rds",
+      "sha256_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/config/001B2_001C.json",
+      "sha256_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/config/programs_001C.json",
+      "sha256_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/config/refinement_001C2.json",
+      "sha256_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+      "sha256_match": true
+    }
+  ],
+  "report_file": {
+    "path": "/root/projects/UC_Treatment_Recovery/reports/Review_response_and_001C_report_20260910.md",
+    "bytes": 11944,
+    "sha256": "14f315e5f96c5aa4274e710fd7ddcac2fbdaff8a197c1094144028e0752a00e2"
+  },
+  "lock_draft_file": {
+    "path": "/root/projects/UC_Treatment_Recovery/planning/signature_lock.draft.json",
+    "bytes": 7226,
+    "sha256": "4f0ef4f9db59e913869e8582bba3c73fd2914d5119e3edbe19cc125315b44702"
+  }
+}

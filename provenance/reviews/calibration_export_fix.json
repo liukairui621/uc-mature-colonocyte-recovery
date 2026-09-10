@@ -1,0 +1,7 @@
+{
+  "created_utc": "2026-09-10T14:22:18.365523+00:00",
+  "stage": "001B2",
+  "failure": "List-of-statistics was serialized as list column; export failed before tests",
+  "fix": "Explicit as.data.table on named numeric statistics before concatenation",
+  "scientific_change": false
+}

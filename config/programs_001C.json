@@ -1,0 +1,16 @@
+{
+  "created_utc": "2026-09-10T14:31:39.530773+00:00",
+  "definition_sources": [
+    "inputs/literature_001C/program_gene_membership.tsv",
+    "inputs/literature_001C/program_gene_membership_author_colonocytes.tsv"
+  ],
+  "score": "unweighted measured-gene mean log2 expression; no discovery-based weights",
+  "membership_path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/program_membership_001C.tsv",
+  "reference_scores_are_proxies": true,
+  "MARS_variants": "Original table columns and original stated database version both retained separately",
+  "IBrD_limitation": "Author pretrained PCA/SCE objects unavailable; measured-gene mean is not original IBrD",
+  "coverage_rule": "Report exact measured membership and fraction; no imputation. Candidate requires all six genes. Incomplete reference coverage prevents exact-score claims.",
+  "hypothesis_timing": "Exploratory, after reading initial discovery and external critique; before 001C module-level results",
+  "primary_axis": "response-associated paired change, arm-adjusted",
+  "model_script": "code/programs_001C.R"
+}

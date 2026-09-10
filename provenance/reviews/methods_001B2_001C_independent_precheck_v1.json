@@ -1,0 +1,100 @@
+{
+  "artifact_id": "methods_001B2_001C_independent_precheck_v1",
+  "status": "REVIEWED",
+  "scope": "Review user-supplied critique as evidence to evaluate, not as mandatory scientific conclusions. Method precheck only; 001B2 and 001C numerical outputs will need independent post-run review.",
+  "created_utc": "2026-09-10T14:18:40.803489+00:00",
+  "source_critique_path": "C:/Users/liuka/.codex/attachments/c8da2f9f-9b6a-470f-a787-218b9cf16afe/pasted-text.txt",
+  "installed_method_version": "limma 3.58.1",
+  "primary_method_evidence": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/limma_3.58.1_camera_help.txt",
+      "sha256": "83be1cd90f3627f57f945bc3c7fbee83052a87d0f5eaf9737f83193b38fc6f98"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/limma_3.58.1_roast_help.txt",
+      "sha256": "14bf9b399b5e464ea0e6b798192d88e406d7117162778823e7e6dfe8eb41ff4c"
+    }
+  ],
+  "judgments": [
+    {
+      "item": "camera default correlation",
+      "decision": "inter.gene.cor=0.01 is the installed documented/default setting, not a coding error. It assumes a common small within-set residual correlation; inter.gene.cor=NA estimates a correlation for each set. The package documents the fixed value as a compromise favoring interpretable rankings and the estimated mode as stronger error-rate control. A large significance change demonstrates assumption sensitivity; it does not by itself prove the original computation invalid or the estimated branch true.",
+      "required_handling": "Retain original output and explicit assumptions. Name calibration branches before running; do not select whichever is significant. Report fixed/estimated/rank behavior separately. Exact P values may be retained as conditional outputs rather than presented as assumption-robust evidence."
+    },
+    {
+      "item": "Estimated correlation semantics",
+      "decision": "Relevant correlation is residual correlation under the declared design. It is not simply raw expression correlation and depends on the model, set and contrast framework. allow.neg.cor must also be recorded when comparing installed defaults with historical camera behavior.",
+      "required_handling": "Save correlation estimates and complete design/argument settings. A median estimated correlation is not a universal correlation truth."
+    },
+    {
+      "item": "fry and roast",
+      "decision": "fry is an approximation to a self-contained rotation test, unlike competitive CAMERA. It asks whether genes in the set show signal for the contrast rather than whether the set is unusually ranked relative to the assayed background. It is complementary evidence, not recalibration of the same null and not an automatic replacement for CAMERA.",
+      "required_handling": "Keep method and null labels in all summaries; separate directional and mixed P values. For fry, document standardization and moderation arguments; avoid describing it as an actual finite-rotation run."
+    },
+    {
+      "item": "Within-arm discovery counts",
+      "decision": "983 versus zero BH discoveries cannot establish differential drug response. Conversely, the critique claim that the difference comes from sample size rather than biology is too strong: sample size, variance, effect sizes, complete-case selection and group composition can contribute.",
+      "required_handling": "Use direct effect contrasts with CI. Do not infer same effect or zero effect from nonsignificance."
+    },
+    {
+      "item": "Pooled response model",
+      "decision": "Nonsignificant arm by response interaction does not establish equivalent effects or justify pooling on that basis. delta_score ~ response + arm is permissible as a newly registered exploratory association model that imposes a common response slope. It is not proof that recovery is driven by response rather than drug.",
+      "required_handling": "Retain arm-specific estimates and interaction estimates with uncertainty. Record that pooling was suggested after 001B results. Keep clinical response as a post-treatment grouping; do not label delta-to-response associations prospective prediction or causal mechanism."
+    },
+    {
+      "item": "Participant identity",
+      "decision": "Agreement in XIST/Y-gene expression and high transcriptome correlation cannot establish individual identity. Sex concordance is coarse; tissue composition, inflammation, treatment and technical factors alter correlations. Adjacent source IDs and matching centers do not resolve identity.",
+      "required_handling": "Use such checks only to flag suspicious swaps/discordance. Do not recover ten pairs without authoritative linkage or sufficiently discriminating independent identity evidence. Retain 65 direct-ID pairs."
+    },
+    {
+      "item": "IFNG contrast sign",
+      "decision": "Critique difference -0.0069 and CI [-0.126,+0.140] use inconsistent contrast signs. Independently recomputed GLM minus placebo is +0.00693255 with that CI. Reverse contrast requires [-0.13974483,+0.12587972].",
+      "required_handling": "Use explicit contrast names, signed point estimates and matching CI endpoints."
+    },
+    {
+      "item": "Power and null results",
+      "decision": "A nonsignificant test does not prove low power, no information, no incremental effect, or equivalence. Large SE and wide CI justify uncertainty; they do not establish that the true effect is nonzero but undetectable. A negative interaction test is likewise not evidence of no interaction.",
+      "required_handling": "Describe compatible effect ranges and model limits. Do not call the drug comparison dead, the metabolic increment definitively absent, or underpowering almost certain based on nonsignificance alone."
+    },
+    {
+      "item": "Barcode branch interpretation",
+      "decision": "Changed discovery counts show sensitivity to an inferred nuisance factor. They do not by themselves demonstrate that a true processing batch exists or preferentially contaminates metabolic biology.",
+      "required_handling": "Report effect-direction/size stability and intervals alongside discovery counts. Preserve barcode as an inferred filename proxy."
+    },
+    {
+      "item": "Program independence and new information",
+      "decision": "A small squared Pearson correlation describes limited bivariate linear score association; it does not establish biological independence, separate cell-intrinsic programs, or incremental endpoint prediction. Selected mature-colonocyte genes remain exploratory when suggested after viewing this dataset.",
+      "required_handling": "Declare candidate derivation, compare established signatures before freezing, and use independent cohorts only after the program definition is fixed. Do not convert exploratory raw P values into confirmatory discoveries."
+    }
+  ],
+  "IFNG_numeric_evidence": {
+    "scope": "Verify critic-provided IFNG mean-score contrast only; not a new selected biological result",
+    "program": "HALLMARK_INTERFERON_GAMMA_RESPONSE",
+    "definition": "Per-patient arithmetic mean gene-level post-minus-baseline log2 expression across assayed set members",
+    "n_genes": 196,
+    "n_GLM": 42,
+    "n_Placebo": 23,
+    "mean_GLM": -0.13621368486992302,
+    "mean_Placebo": -0.14314623888219885,
+    "GLM_minus_Placebo": 0.006932554012275827,
+    "CI_GLM_minus_Placebo": [
+      -0.1258797183228184,
+      0.1397448263473701
+    ],
+    "P_Welch": 0.916877282272567,
+    "Placebo_minus_GLM": -0.006932554012275827,
+    "CI_Placebo_minus_GLM": [
+      -0.1397448263473701,
+      0.1258797183228184
+    ],
+    "method": "Welch two-sample t test on independent patient delta scores",
+    "input": "runs/001A_qc/discovery_preprocessed_v1.rds",
+    "set_input": "inputs/annotation/gene_sets_001B.rds"
+  },
+  "IFNG_numeric_file": {
+    "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/methods_001B2_IFNG_numeric_v1.json",
+    "sha256": "abea033d2676032ad7107331fd377e99f4f14ac0ebfd050a47276eb236eb16b1"
+  },
+  "next_review": "Await 001B2 calibration and 001C patient-program artifacts for independent numerical review; no scientific production code modified by this reviewer.",
+  "production_changes_made": false
+}

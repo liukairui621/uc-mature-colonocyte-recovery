@@ -1,0 +1,18 @@
+{
+  "scope": "Verify critic-provided IFNG mean-score contrast only; not a new selected biological result",
+  "program": "HALLMARK_INTERFERON_GAMMA_RESPONSE",
+  "definition": "Per-patient arithmetic mean gene-level post-minus-baseline log2 expression across assayed set members",
+  "n_genes": 196,
+  "n_GLM": 42,
+  "n_Placebo": 23,
+  "mean_GLM": -0.13621368486992302,
+  "mean_Placebo": -0.14314623888219885,
+  "GLM_minus_Placebo": 0.0069325540122758267,
+  "CI_GLM_minus_Placebo": [-0.12587971832281841, 0.13974482634737009],
+  "P_Welch": 0.91687728227256704,
+  "Placebo_minus_GLM": -0.0069325540122758267,
+  "CI_Placebo_minus_GLM": [-0.13974482634737009, 0.12587971832281841],
+  "method": "Welch two-sample t test on independent patient delta scores",
+  "input": "runs/001A_qc/discovery_preprocessed_v1.rds",
+  "set_input": "inputs/annotation/gene_sets_001B.rds"
+}

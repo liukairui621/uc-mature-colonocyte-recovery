@@ -1,0 +1,582 @@
+{
+  "status": "COMPLETE",
+  "scores_max_errors": {
+    "all_sample": 1.0658141036401503e-14,
+    "baseline": 1.0658141036401503e-14,
+    "post": 8.8817841970012523e-15,
+    "delta": 1.2434497875801753e-14
+  },
+  "membership_all_weights_one": true,
+  "candidate_members": ["AQP8", "HMGCS2", "GUCA2A", "CA2", "SLC26A3", "MS4A12"],
+  "n_subjects": 65,
+  "n_programs": 33,
+  "n_001C_OLS_models": 237,
+  "max_001C_OLS_error": 3.3861802251067274e-14,
+  "n_001C2_OLS_models": 21,
+  "max_001C2_OLS_error": 1.3489209749195652e-14,
+  "candidate_OLS_recomputed": {
+    "001C response_arm_adjusted": {
+      "estimate": 0.68581246995192335,
+      "se": 0.27140165353124007,
+      "lower": 0.14328829486721306,
+      "upper": 1.2283366450366335,
+      "p": 0.014071873942704025
+    },
+    "001C response_baseline_adjusted": {
+      "estimate": 0.89332722977680656,
+      "se": 0.22931373664901047,
+      "lower": 0.43463146179983941,
+      "upper": 1.3520229977537737,
+      "p": 0.00024906231107228152
+    },
+    "001C response_barcode_adjusted": {
+      "estimate": 0.64435185493527303,
+      "se": 0.27694133569676771,
+      "lower": 0.089993541188517989,
+      "upper": 1.1987101686820281,
+      "p": 0.023497015472695677
+    },
+    "001C arm_response_interaction": {
+      "estimate": 0.51028826388888748,
+      "se": 0.57535504144063065,
+      "lower": -0.64020524672153822,
+      "upper": 1.6607817744993132,
+      "p": 0.37861070429970967
+    },
+    "001C Placebo_response_difference": {
+      "estimate": 0.3472558333333341,
+      "se": 0.52177200151752445,
+      "lower": -0.73782844481378185,
+      "upper": 1.4323401114804502,
+      "p": 0.5129547703511157
+    },
+    "001C golimumab_response_difference": {
+      "estimate": 0.85754409722222213,
+      "se": 0.31207860621463868,
+      "lower": 0.2268097063607335,
+      "upper": 1.4882784880837108,
+      "p": 0.0089539825204934011
+    },
+    "001C arm_baseline_adjusted": {
+      "estimate": -0.020567797361933069,
+      "se": 0.25788082729121309,
+      "lower": -0.53623238173144927,
+      "upper": 0.49509678700758314,
+      "p": 0.93669161909323284
+    },
+    "001C response_plus_inflammation": {
+      "estimate": 0.62513071006613208,
+      "se": 0.21865383122435739,
+      "lower": 0.18760540438490098,
+      "upper": 1.0626560157473632,
+      "p": 0.0058654955305322068
+    },
+    "001C response_plus_epithelial_proxy": {
+      "estimate": 0.85617213201982345,
+      "se": 0.23206825742352968,
+      "lower": 0.39180462151434242,
+      "upper": 1.3205396425253044,
+      "p": 0.00049203158790602788
+    },
+    "001C response_plus_both": {
+      "estimate": 0.5926524443128387,
+      "se": 0.22068248313591898,
+      "lower": 0.15090845937508357,
+      "upper": 1.0343964292505938,
+      "p": 0.0094275536955233576
+    },
+    "001C2 common_baseline": {
+      "estimate": 0.87352424416608421,
+      "se": 0.23457009898451273,
+      "lower": 0.40447234190205517,
+      "upper": 1.3425761464301131,
+      "p": 0.00043036487312193101
+    },
+    "001C2 common_baseline_inflammation": {
+      "estimate": 0.60620711350823198,
+      "se": 0.22559228659202685,
+      "lower": 0.15495535397498406,
+      "upper": 1.05745887304148,
+      "p": 0.00931001046726441
+    },
+    "001C2 common_baseline_inflammation_epithelial": {
+      "estimate": 0.5766990682505938,
+      "se": 0.2282584112112663,
+      "lower": 0.11995504240707888,
+      "upper": 1.0334430940941086,
+      "p": 0.014222397270345943
+    },
+    "001C2 common_baseline_inflammation_barcode": {
+      "estimate": 0.53401891898950304,
+      "se": 0.22173813584314886,
+      "lower": 0.089824056347086401,
+      "upper": 0.97821378163191963,
+      "p": 0.019342322156784088
+    },
+    "001C2 common_baseline_inflammation_MARS_TableS1_11": {
+      "estimate": 0.3721727985609975,
+      "se": 0.14846117724451685,
+      "lower": 0.073828893095361448,
+      "upper": 0.67051670402663355,
+      "p": 0.01554671455665421
+    },
+    "001C2 common_baseline_inflammation_MARS_v74_11": {
+      "estimate": 0.36288222546094312,
+      "se": 0.14792427619043258,
+      "lower": 0.065617263058383446,
+      "upper": 0.66014718786350279,
+      "p": 0.017765706537228306
+    },
+    "001C2 candidate_conditioned_on_CT_program": {
+      "estimate": 0.20946073747448002,
+      "se": 0.081916004954741828,
+      "lower": 0.045488038125245545,
+      "upper": 0.37343343682371449,
+      "p": 0.013195891273036862
+    }
+  },
+  "candidate_CT_correlation": {
+    "r": 0.92872218998839773,
+    "CI": [0.88537289155191412, 0.95605986324783909],
+    "P": 7.6852626482250937e-29,
+    "max_error": 8.8817841970012523e-16,
+    "shared_genes": ["AQP8", "GUCA2A", "SLC26A3", "MS4A12"]
+  },
+  "logistic_recomputed": {
+    "001C MATURE_COLONOCYTE6_EXPLORATORY arm_inflammation": {
+      "beta": 0.46764056393751569,
+      "se": 0.30684511119516006,
+      "LRT_p": 0.11613727172561482,
+      "OR_SD": 1.6779227826424747,
+      "OR_CI": [0.86239413605305426, 3.264661419656802],
+      "all_values_max_error": 1.7910147187549796e-07,
+      "converged": true
+    },
+    "001C MATURE_COLONOCYTE6_EXPLORATORY arm_inflammation_baseline": {
+      "beta": 0.93063888735510203,
+      "se": 0.37452556617685717,
+      "LRT_p": 0.0071597543169548989,
+      "OR_SD": 2.8009969993405104,
+      "OR_CI": [1.2430468310397977, 6.3115757141279882],
+      "all_values_max_error": 6.3375476668348085e-05,
+      "converged": true
+    },
+    "001C HALLMARK_OXIDATIVE_PHOSPHORYLATION arm_inflammation": {
+      "beta": 1.8997168696948201,
+      "se": 1.7193310388249674,
+      "LRT_p": 0.2572915248869006,
+      "OR_SD": 1.3810295294155965,
+      "OR_CI": [0.77893800115317402, 2.4485165164548377],
+      "all_values_max_error": 9.9421727295379014e-08,
+      "converged": true
+    },
+    "001C HALLMARK_OXIDATIVE_PHOSPHORYLATION arm_inflammation_baseline": {
+      "beta": 5.8233352282087152,
+      "se": 2.3587974324506917,
+      "LRT_p": 0.0079684667060885422,
+      "OR_SD": 2.6901343608940391,
+      "OR_CI": [1.2262401077942171, 5.9016360936688894],
+      "all_values_max_error": 5.3013613996455433e-06,
+      "converged": true
+    },
+    "001C2 MATURE_COLONOCYTE6_EXPLORATORY common_covariate": {
+      "beta": 0.84040257026938259,
+      "se": 0.36232621320793174,
+      "LRT_p": 0.012597484360588482,
+      "OR_SD": 2.534781067929988,
+      "OR_CI": [1.1550686887175161, 5.5625393754462849],
+      "all_values_max_error": 1.0917507848873242e-06,
+      "converged": true
+    },
+    "001C2 UC_Maciag2024_TableS2_CT_Colonocytes_reported_marker_mean_proxy common_covariate": {
+      "beta": 1.2724818085012335,
+      "se": 0.73038006905692221,
+      "LRT_p": 0.070378602686664224,
+      "OR_SD": 1.9030680515627532,
+      "OR_CI": [0.92272725781473131, 3.9249604671438312],
+      "all_values_max_error": 2.5394035096937273e-07,
+      "converged": true
+    },
+    "001C2 UC_IA13_JAKSTAT_2024_gene_mean_proxy common_covariate": {
+      "beta": -0.578122465720039,
+      "se": 0.4317936983067725,
+      "LRT_p": 0.17500725394709793,
+      "OR_SD": 0.62197050980183688,
+      "OR_CI": [0.31036602008440517, 1.2464229007993604],
+      "all_values_max_error": 7.0336580337837518e-08,
+      "converged": true
+    },
+    "001C2 HALLMARK_OXIDATIVE_PHOSPHORYLATION common_covariate": {
+      "beta": 5.3135427102251382,
+      "se": 2.2934723467852973,
+      "LRT_p": 0.012488726292770938,
+      "OR_SD": 2.4668926334186949,
+      "OR_CI": [1.1492143036437719, 5.2954085635030497],
+      "all_values_max_error": 1.1519297498097103e-06,
+      "converged": true
+    }
+  },
+  "BH_family_sizes": {
+    "001C response_arm_adjusted focused_and_reference_programs": 83,
+    "001C response_arm_adjusted MARS_MSigDB74": 77,
+    "001C response_arm_adjusted MARS_TableS1": 77,
+    "001C response_baseline_adjusted focused_and_reference_programs": 83,
+    "001C response_baseline_adjusted MARS_MSigDB74": 77,
+    "001C response_baseline_adjusted MARS_TableS1": 77,
+    "001C response_barcode_adjusted focused_and_reference_programs": 83,
+    "001C response_barcode_adjusted MARS_MSigDB74": 77,
+    "001C response_barcode_adjusted MARS_TableS1": 77,
+    "001C arm_response_interaction focused_and_reference_programs": 83,
+    "001C arm_response_interaction MARS_MSigDB74": 77,
+    "001C arm_response_interaction MARS_TableS1": 77,
+    "001C Placebo_response_difference focused_and_reference_programs": 83,
+    "001C Placebo_response_difference MARS_MSigDB74": 77,
+    "001C Placebo_response_difference MARS_TableS1": 77,
+    "001C golimumab_response_difference focused_and_reference_programs": 83,
+    "001C golimumab_response_difference MARS_MSigDB74": 77,
+    "001C golimumab_response_difference MARS_TableS1": 77,
+    "001C arm_baseline_adjusted focused_and_reference_programs": 83,
+    "001C arm_baseline_adjusted MARS_MSigDB74": 77,
+    "001C arm_baseline_adjusted MARS_TableS1": 77,
+    "001C response_plus_inflammation focused_and_reference_programs": 83,
+    "001C response_plus_inflammation MARS_MSigDB74": 77,
+    "001C response_plus_inflammation MARS_TableS1": 77,
+    "001C response_plus_epithelial_proxy focused_and_reference_programs": 83,
+    "001C response_plus_epithelial_proxy MARS_MSigDB74": 77,
+    "001C response_plus_epithelial_proxy MARS_TableS1": 77,
+    "001C response_plus_both focused_and_reference_programs": 83,
+    "001C response_plus_both MARS_MSigDB74": 77,
+    "001C response_plus_both MARS_TableS1": 77,
+    "001C2 common_baseline": 21,
+    "001C2 common_baseline_inflammation": 21,
+    "001C2 common_baseline_inflammation_epithelial": 21,
+    "001C2 common_baseline_inflammation_barcode": 21,
+    "001C2 common_baseline_inflammation_MARS_TableS1_11": 21,
+    "001C2 common_baseline_inflammation_MARS_v74_11": 21,
+    "001C2 candidate_conditioned_on_CT_program": 21
+  },
+  "BH_max_errors": {
+    "001C response_arm_adjusted focused_and_reference_programs": 0.72130543144490789,
+    "001C response_arm_adjusted MARS_MSigDB74": 0.3636912773295421,
+    "001C response_arm_adjusted MARS_TableS1": 0.37016257117145551,
+    "001C response_baseline_adjusted focused_and_reference_programs": 0.72130543144490789,
+    "001C response_baseline_adjusted MARS_MSigDB74": 0.3636912773295421,
+    "001C response_baseline_adjusted MARS_TableS1": 0.37016257117145551,
+    "001C response_barcode_adjusted focused_and_reference_programs": 0.72130543144490789,
+    "001C response_barcode_adjusted MARS_MSigDB74": 0.3636912773295421,
+    "001C response_barcode_adjusted MARS_TableS1": 0.37016257117145551,
+    "001C arm_response_interaction focused_and_reference_programs": 0.72130543144490789,
+    "001C arm_response_interaction MARS_MSigDB74": 0.3636912773295421,
+    "001C arm_response_interaction MARS_TableS1": 0.37016257117145551,
+    "001C Placebo_response_difference focused_and_reference_programs": 0.72130543144490789,
+    "001C Placebo_response_difference MARS_MSigDB74": 0.3636912773295421,
+    "001C Placebo_response_difference MARS_TableS1": 0.37016257117145551,
+    "001C golimumab_response_difference focused_and_reference_programs": 0.72130543144490789,
+    "001C golimumab_response_difference MARS_MSigDB74": 0.3636912773295421,
+    "001C golimumab_response_difference MARS_TableS1": 0.37016257117145551,
+    "001C arm_baseline_adjusted focused_and_reference_programs": 0.72130543144490789,
+    "001C arm_baseline_adjusted MARS_MSigDB74": 0.3636912773295421,
+    "001C arm_baseline_adjusted MARS_TableS1": 0.37016257117145551,
+    "001C response_plus_inflammation focused_and_reference_programs": 0.72130543144490789,
+    "001C response_plus_inflammation MARS_MSigDB74": 0.3636912773295421,
+    "001C response_plus_inflammation MARS_TableS1": 0.37016257117145551,
+    "001C response_plus_epithelial_proxy focused_and_reference_programs": 0.72130543144490789,
+    "001C response_plus_epithelial_proxy MARS_MSigDB74": 0.3636912773295421,
+    "001C response_plus_epithelial_proxy MARS_TableS1": 0.37016257117145551,
+    "001C response_plus_both focused_and_reference_programs": 0.72130543144490789,
+    "001C response_plus_both MARS_MSigDB74": 0.3636912773295421,
+    "001C response_plus_both MARS_TableS1": 0.37016257117145551,
+    "001C2 common_baseline": 0.03675041209788895,
+    "001C2 common_baseline_inflammation": 0.03675041209788895,
+    "001C2 common_baseline_inflammation_epithelial": 0.03675041209788895,
+    "001C2 common_baseline_inflammation_barcode": 0.03675041209788895,
+    "001C2 common_baseline_inflammation_MARS_TableS1_11": 0.03675041209788895,
+    "001C2 common_baseline_inflammation_MARS_v74_11": 0.03675041209788895,
+    "001C2 candidate_conditioned_on_CT_program": 0.03675041209788895,
+    "001C_logistic arm_inflammation": 0.077424847817074011,
+    "001C_logistic arm_inflammation_baseline": 0.077424847817074011,
+    "001C2_logistic": 9.7144514654701197e-17,
+    "HC3 common_baseline": 0.015182292349544824,
+    "HC3 common_baseline_inflammation": 0.015182292349544824
+  },
+  "HC3_recomputed": {
+    "MATURE_COLONOCYTE6_EXPLORATORY common_baseline": {
+      "estimate": 0.87352424416608421,
+      "HC3_se": 0.24719118334096848,
+      "CI": [0.37923492395467556, 1.3678135643774929],
+      "P": 0.00078785089165369086,
+      "condition_standardized": 1.3192486399787866,
+      "max_error": 3.3306690738754696e-15
+    },
+    "MATURE_COLONOCYTE6_EXPLORATORY common_baseline_inflammation": {
+      "estimate": 0.60620711350823198,
+      "HC3_se": 0.24219210589607912,
+      "CI": [0.12175077157525799, 1.090663455441206],
+      "P": 0.015055073497636153,
+      "condition_standardized": 1.5935404999064471,
+      "max_error": 7.1054273576010019e-15
+    },
+    "UC_Maciag2024_TableS2_CT_Colonocytes_reported_marker_mean_proxy common_baseline": {
+      "estimate": 0.29463988693009602,
+      "HC3_se": 0.10947489214248869,
+      "CI": [0.075731310637198485, 0.51354846322299352],
+      "P": 0.0091698551589481404,
+      "condition_standardized": 1.3317933965039404,
+      "max_error": 1.0630385460785874e-14
+    },
+    "UC_Maciag2024_TableS2_CT_Colonocytes_reported_marker_mean_proxy common_baseline_inflammation": {
+      "estimate": 0.20155007067987862,
+      "HC3_se": 0.11306381376225789,
+      "CI": [-0.024611229737391715, 0.42771137109714896],
+      "P": 0.079707034835114113,
+      "condition_standardized": 1.5829345596846416,
+      "max_error": 1.0713652187632761e-14
+    },
+    "UC_IA13_JAKSTAT_2024_gene_mean_proxy common_baseline": {
+      "estimate": -0.41031999632692417,
+      "HC3_se": 0.18573536371243876,
+      "CI": [-0.78172081017392991, -0.038919182479918435],
+      "P": 0.030928556369481885,
+      "condition_standardized": 1.289348289427809,
+      "max_error": 2.1038726316646716e-14
+    },
+    "UC_IA13_JAKSTAT_2024_gene_mean_proxy common_baseline_inflammation": {
+      "estimate": -0.23708237399913373,
+      "HC3_se": 0.19503634066488956,
+      "CI": [-0.62721314144474349, 0.15304839344647603],
+      "P": 0.22890612286323525,
+      "condition_standardized": 1.6306546423948116,
+      "max_error": 1.1546319456101628e-14
+    },
+    "HALLMARK_OXIDATIVE_PHOSPHORYLATION common_baseline": {
+      "estimate": 0.10338427807680668,
+      "HC3_se": 0.035633903597990103,
+      "CI": [0.032129884016829646, 0.17463867213678372],
+      "P": 0.0051628675483872677,
+      "condition_standardized": 1.3160658541009946,
+      "max_error": 2.0050627824730327e-13
+    },
+    "HALLMARK_OXIDATIVE_PHOSPHORYLATION common_baseline_inflammation": {
+      "estimate": 0.088208165174892675,
+      "HC3_se": 0.03758249077275029,
+      "CI": [0.013031990736289259, 0.16338433961349608],
+      "P": 0.022240651128605016,
+      "condition_standardized": 1.51427082657057,
+      "max_error": 3.219646771412954e-14
+    }
+  },
+  "candidate_leave_one_patient_out": {
+    "001C": {
+      "max_error": 9.9920072216264089e-16,
+      "estimate_range": [0.60637395429064267, 0.76712681112548531],
+      "all_same_positive_sign": true
+    },
+    "001C2": {
+      "max_error": 4.3298697960381105e-15,
+      "estimate_range": [0.52084043247112766, 0.6918807977144944],
+      "all_same_positive_sign": true
+    }
+  },
+  "coverage_identical": true,
+  "coverage": [
+    {
+      "program": "EPITHELIAL_ABUNDANCE_PROXY4",
+      "source": 4,
+      "measured": 4,
+      "fraction": 1
+    },
+    {
+      "program": "HALLMARK_FATTY_ACID_METABOLISM",
+      "source": 158,
+      "measured": 155,
+      "fraction": 0.98101265822784811
+    },
+    {
+      "program": "HALLMARK_INFLAMMATORY_RESPONSE",
+      "source": 200,
+      "measured": 199,
+      "fraction": 0.995
+    },
+    {
+      "program": "HALLMARK_INTERFERON_GAMMA_RESPONSE",
+      "source": 200,
+      "measured": 196,
+      "fraction": 0.97999999999999998
+    },
+    {
+      "program": "HALLMARK_OXIDATIVE_PHOSPHORYLATION",
+      "source": 200,
+      "measured": 184,
+      "fraction": 0.92000000000000004
+    },
+    {
+      "program": "IBrD_unweighted_gene_mean_proxy",
+      "source": 81,
+      "measured": 15,
+      "fraction": 0.18518518518518517
+    },
+    {
+      "program": "MARS_MSigDB74_ASPARTATE_AND_ASPARAGINE_METABOLISM",
+      "source": 11,
+      "measured": 11,
+      "fraction": 1
+    },
+    {
+      "program": "MARS_MSigDB74_BRANCHED_CHAIN_AMINO_ACID_CATABOLISM",
+      "source": 21,
+      "measured": 21,
+      "fraction": 1
+    },
+    {
+      "program": "MARS_MSigDB74_INTERLEUKIN_4_AND_INTERLEUKIN_13_SIGNALING",
+      "source": 111,
+      "measured": 108,
+      "fraction": 0.97297297297297303
+    },
+    {
+      "program": "MARS_MSigDB74_PEROXISOMAL_PROTEIN_IMPORT",
+      "source": 63,
+      "measured": 61,
+      "fraction": 0.96825396825396826
+    },
+    {
+      "program": "MARS_MSigDB74_PLATELET_ADHESION_TO_EXPOSED_COLLAGEN",
+      "source": 15,
+      "measured": 14,
+      "fraction": 0.93333333333333335
+    },
+    {
+      "program": "MARS_MSigDB74_POTENTIAL_THERAPEUTICS_FOR_SARS",
+      "source": 81,
+      "measured": 81,
+      "fraction": 1
+    },
+    {
+      "program": "MARS_MSigDB74_REGULATION_OF_FZD_BY_UBIQUITINATION",
+      "source": 21,
+      "measured": 20,
+      "fraction": 0.95238095238095233
+    },
+    {
+      "program": "MARS_MSigDB74_REGULATION_OF_IFNA_SIGNALING",
+      "source": 26,
+      "measured": 24,
+      "fraction": 0.92307692307692313
+    },
+    {
+      "program": "MARS_MSigDB74_SULFUR_AMINO_ACID_METABOLISM",
+      "source": 28,
+      "measured": 26,
+      "fraction": 0.9285714285714286
+    },
+    {
+      "program": "MARS_MSigDB74_TRYPTOPHAN_CATABOLISM",
+      "source": 14,
+      "measured": 14,
+      "fraction": 1
+    },
+    {
+      "program": "MARS_MSigDB74_UNFOLDED_PROTEIN_RESPONSE_UPR",
+      "source": 92,
+      "measured": 90,
+      "fraction": 0.97826086956521741
+    },
+    {
+      "program": "MARS_TableS1_column_ASPARTATE_AND_ASPARAGINE_METABOLISM",
+      "source": 13,
+      "measured": 13,
+      "fraction": 1
+    },
+    {
+      "program": "MARS_TableS1_column_BRANCHED_CHAIN_AMINO_ACID_CATABOLISM",
+      "source": 21,
+      "measured": 21,
+      "fraction": 1
+    },
+    {
+      "program": "MARS_TableS1_column_INTERLEUKIN_4_AND_INTERLEUKIN_13_SIGNALING",
+      "source": 110,
+      "measured": 107,
+      "fraction": 0.97272727272727277
+    },
+    {
+      "program": "MARS_TableS1_column_PEROXISOMAL_PROTEIN_IMPORT",
+      "source": 62,
+      "measured": 60,
+      "fraction": 0.967741935483871
+    },
+    {
+      "program": "MARS_TableS1_column_PLATELET_ADHESION_TO_EXPOSED_COLLAGEN",
+      "source": 15,
+      "measured": 14,
+      "fraction": 0.93333333333333335
+    },
+    {
+      "program": "MARS_TableS1_column_POTENTIAL_THERAPEUTICS_FOR_SARS",
+      "source": 35,
+      "measured": 35,
+      "fraction": 1
+    },
+    {
+      "program": "MARS_TableS1_column_REGULATION_OF_FZD_BY_UBIQUITINATION",
+      "source": 22,
+      "measured": 21,
+      "fraction": 0.95454545454545459
+    },
+    {
+      "program": "MARS_TableS1_column_REGULATION_OF_IFNA_SIGNALING",
+      "source": 27,
+      "measured": 25,
+      "fraction": 0.92592592592592593
+    },
+    {
+      "program": "MARS_TableS1_column_SULFUR_AMINO_ACID_METABOLISM",
+      "source": 28,
+      "measured": 26,
+      "fraction": 0.9285714285714286
+    },
+    {
+      "program": "MARS_TableS1_column_TRYPTOPHAN_CATABOLISM",
+      "source": 14,
+      "measured": 14,
+      "fraction": 1
+    },
+    {
+      "program": "MARS_TableS1_column_UNFOLDED_PROTEIN_RESPONSE_UPR",
+      "source": 92,
+      "measured": 90,
+      "fraction": 0.97826086956521741
+    },
+    {
+      "program": "MATURE_COLONOCYTE6_EXPLORATORY",
+      "source": 6,
+      "measured": 6,
+      "fraction": 1
+    },
+    {
+      "program": "UC_differentiation4_literature_proxy",
+      "source": 4,
+      "measured": 4,
+      "fraction": 1
+    },
+    {
+      "program": "UC_IA13_JAKSTAT_2024_gene_mean_proxy",
+      "source": 13,
+      "measured": 13,
+      "fraction": 1
+    },
+    {
+      "program": "UC_Maciag2024_TableS2_Colonocytes_reported_marker_mean_proxy",
+      "source": 20,
+      "measured": 20,
+      "fraction": 1
+    },
+    {
+      "program": "UC_Maciag2024_TableS2_CT_Colonocytes_reported_marker_mean_proxy",
+      "source": 20,
+      "measured": 18,
+      "fraction": 0.90000000000000002
+    }
+  ],
+  "session": ["R version 4.3.3 (2024-02-29)", "Platform: x86_64-pc-linux-gnu (64-bit)", "Running under: Ubuntu 24.04.4 LTS", "", "Matrix products: default", "BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.12.0 ", "LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.12.0", "", "locale:", " [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C               LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8     LC_MONETARY=en_US.UTF-8   ", " [6] LC_MESSAGES=en_US.UTF-8    LC_PAPER=en_US.UTF-8       LC_NAME=C                  LC_ADDRESS=C               LC_TELEPHONE=C            ", "[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       ", "", "time zone: Asia/Shanghai", "tzcode source: system (glibc)", "", "attached base packages:", "[1] stats     graphics  grDevices datasets  utils     methods   base     ", "", "other attached packages:", "[1] jsonlite_2.0.0      data.table_1.18.2.1", "", "loaded via a namespace (and not attached):", "[1] BiocManager_1.30.27 compiler_4.3.3      tools_4.3.3         renv_1.2.1         "]
+}

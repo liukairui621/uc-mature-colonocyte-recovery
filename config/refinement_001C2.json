@@ -1,0 +1,14 @@
+{
+  "created_utc": "2026-09-10T14:36:55.525713+00:00",
+  "trigger": "001C candidate highly overlaps existing CT colonocyte state; compare conditional associations before deciding validation object",
+  "stage": "exploratory 001C2",
+  "programs": [
+    "MATURE_COLONOCYTE6_EXPLORATORY",
+    "UC_Maciag2024_TableS2_CT_Colonocytes_reported_marker_mean_proxy",
+    "UC_IA13_JAKSTAT_2024_gene_mean_proxy",
+    "HALLMARK_OXIDATIVE_PHOSPHORYLATION"
+  ],
+  "score_change_and_baseline_common_model": "Use baseline own score because observed in all cohorts; Mayo0 retained as discovery sensitivity only",
+  "comparators": "MARS 11 proxies both printed and v7.4; IBrD 15/81 partial diagnostic excluded formal incremental claim",
+  "no_validation_expression_used": true
+}

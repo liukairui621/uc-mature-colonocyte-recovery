@@ -1,0 +1,180 @@
+{
+  "status": "COMPLETE",
+  "current_directory_only": "runs/001B2_calibration; deprecated export_v1 never read",
+  "Hallmark_patient_delta_max_error": 5.5511151231257827e-16,
+  "effects_checked": 350,
+  "effect_CI_max_error": 7.7715611723760958e-16,
+  "patient_effect_BH_max_error": 1.2212453270876722e-15,
+  "pooled_gene_model_checks": {
+    "primary_paired": {
+      "design_max_error": 0,
+      "rank": 3,
+      "coefficient_max_error": 5.1070259132757201e-15,
+      "sigma_max_error": 4.4408920985006262e-16,
+      "P_max_error": 9.4368957093138306e-16,
+      "CI_max_error": 5.1070259132757201e-15,
+      "BH_max_error": 3.4416913763379853e-15,
+      "fdr05": 0
+    },
+    "barcode_sensitivity": {
+      "design_max_error": 0,
+      "rank": 7,
+      "coefficient_max_error": 4.6629367034256575e-15,
+      "sigma_max_error": 4.4408920985006262e-16,
+      "P_max_error": 8.3266726846886741e-16,
+      "CI_max_error": 5.1070259132757201e-15,
+      "BH_max_error": 4.2188474935755949e-15,
+      "fdr05": 0
+    }
+  },
+  "method_repeat_checks": {
+    "primary_paired camera_fixed001 GLM_change": {
+      "P_max_error": 4.9960036108132044e-16,
+      "FDR_max_error": 5.5511151231257827e-16,
+      "direction_identical": true,
+      "FDR05": 17,
+      "correlation_max_error": {},
+      "mixed_P_max_error": {}
+    },
+    "primary_paired camera_fixed001 pooled_response_arm_adjusted": {
+      "P_max_error": 4.5796699765787707e-16,
+      "FDR_max_error": 4.4408920985006262e-16,
+      "direction_identical": true,
+      "FDR05": 14,
+      "correlation_max_error": {},
+      "mixed_P_max_error": {}
+    },
+    "primary_paired camera_estimated GLM_change": {
+      "P_max_error": 4.9960036108132044e-16,
+      "FDR_max_error": 4.4408920985006262e-16,
+      "direction_identical": true,
+      "FDR05": 0,
+      "correlation_max_error": 4.7184478546569153e-16,
+      "mixed_P_max_error": {}
+    },
+    "primary_paired camera_estimated pooled_response_arm_adjusted": {
+      "P_max_error": 5.5511151231257827e-16,
+      "FDR_max_error": 2.2204460492503131e-16,
+      "direction_identical": true,
+      "FDR05": 0,
+      "correlation_max_error": 4.4408920985006262e-16,
+      "mixed_P_max_error": {}
+    },
+    "primary_paired camera_ranks001 GLM_change": {
+      "P_max_error": 5.5511151231257827e-16,
+      "FDR_max_error": 5.5511151231257827e-16,
+      "direction_identical": true,
+      "FDR05": 15,
+      "correlation_max_error": {},
+      "mixed_P_max_error": {}
+    },
+    "primary_paired camera_ranks001 pooled_response_arm_adjusted": {
+      "P_max_error": 5.5511151231257827e-16,
+      "FDR_max_error": 5.5511151231257827e-16,
+      "direction_identical": true,
+      "FDR05": 14,
+      "correlation_max_error": {},
+      "mixed_P_max_error": {}
+    },
+    "primary_paired fry GLM_change": {
+      "P_max_error": 5.5511151231257827e-16,
+      "FDR_max_error": 4.4408920985006262e-16,
+      "direction_identical": true,
+      "FDR05": 7,
+      "correlation_max_error": {},
+      "mixed_P_max_error": 4.9960036108132044e-16
+    },
+    "primary_paired fry pooled_response_arm_adjusted": {
+      "P_max_error": 5.5511151231257827e-16,
+      "FDR_max_error": 5.5511151231257827e-16,
+      "direction_identical": true,
+      "FDR05": 0,
+      "correlation_max_error": {},
+      "mixed_P_max_error": 4.9960036108132044e-16
+    },
+    "barcode_sensitivity camera_fixed001 GLM_change": {
+      "P_max_error": 4.7184478546569153e-16,
+      "FDR_max_error": 5.5511151231257827e-16,
+      "direction_identical": true,
+      "FDR05": 14,
+      "correlation_max_error": {},
+      "mixed_P_max_error": {}
+    },
+    "barcode_sensitivity camera_fixed001 pooled_response_arm_adjusted": {
+      "P_max_error": 5.5511151231257827e-16,
+      "FDR_max_error": 4.9960036108132044e-16,
+      "direction_identical": true,
+      "FDR05": 19,
+      "correlation_max_error": {},
+      "mixed_P_max_error": {}
+    },
+    "barcode_sensitivity camera_estimated GLM_change": {
+      "P_max_error": 5.5511151231257827e-16,
+      "FDR_max_error": 4.4408920985006262e-16,
+      "direction_identical": true,
+      "FDR05": 0,
+      "correlation_max_error": 5.2735593669694936e-16,
+      "mixed_P_max_error": {}
+    },
+    "barcode_sensitivity camera_estimated pooled_response_arm_adjusted": {
+      "P_max_error": 5.5511151231257827e-16,
+      "FDR_max_error": 4.4408920985006262e-16,
+      "direction_identical": true,
+      "FDR05": 0,
+      "correlation_max_error": 3.8857805861880479e-16,
+      "mixed_P_max_error": {}
+    },
+    "barcode_sensitivity camera_ranks001 GLM_change": {
+      "P_max_error": 4.9960036108132044e-16,
+      "FDR_max_error": 6.6613381477509392e-16,
+      "direction_identical": true,
+      "FDR05": 13,
+      "correlation_max_error": {},
+      "mixed_P_max_error": {}
+    },
+    "barcode_sensitivity camera_ranks001 pooled_response_arm_adjusted": {
+      "P_max_error": 4.4408920985006262e-16,
+      "FDR_max_error": 5.5511151231257827e-16,
+      "direction_identical": true,
+      "FDR05": 19,
+      "correlation_max_error": {},
+      "mixed_P_max_error": {}
+    },
+    "barcode_sensitivity fry GLM_change": {
+      "P_max_error": 5.5511151231257827e-16,
+      "FDR_max_error": 5.5511151231257827e-16,
+      "direction_identical": true,
+      "FDR05": 3,
+      "correlation_max_error": {},
+      "mixed_P_max_error": 4.8572257327350599e-16
+    },
+    "barcode_sensitivity fry pooled_response_arm_adjusted": {
+      "P_max_error": 5.5511151231257827e-16,
+      "FDR_max_error": 4.4408920985006262e-16,
+      "direction_identical": true,
+      "FDR05": 0,
+      "correlation_max_error": {},
+      "mixed_P_max_error": 4.9960036108132044e-16
+    }
+  },
+  "method_summary_count_mismatches": [],
+  "all_test_BH_max_error": 1.7208456881689926e-15,
+  "five_contrast_BH_max_error": 2.55351295663786e-15,
+  "fry_mixed_BH_max_error": 1.0269562977782698e-15,
+  "identity": {
+    "all_pairwise_correlations_checked": 6525,
+    "correlation_max_error": 2.5202062658991053e-14,
+    "marker_max_error": 1.7763568394002505e-15,
+    "rank_mismatches": [],
+    "documented_pairs": 65,
+    "top_all": 12,
+    "top_same_arm": 15,
+    "top_same_center_arm": 52,
+    "declared_new_pairs": 0,
+    "known_vs_other_cor_ranges": {
+      "known": [0.93516074589360099, 0.99309975396336503],
+      "other": [0.87607167796020602, 0.99171750771670397]
+    }
+  },
+  "session": ["R version 4.3.3 (2024-02-29)", "Platform: x86_64-pc-linux-gnu (64-bit)", "Running under: Ubuntu 24.04.4 LTS", "", "Matrix products: default", "BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.12.0 ", "LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.12.0", "", "locale:", " [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C               LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8     LC_MONETARY=en_US.UTF-8   ", " [6] LC_MESSAGES=en_US.UTF-8    LC_PAPER=en_US.UTF-8       LC_NAME=C                  LC_ADDRESS=C               LC_TELEPHONE=C            ", "[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       ", "", "time zone: Asia/Shanghai", "tzcode source: system (glibc)", "", "attached base packages:", "[1] stats     graphics  grDevices datasets  utils     methods   base     ", "", "other attached packages:", "[1] limma_3.58.1        jsonlite_2.0.0      data.table_1.18.2.1", "", "loaded via a namespace (and not attached):", "[1] BiocManager_1.30.27 compiler_4.3.3      tools_4.3.3         renv_1.2.1          statmod_1.5.1      "]
+}
