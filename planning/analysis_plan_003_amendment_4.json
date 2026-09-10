@@ -1,0 +1,11 @@
+{
+  "amendment_id": "003-4",
+  "created_utc": "2026-09-10T22:39:39.041363+00:00",
+  "classification": "provenance-record correction only",
+  "correction": "The parent extractor hash typed into amendment 003-3 was not computed from the parent commit. The correct parent-commit hash is recorded here.",
+  "incorrect_value_in_amendment_003_3": "00273e8e7ca6f896f48fdab23a4276a370958219030c19040f3a1f0e5ec5c8e",
+  "correct_parent_commit_extractor_sha256": "e668fc78de559fe2ab6195f46f22de8767a461ef16bbc7d8bf5fd05d112e9a58",
+  "corrected_extractor_sha256": "e45186698145eafa239d26a5ae28217cf7f0ee806d77ce17c9149059093eef0d",
+  "results_viewed_before_correction": false,
+  "scientific_change": false
+}
