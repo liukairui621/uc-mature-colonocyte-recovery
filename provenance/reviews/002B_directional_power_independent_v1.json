@@ -1,0 +1,56 @@
+{
+  "review_id": "002B_directional_power_independent_v1",
+  "created_utc": "2026-09-10T17:08:25.234672+00:00",
+  "status": "REVIEWED",
+  "blocking_findings": [],
+  "relationship": "Addendum after main precision review was written; leaves that existing review unchanged.",
+  "inputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_precision_independent_v1.json",
+      "bytes": 19420,
+      "sha256": "da805b2b5d638e63683cc418bd16bb51f05b9203a520b4e627b13d927a6bacec"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_precision_numeric_independent_v1.json",
+      "bytes": 9361,
+      "sha256": "64f6142fe79c022635506dee6d92865dab5db22934badd136c451ce116c1c114"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/directional_power_002B.R",
+      "bytes": 1366,
+      "sha256": "2e511b6c5155c200a16b21c470c486fb294ad79bf2245db95217ca5be2d0307d"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/directional_support_power_audit.tsv",
+      "bytes": 549,
+      "sha256": "b80534a97d295f13726dc1f0fe172df771ea309a265517757f9bd259a6b24d20"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/directional_power_definition.json",
+      "bytes": 363,
+      "sha256": "fee9ad49cef75d2a9e6714f6926b19780d88dc50047579198c66af60e5797800"
+    }
+  ],
+  "checks": {
+    "scenario_rows": 7,
+    "max_absolute_probability_difference": 6.995515278163111e-13,
+    "max_absolute_MDE_difference": 6.66799948589869e-13,
+    "method": "Independent SciPy survival probabilities with noncentral-t symmetry and existing independently recomputed MDE roots."
+  },
+  "decision": "The new code and seven-row table correctly distinguish two-sided rejection from positive-direction support, and the definition JSON preserves the scenario-only interpretation. The terminology clarification in the main review is now explicitly implemented. Main precision and supportive-plan freeze recommendations remain unchanged.",
+  "key_values": {
+    "at_assumed_discovery_effect": {
+      "effect": 0.5994069272782647,
+      "two_sided_rejection_power": 0.27021800560908926,
+      "positive_support_probability": 0.269748348842876,
+      "negative_rejection_probability": 0.00046965676621325055
+    },
+    "MDE80_two_sided_rejection": 1.2481272139281687,
+    "MDE80_positive_support": 1.2481286882382256,
+    "at_zero_effect": {
+      "two_sided_rejection": 0.04999999999999998,
+      "positive_support": 0.02499999999999999
+    }
+  },
+  "scope": "No original precision table or frozen primary result was overwritten; no GSE73661 expression was read by the reviewer."
+}

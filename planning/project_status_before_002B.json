@@ -1,6 +1,6 @@
 {
   "created_utc": "2026-09-10T08:23:12.775089+00:00",
-  "current_phase": "002B precision audit, supportive-cohort pre-expression plan and single-cell asset verification in progress",
+  "current_phase": "002A GSE23597 completed and independently reviewed; prespecified primary support criterion not met",
   "discovery_cohort": "GSE92415",
   "candidate_frozen": true,
   "independent_validation_started": true,
@@ -9,8 +9,8 @@
     "/root/projects/UC_Treatment_Recovery/inputs/discovery/GSE92415_series_matrix.relay.txt.gz",
     "/root/projects/UC_Treatment_Recovery/inputs/validation/GSE23597_series_matrix.txt.gz"
   ],
-  "review_pending": true,
-  "updated_utc": "2026-09-10T17:07:57.140037+00:00",
+  "review_pending": false,
+  "updated_utc": "2026-09-10T15:49:48.982522+00:00",
   "stage_report": "/root/projects/UC_Treatment_Recovery/reports/Annotation_amendment_and_GSE23597_validation_20260910.md",
   "independent_review": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_validation_results_independent_v1.json",
   "signature_lock": "/root/projects/UC_Treatment_Recovery/signature_lock.json",
@@ -19,6 +19,5 @@
   "independent_validation_completed": true,
   "primary_validation_evaluable": true,
   "primary_validation_support": false,
-  "validation_expression_accessed": true,
-  "GSE73661_expression_accessed": false
+  "validation_expression_accessed": true
 }

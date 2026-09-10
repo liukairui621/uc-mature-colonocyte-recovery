@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_precision_recompute_v1.py", line 24, in <module>
+    info={'cohort':name,'n':n,'p_response':float(response.mean()),'df':df,'delta_SD':float(np.std(y,ddof=1)),'residual_sigma':sigma,'residual_sigma_lower':lo,'residual_sigma_upper':hi,'response_SST':sst,'residualized_response_SS':rss,'response_VIF':sst/rss,'SE':se,'estimate':float(beta[j]),'MDE80_plugin':mde(se,df),'MDE80_lower_sigma':mde(se*lo/sigma,df),'MDE80_upper_sigma':mde(se*hi/sigma,df)}
+                                                                                                                                                                                                                                                                                                                  ^^^^^^^^^^
+  File "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_precision_recompute_v1.py", line 13, in mde
+    return float(brentq(lambda e:fun(e,se,df)-.8,0,20*se,xtol=1e-12))
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/scipy/optimize/_zeros_py.py", line 846, in brentq
+    r = _zeros._brentq(f, a, b, xtol, rtol, maxiter, args, full_output, disp)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/scipy/optimize/_zeros_py.py", line 102, in f_raise
+    raise err
+ValueError: The function value at x=4.516390511629493 is NaN; solver cannot continue.

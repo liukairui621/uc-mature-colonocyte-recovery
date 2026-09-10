@@ -1,0 +1,137 @@
+{
+  "review_id": "002B_GSE73661_IFX_metadata_independent_v1",
+  "created_utc": "2026-09-10T16:57:39.447667+00:00",
+  "status": "REVIEWED",
+  "reviewer_role": "Independent metadata-only Reviewer Gate",
+  "blocking_findings": [],
+  "scope": "Only existing GSE73661 matrix header and sample registry read. No GSE73661 expression downloaded or accessed. Recommendations below are not a scientific-model freeze.",
+  "inputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/metadata/GSE73661.matrix_header.txt",
+      "bytes": 284310,
+      "sha256": "47f478d2b6d7387493ad6f5ad78368d17c20692d3c541d7124de5d4904876980"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_metadata/sample_registry_v1.tsv",
+      "bytes": 82956,
+      "sha256": "51fb54b7d978c8d5ed025c00a04df69017f71c4875eccc227a5b17e5c6936ba5"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/GSE73661_IFX_pairs_metadata_independent_v1.tsv",
+      "bytes": 3508,
+      "sha256": "6696c056869066a00310ee75c936a082dfa9b12f48bb37d874bb15e119cb0014"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/GSE73661_IFX_response_visit_metadata_independent_v1.tsv",
+      "bytes": 106,
+      "sha256": "3a7846045c6e979689754c77bfae41588fb3a7c797ba9009dbdfdf887cf0436d"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/GSE73661_IFX_availability_metadata_independent_v1.tsv",
+      "bytes": 12711,
+      "sha256": "e1a193070fd22268b68c4369cbad0d347551437309fd4ece199519e491656d73"
+    }
+  ],
+  "source_provenance": {
+    "series": "GSE73661",
+    "platform": "GPL6244",
+    "PMID_recorded_in_header": "27802155",
+    "endpoint_source_field": "!Series_overall_design",
+    "endpoint_source_excerpt": "Response was defined as endoscopic mucosal healing (Mayo endoscoipc subscore 0 or 1)",
+    "endpoint_assessment_window": "IFX W4-6 after first IFX; explicit in overall_design and per-sample source descriptions.",
+    "endpoint_interpretation": "Endoscopic mucosal healing at the follow-up biopsy, defined by Mayo endoscopic subscore 0 or 1. This is neither total-Mayo clinical response nor change-in-Mayo response, and is not the clinical-response endpoint used for GSE23597."
+  },
+  "counts": {
+    "all_arrays": 178,
+    "all_source_treatment_paths": {
+      "IFX": 46,
+      "CO": 12,
+      "vdz4w": 34,
+      "vdz_vdz8w": 11,
+      "vdz_vdz4w": 58,
+      "plac_plac": 7,
+      "vdz_plac": 10
+    },
+    "IFX_arrays": 46,
+    "IFX_subjects": 23,
+    "IFX_unique_pairs": 23,
+    "IFX_arrays_by_visit": {
+      "W0": 23,
+      "W4_W6": 23
+    },
+    "healed": 8,
+    "not_healed": 15,
+    "IFX_baseline_Mayo_endoscopic": {
+      "3": 19,
+      "2": 4
+    },
+    "IFX_followup_Mayo_endoscopic": {
+      "3": 11,
+      "2": 4,
+      "1": 5,
+      "0": 3
+    },
+    "excluded_non_IFX_arrays": 132,
+    "IFX_excluded_unpaired_subjects": 0
+  },
+  "response_by_followup_visit": [
+    {
+      "followup_visit": "W4_W6",
+      "endoscopic_healing": "No",
+      "n_patients": 15,
+      "actual_W4_W6_split_known": false
+    },
+    {
+      "followup_visit": "W4_W6",
+      "endoscopic_healing": "Yes",
+      "n_patients": 8,
+      "actual_W4_W6_split_known": false
+    }
+  ],
+  "consistency_checks": {
+    "all_IFX_title_source_subject_visit_matches": true,
+    "all_23_post_R_NR_titles_agree_with_Mayo_0_1_threshold": true,
+    "IFX_registry_differences": [],
+    "IFX_duplicate_or_label_issues": [],
+    "IFX_subject_ID_cross_treatment_paths": [],
+    "IFX_pair_exclusions": [],
+    "registry_response_field_note": "Registry response is blank for all IFX arrays. Derived endoscopic_healing is stored only in the new pair table, with its explicit source rule; existing blank fields are not overwritten or treated as missing clinical-response values."
+  },
+  "dose_and_time_limits": {
+    "observed_IFX_path": "All 46 IFX samples are labeled IFX; no IFX switch path is present in this subset.",
+    "numeric_dose": "Not released in the existing header/registry; do not assume 5 mg/kg, equal dosing, or an individual infusion schedule.",
+    "actual_followup_week": "All 23 follow-up samples are only labeled W4_W6, including title W4/6 and source W4-6. Which patients are W4 versus W6 is not released.",
+    "time_heterogeneity": "A 4-to-6-week sampling window is documented, but patient-specific timing heterogeneity cannot be quantified or adjusted using this single-level deposited field.",
+    "non_IFX_paths": "The VDZ/placebo induction-maintenance paths and their W6/W8/W12/etc visits belong to separate contexts and are not pooled into the IFX precision cohort."
+  },
+  "precision_model_recommendation": {
+    "status": "RECOMMENDATION_ONLY_NOT_FROZEN",
+    "suggested_formula": "delta_candidate ~ endoscopic_healing + baseline_candidate + delta_common194_inflammation",
+    "reason": "Matches the requested longitudinal conditional association while naming the actual source endpoint and retaining the same fixed candidate/inflammation object. Treatment is constant within this IFX-only subset.",
+    "visit_covariate": "Do not add the observed W4_W6 field: it has one level and would be constant/aliased. Do not invent a W4/W6 split. If independent documentary actual times are later recovered before expression analysis, revisit a visit term under an explicit amendment, not an outcome-driven choice.",
+    "dose_covariate": "No numeric dose variation is available for an estimable dose term.",
+    "conditional_full_model_n": 23,
+    "expected_coefficient_count_if_full_rank": 4,
+    "expected_residual_df_if_complete_and_full_rank": 19,
+    "actual_full_rank": null,
+    "actual_full_leverage": null,
+    "actual_covariate_correlation": null,
+    "metadata_only_response_design_rank": 2,
+    "metadata_only_response_design_df": 21,
+    "metadata_only_hat_range": [
+      0.06666666666666667,
+      0.125
+    ],
+    "precision_scenario_boundary": "Residual variance and correlation of response with baseline candidate/inflammation covariates remain unknown before expression. Use explicitly labeled variance/covariate-correlation scenarios; do not present metadata-only leverage or an assumed effect size as observed full-model precision.",
+    "additional_available_metadata": "Baseline endoscopic Mayo (2 or 3) is available, but not silently added as a new covariate by this review."
+  },
+  "interpretation_limits": [
+    "This cohort can evaluate association with endoscopic healing in an IFX treatment context; it is not an exact replication of the GSE23597 Week8 clinical-response estimand.",
+    "A later contextual result cannot retrospectively convert the failed GSE23597 frozen primary test into a successful one.",
+    "Source-ID pairing and endpoint agreement are established from metadata; gene coverage, actual log scale, score behavior, full-model estimability and results remain unassessed.",
+    "The header describes RMA-produced log2 probe-set values for GPL6244; future expression handling must verify the deposited scale and avoid repeat log2/normalization."
+  ],
+  "mutation_scope": "Only new dedicated files in runs/002B_precision and this new provenance/reviews/002B_* JSON written. No old manifest, registry, frozen input or scientific lock modified."
+}

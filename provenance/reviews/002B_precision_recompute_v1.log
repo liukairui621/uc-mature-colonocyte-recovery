@@ -1,0 +1,118 @@
+{
+  "status": "INDEPENDENT_RECOMPUTATION_PASSED",
+  "components": [
+    {
+      "cohort": "GSE92415",
+      "n": 65,
+      "p_response": 0.49230769230769234,
+      "df": 60,
+      "delta_SD": 1.106740153447821,
+      "residual_sigma": 0.8289145883712465,
+      "residual_sigma_lower": 0.7035078838892865,
+      "residual_sigma_upper": 1.0091501275783752,
+      "response_SST": 16.24615384615385,
+      "residualized_response_SS": 13.47400129267542,
+      "response_VIF": 1.2057408555382427,
+      "SE": 0.22581952558147464,
+      "estimate": 0.5994069272782647,
+      "MDE80_plugin": 0.6430054389356318,
+      "MDE80_lower_sigma": 0.5457249782076578,
+      "MDE80_upper_sigma": 0.7828177110629685
+    },
+    {
+      "cohort": "GSE23597",
+      "n": 32,
+      "p_response": 0.625,
+      "df": 26,
+      "delta_SD": 1.657153835957365,
+      "residual_sigma": 1.045226736538475,
+      "residual_sigma_lower": 0.8231332150758227,
+      "residual_sigma_upper": 1.4324117648918429,
+      "response_SST": 7.5,
+      "residualized_response_SS": 5.940872128794626,
+      "response_VIF": 1.262440907227827,
+      "SE": 0.4288302447842438,
+      "estimate": 0.40082314304707667,
+      "MDE80_plugin": 1.2481272139281687,
+      "MDE80_lower_sigma": 0.9829206721469136,
+      "MDE80_upper_sigma": 1.7104729938627787
+    }
+  ],
+  "SE_ratio": 1.8989954198160064,
+  "factors": {
+    "sample_size": 1.4252192813739224,
+    "response_balance": 1.0326733274290723,
+    "response_collinearity": 1.023242431171253,
+    "residual_sigma": 1.2609583076493627
+  },
+  "directional_rule_distinction": {
+    "at_assumed_discovery_effect": {
+      "effect": 0.5994069272782647,
+      "two_sided_rejection_power": 0.27021800560908926,
+      "positive_support_probability": 0.269748348842876,
+      "negative_rejection_probability": 0.00046965676621325055
+    },
+    "MDE80_two_sided_rejection": 1.2481272139281687,
+    "MDE80_positive_support": 1.2481286882382256,
+    "at_zero_effect": {
+      "two_sided_rejection": 0.04999999999999998,
+      "positive_support": 0.02499999999999999
+    }
+  },
+  "GSE73661_MDE_range": [
+    1.0718463481216285,
+    1.911385370848302
+  ],
+  "checks": [
+    {
+      "file": "fitted_precision_components.tsv",
+      "rows": 2,
+      "max_absolute_numeric_difference": 1.0087486401744172e-12
+    },
+    {
+      "file": "exact_SE_ratio_decomposition.tsv",
+      "rows": 4,
+      "max_absolute_numeric_difference": 2.886579864025407e-15
+    },
+    {
+      "file": "conditional_power_scenarios.tsv",
+      "rows": 362,
+      "max_absolute_numeric_difference": 9.32767751926633e-13
+    },
+    {
+      "file": "selected_power_scenarios.tsv",
+      "rows": 5,
+      "max_absolute_numeric_difference": 6.754319326063296e-13
+    },
+    {
+      "file": "observed_power_arithmetic_only.tsv",
+      "rows": 1,
+      "max_absolute_numeric_difference": 7.002176616310862e-13
+    },
+    {
+      "file": "observed_delta_dispersion.tsv",
+      "rows": 7,
+      "max_absolute_numeric_difference": 5.10702591327572e-15
+    },
+    {
+      "file": "score_variance_identity.tsv",
+      "rows": 2,
+      "max_absolute_numeric_difference": 4.218847493575595e-15
+    },
+    {
+      "file": "inflammation_conditioning_attenuation.tsv",
+      "rows": 2,
+      "max_absolute_numeric_difference": 1.3855583347321954e-13
+    },
+    {
+      "file": "GSE73661_preexpression_precision_scenarios.tsv",
+      "rows": 8,
+      "max_absolute_numeric_difference": 5.719869022868806e-13
+    },
+    {
+      "file": "future_sample_size_scenarios.tsv",
+      "rows": 28,
+      "max_absolute_numeric_difference": 6.818989817247711e-13
+    }
+  ]
+}

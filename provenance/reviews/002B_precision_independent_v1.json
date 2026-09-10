@@ -1,0 +1,387 @@
+{
+  "review_id": "002B_precision_independent_v1",
+  "created_utc": "2026-09-10T17:07:35.747546+00:00",
+  "status": "REVIEWED",
+  "reviewer_role": "Independent precision arithmetic and prospective supportive-protocol Reviewer Gate",
+  "blocking_findings": [],
+  "decision": "Adopt the precision calculations as conditional design scenarios and descriptive arithmetic, with the rejection-power versus directional-support distinction below. The reviewed GSE73661 supportive-only draft and code may be frozen for later execution without changing the GSE23597 primary lock. No GSE73661 result or full-model precision has been assessed.",
+  "inputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/precision_002B.R",
+      "bytes": 6629,
+      "sha256": "2c38d60b9ba44506b5324de31abae5523e6071c34724dbbbcadf7fc1337de690"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/design_73661_002B.R",
+      "bytes": 3020,
+      "sha256": "d176f605bfb53f3b1a2e2cdcbea81f3dc64f4d3bfbfde92812bcdafdc1f85646"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/discovery_model_fits.rds",
+      "bytes": 102306,
+      "sha256": "df3ad353859fb4b0a5b6855f59d68f4c20f50816333227c9184fd081fca43034"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/candidate_model_fits.rds",
+      "bytes": 7474,
+      "sha256": "0ffe2af72e832c2011bb12e80e03dca3e13dc580c92091a580cca6e4e05b9949"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/discovery_preprocessed_canonical.rds",
+      "bytes": 20994139,
+      "sha256": "772f1753999758e5910b7017ccad65189d996c32fd6c79bfba322e20556b0e67"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/validation_scores.rds",
+      "bytes": 62608421,
+      "sha256": "a5b285ebf0a815e28b75f33983e5ac6a44a71a532efdbe7a3f86223081b6df2c"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/precision_summary.json",
+      "bytes": 1324,
+      "sha256": "3562e2531d18626b7988b2771e78edd59b3f94a9e664d02bf398ab65aace9d98"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/GSE73661_preexpression_summary.json",
+      "bytes": 1022,
+      "sha256": "9bc4327fafb5df8ce7ff3aae15c804ddd9d137da5e7d1e6ac4e20802fbb1847f"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/planning/support_plan_002B.draft.json",
+      "bytes": 7376,
+      "sha256": "7030b11827492bc6b234ec71054d7d973fe67f9e41cf017b8ca79c728ddcd220"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/support_73661_002B.R",
+      "bytes": 7956,
+      "sha256": "7e94818193ab6011c6d4e469751e0216e0706b3cf19f149ecb359c7387ebd952"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/fitted_precision_components.tsv",
+      "bytes": 661,
+      "sha256": "c9018ae3399c232b740ad98f3b63752d28e73777ac8bd8209005fac7e881e46e"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/exact_SE_ratio_decomposition.tsv",
+      "bytes": 151,
+      "sha256": "bfd0e751e18d7180654394d19bba9ba0174f147f409fd3a68dd0db3af59c01ab"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/conditional_power_scenarios.tsv",
+      "bytes": 19195,
+      "sha256": "8c596e72db4b58872a1ceaa5694476df1bfe32f5b327bb55ced864c5d39173c3"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/selected_power_scenarios.tsv",
+      "bytes": 367,
+      "sha256": "266af309758408d5769ad7f86e9780536e08ac225efae64a330f2449c7fc5aea"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/observed_power_arithmetic_only.tsv",
+      "bytes": 151,
+      "sha256": "3b6c04b955038108853e0308a6b7f49462bfa0a4dac7dc36205e9e327d626c76"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/observed_delta_dispersion.tsv",
+      "bytes": 465,
+      "sha256": "7154625e1086b930fc6d1f114025da4ba928ce20845c0171917c9a306266931c"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/score_variance_identity.tsv",
+      "bytes": 282,
+      "sha256": "6fc717b27bd341cb4d7725cf952b07feb8afbf1b14ad00b64abb510227152e3f"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/inflammation_conditioning_attenuation.tsv",
+      "bytes": 164,
+      "sha256": "1d7867c719d54ed2d0d5915ae80858524291d2bf82b39fa8a3a83af7d0aea641"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/GSE73661_preexpression_precision_scenarios.tsv",
+      "bytes": 869,
+      "sha256": "97c1f213d5c2024e0d6b4df8adf3ae80e58395688ca9e927c20da960c404b227"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/future_sample_size_scenarios.tsv",
+      "bytes": 3070,
+      "sha256": "6d097697d4c465d1304c0fadf80b890621a19df6ab1ed4ce247c46ad1a1f0573"
+    }
+  ],
+  "reviewer_artifacts": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_precision_recompute_inputs_v1.R",
+      "bytes": 1347,
+      "sha256": "b9356ed5fa43d7ed6ba023275cd2e1a57a03ac538ea647dcdc84382b49357d30"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_precision_recompute_inputs_v1.json",
+      "bytes": 27442,
+      "sha256": "2374a18f24235307a36be843b09e3dca7e34f89dccd66276d3276e41cb64e26f"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_precision_recompute_inputs_v1.log",
+      "bytes": 43,
+      "sha256": "68014172fe3f4f6f25207b43c5d761f446831d41a3efae94f0383de47c32d7e7"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_precision_recompute_v1.py",
+      "bytes": 8285,
+      "sha256": "a7d689c953434d31eadc2937632c4e9db022f2ac298764a12ccfbc68081cf336"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_precision_recompute_v1.log",
+      "bytes": 3606,
+      "sha256": "eef92845620a6c3e8361c1e612e2619a4db7f30e7aee9bd2d01e385fa4fee589"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_precision_numeric_independent_v1.json",
+      "bytes": 9361,
+      "sha256": "64f6142fe79c022635506dee6d92865dab5db22934badd136c451ce116c1c114"
+    }
+  ],
+  "numeric_recomputation": {
+    "source": "Original discovery and GSE23597 fit X/y, and their already available gene-delta matrices; no new outcome search.",
+    "methods": "Source original fit matrices/responses exported with R; independent NumPy SVD estimates/residual SD, projection-based response VIF, SciPy noncentral-t CDF/SF, chi-square quantiles and Brent root solver; no GSE73661 expression read.",
+    "software": {
+      "numpy": "1.26.4",
+      "scipy": "1.17.1"
+    },
+    "tables_checked": 10,
+    "total_table_rows_checked": 421,
+    "checks": [
+      {
+        "file": "fitted_precision_components.tsv",
+        "rows": 2,
+        "max_absolute_numeric_difference": 1.0087486401744172e-12
+      },
+      {
+        "file": "exact_SE_ratio_decomposition.tsv",
+        "rows": 4,
+        "max_absolute_numeric_difference": 2.886579864025407e-15
+      },
+      {
+        "file": "conditional_power_scenarios.tsv",
+        "rows": 362,
+        "max_absolute_numeric_difference": 9.32767751926633e-13
+      },
+      {
+        "file": "selected_power_scenarios.tsv",
+        "rows": 5,
+        "max_absolute_numeric_difference": 6.754319326063296e-13
+      },
+      {
+        "file": "observed_power_arithmetic_only.tsv",
+        "rows": 1,
+        "max_absolute_numeric_difference": 7.002176616310862e-13
+      },
+      {
+        "file": "observed_delta_dispersion.tsv",
+        "rows": 7,
+        "max_absolute_numeric_difference": 5.10702591327572e-15
+      },
+      {
+        "file": "score_variance_identity.tsv",
+        "rows": 2,
+        "max_absolute_numeric_difference": 4.218847493575595e-15
+      },
+      {
+        "file": "inflammation_conditioning_attenuation.tsv",
+        "rows": 2,
+        "max_absolute_numeric_difference": 1.3855583347321954e-13
+      },
+      {
+        "file": "GSE73661_preexpression_precision_scenarios.tsv",
+        "rows": 8,
+        "max_absolute_numeric_difference": 5.719869022868806e-13
+      },
+      {
+        "file": "future_sample_size_scenarios.tsv",
+        "rows": 28,
+        "max_absolute_numeric_difference": 6.818989817247711e-13
+      }
+    ],
+    "fitted_components": [
+      {
+        "cohort": "GSE92415",
+        "n": 65,
+        "p_response": 0.49230769230769234,
+        "df": 60,
+        "delta_SD": 1.106740153447821,
+        "residual_sigma": 0.8289145883712465,
+        "residual_sigma_lower": 0.7035078838892865,
+        "residual_sigma_upper": 1.0091501275783752,
+        "response_SST": 16.24615384615385,
+        "residualized_response_SS": 13.47400129267542,
+        "response_VIF": 1.2057408555382427,
+        "SE": 0.22581952558147464,
+        "estimate": 0.5994069272782647,
+        "MDE80_plugin": 0.6430054389356318,
+        "MDE80_lower_sigma": 0.5457249782076578,
+        "MDE80_upper_sigma": 0.7828177110629685
+      },
+      {
+        "cohort": "GSE23597",
+        "n": 32,
+        "p_response": 0.625,
+        "df": 26,
+        "delta_SD": 1.657153835957365,
+        "residual_sigma": 1.045226736538475,
+        "residual_sigma_lower": 0.8231332150758227,
+        "residual_sigma_upper": 1.4324117648918429,
+        "response_SST": 7.5,
+        "residualized_response_SS": 5.940872128794626,
+        "response_VIF": 1.262440907227827,
+        "SE": 0.4288302447842438,
+        "estimate": 0.40082314304707667,
+        "MDE80_plugin": 1.2481272139281687,
+        "MDE80_lower_sigma": 0.9829206721469136,
+        "MDE80_upper_sigma": 1.7104729938627787
+      }
+    ],
+    "exact_SE_ratio": 1.8989954198160064,
+    "factor_decomposition": {
+      "sample_size": 1.4252192813739224,
+      "response_balance": 1.0326733274290723,
+      "response_collinearity": 1.023242431171253,
+      "residual_sigma": 1.2609583076493627
+    },
+    "GSE23597_MDE80_two_sided_plugin": 1.2481272139281687,
+    "GSE23597_power_at_assumed_discovery_effect": 0.27021800560908926,
+    "observed_power_arithmetic_only": 0.14680939950669378,
+    "GSE73661_scenario_MDE80_range": [
+      1.0718463481216285,
+      1.911385370848302
+    ],
+    "GSE73661_scenario_count": 8,
+    "future_sample_size_scenario_count": 28
+  },
+  "power_definition_clarification": {
+    "severity": "nonblocking terminology distinction",
+    "calculated_quantity": "Probability of rejecting the two-sided zero-effect null in either tail under fixed X, plug-in residual sigma and an assumed true effect.",
+    "not_identical_quantity": "The earlier positive-coefficient plus two-sided P<0.05 support rule uses only the positive rejection tail.",
+    "exact_comparison": {
+      "at_assumed_discovery_effect": {
+        "effect": 0.5994069272782647,
+        "two_sided_rejection_power": 0.27021800560908926,
+        "positive_support_probability": 0.269748348842876,
+        "negative_rejection_probability": 0.00046965676621325055
+      },
+      "MDE80_two_sided_rejection": 1.2481272139281687,
+      "MDE80_positive_support": 1.2481286882382256,
+      "at_zero_effect": {
+        "two_sided_rejection": 0.04999999999999998,
+        "positive_support": 0.02499999999999999
+      }
+    },
+    "required_reporting": "Call 27.0218% two-sided rejection power under the stated assumptions, not the probability that the frozen positive-direction validation succeeds. The latter is 26.9748% under the same assumptions. Do not alter the frozen primary rule or substitute either power quantity for the observed test result."
+  },
+  "interpretation_audit": [
+    "The .5994069273 effect is an illustrative assumed true effect drawn from a selected discovery estimate; it is not established as the transportable true effect in another cohort.",
+    "The 1.248127 MDE is conditional on fixed observed GSE23597 design, residual-sigma plug-in and a homoscedastic normal linear model. It is not an empirical biological detection boundary or a claim that smaller effects cannot exist.",
+    "Observed power at .400823 is .1468094 and is recorded only for arithmetic auditing. Because it is computed from the observed estimate and SE, it supplies no independent explanation for a nonsignificant result.",
+    "The exact SE factorization is sigmaV/sigmaD times sqrt(nD/nV) times response-balance factor times sqrt(response-VIFV/response-VIFD). The product equals 1.8989954. It is an algebraic description, not causal decomposition of platform/treatment/cohort effects.",
+    "Raw delta-SD and residual-sigma ratios are different quantities. The raw score SD ratio near 1.497 includes biological, treatment, patient, time, technical and random variability. Without shared biospecimens measured under both processes, a pure RMA-to-GCOS noise multiplier cannot be identified.",
+    "The variance-of-score identity includes gene cross-covariances; an average of genes does not by itself prove technical-noise amplification.",
+    "Changes in response coefficients after conditioning on inflammation are descriptive model comparisons, not a mediated proportion or causal attenuation estimate.",
+    "Residual-sigma intervals use chi-square variance uncertainty under model assumptions; they are not a full interval for cross-cohort power including effect/design uncertainty.",
+    "GSE73661 scenarios use 23 patients, 8 healing/15 nonhealing, expected four parameters/df19, and external sigma by VIF grids. Actual expression covariate correlations and residual variance remain unknown; no actual GSE73661 power is claimed.",
+    "Future sample-size scenarios preserve the current response fraction as an illustrative design assumption. They do not guarantee future response counts or empirical covariance."
+  ],
+  "supportive_plan_static_review": {
+    "draft_sha256": "7030b11827492bc6b234ec71054d7d973fe67f9e41cf017b8ca79c728ddcd220",
+    "code_sha256": "7e94818193ab6011c6d4e469751e0216e0706b3cf19f149ecb359c7387ebd952",
+    "input_hash_checks": [
+      {
+        "path": "/root/projects/UC_Treatment_Recovery/signature_lock.json",
+        "sha256_match": true,
+        "bytes_match": true
+      },
+      {
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/GPL6244_canonical_probe_mapping.tsv",
+        "sha256_match": true,
+        "bytes_match": true
+      },
+      {
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/program_membership_canonical.tsv",
+        "sha256_match": true,
+        "bytes_match": true
+      },
+      {
+        "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/GSE73661_IFX_pairs_metadata_independent_v1.tsv",
+        "sha256_match": true,
+        "bytes_match": true
+      },
+      {
+        "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/GSE73661_preexpression_precision_scenarios.tsv",
+        "sha256_match": true,
+        "bytes_match": true
+      },
+      {
+        "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/GSE73661_preexpression_summary.json",
+        "sha256_match": true,
+        "bytes_match": true
+      },
+      {
+        "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_GSE73661_IFX_metadata_independent_v1.json",
+        "sha256_match": true,
+        "bytes_match": true
+      },
+      {
+        "path": "/root/projects/UC_Treatment_Recovery/code/support_73661_002B.R",
+        "sha256_match": true,
+        "bytes_match": true
+      },
+      {
+        "path": "/root/projects/UC_Treatment_Recovery/code/design_73661_002B.R",
+        "sha256_match": true,
+        "bytes_match": true
+      },
+      {
+        "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+        "sha256_match": true,
+        "bytes_match": true
+      }
+    ],
+    "R_syntax_parse_only": "All three reviewed R files parsed successfully; support script was not sourced or executed.",
+    "candidate_and_inflammation_match_existing_lock": true,
+    "candidate_genes": [
+      "AQP8",
+      "HMGCS2",
+      "GUCA2A",
+      "CA2",
+      "SLC26A3",
+      "MS4A12"
+    ],
+    "inflammation_unique_count": 194,
+    "scope": "GSE73661 IFX 23 pairs; post-treatment Mayo endoscopic subscore0/1 at deposited W4/6 window. This differs from GSE23597 clinical response.",
+    "models": {
+      "adjusted_support": "delta_candidate ~ endoscopic_healing + baseline_candidate + delta_common194_inflammation",
+      "parallel_no_baseline": "delta_candidate ~ endoscopic_healing + delta_common194_inflammation",
+      "parallel_no_inflammation": "delta_candidate ~ endoscopic_healing + baseline_candidate"
+    },
+    "confirmatory_primary_tests": 0,
+    "role": "descriptive_supportive_only; cannot replace or rescue the failed GSE23597 fixed primary test.",
+    "code_checks": [
+      "Reads adjusted and parallel formulas from the separate frozen support plan.",
+      "Requires frozen supportive-only plan and fixed pair file; preserves explicit source pairing and 8 healing/15 nonhealing.",
+      "Candidate membership, all six measured genes and all common194 measured genes are required; deposited log2 probes are averaged only after canonicalization.",
+      "RMA-compatible finite numerical scale is checked; no second log2 or normalization is applied.",
+      "All three predeclared candidate models report OLS and HC3 residual-df t intervals and exact nominal P values.",
+      "Rank-deficient support/auxiliary/reference branches and LOPO are recognized without switching a model to rescue significance.",
+      "Patient leverage, Cook distance and all LOPO fits are reported without automatic patient deletion.",
+      "Three reference programs use fixed BH(n=3); no pooled P value, superiority-by-P comparison, or replacement primary is computed.",
+      "No artificial visit or numeric-dose covariate is introduced because these are not supplied at patient level."
+    ],
+    "future_adoption_boundary": "After authorized expression access, independently compare the newly downloaded full header with frozen source metadata, verify actual mapping/scale/coverage and reproduce numerical fits before adopting results. This static review cannot certify those unseen values.",
+    "freeze_recommendation": "No blocking issue; freeze the reviewed supportive-only plan and associated input hashes, preserving the original GSE23597 lock unchanged."
+  },
+  "reviewer_computation_note": {
+    "initial_debug_artifacts": [
+      "provenance/reviews/002B_precision_recompute_initial_cdf_v1.py",
+      "provenance/reviews/002B_precision_recompute_initial_cdf_v1.log"
+    ],
+    "issue": "SciPy1.17.1 returned NaN for an extreme negative-tail nct.cdf during the reviewer root-solver bracket. This was a reviewer-library numerical edge case, not a production-R error.",
+    "resolution": "Used the exact noncentral-t symmetry CDF(-c;df,ncp)=SF(c;df,-ncp), retaining the same two-sided probability and target. Final independent calculations agree with production R at about1e-12; only the final numeric artifact is authoritative."
+  },
+  "access_and_mutation_scope": "No GSE73661 expression was accessed or downloaded. Only new 002B reviewer artifacts were written; no previous manifest, frozen input, primary validation result or scientific code was modified."
+}

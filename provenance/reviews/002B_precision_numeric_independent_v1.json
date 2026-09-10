@@ -1,0 +1,319 @@
+{
+  "status": "INDEPENDENT_RECOMPUTATION_PASSED",
+  "software": {
+    "numpy": "1.26.4",
+    "scipy": "1.17.1"
+  },
+  "methods": "Source original fit matrices/responses exported with R; independent NumPy SVD estimates/residual SD, projection-based response VIF, SciPy noncentral-t CDF/SF, chi-square quantiles and Brent root solver; no GSE73661 expression read.",
+  "components": [
+    {
+      "cohort": "GSE92415",
+      "n": 65,
+      "p_response": 0.49230769230769234,
+      "df": 60,
+      "delta_SD": 1.106740153447821,
+      "residual_sigma": 0.8289145883712465,
+      "residual_sigma_lower": 0.7035078838892865,
+      "residual_sigma_upper": 1.0091501275783752,
+      "response_SST": 16.24615384615385,
+      "residualized_response_SS": 13.47400129267542,
+      "response_VIF": 1.2057408555382427,
+      "SE": 0.22581952558147464,
+      "estimate": 0.5994069272782647,
+      "MDE80_plugin": 0.6430054389356318,
+      "MDE80_lower_sigma": 0.5457249782076578,
+      "MDE80_upper_sigma": 0.7828177110629685
+    },
+    {
+      "cohort": "GSE23597",
+      "n": 32,
+      "p_response": 0.625,
+      "df": 26,
+      "delta_SD": 1.657153835957365,
+      "residual_sigma": 1.045226736538475,
+      "residual_sigma_lower": 0.8231332150758227,
+      "residual_sigma_upper": 1.4324117648918429,
+      "response_SST": 7.5,
+      "residualized_response_SS": 5.940872128794626,
+      "response_VIF": 1.262440907227827,
+      "SE": 0.4288302447842438,
+      "estimate": 0.40082314304707667,
+      "MDE80_plugin": 1.2481272139281687,
+      "MDE80_lower_sigma": 0.9829206721469136,
+      "MDE80_upper_sigma": 1.7104729938627787
+    }
+  ],
+  "factor_decomposition": {
+    "sample_size": 1.4252192813739224,
+    "response_balance": 1.0326733274290723,
+    "response_collinearity": 1.023242431171253,
+    "residual_sigma": 1.2609583076493627
+  },
+  "SE_ratio": 1.8989954198160064,
+  "SD_ratios": [
+    {
+      "feature": "AQP8",
+      "discovery_delta_SD": 2.210811390433864,
+      "validation_delta_SD": 3.462686795730368,
+      "ratio": 1.5662515629842253
+    },
+    {
+      "feature": "HMGCS2",
+      "discovery_delta_SD": 1.459321517528895,
+      "validation_delta_SD": 1.4078220661871343,
+      "ratio": 0.9647100034343591
+    },
+    {
+      "feature": "GUCA2A",
+      "discovery_delta_SD": 1.2053229224345459,
+      "validation_delta_SD": 2.372331186693118,
+      "ratio": 1.9682121218614304
+    },
+    {
+      "feature": "CA2",
+      "discovery_delta_SD": 0.9994476530621991,
+      "validation_delta_SD": 1.0236112243524802,
+      "ratio": 1.0241769253409587
+    },
+    {
+      "feature": "SLC26A3",
+      "discovery_delta_SD": 0.7431652280306486,
+      "validation_delta_SD": 1.536935447486944,
+      "ratio": 2.068093863271493
+    },
+    {
+      "feature": "MS4A12",
+      "discovery_delta_SD": 1.0672463146885756,
+      "validation_delta_SD": 1.7739140617148306,
+      "ratio": 1.6621411920569265
+    },
+    {
+      "feature": "Six_gene_mean",
+      "discovery_delta_SD": 1.1067401534478207,
+      "validation_delta_SD": 1.657153835957365,
+      "ratio": 1.4973287368266561
+    }
+  ],
+  "variance_identity": [
+    {
+      "cohort": "discovery",
+      "variance_of_score_mean": 1.2248737672537058,
+      "sum_individual_variances_over_k2": 0.31000873629230097,
+      "sum_cross_covariances_over_k2": 0.9148650309614046,
+      "mean_gene_pair_correlation": 0.6869524978817613
+    },
+    {
+      "cohort": "validation",
+      "variance_of_score_mean": 2.7461588360282096,
+      "sum_individual_variances_over_k2": 0.7265788800399309,
+      "sum_cross_covariances_over_k2": 2.019579955988278,
+      "mean_gene_pair_correlation": 0.6868860129468586
+    }
+  ],
+  "descriptive_attenuation": [
+    {
+      "cohort": "GSE92415",
+      "before": 0.8735242441660837,
+      "after": 0.5994069272782647,
+      "attenuation_percent": 31.38061922362636
+    },
+    {
+      "cohort": "GSE23597",
+      "before": 0.9607740589112137,
+      "after": 0.40082314304707667,
+      "attenuation_percent": 58.28122758629589
+    }
+  ],
+  "selected_effect_power_scenarios": [
+    {
+      "assumed_effect": 0.25,
+      "validation_power": 0.08686035303217236
+    },
+    {
+      "assumed_effect": 0.4,
+      "validation_power": 0.14640143082016457
+    },
+    {
+      "assumed_effect": 0.5994069272782647,
+      "validation_power": 0.27021800560908926
+    },
+    {
+      "assumed_effect": 0.8,
+      "validation_power": 0.4351902297179838
+    },
+    {
+      "assumed_effect": 1.0,
+      "validation_power": 0.6122926747456486
+    }
+  ],
+  "observed_power_arithmetic_only": 0.14680939950669378,
+  "future_GSE73661_scenarios": [
+    {
+      "sigma_source": "GSE23597",
+      "assumed_response_VIF": 1,
+      "residual_sigma": 1.045226736538475,
+      "SE": 0.45759767088406045,
+      "MDE80": 1.3515535571875983,
+      "power_at_discovery_0_599": 0.23775700845612563,
+      "n": 23,
+      "n_healing": 8,
+      "n_nonhealing": 15,
+      "expected_df": 19
+    },
+    {
+      "sigma_source": "GSE23597",
+      "assumed_response_VIF": 1.25,
+      "residual_sigma": 1.045226736538475,
+      "SE": 0.5116097492211678,
+      "MDE80": 1.5110828145515598,
+      "power_at_discovery_0_599": 0.19956808763346984,
+      "n": 23,
+      "n_healing": 8,
+      "n_nonhealing": 15,
+      "expected_df": 19
+    },
+    {
+      "sigma_source": "GSE23597",
+      "assumed_response_VIF": 1.5,
+      "residual_sigma": 1.045226736538475,
+      "SE": 0.5604404005759893,
+      "MDE80": 1.65530828757657,
+      "power_at_discovery_0_599": 0.17408165991280217,
+      "n": 23,
+      "n_healing": 8,
+      "n_nonhealing": 15,
+      "expected_df": 19
+    },
+    {
+      "sigma_source": "GSE23597",
+      "assumed_response_VIF": 2,
+      "residual_sigma": 1.045226736538475,
+      "SE": 0.6471408322745782,
+      "MDE80": 1.911385370848302,
+      "power_at_discovery_0_599": 0.14235016517786678,
+      "n": 23,
+      "n_healing": 8,
+      "n_nonhealing": 15,
+      "expected_df": 19
+    },
+    {
+      "sigma_source": "GSE92415",
+      "assumed_response_VIF": 1,
+      "residual_sigma": 0.8289145883712465,
+      "SE": 0.36289674932797666,
+      "MDE80": 1.0718463481216285,
+      "power_at_discovery_0_599": 0.3479297419466116,
+      "n": 23,
+      "n_healing": 8,
+      "n_nonhealing": 15,
+      "expected_df": 19
+    },
+    {
+      "sigma_source": "GSE92415",
+      "assumed_response_VIF": 1.25,
+      "residual_sigma": 0.8289145883712465,
+      "SE": 0.4057309001555285,
+      "MDE80": 1.198360647917433,
+      "power_at_discovery_0_599": 0.28919549676413076,
+      "n": 23,
+      "n_healing": 8,
+      "n_nonhealing": 15,
+      "expected_df": 19
+    },
+    {
+      "sigma_source": "GSE92415",
+      "assumed_response_VIF": 1.5,
+      "residual_sigma": 0.8289145883712465,
+      "SE": 0.44445593258411853,
+      "MDE80": 1.3127383177817684,
+      "power_at_discovery_0_599": 0.24917145285434017,
+      "n": 23,
+      "n_healing": 8,
+      "n_nonhealing": 15,
+      "expected_df": 19
+    },
+    {
+      "sigma_source": "GSE92415",
+      "assumed_response_VIF": 2,
+      "residual_sigma": 0.8289145883712465,
+      "SE": 0.513213504640734,
+      "MDE80": 1.515819642293681,
+      "power_at_discovery_0_599": 0.19861347222557363,
+      "n": 23,
+      "n_healing": 8,
+      "n_nonhealing": 15,
+      "expected_df": 19
+    }
+  ],
+  "GSE73661_MDE_range": [
+    1.0718463481216285,
+    1.911385370848302
+  ],
+  "future_grid_rows": 28,
+  "two_sided_vs_positive_support": {
+    "at_assumed_discovery_effect": {
+      "effect": 0.5994069272782647,
+      "two_sided_rejection_power": 0.27021800560908926,
+      "positive_support_probability": 0.269748348842876,
+      "negative_rejection_probability": 0.00046965676621325055
+    },
+    "MDE80_two_sided_rejection": 1.2481272139281687,
+    "MDE80_positive_support": 1.2481286882382256,
+    "at_zero_effect": {
+      "two_sided_rejection": 0.04999999999999998,
+      "positive_support": 0.02499999999999999
+    }
+  },
+  "table_checks": [
+    {
+      "file": "fitted_precision_components.tsv",
+      "rows": 2,
+      "max_absolute_numeric_difference": 1.0087486401744172e-12
+    },
+    {
+      "file": "exact_SE_ratio_decomposition.tsv",
+      "rows": 4,
+      "max_absolute_numeric_difference": 2.886579864025407e-15
+    },
+    {
+      "file": "conditional_power_scenarios.tsv",
+      "rows": 362,
+      "max_absolute_numeric_difference": 9.32767751926633e-13
+    },
+    {
+      "file": "selected_power_scenarios.tsv",
+      "rows": 5,
+      "max_absolute_numeric_difference": 6.754319326063296e-13
+    },
+    {
+      "file": "observed_power_arithmetic_only.tsv",
+      "rows": 1,
+      "max_absolute_numeric_difference": 7.002176616310862e-13
+    },
+    {
+      "file": "observed_delta_dispersion.tsv",
+      "rows": 7,
+      "max_absolute_numeric_difference": 5.10702591327572e-15
+    },
+    {
+      "file": "score_variance_identity.tsv",
+      "rows": 2,
+      "max_absolute_numeric_difference": 4.218847493575595e-15
+    },
+    {
+      "file": "inflammation_conditioning_attenuation.tsv",
+      "rows": 2,
+      "max_absolute_numeric_difference": 1.3855583347321954e-13
+    },
+    {
+      "file": "GSE73661_preexpression_precision_scenarios.tsv",
+      "rows": 8,
+      "max_absolute_numeric_difference": 5.719869022868806e-13
+    },
+    {
+      "file": "future_sample_size_scenarios.tsv",
+      "rows": 28,
+      "max_absolute_numeric_difference": 6.818989817247711e-13
+    }
+  ]
+}
