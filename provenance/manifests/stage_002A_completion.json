@@ -1,0 +1,415 @@
+{
+  "run_id": "002A_GSE23597",
+  "status": "REVIEWED",
+  "scope": "One frozen primary validation; no alternative primary",
+  "command": "Rscript code/validation_002A.R",
+  "seed": 20260910,
+  "cwd": "/root/projects/UC_Treatment_Recovery",
+  "source_code_commit": "7955f74a505329b4feae6e6b99b5981655a29bbf",
+  "lock": {
+    "path": "/root/projects/UC_Treatment_Recovery/signature_lock.json",
+    "bytes": 19065,
+    "sha256": "62462dfbc25bb857c94c872424173e215c6d1b8b6724a0bbc724a5c2683bfb36"
+  },
+  "expression_access_event": {
+    "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/expression_access_event.json",
+    "bytes": 498,
+    "sha256": "e38a462a3e2f2a8f5514f3ce456d92172faa5e84e709d084c9dec37f572af7d5"
+  },
+  "result_summary": {
+    "status": "COMPLETE",
+    "cohort": "GSE23597",
+    "primary_evaluable": true,
+    "primary": {
+      "program": "MATURE_COLONOCYTE6_EXPLORATORY",
+      "model": "primary_baseline_inflammation",
+      "estimate": 0.4008231430470785,
+      "se": 0.4288302447842439,
+      "lower": -0.4806500492873639,
+      "upper": 1.282296335381521,
+      "p": 0.358548763461803,
+      "n": 32,
+      "df": 26,
+      "rank": 6,
+      "raw_condition": 100.5530113724583,
+      "standardized_condition": 2.685376608264518,
+      "max_VIF": 2.220623316771648,
+      "max_leverage": 0.5257441330656496
+    },
+    "primary_support_rule_met": false,
+    "primary_tests": 1,
+    "secondary_tests": 3,
+    "discovery_genes_unchanged": true,
+    "validation_expression_accessed": true,
+    "alternative_primary_allowed": false,
+    "claim": "Concurrent conditional association only; no baseline prediction, causal repair, novel cell state or comparator superiority",
+    "lock_version": "1.1",
+    "completed_utc": "2026-09-10 15:37:37 UTC"
+  },
+  "reviews": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_validation_results_independent_v1.json",
+      "bytes": 17194,
+      "sha256": "b2d2fbc82fe814a268e9af65c5226aa5e92eee1c28dcb0ecff15582eb8c0a766"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_report_independent_v1.json",
+      "bytes": 10339,
+      "sha256": "baa899a198a4e8d573e12fd176f2b6321fef2d3b020122ca6d799344ece84fab"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_visual_QA.json",
+      "bytes": 1875,
+      "sha256": "2cdd6808c556fee109ec554a8ee73c61ca15a08ff60eaff2964de3ddf85b85c9"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/hgnc_complete_set_20260910.txt",
+      "bytes": 16911574,
+      "sha256": "6a1423507780773fbcb373eaef84dba5f9357b36e7219db2aeaae13d8a42d62b"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/GPL13158.annot.gz",
+      "bytes": 8313277,
+      "sha256": "d9eddd653c200c9ac1b282b441079a19e890914929b35792a4e99ce4eba3b0d0"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/GPL570.annot.gz",
+      "bytes": 8471521,
+      "sha256": "d7cd44352127b1e34f3a720ebea86093ef255a38f1612a85a2962b71bde8f394"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/GPL6244.relay.annot.gz",
+      "bytes": 7193437,
+      "sha256": "99ee70f87e02c75ff1c8dc57b6c40c0482c7ef2760e004301315ac34344ac6dc"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/program_scoring_membership.tsv",
+      "bytes": 463071,
+      "sha256": "31020cde802a5c59401165c5b46e53cfedb4e2b784b57e1ea364bde25638900c"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/program_membership_canonical.tsv",
+      "bytes": 465739,
+      "sha256": "2c04c0f497502d5918a0f77dac89a078e6bc89e2ef0166b1ef1789b1f1e23f39"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/frozen_common_inflammation_members.tsv",
+      "bytes": 1737,
+      "sha256": "baa65e35b57d0475a304c36a2cb04db036b6ed3648eb82a7295f77f452cca8cd"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/platform_program_coverage.tsv",
+      "bytes": 11501,
+      "sha256": "cc11ee6b99519c14fd3756f093a011615ad145fead16baf7eec89d9b5c4084a5"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/program_scores.rds",
+      "bytes": 91588,
+      "sha256": "baae0b99b94ac292703de07b6fb1155265db7d820fef8ca7f9e46660ab542849"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_metadata_prevalidation_pairs_independent_v1.tsv",
+      "bytes": 2623,
+      "sha256": "a463f1c71e15f6cf54363fddfb9b39408608668f28812f2efe9f6944c698eddd"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_metadata_prevalidation_independent_v1.json",
+      "bytes": 11577,
+      "sha256": "5c749a7b57429b7986761ecc161510bc26312fa1076a367fb7fd91afe0119fea"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/annotation_001D.py",
+      "bytes": 6092,
+      "sha256": "4275b8ccebd38678f368de3a0cfed02eea89c8c2bed306dfa3416a58bd239443"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/discovery_001D.R",
+      "bytes": 9067,
+      "sha256": "b6d36e01188d852809e657df4518c4b77569d220a98c36778eb666556c62b5fa"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+      "bytes": 144982,
+      "sha256": "d0b866e9d3af3a81cb6d35f4eee3cba387946f2e6ade554e22057e24bdf2ed86"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/validation_002A.R",
+      "bytes": 9179,
+      "sha256": "a1efe70b1b321af8072bf6a55635a4e73de23ad65218e95f4c9b4d091919e132"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/planning/Analysis_Amendment_001D.md",
+      "bytes": 4110,
+      "sha256": "ba97f17924059b85e43c4e4f6aac3f9e25a0b2b4ae6a67fa839fbd09ba42bb6a"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/validation/GSE23597_series_matrix.txt.gz",
+      "bytes": 31357273,
+      "sha256": "d36fe4df1b6903c2be9de761a66deb92598cce84105d26be48e956ea5a26ce50"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/actual_program_coverage.tsv",
+      "bytes": 340,
+      "sha256": "d5d2e909e1b42a056b565cd237444fc93182f3d88e5da96c7a7c867f2c138c48"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/actual_scored_inflammation194.tsv",
+      "bytes": 2521,
+      "sha256": "39b5e73d2e18f34fed7bf0cb462e8defd37ef8ca166a8b497aec9b4f1dff05c6"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/candidate_model_fits.rds",
+      "bytes": 7474,
+      "sha256": "0ffe2af72e832c2011bb12e80e03dca3e13dc580c92091a580cca6e4e05b9949"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/candidate_models.tsv",
+      "bytes": 978,
+      "sha256": "a4d3041baa560e87443fbe856efd0fd848467ac827609c2b0db94fcf5bf71760"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/candidate_models_HC3.tsv",
+      "bytes": 633,
+      "sha256": "2b3f5cf9760b79de804e1dafef8f7038bfe56c9f3190c27a0a0e9bc3124ca648"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/download_manifest.json",
+      "bytes": 1035,
+      "sha256": "fb5c8c1bca1f94a4e214cf4d7c1a5bdc42ae1968764fd95000a74815fd56138e"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/execution.json",
+      "bytes": 389,
+      "sha256": "6cc50d39429c18805555117817106de2bf291b831f2b25e90c7b335b0373b104"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/execution_started_v1.json",
+      "bytes": 211,
+      "sha256": "cfc017582935617dfb5180cfac1b30b2a36d3b0b245ba2beed152494eca7c4b8"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/expression_access_event.json",
+      "bytes": 498,
+      "sha256": "e38a462a3e2f2a8f5514f3ce456d92172faa5e84e709d084c9dec37f572af7d5"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/figures/Fig002A_PrimaryAndParallel.pdf",
+      "bytes": 26006,
+      "sha256": "322c7f797b0b706d71bb6946c5c127d59955b869065261eaf5e394d9f62f72b0"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/figures/Fig002A_PrimaryAndParallel.png",
+      "bytes": 116500,
+      "sha256": "3bd830f3c740a75ae464458f5c7e86208641a4319be280e06977cddd86c17002"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/figures/Fig002A_PrimaryAndParallel_source.tsv",
+      "bytes": 1463,
+      "sha256": "14c3b68c49b1a7fe727369343044c542ef5e0cdbf8a2d2e6cc18ffd9e0568b70"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/figures/Fig002B_ValidationSensitivity.pdf",
+      "bytes": 27248,
+      "sha256": "9fd0ca22b7eb314041a1dc6bd3b191cef2091962614f5d83fefd84bf24b4012d"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/figures/Fig002B_ValidationSensitivity.png",
+      "bytes": 56865,
+      "sha256": "5fd8205dcde8a0941caa4fa999a64505f5e85a763a8d6778d8c458cab651e7a2"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/figures/Fig002B_ValidationSensitivity_source.tsv",
+      "bytes": 735,
+      "sha256": "a853dc1d2ff8045eede52ca6faaa020e015e5bae98d548a886698eaa8a62f6db"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/leave_one_patient_out.tsv",
+      "bytes": 1291,
+      "sha256": "db4037e23acf146a243a136eacc83428f23f2a2dbfd2591512692f7bd35ea95d"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/plots.log",
+      "bytes": 17,
+      "sha256": "988a3163d15fe0a66e81f2ca7464eea0ae4546d7ddba08213f7f342e14b6a687"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/primary_VIF.tsv",
+      "bytes": 200,
+      "sha256": "3506ea1ee9b8e1c3e54318b94c1159b6c330c9049299b927e6b215170196e20d"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/primary_patient_data.tsv",
+      "bytes": 4353,
+      "sha256": "56fea05cf5e65d6edc3267d43dd9c603a12edf7b6b7cb3a26185270e92fd9e35"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/primary_patient_diagnostics.tsv",
+      "bytes": 2983,
+      "sha256": "4ea2954c119de23eaaeccce49948b352abd16148a159b67aa62ec46131a44617"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/primary_test.tsv",
+      "bytes": 335,
+      "sha256": "4c1a520e712d0a5790ef14a2380b6fe559c48a8e627acd265af47cb7ffa63af7"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/qc_summary.json",
+      "bytes": 571,
+      "sha256": "fc0534fd681b6d93c55c6d224988fb93a10603c6fce11a0ef077119ae8fd1bb7"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/report.log",
+      "bytes": 108,
+      "sha256": "fc1e1fd9262c080f83214a7c0a0ca898cfba959d0132a749f09c33039290c681"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/sample_qc.tsv",
+      "bytes": 7122,
+      "sha256": "0a1279d7edfb099245b810ce15d8f62b4253cda4ab129d03c36f7aaaa0b4c022"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/secondary_no_baseline_descriptive.tsv",
+      "bytes": 842,
+      "sha256": "01deca5ad4f2071358e5968cfcda5eac0b487f9363b877d8162448046972eb03"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/secondary_reference_tests.tsv",
+      "bytes": 940,
+      "sha256": "4e7ba01f0f99fea65c1160446a301b4bbcb155c536afdbd7bba32f39ad02a321"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/sessionInfo.txt",
+      "bytes": 983,
+      "sha256": "884cc239113c8dfd8b9c5bd2d004ddc411a596c05d111543c44b94fbdaff3354"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/validation.log",
+      "bytes": 3268,
+      "sha256": "4f7865654e1054c7afd92f282a8d01af1a9cdc81e5a30ce52361f9e4f99ca41a"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/validation_scores.rds",
+      "bytes": 62608421,
+      "sha256": "a5b285ebf0a815e28b75f33983e5ac6a44a71a532efdbe7a3f86223081b6df2c"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/validation_summary.json",
+      "bytes": 969,
+      "sha256": "6e90a597b8f8fa5eee98840b748cfdb4bb49aeeda695309bddeee4b754b1d618"
+    }
+  ],
+  "review_evidence": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_final_hash_integrity.json",
+      "bytes": 331,
+      "sha256": "ec75ad09e736fdf6cd14adbc1d3dc70a22dcba60d3ca95c234ea905bea6b96e5"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_metadata_prevalidation_independent_v1.json",
+      "bytes": 11577,
+      "sha256": "5c749a7b57429b7986761ecc161510bc26312fa1076a367fb7fd91afe0119fea"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_metadata_prevalidation_pairs_independent_v1.tsv",
+      "bytes": 2623,
+      "sha256": "a463f1c71e15f6cf54363fddfb9b39408608668f28812f2efe9f6944c698eddd"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_recomputed_candidate_HC3_v1.tsv",
+      "bytes": 632,
+      "sha256": "9f799e5145a68e66580b23f9caa3e8063fed99ef8ed7385ce555552a2d657a2d"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_recomputed_candidate_OLS_v1.tsv",
+      "bytes": 983,
+      "sha256": "c13b982731d1517e6af904f2fd49049e461faf388c5acae1611a9a74a50e7b16"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_recomputed_patient_diagnostics_v1.tsv",
+      "bytes": 2524,
+      "sha256": "7d3070222f385f46967dabd3e1c9219a9b6ad8584d2775c67fc8e05b847f8ba7"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_recomputed_secondary_v1.tsv",
+      "bytes": 912,
+      "sha256": "bd61b92ad35d7f600260b2a372a3395cd6146e45a88f03f66e9be6053b2d6f1f"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_report_independent_v1.json",
+      "bytes": 10339,
+      "sha256": "baa899a198a4e8d573e12fd176f2b6321fef2d3b020122ca6d799344ece84fab"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_validation_code_independent_v1.json",
+      "bytes": 8539,
+      "sha256": "f37777b58259aeaf965217732947efe3a6f0f01697fb1ad0260579dedd367829"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_validation_numeric_v1.json",
+      "bytes": 7040,
+      "sha256": "f9c5aee8c3d68623acdea0da66480c5bcc743d12c0b00c42f389324d391b31cb"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_validation_recompute_v1.R",
+      "bytes": 11479,
+      "sha256": "b49a4d4c8324141dc8fc659f3b4fbc367eb84119bdf5f4ae2aa2d1c184383b9b"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_validation_recompute_v1.log",
+      "bytes": 4263,
+      "sha256": "3b6b6edb124ffc79497beee96b4a57951ea106c73feca091ba16da96df01fb75"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_validation_results_independent_v1.json",
+      "bytes": 17194,
+      "sha256": "b2d2fbc82fe814a268e9af65c5226aa5e92eee1c28dcb0ecff15582eb8c0a766"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_visual_QA.json",
+      "bytes": 1875,
+      "sha256": "2cdd6808c556fee109ec554a8ee73c61ca15a08ff60eaff2964de3ddf85b85c9"
+    }
+  ],
+  "code": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/validation_002A.R",
+      "bytes": 9179,
+      "sha256": "a1efe70b1b321af8072bf6a55635a4e73de23ad65218e95f4c9b4d091919e132"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/plots_002A.R",
+      "bytes": 3623,
+      "sha256": "6a8bfecb0b3a1b8ec2e37a822e69721792a3d00dabdf78f8ffdee40b8bc7f637"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/report_002A.py",
+      "bytes": 12420,
+      "sha256": "b00f94fbf5875560f58108c78fdc58faf63710c378a5c19060778b98ae18b39f"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/finalize_002A.py",
+      "bytes": 4734,
+      "sha256": "57ba3be9e5419776ef6484a8743069d72df239d5e33fd268f0cb666b1c5a5af1"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/figure_theme.R",
+      "bytes": 756,
+      "sha256": "13b2aafacd809b9a72a19e8890e604466fa3fcc5620f02646f42f7d4f44f6eec"
+    }
+  ],
+  "report": {
+    "path": "/root/projects/UC_Treatment_Recovery/reports/Annotation_amendment_and_GSE23597_validation_20260910.md",
+    "bytes": 10434,
+    "sha256": "0409650978cc7bcceb25a4caee4831bd2295f635d3bafa5463d6d6178c9e1e2b"
+  },
+  "environment": {
+    "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+    "bytes": 144982,
+    "sha256": "d0b866e9d3af3a81cb6d35f4eee3cba387946f2e6ade554e22057e24bdf2ed86"
+  },
+  "completed_utc": "2026-09-10T15:49:48.981947+00:00"
+}

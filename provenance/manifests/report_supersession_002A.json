@@ -1,0 +1,11 @@
+{
+  "status": "REVIEWED",
+  "current_report": {
+    "path": "/root/projects/UC_Treatment_Recovery/reports/Annotation_amendment_and_GSE23597_validation_20260910.md",
+    "bytes": 10434,
+    "sha256": "0409650978cc7bcceb25a4caee4831bd2295f635d3bafa5463d6d6178c9e1e2b"
+  },
+  "previous_report": "reports/Review_response_and_001C_report_20260910.md",
+  "old_artifacts": "Retained unchanged; current program estimates use001D canonical annotation and common194. Partial IBrD proxy retired. No old GO/CAMERA run has been relabelled as new-annotation output.",
+  "primary_validation": "GSE23597 technically evaluable, support rule false. GSE73661 never substitutes."
+}

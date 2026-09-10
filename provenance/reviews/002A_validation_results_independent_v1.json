@@ -1,0 +1,409 @@
+{
+  "review_id": "002A_validation_results_independent_v1",
+  "created_utc": "2026-09-10T15:43:21.098443+00:00",
+  "reviewer_role": "Independent Reviewer Gate: downloaded header, preprocessing, patient pairing and numerical model reconstruction",
+  "status": "REVIEWED",
+  "blocking_findings": [],
+  "decision": "Adopt the technically reproducible held-out result as not meeting the frozen primary support rule. Review passed does not mean biological validation succeeded. No mechanical or statistical implementation error was found that warrants replacing the prespecified scientific analysis.",
+  "inputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/signature_lock.json",
+      "bytes": 19065,
+      "sha256": "62462dfbc25bb857c94c872424173e215c6d1b8b6724a0bbc724a5c2683bfb36"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/metadata/GSE23597.matrix_header.txt",
+      "bytes": 154850,
+      "sha256": "4e2235639e0493d549ded32335e50898ee13eecb1d35c9b54522ca82bb7e0d09"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/validation/GSE23597_series_matrix.txt.gz",
+      "bytes": 31357273,
+      "sha256": "d36fe4df1b6903c2be9de761a66deb92598cce84105d26be48e956ea5a26ce50"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/expression_access_event.json",
+      "bytes": 498,
+      "sha256": "e38a462a3e2f2a8f5514f3ce456d92172faa5e84e709d084c9dec37f572af7d5"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/download_manifest.json",
+      "bytes": 1035,
+      "sha256": "fb5c8c1bca1f94a4e214cf4d7c1a5bdc42ae1968764fd95000a74815fd56138e"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/validation_002A.R",
+      "bytes": 9179,
+      "sha256": "a1efe70b1b321af8072bf6a55635a4e73de23ad65218e95f4c9b4d091919e132"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/GPL570_canonical_probe_mapping.tsv",
+      "bytes": 2514367,
+      "sha256": "db6a0c83ab5bd4f3fa94e84b8adc9925f26325d4dd1b6ca946571f2babbcee51"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/program_membership_canonical.tsv",
+      "bytes": 465739,
+      "sha256": "2c04c0f497502d5918a0f77dac89a078e6bc89e2ef0166b1ef1789b1f1e23f39"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_metadata_prevalidation_pairs_independent_v1.tsv",
+      "bytes": 2623,
+      "sha256": "a463f1c71e15f6cf54363fddfb9b39408608668f28812f2efe9f6944c698eddd"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/validation_scores.rds",
+      "bytes": 62608421,
+      "sha256": "a5b285ebf0a815e28b75f33983e5ac6a44a71a532efdbe7a3f86223081b6df2c"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/primary_test.tsv",
+      "bytes": 335,
+      "sha256": "4c1a520e712d0a5790ef14a2380b6fe559c48a8e627acd265af47cb7ffa63af7"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/candidate_models.tsv",
+      "bytes": 978,
+      "sha256": "a4d3041baa560e87443fbe856efd0fd848467ac827609c2b0db94fcf5bf71760"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/candidate_models_HC3.tsv",
+      "bytes": 633,
+      "sha256": "2b3f5cf9760b79de804e1dafef8f7038bfe56c9f3190c27a0a0e9bc3124ca648"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/secondary_reference_tests.tsv",
+      "bytes": 940,
+      "sha256": "4e7ba01f0f99fea65c1160446a301b4bbcb155c536afdbd7bba32f39ad02a321"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/secondary_no_baseline_descriptive.tsv",
+      "bytes": 842,
+      "sha256": "01deca5ad4f2071358e5968cfcda5eac0b487f9363b877d8162448046972eb03"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/leave_one_patient_out.tsv",
+      "bytes": 1291,
+      "sha256": "db4037e23acf146a243a136eacc83428f23f2a2dbfd2591512692f7bd35ea95d"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/primary_patient_diagnostics.tsv",
+      "bytes": 2983,
+      "sha256": "4ea2954c119de23eaaeccce49948b352abd16148a159b67aa62ec46131a44617"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/validation_summary.json",
+      "bytes": 969,
+      "sha256": "6e90a597b8f8fa5eee98840b748cfdb4bb49aeeda695309bddeee4b754b1d618"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/qc_summary.json",
+      "bytes": 571,
+      "sha256": "fc0534fd681b6d93c55c6d224988fb93a10603c6fce11a0ef077119ae8fd1bb7"
+    }
+  ],
+  "reviewer_artifacts": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_validation_recompute_v1.R",
+      "bytes": 11479,
+      "sha256": "b49a4d4c8324141dc8fc659f3b4fbc367eb84119bdf5f4ae2aa2d1c184383b9b"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_validation_recompute_v1.log",
+      "bytes": 4263,
+      "sha256": "3b6b6edb124ffc79497beee96b4a57951ea106c73feca091ba16da96df01fb75"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_validation_numeric_v1.json",
+      "bytes": 7040,
+      "sha256": "f9c5aee8c3d68623acdea0da66480c5bcc743d12c0b00c42f389324d391b31cb"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_recomputed_candidate_OLS_v1.tsv",
+      "bytes": 983,
+      "sha256": "c13b982731d1517e6af904f2fd49049e461faf388c5acae1611a9a74a50e7b16"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_recomputed_candidate_HC3_v1.tsv",
+      "bytes": 632,
+      "sha256": "9f799e5145a68e66580b23f9caa3e8063fed99ef8ed7385ce555552a2d657a2d"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_recomputed_secondary_v1.tsv",
+      "bytes": 912,
+      "sha256": "bd61b92ad35d7f600260b2a372a3395cd6146e45a88f03f66e9be6053b2d6f1f"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_recomputed_patient_diagnostics_v1.tsv",
+      "bytes": 2524,
+      "sha256": "7d3070222f385f46967dabd3e1c9219a9b6ad8584d2775c67fc8e05b847f8ba7"
+    }
+  ],
+  "freeze_and_access": {
+    "lock_version": "1.1",
+    "lock_sha256": "62462dfbc25bb857c94c872424173e215c6d1b8b6724a0bbc724a5c2683bfb36",
+    "frozen_utc": "2026-09-10T15:36:16.742591+00:00",
+    "first_expression_access_event_utc": "2026-09-10T15:36:45.565553+00:00",
+    "freeze_precedes_access_event": true,
+    "frozen_inputs_checked": 26,
+    "frozen_input_failures": [],
+    "download_bytes_and_sha_match": true,
+    "boundary": "Temporal order is verified against the recorded freeze/access artifacts; reviewer had no expression access before the root execution notification."
+  },
+  "header_audit": {
+    "old_and_new_unique_field_types": 54,
+    "field_differences": [],
+    "coverage": "Compared all parsed Series and Sample header field values and every repeated characteristic row, not only GSM. Subject, title, dose, visit, wk8 response, wk30 response, platform and processing descriptions agree exactly."
+  },
+  "preprocessing": {
+    "raw_dimensions": [
+      54675,
+      113
+    ],
+    "raw_min": 0.105479,
+    "raw_99th_percentile": 12588.3584,
+    "scale_decision": "Nonnegative GCOS-scaled intensities with 99th percentile >100; independently applied frozen log2(pmax(x,1)) rule, without repeat normalization.",
+    "floored_values": 2026,
+    "retained_unambiguous_canonical_probes": 40659,
+    "canonical_genes": 18992,
+    "independent_aggregation": "rowsum of log2 probes divided by per-gene probe count, followed by explicit equal-weight membership matrix multiplication. No limma avereps call in reviewer recomputation.",
+    "all_matrix_score_comparison_max_differences": {
+      "log_probe": 0,
+      "all_gene_means": 0,
+      "all_program_scores": 1.0658141036401503e-14,
+      "all_baselines": 1.0658141036401503e-14,
+      "all_deltas": 1.7763568394002505e-14
+    },
+    "coverage": [
+      {
+        "program": "MATURE_COLONOCYTE6_EXPLORATORY",
+        "source_n": 6,
+        "measured_n": 6,
+        "coverage": 1,
+        "_row": "MATURE_COLONOCYTE6_EXPLORATORY"
+      },
+      {
+        "program": "HALLMARK_INFLAMMATORY_RESPONSE",
+        "source_n": 200,
+        "measured_n": 200,
+        "coverage": 1,
+        "_row": "HALLMARK_INFLAMMATORY_RESPONSE"
+      },
+      {
+        "program": "UC_Maciag2024_TableS2_CT_Colonocytes_reported_marker_mean_proxy",
+        "source_n": 20,
+        "measured_n": 18,
+        "coverage": 0.9,
+        "_row": "UC_Maciag2024_TableS2_CT_Colonocytes_reported_marker_mean_proxy"
+      },
+      {
+        "program": "UC_IA13_JAKSTAT_2024_gene_mean_proxy",
+        "source_n": 13,
+        "measured_n": 13,
+        "coverage": 1,
+        "_row": "UC_IA13_JAKSTAT_2024_gene_mean_proxy"
+      },
+      {
+        "program": "HALLMARK_OXIDATIVE_PHOSPHORYLATION",
+        "source_n": 200,
+        "measured_n": 196,
+        "coverage": 0.98,
+        "_row": "HALLMARK_OXIDATIVE_PHOSPHORYLATION"
+      }
+    ],
+    "actual_scored_inflammation_genes": 194
+  },
+  "patient_audit": {
+    "source_reconstructed_pairs": 32,
+    "responders": 20,
+    "nonresponders": 12,
+    "frozen_pair_table_exact_match": true,
+    "P13_excluded": true,
+    "identity_rule": "Exactly one deposited W0 and one W8 for the same explicit source subject. No expression-based pairing or expression-dependent exclusion.",
+    "response_by_dose": {
+      "Placebo": {
+        "No": 5,
+        "Yes": 3
+      },
+      "IFX_5mgkg": {
+        "No": 2,
+        "Yes": 8
+      },
+      "IFX_10mgkg": {
+        "No": 5,
+        "Yes": 9
+      }
+    }
+  },
+  "independent_statistics": {
+    "method": "Independent GEO table read.table; raw-header pair reconstruction; rowsum divided by probe counts; explicit gene-membership weight matrix; SVD coefficient and covariance reconstruction, direct squared sandwich columns for HC3; manual BH reverse cumulative minimum; no lm or limma fit/avereps calls",
+    "table_comparisons": [
+      {
+        "file": "candidate_models.tsv",
+        "n_rows": 4,
+        "max_numeric_difference": 2.8421709430404007e-13
+      },
+      {
+        "file": "candidate_models_HC3.tsv",
+        "n_rows": 4,
+        "max_numeric_difference": 1.7319479184152442e-14
+      },
+      {
+        "file": "secondary_reference_tests.tsv",
+        "n_rows": 3,
+        "max_numeric_difference": 3.637978807091713e-12
+      },
+      {
+        "file": "secondary_no_baseline_descriptive.tsv",
+        "n_rows": 3,
+        "max_numeric_difference": 2.581268532253489e-14
+      },
+      {
+        "file": "leave_one_patient_out.tsv",
+        "n_rows": 32,
+        "max_numeric_difference": 1.454392162258955e-14
+      },
+      {
+        "file": "primary_patient_diagnostics.tsv",
+        "n_rows": 32,
+        "max_numeric_difference": 2.886579864025407e-14
+      }
+    ],
+    "primary_OLS": {
+      "program": "MATURE_COLONOCYTE6_EXPLORATORY",
+      "model": "primary_baseline_inflammation",
+      "estimate": 0.4008231430470832,
+      "se": 0.42883024478424286,
+      "lower": -0.4806500492873572,
+      "upper": 1.2822963353815235,
+      "p": 0.3585487634617963,
+      "n": 32,
+      "df": 26,
+      "rank": 6,
+      "raw_condition": 100.55301137245829,
+      "standardized_condition": 2.6853766082645176,
+      "max_VIF": 2.2206233167716465,
+      "max_leverage": 0.5257441330656476,
+      "_row": "primary_baseline_inflammation"
+    },
+    "primary_HC3": {
+      "program": "MATURE_COLONOCYTE6_EXPLORATORY",
+      "model": "primary_baseline_inflammation",
+      "estimate": 0.4008231430470832,
+      "se": 0.5364472138095397,
+      "lower": -0.701859897216373,
+      "upper": 1.5035061833105394,
+      "p": 0.461658603128432,
+      "n": 32,
+      "df": 26,
+      "_row": "primary_baseline_inflammation"
+    },
+    "mandatory_no_baseline": {
+      "program": "MATURE_COLONOCYTE6_EXPLORATORY",
+      "model": "mandatory_no_baseline",
+      "estimate": 0.2669614126513172,
+      "se": 0.492469945669525,
+      "lower": -0.7435034503228022,
+      "upper": 1.2774262756254364,
+      "p": 0.5922050139915034,
+      "n": 32,
+      "df": 27,
+      "rank": 5,
+      "raw_condition": 5.440531249553604,
+      "standardized_condition": 2.2595087674289616,
+      "max_VIF": 1.8069195347999927,
+      "max_leverage": 0.5071810593081811,
+      "_row": "mandatory_no_baseline"
+    },
+    "secondary_tests": [
+      {
+        "program": "UC_Maciag2024_TableS2_CT_Colonocytes_reported_marker_mean_proxy",
+        "model": "secondary_baseline_inflammation",
+        "estimate": 0.14542551641593193,
+        "se": 0.21938328243723956,
+        "lower": -0.3055232789799179,
+        "upper": 0.5963743118117817,
+        "p": 0.513239631695279,
+        "n": 32,
+        "df": 26,
+        "rank": 6,
+        "raw_condition": 208.6098318423405,
+        "standardized_condition": 2.644337895559578,
+        "max_VIF": 2.1668513183551896,
+        "max_leverage": 0.5317698719179669,
+        "FDR_across_three": 0.6434863666199255,
+        "_row": "UC_Maciag2024_TableS2_CT_Colonocytes_reported_marker_mean_proxy"
+      },
+      {
+        "program": "UC_IA13_JAKSTAT_2024_gene_mean_proxy",
+        "model": "secondary_baseline_inflammation",
+        "estimate": -0.30924933146748346,
+        "se": 0.3064311866532163,
+        "lower": -0.9391276565514385,
+        "upper": 0.32062899361647157,
+        "p": 0.3221806816970183,
+        "n": 32,
+        "df": 26,
+        "rank": 6,
+        "raw_condition": 225.03014405772603,
+        "standardized_condition": 2.428196065328717,
+        "max_VIF": 1.8108842174925808,
+        "max_leverage": 0.5399354510794396,
+        "FDR_across_three": 0.6434863666199255,
+        "_row": "UC_IA13_JAKSTAT_2024_gene_mean_proxy"
+      },
+      {
+        "program": "HALLMARK_OXIDATIVE_PHOSPHORYLATION",
+        "model": "secondary_baseline_inflammation",
+        "estimate": 0.02007221667335104,
+        "se": 0.042863694227448984,
+        "lower": -0.06803536866015691,
+        "upper": 0.10817980200685898,
+        "p": 0.6434863666199255,
+        "n": 32,
+        "df": 26,
+        "rank": 6,
+        "raw_condition": 810.6542681035004,
+        "standardized_condition": 2.570672472463855,
+        "max_VIF": 1.9277847805398838,
+        "max_leverage": 0.5083557945866247,
+        "FDR_across_three": 0.6434863666199255,
+        "_row": "HALLMARK_OXIDATIVE_PHOSPHORYLATION"
+      }
+    ],
+    "BH_family_size": 3,
+    "full_primary_actual_rank": 6,
+    "full_primary_actual_residual_df": 26,
+    "primary_support_rule_met": false,
+    "support_rule": "ResponseYes >0 AND two-sided OLS P<0.05. Estimate is positive but P=0.35854876346; criterion is not met. HC3 is a sensitivity analysis and does not change the main method."
+  },
+  "diagnostics": {
+    "full_model_max_leverage": 0.5257441330656476,
+    "max_leverage_subject": "P45",
+    "P45_cooks_distance": 0.03930455240644554,
+    "standardized_design_condition": 2.6853766082645176,
+    "max_VIF": 2.2206233167716465,
+    "LOPO_all_full_rank": true,
+    "LOPO_estimate_range": [
+      0.22251243992915512,
+      0.7350324266699828
+    ],
+    "LOPO_p_range": [
+      0.09758505365857738,
+      0.6070047653781858
+    ],
+    "delta_response_vs_equivalent_post_model_difference": 3.497202527569243e-15,
+    "baseline_coefficient_delta_model": -0.43184640532454094,
+    "baseline_coefficient_equivalent_post_model": 0.5681535946754588,
+    "interpretation": "Actual full-model leverage is distinct from the earlier metadata-only calculation. P45 exceeds the descriptive 2p/n threshold but is retained under the frozen rules; all 32 LOPO fits were estimable. Raw condition number is not interpreted as severe multicollinearity because the standardized condition and VIF are modest."
+  },
+  "reporting_boundaries": [
+    "The independent primary association was not supported by the frozen test. Do not call this successful validation based on positive direction, exploratory branches, nominal near-significance, or selected patient omissions.",
+    "A CI including zero does not establish no effect, equivalence, or low power. Report the estimate and interval rather than inferring those conclusions.",
+    "The three reference programs also did not pass their fixed three-test BH family; their adjusted P values are each 0.64348636662.",
+    "The no-baseline and no-inflammation models have different conditioning/estimands. Neither is an authorized replacement primary.",
+    "No candidate gene, score weight, coverage threshold, endpoint, covariate, sample-selection rule or primary method was changed by this reviewer."
+  ],
+  "provenance_note": "The root was notified that execution.json still stated RUNNING after the completion marker appeared, for routine execution-state reconciliation. This does not affect the independently reproduced numerical results.",
+  "mutation_scope": "Only new independent review/recomputation files under provenance/reviews were written. Frozen inputs, main scientific outputs and existing reviews were not modified."
+}

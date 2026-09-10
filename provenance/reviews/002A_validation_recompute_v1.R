@@ -1,0 +1,92 @@
+options(stringsAsFactors=FALSE,width=180)
+suppressPackageStartupMessages(library(jsonlite))
+root<-"/root/projects/UC_Treatment_Recovery";setwd(root)
+rout<-"provenance/reviews";prod<-"runs/002A_GSE23597"
+lock<-read_json("signature_lock.json",simplifyVector=TRUE)
+stopifnot(lock$version=="1.1",lock$status=="FROZEN")
+con<-gzfile("inputs/validation/GSE23597_series_matrix.txt.gz","rt");ln<-readLines(con,warn=FALSE);close(con)
+beg<-which(ln=="!series_matrix_table_begin");end<-which(ln=="!series_matrix_table_end")
+stopifnot(length(beg)==1,length(end)==1,end>beg)
+tab<-read.table(text=paste(ln[(beg+1):(end-1)],collapse="\n"),header=TRUE,sep="\t",quote='"',comment.char="",check.names=FALSE,colClasses=c("character",rep("numeric",113)))
+raw<-as.matrix(tab[,-1]);rownames(raw)<-tab[,1];rm(tab)
+stopifnot(identical(dim(raw),c(54675L,113L)),all(is.finite(raw)),!anyDuplicated(rownames(raw)),!anyDuplicated(colnames(raw)))
+header<-lapply(ln[seq_len(beg-1)],function(z)scan(text=z,what="",sep="\t",quote='"',quiet=TRUE));rm(ln)
+charrows<-header[vapply(header,function(z)length(z)>0&&z[1]=="!Sample_characteristics_ch1",logical(1))]
+getcharfield<-function(prefix){z<-charrows[vapply(charrows,function(z)startsWith(z[2],paste0(prefix,": ")),logical(1))];stopifnot(length(z)==1);substring(z[[1]][-1],nchar(prefix)+3)}
+sgsm<-header[vapply(header,function(z)length(z)>0&&z[1]=="!Sample_geo_accession",logical(1))][[1]][-1]
+md<-data.frame(gsm=sgsm,subject=getcharfield("subject"),visit=getcharfield("time"),dose=getcharfield("dose"),response=getcharfield("wk8 response"))
+stopifnot(identical(md$gsm,colnames(raw)))
+subjects<-unique(md$subject);subjects<-subjects[order(as.integer(sub("P","",subjects)))]
+pairs<-do.call(rbind,lapply(subjects,function(s){z<-md[md$subject==s,];if(s=="P13"||sum(z$visit=="W0")!=1||sum(z$visit=="W8")!=1)return(NULL);stopifnot(length(unique(z$dose))==1,length(unique(z$response))==1);data.frame(subject=s,baseline_gsm=z$gsm[z$visit=="W0"],week8_gsm=z$gsm[z$visit=="W8"],dose=z$dose[1],response=z$response[1])}))
+stopifnot(nrow(pairs)==32)
+pair_frozen<-read.delim("provenance/reviews/002A_metadata_prevalidation_pairs_independent_v1.tsv",check.names=FALSE)
+stopifnot(identical(pairs$subject,pair_frozen$subject),identical(pairs$baseline_gsm,pair_frozen$baseline_gsm),identical(pairs$week8_gsm,pair_frozen$week8_gsm),identical(pairs$response,pair_frozen$response),identical(pairs$dose,pair_frozen$dose_source))
+q<-quantile(raw,c(0,.01,.25,.5,.75,.99,1));stopifnot(q[6]>100,q[1]>=0)
+floor_n<-sum(raw<1);E<-log2(pmax(raw,1))
+map<-read.delim("runs/001D_annotation/GPL570_canonical_probe_mapping.tsv",check.names=FALSE,na.strings="")
+stopifnot(!anyDuplicated(map$probe));ii<-match(rownames(E),map$probe);ok<-!is.na(ii)&map$retained[ii]==1&!is.na(map$canonical_symbol[ii]);ok[is.na(ok)]<-FALSE
+syms<-map$canonical_symbol[ii[ok]]
+Gsum<-rowsum(E[ok,,drop=FALSE],group=syms,reorder=TRUE);Gcount<-table(syms);G<-Gsum/as.numeric(Gcount[rownames(Gsum)]);G<-G[order(rownames(G)),,drop=FALSE]
+mem<-read.delim("runs/001D_annotation/program_membership_canonical.tsv",check.names=FALSE)
+cand<-lock$candidate$id;infl<-"HALLMARK_INFLAMMATORY_RESPONSE";refs<-lock$secondary_reference_programs
+sets<-list();sets[[cand]]<-lock$candidate$genes;sets[[infl]]<-lock$inflammation_covariate$genes
+coverage<-list()
+for(s in c(cand,infl,refs)){source<-unique(mem$gene[mem$program==s]);hit<-intersect(source,rownames(G));coverage[[s]]<-data.frame(program=s,source_n=length(source),measured_n=length(hit),coverage=length(hit)/length(source));if(s%in%refs)sets[[s]]<-hit}
+stopifnot(all(sets[[cand]]%in%rownames(G)),length(sets[[cand]])==6,length(sets[[infl]])==194,all(sets[[infl]]%in%rownames(G)))
+W<-matrix(0,nrow=length(sets),ncol=nrow(G),dimnames=list(names(sets),rownames(G)))
+for(s in names(sets))W[s,sets[[s]]]<-1/length(sets[[s]])
+score<-W%*%G;bl<-score[,pairs$baseline_gsm,drop=FALSE];post<-score[,pairs$week8_gsm,drop=FALSE];delta<-post-bl;colnames(bl)<-colnames(post)<-colnames(delta)<-pairs$subject
+stored<-readRDS(file.path(prod,"validation_scores.rds"))
+diffs<-list(log_probe=max(abs(E-stored$probe_expression_log2)),all_gene_means=max(abs(G-stored$gene_expression[rownames(G),colnames(G)])),all_program_scores=max(abs(score-stored$sample_scores[rownames(score),colnames(score)])),all_baselines=max(abs(bl-stored$baseline[rownames(bl),colnames(bl)])),all_deltas=max(abs(delta-stored$delta[rownames(delta),colnames(delta)])))
+stopifnot(max(unlist(diffs))<1e-10)
+baseX<-cbind(Intercept=1,responseYes=as.numeric(pairs$response=="Yes"),IFX_5mgkg=as.numeric(pairs$dose=="5mg/kg"),IFX_10mgkg=as.numeric(pairs$dose=="10mg/kg"))
+formX<-function(s,model){
+ X<-baseX
+ if(model%in%c("primary_baseline_inflammation","secondary_baseline_inflammation","without_inflammation","IFX_only"))X<-cbind(X,baseline=as.numeric(bl[s,]))
+ if(model!="without_inflammation")X<-cbind(X,inflammation=as.numeric(delta[infl,]))
+ if(model=="IFX_only")X<-X[pairs$dose!="placebo",c("Intercept","responseYes","IFX_10mgkg","baseline","inflammation"),drop=FALSE]
+ X
+}
+svdfit<-function(X,y){
+ z<-svd(X);rank<-sum(z$d>max(z$d)*max(dim(X))*.Machine$double.eps);stopifnot(rank==ncol(X))
+ beta<-as.vector(z$v%*%((crossprod(z$u,y))/z$d));names(beta)<-colnames(X)
+ bread<-tcrossprod(sweep(z$v,2,z$d,"/"));dimnames(bread)<-list(colnames(X),colnames(X))
+ res<-as.vector(y-X%*%beta);df<-length(y)-rank;mse<-sum(res^2)/df;se<-sqrt(diag(bread)*mse);h<-rowSums(z$u^2)
+ a<-bread%*%t(X);robse<-sqrt(rowSums(sweep(a,2,res/(1-h),"*")^2))
+ s<-"responseYes";estimate<-beta[s];pv<-2*pt(-abs(estimate/se[s]),df);crit<-qt(.975,df)
+ nonint<-X[,-1,drop=FALSE];Z<-cbind(1,scale(nonint));vif<-diag(solve(cor(nonint)))
+ row<-data.frame(estimate=unname(estimate),se=unname(se[s]),lower=unname(estimate-crit*se[s]),upper=unname(estimate+crit*se[s]),p=unname(pv),n=length(y),df=df,rank=rank,raw_condition=max(z$d)/min(z$d),standardized_condition=kappa(Z,exact=TRUE),max_VIF=max(vif),max_leverage=max(h))
+ hc<-data.frame(estimate=unname(estimate),se=unname(robse[s]),lower=unname(estimate-crit*robse[s]),upper=unname(estimate+crit*robse[s]),p=unname(2*pt(-abs(estimate/robse[s]),df)),n=length(y),df=df)
+ list(row=row,hc3=hc,beta=beta,res=res,h=h,X=X,mse=mse,vif=vif)
+}
+fits<-list();ols<-list();rob<-list();for(model in c("primary_baseline_inflammation","mandatory_no_baseline","without_inflammation","IFX_only")){
+ y<-as.numeric(delta[cand,]);if(model=="IFX_only")y<-y[pairs$dose!="placebo"]
+ f<-svdfit(formX(cand,model),y);fits[[model]]<-f;ols[[model]]<-cbind(program=cand,model=model,f$row);rob[[model]]<-cbind(program=cand,model=model,f$hc3)
+}
+ols<-do.call(rbind,ols);rob<-do.call(rbind,rob)
+comp<-function(own,file,keys,numeric_columns){
+ observed<-read.delim(file.path(prod,file),check.names=FALSE)
+ ka<-apply(own[,keys,drop=FALSE],1,paste,collapse="|");kb<-apply(observed[,keys,drop=FALSE],1,paste,collapse="|");stopifnot(!anyDuplicated(ka),!anyDuplicated(kb),setequal(ka,kb))
+ b<-observed[match(ka,kb),numeric_columns,drop=FALSE];a<-own[,numeric_columns,drop=FALSE];dd<-max(abs(as.matrix(a)-as.matrix(b)),na.rm=TRUE);stopifnot(dd<1e-8);list(file=file,n_rows=nrow(own),max_numeric_difference=dd)
+}
+compare<-list(comp(ols,"candidate_models.tsv",c("program","model"),names(fits[[1]]$row)),comp(rob,"candidate_models_HC3.tsv",c("program","model"),names(fits[[1]]$hc3)))
+sec<-list();secNB<-list();for(s in refs){f<-svdfit(formX(s,"secondary_baseline_inflammation"),as.numeric(delta[s,]));sec[[s]]<-cbind(program=s,model="secondary_baseline_inflammation",f$row);g<-svdfit(formX(s,"mandatory_no_baseline"),as.numeric(delta[s,]));secNB[[s]]<-cbind(program=s,model="reference_no_baseline_descriptive",g$row)}
+sec<-do.call(rbind,sec);secNB<-do.call(rbind,secNB)
+o<-order(sec$p);bh<-pmin(1,rev(cummin(rev(sec$p[o]*3/seq_along(o)))));sec$FDR_across_three<-NA_real_;sec$FDR_across_three[o]<-bh
+compare[[length(compare)+1]]<-comp(sec,"secondary_reference_tests.tsv",c("program","model"),c(names(fits[[1]]$row),"FDR_across_three"))
+compare[[length(compare)+1]]<-comp(secNB,"secondary_no_baseline_descriptive.tsv",c("program","model"),names(fits[[1]]$row))
+f<-fits[[1]];XX<-f$X;y<-as.numeric(delta[cand,]);lo<-do.call(rbind,lapply(seq_along(y),function(i){q<-svdfit(XX[-i,,drop=FALSE],y[-i]);data.frame(omitted_subject=pairs$subject[i],estimate=q$row$estimate,p=q$row$p)}))
+compare[[length(compare)+1]]<-comp(lo,"leave_one_patient_out.tsv","omitted_subject",c("estimate","p"))
+df<-f$row$df;extsigma<-sqrt((sum(f$res^2)-f$res^2/(1-f$h))/(df-1));diagnostics<-data.frame(subject=pairs$subject,leverage=f$h,residual=f$res,studentized_residual=f$res/(extsigma*sqrt(1-f$h)),cooks_distance=(f$res^2/(ncol(XX)*f$mse))*f$h/(1-f$h)^2)
+compare[[length(compare)+1]]<-comp(diagnostics,"primary_patient_diagnostics.tsv","subject",c("leverage","residual","studentized_residual","cooks_distance"))
+postfit<-svdfit(XX,as.numeric(post[cand,]));response_delta_post_diff<-abs(postfit$beta["responseYes"]-f$beta["responseYes"]);stopifnot(response_delta_post_diff<1e-10)
+qc<-read_json(file.path(prod,"qc_summary.json"),simplifyVector=TRUE);stopifnot(floor_n==qc$floored_values,max(abs(as.numeric(q)-unlist(qc$source_quantiles)))<1e-8)
+summ<-read_json(file.path(prod,"validation_summary.json"),simplifyVector=TRUE);support<-f$row$estimate>0&&f$row$p<.05;stopifnot(identical(support,summ$primary_support_rule_met),f$row$n==32,f$row$rank==6,f$row$df==26)
+for(nm in names(diffs))stopifnot(is.finite(diffs[[nm]]))
+write.table(ols,file.path(rout,"002A_recomputed_candidate_OLS_v1.tsv"),sep="\t",row.names=FALSE,quote=FALSE)
+write.table(rob,file.path(rout,"002A_recomputed_candidate_HC3_v1.tsv"),sep="\t",row.names=FALSE,quote=FALSE)
+write.table(sec,file.path(rout,"002A_recomputed_secondary_v1.tsv"),sep="\t",row.names=FALSE,quote=FALSE)
+write.table(diagnostics,file.path(rout,"002A_recomputed_patient_diagnostics_v1.tsv"),sep="\t",row.names=FALSE,quote=FALSE)
+report<-list(status="RECOMPUTATION_PASSED",raw_dims=dim(raw),source_quantiles=as.list(q),floored_values=floor_n,retained_probe_count=sum(ok),canonical_gene_count=nrow(G),pairs=nrow(pairs),responders=sum(pairs$response=="Yes"),nonresponders=sum(pairs$response=="No"),coverage=do.call(rbind,coverage),scored_common_inflammation=length(sets[[infl]]),preprocessing_and_score_max_differences=diffs,table_comparisons=compare,primary=ols[ols$model=="primary_baseline_inflammation",],primary_HC3=rob[rob$model=="primary_baseline_inflammation",],no_baseline=ols[ols$model=="mandatory_no_baseline",],secondary=sec,primary_support_rule_met=support,primary_full_model_high_leverage_descriptive=diagnostics[diagnostics$leverage>2*ncol(XX)/nrow(XX),],leverage_threshold_descriptive=2*ncol(XX)/nrow(XX),LOPO_estimate_range=range(lo$estimate),LOPO_p_range=range(lo$p),LOPO_all_fits_full_rank=TRUE,response_delta_vs_post_model_difference=unname(response_delta_post_diff),primary_baseline_coefficient=f$beta["baseline"],equivalent_post_baseline_coefficient=postfit$beta["baseline"],methods="Independent GEO table read.table; raw-header pair reconstruction; rowsum divided by probe counts; explicit gene-membership weight matrix; SVD coefficient and covariance reconstruction, direct squared sandwich columns for HC3; manual BH reverse cumulative minimum; no lm or limma fit/avereps calls")
+write_json(report,file.path(rout,"002A_validation_numeric_v1.json"),auto_unbox=TRUE,pretty=TRUE,digits=16)
+print(ols);print(rob);print(sec);print(diagnostics[order(-diagnostics$leverage),][1:5,]);print(diffs);cat("002A_INDEPENDENT_RECOMPUTATION_PASSED\n")

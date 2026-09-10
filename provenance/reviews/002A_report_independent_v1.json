@@ -1,0 +1,256 @@
+{
+  "schema_version": "1.0",
+  "status": "REVIEWED",
+  "completed_utc": "2026-09-10T15:49:27.072307+00:00",
+  "reviewer": "independent prior_program_review agent",
+  "scope": "Final report numbers/claims and figure source consistency. Does not repeat raw-matrix computation or literature review; independent raw-matrix review separately recorded in 002A_validation_numeric_v1.json.",
+  "report": {
+    "path": "reports/Annotation_amendment_and_GSE23597_validation_20260910.md",
+    "sha256": "0409650978cc7bcceb25a4caee4831bd2295f635d3bafa5463d6d6178c9e1e2b",
+    "bytes": 10434
+  },
+  "blocking_findings": [],
+  "resolved_findings": [
+    {
+      "id": "REPORT-MARS-ATTRIBUTION",
+      "location": "report line 26",
+      "original_problem": "57.3% compared baseline_only with baseline+inflammation+MARS, wrongly attributing both added adjustments to MARS alone.",
+      "resolution": "Current text reports .874 -> .599 after inflammation -> .373 after 11 MARS source-table components, separates joint 57.3% from additional MARS 37.8%, explicitly descriptive not causal.",
+      "verified_current_text": "LOGO只能支持没有单一基因决定全部结果，不能证明没有过拟合。基线调整模型β=0.874；加入炎症后为0.599；再加入11个MARS原表组件后为0.373。炎症与MARS两步联合较基线模型降低57.3%，MARS相对已调炎症模型降低37.8%。这些均为描述性条件系数变化，不是因果解释比例，也不能把两步联合降低全部归于MARS。",
+      "joint_descriptive_attenuation_percent": 57.29740490050372,
+      "additional_MARS_descriptive_attenuation_percent": 37.76890054041503,
+      "status": "RESOLVED"
+    }
+  ],
+  "numeric_checks": {
+    "report_result_rows": [
+      {
+        "report_line": 44,
+        "label": "仅HGNC归一，完整200炎症"
+      },
+      {
+        "report_line": 45,
+        "label": "v1.1主对应模型：自身baseline+共同194炎症"
+      },
+      {
+        "report_line": 46,
+        "label": "强制并列：无自身baseline+共同194炎症"
+      },
+      {
+        "report_line": 47,
+        "label": "另加11个MARS原表组件"
+      },
+      {
+        "report_line": 48,
+        "label": "CT条件模型"
+      },
+      {
+        "report_line": 74,
+        "label": "primary_baseline_inflammation"
+      },
+      {
+        "report_line": 75,
+        "label": "mandatory_no_baseline"
+      },
+      {
+        "report_line": 76,
+        "label": "without_inflammation"
+      },
+      {
+        "report_line": 77,
+        "label": "IFX_only"
+      },
+      {
+        "report_line": 84,
+        "label": "UC_Maciag2024_TableS2_CT_Colonocytes_reported_marker_mean_proxy"
+      },
+      {
+        "report_line": 85,
+        "label": "UC_IA13_JAKSTAT_2024_gene_mean_proxy"
+      },
+      {
+        "report_line": 86,
+        "label": "HALLMARK_OXIDATIVE_PHOSPHORYLATION"
+      }
+    ],
+    "primary_values": {
+      "estimate": 0.400823143047078,
+      "lower": -0.480650049287364,
+      "upper": 1.28229633538152,
+      "p": 0.358548763461803,
+      "n": 32.0,
+      "df": 26.0
+    },
+    "primary_evaluable": true,
+    "primary_support_rule_met": false,
+    "figure_comparisons": [
+      {
+        "figure_source": "Fig002A_PrimaryAndParallel_source.tsv",
+        "rows": 4,
+        "labels_checked": 4,
+        "source": "discovery_response_models.tsv or candidate_models.tsv by cohort/model"
+      },
+      {
+        "figure_source": "Fig002B_ValidationSensitivity_source.tsv",
+        "rows": 8,
+        "source": "candidate_models.tsv for OLS; candidate_models_HC3.tsv for HC3"
+      }
+    ],
+    "figure_numeric_comparisons": 82,
+    "figure_max_absolute_numeric_difference": 0.0,
+    "platform_coverage": {
+      "GPL13158": [
+        "6/6",
+        "200/200",
+        "200/200",
+        "199/200"
+      ],
+      "GPL570": [
+        "6/6",
+        "200/200",
+        "197/200",
+        "196/200"
+      ],
+      "GPL6244": [
+        "6/6",
+        "194/200",
+        "191/200",
+        "192/200"
+      ]
+    },
+    "actual_frozen_inflammation_membership_exact": true,
+    "actual_frozen_inflammation_n": 194,
+    "actual_source_inflammation_coverage": "200/200",
+    "candidate_coverage": "6/6",
+    "LOPO_estimate_range": [
+      0.222512439929155,
+      0.735032426669982
+    ],
+    "MARS_step_corrected": true,
+    "OLS_HC3_reference_and_QC_numbers": "Matched source rows; no mismatch found"
+  },
+  "claims_review": {
+    "discovery_vs_validation": "Clearly distinguishes all exploratory discovery P values from the single frozen GSE23597 primary validation. Positive primary point estimate with CI crossing zero and P=.358549 is not called successful validation.",
+    "negative_interpretation": "Does not infer proven absence of association or assert inadequate power as a demonstrated explanation.",
+    "baseline_dependence": "Mandatory no-baseline model presented with nonsignificant discovery and validation results; no model switching.",
+    "secondary_tests": "Three BH-adjusted reference tests remain secondary; same BH values not called equivalence, and separate P values not superiority.",
+    "inflammation_200_vs_194": "Report distinguishes full200 source coverage, full200 discovery bridge, and fixedcommon194 actual score; records full194 actual coverage.",
+    "IBrD": "Old15/81 correlation explicitly historical and retired; absent from current scoring membership and substantive comparison.",
+    "GSE73661": "Explicitly support/descriptive-only, not replacement/rescue or alternate primary.",
+    "MARS": "Component means not claimed original trained classifier; attenuation is descriptive and now correctly apportioned across the two model additions.",
+    "CT": "Overlap and discovery selection acknowledged; raw/standardized condition and VIF distinguished; no novel-state or superiority claim.",
+    "internal_freeze": "Report hash/timing matches lock/access record and is explicitly not registered report or public preregistration."
+  },
+  "freeze_checks": {
+    "version": "1.1",
+    "lock_sha256": "62462dfbc25bb857c94c872424173e215c6d1b8b6724a0bbc724a5c2683bfb36",
+    "frozen_utc": "2026-09-10T15:36:16.742591+00:00",
+    "first_expression_access_utc": "2026-09-10T15:36:45.565553+00:00",
+    "order_valid": true,
+    "001D_review_sha256_unchanged": "c38b34d10265642fba60f3d62a10facb7696fc8129f5ccb6ae84ea63f68e8fbb"
+  },
+  "independent_numeric_review_status": "RECOMPUTATION_PASSED",
+  "review_conclusion": "No remaining numeric or claim-level blocker for the corrected report. Primary validation is evaluable and failed the prespecified support rule; this review does not endorse a positive validation claim.",
+  "source_file_manifest": [
+    {
+      "path": "provenance/reviews/002A_validation_numeric_v1.json",
+      "bytes": 7040,
+      "sha256": "f9c5aee8c3d68623acdea0da66480c5bcc743d12c0b00c42f389324d391b31cb"
+    },
+    {
+      "path": "reports/Annotation_amendment_and_GSE23597_validation_20260910.md",
+      "bytes": 10434,
+      "sha256": "0409650978cc7bcceb25a4caee4831bd2295f635d3bafa5463d6d6178c9e1e2b"
+    },
+    {
+      "path": "runs/001D_annotation/CT_conditioned_VIF.tsv",
+      "bytes": 170,
+      "sha256": "96d9a953d17e6110549633d223c54fa7a2153ac2a6c966e45631e9489f19bb52"
+    },
+    {
+      "path": "runs/001D_annotation/annotation_only_full200_discovery_bridge.tsv",
+      "bytes": 195,
+      "sha256": "3b12a58f5c191c8541ae87991b334d9fa56dd41b1c52275bc8204c0dfcf7404a"
+    },
+    {
+      "path": "runs/001D_annotation/discovery_response_models.tsv",
+      "bytes": 7996,
+      "sha256": "76ea76ea538e97b4bdbf91f24dce4ca1ed49f674c8f5b23ff430e34863b00ddc"
+    },
+    {
+      "path": "runs/001D_annotation/platform_program_coverage.tsv",
+      "bytes": 11501,
+      "sha256": "cc11ee6b99519c14fd3756f093a011615ad145fead16baf7eec89d9b5c4084a5"
+    },
+    {
+      "path": "runs/001D_annotation/program_scoring_membership.tsv",
+      "bytes": 463071,
+      "sha256": "31020cde802a5c59401165c5b46e53cfedb4e2b784b57e1ea364bde25638900c"
+    },
+    {
+      "path": "runs/002A_GSE23597/actual_program_coverage.tsv",
+      "bytes": 340,
+      "sha256": "d5d2e909e1b42a056b565cd237444fc93182f3d88e5da96c7a7c867f2c138c48"
+    },
+    {
+      "path": "runs/002A_GSE23597/actual_scored_inflammation194.tsv",
+      "bytes": 2521,
+      "sha256": "39b5e73d2e18f34fed7bf0cb462e8defd37ef8ca166a8b497aec9b4f1dff05c6"
+    },
+    {
+      "path": "runs/002A_GSE23597/candidate_models.tsv",
+      "bytes": 978,
+      "sha256": "a4d3041baa560e87443fbe856efd0fd848467ac827609c2b0db94fcf5bf71760"
+    },
+    {
+      "path": "runs/002A_GSE23597/candidate_models_HC3.tsv",
+      "bytes": 633,
+      "sha256": "2b3f5cf9760b79de804e1dafef8f7038bfe56c9f3190c27a0a0e9bc3124ca648"
+    },
+    {
+      "path": "runs/002A_GSE23597/expression_access_event.json",
+      "bytes": 498,
+      "sha256": "e38a462a3e2f2a8f5514f3ce456d92172faa5e84e709d084c9dec37f572af7d5"
+    },
+    {
+      "path": "runs/002A_GSE23597/figures/Fig002A_PrimaryAndParallel_source.tsv",
+      "bytes": 1463,
+      "sha256": "14c3b68c49b1a7fe727369343044c542ef5e0cdbf8a2d2e6cc18ffd9e0568b70"
+    },
+    {
+      "path": "runs/002A_GSE23597/figures/Fig002B_ValidationSensitivity_source.tsv",
+      "bytes": 735,
+      "sha256": "a853dc1d2ff8045eede52ca6faaa020e015e5bae98d548a886698eaa8a62f6db"
+    },
+    {
+      "path": "runs/002A_GSE23597/leave_one_patient_out.tsv",
+      "bytes": 1291,
+      "sha256": "db4037e23acf146a243a136eacc83428f23f2a2dbfd2591512692f7bd35ea95d"
+    },
+    {
+      "path": "runs/002A_GSE23597/primary_test.tsv",
+      "bytes": 335,
+      "sha256": "4c1a520e712d0a5790ef14a2380b6fe559c48a8e627acd265af47cb7ffa63af7"
+    },
+    {
+      "path": "runs/002A_GSE23597/qc_summary.json",
+      "bytes": 571,
+      "sha256": "fc0534fd681b6d93c55c6d224988fb93a10603c6fce11a0ef077119ae8fd1bb7"
+    },
+    {
+      "path": "runs/002A_GSE23597/secondary_reference_tests.tsv",
+      "bytes": 940,
+      "sha256": "4e7ba01f0f99fea65c1160446a301b4bbcb155c536afdbd7bba32f39ad02a321"
+    },
+    {
+      "path": "runs/002A_GSE23597/validation_summary.json",
+      "bytes": 969,
+      "sha256": "6e90a597b8f8fa5eee98840b748cfdb4bb49aeeda695309bddeee4b754b1d618"
+    },
+    {
+      "path": "signature_lock.json",
+      "bytes": 19065,
+      "sha256": "62462dfbc25bb857c94c872424173e215c6d1b8b6724a0bbc724a5c2683bfb36"
+    }
+  ]
+}

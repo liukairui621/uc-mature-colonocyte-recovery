@@ -1,0 +1,21 @@
+options(stringsAsFactors=FALSE);suppressPackageStartupMessages({library(data.table);library(ggplot2)})
+setwd("/root/projects/UC_Treatment_Recovery");figdir<-"runs/002A_GSE23597/figures";dir.create(figdir,showWarnings=FALSE,recursive=TRUE);source("code/figure_theme.R")
+d<-fread("runs/001D_annotation/discovery_response_models.tsv")
+d<-d[program=="MATURE_COLONOCYTE6_EXPLORATORY"&model%in%c("primary_baseline_inflammation","no_baseline_inflammation")]
+d$cohort<-"Discovery: GSE92415 (n = 65)";d$analysis<-ifelse(d$model=="primary_baseline_inflammation","Baseline + inflammation","No baseline; inflammation adjusted")
+v<-fread("runs/002A_GSE23597/candidate_models.tsv");v<-v[model%in%c("primary_baseline_inflammation","mandatory_no_baseline")]
+v$cohort<-"Validation: GSE23597 (n = 32)";v$analysis<-ifelse(v$model=="primary_baseline_inflammation","Baseline + inflammation","No baseline; inflammation adjusted")
+f<-rbindlist(list(d,v),fill=TRUE)
+f$analysis<-factor(f$analysis,levels=c("No baseline; inflammation adjusted","Baseline + inflammation"))
+f$cohort<-factor(f$cohort,levels=c("Discovery: GSE92415 (n = 65)","Validation: GSE23597 (n = 32)"))
+f$label<-sprintf("%.3f [%.3f, %.3f]; P = %.4f",f$estimate,f$lower,f$upper,f$p)
+fwrite(f,file.path(figdir,"Fig002A_PrimaryAndParallel_source.tsv"),sep="\t")
+pl<-ggplot(f,aes(estimate,analysis,color=cohort))+geom_vline(xintercept=0,linetype=2,color="grey60",linewidth=.4)+geom_errorbar(aes(xmin=lower,xmax=upper),orientation="y",width=.15,linewidth=.7)+geom_point(size=2.6)+geom_text(aes(label=label),x=1.46,hjust=0,color="black",size=3.1)+facet_grid(cohort~.,scales="free_y",space="free_y")+scale_color_manual(values=c("#2166AC","#B35806"),guide="none")+coord_cartesian(xlim=c(-.9,2.95),clip="off")+scale_x_continuous(breaks=c(-.5,0,.5,1))+labs(title="Six-gene candidate: primary and parallel estimates",subtitle="Response association in paired change; dose/arm adjusted; OLS 95% CI",x="ResponseYes coefficient (mean log2 score change)",y=NULL,caption="Discovery analyses are exploratory. The prespecified validation support rule was not met.\nEach cohort was analyzed separately; no pooled effect or cross-platform equivalence is inferred.")+theme_project()+theme(strip.background=element_rect(fill="grey95",color=NA),strip.text.y=element_text(angle=0),plot.caption=element_text(hjust=0,size=9))
+save_panel(pl,"Fig002A_PrimaryAndParallel",13,5.8)
+h<-fread("runs/002A_GSE23597/candidate_models_HC3.tsv")
+a<-fread("runs/002A_GSE23597/candidate_models.tsv");a<-a[,.(model,estimate,lower,upper,p)];a$method<-"OLS";h<-h[,.(model,estimate,lower,upper,p)];h$method<-"HC3"
+a<-rbindlist(list(a,h));a$model<-factor(a$model,levels=rev(c("primary_baseline_inflammation","mandatory_no_baseline","without_inflammation","IFX_only")),labels=rev(c("Primary","No baseline","No inflammation","IFX only")))
+fwrite(a,file.path(figdir,"Fig002B_ValidationSensitivity_source.tsv"),sep="\t")
+pp<-ggplot(a,aes(estimate,model,color=method))+geom_vline(xintercept=0,linetype=2,color="grey60")+geom_errorbar(aes(xmin=lower,xmax=upper),position=position_dodge(width=.45),orientation="y",width=.14,linewidth=.6)+geom_point(position=position_dodge(width=.45),size=2.5)+scale_color_manual(values=c("OLS"="#2166AC","HC3"="#B35806"))+labs(title="GSE23597: uncertainty across prespecified analyses",x="ResponseYes coefficient (mean log2 score change)",y=NULL,color=NULL,caption="OLS is the fixed primary method. Sensitivity results do not replace the primary test.")+theme_project()+theme(plot.caption=element_text(hjust=0,size=9))
+save_panel(pp,"Fig002B_ValidationSensitivity",8.5,5.5)
+cat("FIGURES_COMPLETE\n")

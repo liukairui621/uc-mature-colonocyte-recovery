@@ -1,0 +1,222 @@
+{
+  "status": "RECOMPUTATION_PASSED",
+  "raw_dims": [54675, 113],
+  "source_quantiles": {
+    "0%": 0.105479,
+    "1%": 4.2313719599999997,
+    "25%": 52.603618499999996,
+    "50%": 163.558853,
+    "75%": 530.93188499999997,
+    "99%": 12588.358399999999,
+    "100%": 137637.3125
+  },
+  "floored_values": 2026,
+  "retained_probe_count": 40659,
+  "canonical_gene_count": 18992,
+  "pairs": 32,
+  "responders": 20,
+  "nonresponders": 12,
+  "coverage": [
+    {
+      "program": "MATURE_COLONOCYTE6_EXPLORATORY",
+      "source_n": 6,
+      "measured_n": 6,
+      "coverage": 1,
+      "_row": "MATURE_COLONOCYTE6_EXPLORATORY"
+    },
+    {
+      "program": "HALLMARK_INFLAMMATORY_RESPONSE",
+      "source_n": 200,
+      "measured_n": 200,
+      "coverage": 1,
+      "_row": "HALLMARK_INFLAMMATORY_RESPONSE"
+    },
+    {
+      "program": "UC_Maciag2024_TableS2_CT_Colonocytes_reported_marker_mean_proxy",
+      "source_n": 20,
+      "measured_n": 18,
+      "coverage": 0.90000000000000002,
+      "_row": "UC_Maciag2024_TableS2_CT_Colonocytes_reported_marker_mean_proxy"
+    },
+    {
+      "program": "UC_IA13_JAKSTAT_2024_gene_mean_proxy",
+      "source_n": 13,
+      "measured_n": 13,
+      "coverage": 1,
+      "_row": "UC_IA13_JAKSTAT_2024_gene_mean_proxy"
+    },
+    {
+      "program": "HALLMARK_OXIDATIVE_PHOSPHORYLATION",
+      "source_n": 200,
+      "measured_n": 196,
+      "coverage": 0.97999999999999998,
+      "_row": "HALLMARK_OXIDATIVE_PHOSPHORYLATION"
+    }
+  ],
+  "scored_common_inflammation": 194,
+  "preprocessing_and_score_max_differences": {
+    "log_probe": 0,
+    "all_gene_means": 0,
+    "all_program_scores": 1.0658141036401503e-14,
+    "all_baselines": 1.0658141036401503e-14,
+    "all_deltas": 1.7763568394002505e-14
+  },
+  "table_comparisons": [
+    {
+      "file": "candidate_models.tsv",
+      "n_rows": 4,
+      "max_numeric_difference": 2.8421709430404007e-13
+    },
+    {
+      "file": "candidate_models_HC3.tsv",
+      "n_rows": 4,
+      "max_numeric_difference": 1.7319479184152442e-14
+    },
+    {
+      "file": "secondary_reference_tests.tsv",
+      "n_rows": 3,
+      "max_numeric_difference": 3.637978807091713e-12
+    },
+    {
+      "file": "secondary_no_baseline_descriptive.tsv",
+      "n_rows": 3,
+      "max_numeric_difference": 2.581268532253489e-14
+    },
+    {
+      "file": "leave_one_patient_out.tsv",
+      "n_rows": 32,
+      "max_numeric_difference": 1.4543921622589551e-14
+    },
+    {
+      "file": "primary_patient_diagnostics.tsv",
+      "n_rows": 32,
+      "max_numeric_difference": 2.886579864025407e-14
+    }
+  ],
+  "primary": [
+    {
+      "program": "MATURE_COLONOCYTE6_EXPLORATORY",
+      "model": "primary_baseline_inflammation",
+      "estimate": 0.40082314304708322,
+      "se": 0.42883024478424286,
+      "lower": -0.48065004928735722,
+      "upper": 1.2822963353815235,
+      "p": 0.35854876346179632,
+      "n": 32,
+      "df": 26,
+      "rank": 6,
+      "raw_condition": 100.55301137245829,
+      "standardized_condition": 2.6853766082645176,
+      "max_VIF": 2.2206233167716465,
+      "max_leverage": 0.5257441330656476,
+      "_row": "primary_baseline_inflammation"
+    }
+  ],
+  "primary_HC3": [
+    {
+      "program": "MATURE_COLONOCYTE6_EXPLORATORY",
+      "model": "primary_baseline_inflammation",
+      "estimate": 0.40082314304708322,
+      "se": 0.53644721380953975,
+      "lower": -0.70185989721637299,
+      "upper": 1.5035061833105394,
+      "p": 0.46165860312843199,
+      "n": 32,
+      "df": 26,
+      "_row": "primary_baseline_inflammation"
+    }
+  ],
+  "no_baseline": [
+    {
+      "program": "MATURE_COLONOCYTE6_EXPLORATORY",
+      "model": "mandatory_no_baseline",
+      "estimate": 0.26696141265131718,
+      "se": 0.49246994566952501,
+      "lower": -0.74350345032280218,
+      "upper": 1.2774262756254364,
+      "p": 0.59220501399150338,
+      "n": 32,
+      "df": 27,
+      "rank": 5,
+      "raw_condition": 5.4405312495536036,
+      "standardized_condition": 2.2595087674289616,
+      "max_VIF": 1.8069195347999927,
+      "max_leverage": 0.50718105930818114,
+      "_row": "mandatory_no_baseline"
+    }
+  ],
+  "secondary": [
+    {
+      "program": "UC_Maciag2024_TableS2_CT_Colonocytes_reported_marker_mean_proxy",
+      "model": "secondary_baseline_inflammation",
+      "estimate": 0.14542551641593193,
+      "se": 0.21938328243723956,
+      "lower": -0.30552327897991788,
+      "upper": 0.59637431181178169,
+      "p": 0.51323963169527897,
+      "n": 32,
+      "df": 26,
+      "rank": 6,
+      "raw_condition": 208.6098318423405,
+      "standardized_condition": 2.6443378955595782,
+      "max_VIF": 2.1668513183551896,
+      "max_leverage": 0.53176987191796687,
+      "FDR_across_three": 0.64348636661992553,
+      "_row": "UC_Maciag2024_TableS2_CT_Colonocytes_reported_marker_mean_proxy"
+    },
+    {
+      "program": "UC_IA13_JAKSTAT_2024_gene_mean_proxy",
+      "model": "secondary_baseline_inflammation",
+      "estimate": -0.30924933146748346,
+      "se": 0.30643118665321628,
+      "lower": -0.93912765655143848,
+      "upper": 0.32062899361647157,
+      "p": 0.3221806816970183,
+      "n": 32,
+      "df": 26,
+      "rank": 6,
+      "raw_condition": 225.03014405772603,
+      "standardized_condition": 2.4281960653287169,
+      "max_VIF": 1.8108842174925808,
+      "max_leverage": 0.53993545107943963,
+      "FDR_across_three": 0.64348636661992553,
+      "_row": "UC_IA13_JAKSTAT_2024_gene_mean_proxy"
+    },
+    {
+      "program": "HALLMARK_OXIDATIVE_PHOSPHORYLATION",
+      "model": "secondary_baseline_inflammation",
+      "estimate": 0.020072216673351038,
+      "se": 0.042863694227448984,
+      "lower": -0.068035368660156914,
+      "upper": 0.10817980200685898,
+      "p": 0.64348636661992553,
+      "n": 32,
+      "df": 26,
+      "rank": 6,
+      "raw_condition": 810.65426810350039,
+      "standardized_condition": 2.5706724724638552,
+      "max_VIF": 1.9277847805398838,
+      "max_leverage": 0.50835579458662472,
+      "FDR_across_three": 0.64348636661992553,
+      "_row": "HALLMARK_OXIDATIVE_PHOSPHORYLATION"
+    }
+  ],
+  "primary_support_rule_met": false,
+  "primary_full_model_high_leverage_descriptive": [
+    {
+      "subject": "P45",
+      "leverage": 0.5257441330656476,
+      "residual": -0.33199615782655734,
+      "studentized_residual": -0.45413348670392895,
+      "cooks_distance": 0.039304552406445543
+    }
+  ],
+  "leverage_threshold_descriptive": 0.375,
+  "LOPO_estimate_range": [0.22251243992915512, 0.73503242666998281],
+  "LOPO_p_range": [0.097585053658577378, 0.60700476537818582],
+  "LOPO_all_fits_full_rank": true,
+  "response_delta_vs_post_model_difference": 3.4972025275692431e-15,
+  "primary_baseline_coefficient": -0.43184640532454094,
+  "equivalent_post_baseline_coefficient": 0.56815359467545878,
+  "methods": "Independent GEO table read.table; raw-header pair reconstruction; rowsum divided by probe counts; explicit gene-membership weight matrix; SVD coefficient and covariance reconstruction, direct squared sandwich columns for HC3; manual BH reverse cumulative minimum; no lm or limma fit/avereps calls"
+}

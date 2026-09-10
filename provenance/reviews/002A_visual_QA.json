@@ -1,0 +1,42 @@
+{
+  "status": "REVIEWED",
+  "reviewer": "root visual inspection",
+  "utc": "2026-09-10T15:43:04.271222+00:00",
+  "panels": [
+    "Fig002A_PrimaryAndParallel",
+    "Fig002B_ValidationSensitivity"
+  ],
+  "visual_checks": "Both server-generated PNGs inspected at display resolution; no text overlaps or clipping; labels,zero lines,intervals,legends readable. PDF/PNG generated from same ggplot objects. All numerical labels trace to exported source TSV.",
+  "artifacts": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/figures/Fig002A_PrimaryAndParallel_source.tsv",
+      "sha256": "14c3b68c49b1a7fe727369343044c542ef5e0cdbf8a2d2e6cc18ffd9e0568b70",
+      "bytes": 1463
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/figures/Fig002A_PrimaryAndParallel.png",
+      "sha256": "3bd830f3c740a75ae464458f5c7e86208641a4319be280e06977cddd86c17002",
+      "bytes": 116500
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/figures/Fig002B_ValidationSensitivity.pdf",
+      "sha256": "9fd0ca22b7eb314041a1dc6bd3b191cef2091962614f5d83fefd84bf24b4012d",
+      "bytes": 27248
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/figures/Fig002A_PrimaryAndParallel.pdf",
+      "sha256": "322c7f797b0b706d71bb6946c5c127d59955b869065261eaf5e394d9f62f72b0",
+      "bytes": 26006
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/figures/Fig002B_ValidationSensitivity.png",
+      "sha256": "5fd8205dcde8a0941caa4fa999a64505f5e85a763a8d6778d8c458cab651e7a2",
+      "bytes": 56865
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/figures/Fig002B_ValidationSensitivity_source.tsv",
+      "sha256": "a853dc1d2ff8045eede52ca6faaa020e015e5bae98d548a886698eaa8a62f6db",
+      "bytes": 735
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+                                                     program                         model   estimate        se      lower    upper          p  n df rank raw_condition
+primary_baseline_inflammation MATURE_COLONOCYTE6_EXPLORATORY primary_baseline_inflammation 0.40082314 0.4288302 -0.4806500 1.282296 0.35854876 32 26    6    100.553011
+mandatory_no_baseline         MATURE_COLONOCYTE6_EXPLORATORY         mandatory_no_baseline 0.26696141 0.4924699 -0.7435035 1.277426 0.59220501 32 27    5      5.440531
+without_inflammation          MATURE_COLONOCYTE6_EXPLORATORY          without_inflammation 0.96077406 0.5014133 -0.0680410 1.989589 0.06599197 32 27    5     99.763052
+IFX_only                      MATURE_COLONOCYTE6_EXPLORATORY                      IFX_only 0.05141762 0.4670277 -0.9260827 1.028918 0.91348827 24 19    5     83.597332
+                              standardized_condition  max_VIF max_leverage
+primary_baseline_inflammation               2.685377 2.220623    0.5257441
+mandatory_no_baseline                       2.259509 1.806920    0.5071811
+without_inflammation                        2.576873 2.130120    0.3016670
+IFX_only                                    1.494637 1.138297    0.6225692
+                                                     program                         model   estimate        se      lower    upper         p  n df
+primary_baseline_inflammation MATURE_COLONOCYTE6_EXPLORATORY primary_baseline_inflammation 0.40082314 0.5364472 -0.7018599 1.503506 0.4616586 32 26
+mandatory_no_baseline         MATURE_COLONOCYTE6_EXPLORATORY         mandatory_no_baseline 0.26696141 0.6587488 -1.0846796 1.618602 0.6884832 32 27
+without_inflammation          MATURE_COLONOCYTE6_EXPLORATORY          without_inflammation 0.96077406 0.6028042 -0.2760779 2.197626 0.1226124 32 27
+IFX_only                      MATURE_COLONOCYTE6_EXPLORATORY                      IFX_only 0.05141762 0.6232666 -1.2530944 1.355930 0.9351144 24 19
+                                                                                                                        program                           model    estimate
+UC_Maciag2024_TableS2_CT_Colonocytes_reported_marker_mean_proxy UC_Maciag2024_TableS2_CT_Colonocytes_reported_marker_mean_proxy secondary_baseline_inflammation  0.14542552
+UC_IA13_JAKSTAT_2024_gene_mean_proxy                                                       UC_IA13_JAKSTAT_2024_gene_mean_proxy secondary_baseline_inflammation -0.30924933
+HALLMARK_OXIDATIVE_PHOSPHORYLATION                                                           HALLMARK_OXIDATIVE_PHOSPHORYLATION secondary_baseline_inflammation  0.02007222
+                                                                        se       lower     upper         p  n df rank raw_condition standardized_condition  max_VIF max_leverage
+UC_Maciag2024_TableS2_CT_Colonocytes_reported_marker_mean_proxy 0.21938328 -0.30552328 0.5963743 0.5132396 32 26    6      208.6098               2.644338 2.166851    0.5317699
+UC_IA13_JAKSTAT_2024_gene_mean_proxy                            0.30643119 -0.93912766 0.3206290 0.3221807 32 26    6      225.0301               2.428196 1.810884    0.5399355
+HALLMARK_OXIDATIVE_PHOSPHORYLATION                              0.04286369 -0.06803537 0.1081798 0.6434864 32 26    6      810.6543               2.570672 1.927785    0.5083558
+                                                                FDR_across_three
+UC_Maciag2024_TableS2_CT_Colonocytes_reported_marker_mean_proxy        0.6434864
+UC_IA13_JAKSTAT_2024_gene_mean_proxy                                   0.6434864
+HALLMARK_OXIDATIVE_PHOSPHORYLATION                                     0.6434864
+   subject  leverage   residual studentized_residual cooks_distance
+30     P45 0.5257441 -0.3319962           -0.4541335    0.039304552
+16     P19 0.3106329  0.1873434            0.2118730    0.003499862
+21     P29 0.2898124  1.8231414            2.2207675    0.291366212
+7       P8 0.2840788  0.9959547            1.1322406    0.083871647
+5       P6 0.2710884  0.5379176            0.5952607    0.022522694
+$log_probe
+[1] 0
+
+$all_gene_means
+[1] 0
+
+$all_program_scores
+[1] 1.065814e-14
+
+$all_baselines
+[1] 1.065814e-14
+
+$all_deltas
+[1] 1.776357e-14
+
+002A_INDEPENDENT_RECOMPUTATION_PASSED
