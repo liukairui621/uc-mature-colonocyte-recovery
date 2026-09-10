@@ -1,0 +1,24 @@
+{
+  "status": "FROZEN",
+  "version": "003.1-amendment2",
+  "parent_plan_sha256": "1293d394184a40819059d0df04f6e070910d8d2e8d35405752c096d43508d340",
+  "amendment1_sha256": "958d5695bfb65fc5a1b8aeabccba610971c066ca668fe049f0b8fb9fac2c85cf",
+  "timing": "Before any X-derived extraction or result was read; full-object byte download was in progress.",
+  "X_derived_results_accessed": false,
+  "technical_and_interpretive_guards": [
+    "If an observed sample has zero non-ileal epithelial cells, the primary composition metric is non-evaluable. Pseudocount0.5 smooths a measured zero CT numerator only; it does not manufacture a denominator.",
+    "Report site pairs and patients evaluable for each axis. Any composition-versus-state comparison uses the joint evaluable patient/site subset.",
+    "Do not compare axes by one significant and one nonsignificant result. Use jointly evaluable data, same-scale two-group decomposition contributions, effect estimates and uncertainty.",
+    "The non-CT epithelial within-group term contains changes among heterogeneous non-CT substates and is not a pure intracellular-regulation term.",
+    "Exact label permutation assumes exchangeability and cannot remove the chemistry/outcome imbalance; v3.1-only sensitivity remains mandatory."
+  ],
+  "implementation": {
+    "path": "/root/projects/UC_Treatment_Recovery/code/analyze_003_cell_context.R",
+    "bytes": 13479,
+    "sha256": "8929770e73321bd11d5ef58ec27f8b84bf227ce10eaabd752fbfd79fcb761281",
+    "synthetic_smoke_log": "runs/003_smoke/smoke4.log",
+    "status": "TESTED"
+  },
+  "unchanged_scientific_choices": true,
+  "created_utc": "2026-09-10T22:35:25.766420+00:00"
+}

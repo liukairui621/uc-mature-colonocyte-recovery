@@ -76,11 +76,20 @@ patient_means <- function(x) {
   metrics <- c("delta_ct_logit_epi","delta_ct_logit_all","delta_ct_state_score","delta_epi_score",
                "composition_contribution","within_state_contribution","total_epi_linear_change",
                "decomposition_error")
-  z <- aggregate(x[,metrics],by=list(patient=x$patient,remission=x$remission,
-                 library_type=x$library_type,batch=x$batch),FUN=function(v) if(all(is.na(v))) NA else mean(v,na.rm=TRUE))
+  keys <- unique(x[,c("patient","remission","library_type","batch")])
+  z <- keys
+  for(metric in metrics) {
+    one <- aggregate(x[[metric]],by=list(patient=x$patient),FUN=function(v) if(all(is.na(v))) NA_real_ else mean(v,na.rm=TRUE))
+    names(one)[2] <- metric
+    z <- merge(z,one,by="patient",all.x=TRUE)
+  }
   nsite <- aggregate(rep(1,nrow(x)),by=list(patient=x$patient),FUN=sum)
   names(nsite)[2] <- "n_site_pairs"
-  merge(z,nsite,by="patient")
+  ncommon <- aggregate(as.integer(is.finite(x$delta_ct_logit_epi) & is.finite(x$delta_ct_state_score)),
+                       by=list(patient=x$patient),FUN=sum)
+  names(ncommon)[2] <- "n_joint_axis_site_pairs"
+  z <- merge(z,nsite,by="patient",all.x=TRUE)
+  merge(z,ncommon,by="patient",all.x=TRUE)
 }
 exact_label_p <- function(y,g) {
   ok <- is.finite(y) & !is.na(g)
@@ -156,6 +165,15 @@ write.table(site_all,file.path(outdir,"site_pair_metrics.tsv"),sep="\t",quote=FA
 write.table(patient_all,file.path(outdir,"patient_metrics.tsv"),sep="\t",quote=FALSE,row.names=FALSE)
 write.table(model_all,file.path(outdir,"patient_group_models.tsv"),sep="\t",quote=FALSE,row.names=FALSE)
 write.table(change_all,file.path(outdir,"all_patient_change_models.tsv"),sep="\t",quote=FALSE,row.names=FALSE)
+joint <- patient_all[patient_all$cell_set=="exclude_predicted_doublets" &
+                     patient_all$scope=="all_fixed" & patient_all$threshold==20 &
+                     is.finite(patient_all$delta_ct_logit_epi) &
+                     is.finite(patient_all$delta_ct_state_score),]
+joint_models <- do.call(rbind,lapply(c("delta_ct_logit_epi","delta_ct_state_score",
+                                      "composition_contribution","within_state_contribution"),
+                                    function(metric) fit_group(joint,metric,"joint_primary_patient_set")))
+write.table(joint,file.path(outdir,"joint_primary_patient_metrics.tsv"),sep="\t",quote=FALSE,row.names=FALSE)
+write.table(joint_models,file.path(outdir,"joint_primary_patient_models.tsv"),sep="\t",quote=FALSE,row.names=FALSE)
 
 # Fixed-family non-ileal epithelial state mapping, main cell set and threshold20.
 a <- ag[ag$cell_set=="exclude_predicted_doublets" & ag$major=="Non_ileal_epithelium",]
@@ -181,6 +199,11 @@ summary <- list(status="COMPLETE",role="Exploratory cell-context discrimination;
  primary_branch="exclude_predicted_doublets::all_fixed::threshold20",
  primary_metrics=c("delta_ct_logit_epi","delta_ct_state_score"),
  max_absolute_decomposition_error=maxerr,
+ n_joint_primary_patients=nrow(joint),
+ n_joint_primary_remission=sum(joint$remission=="Remission"),
+ n_joint_primary_nonremission=sum(joint$remission=="Non_Remission"),
+ denominator_rule="Composition is non-evaluable when the epithelial denominator is zero; pseudocount0.5 smooths a measured zero numerator only.",
+ axis_comparison_rule="Interpret composition versus state only on joint evaluable patient/site data and same-scale decomposition contributions with uncertainty; never by significant-versus-nonsignificant alone.",
  chemistry_boundary="All remitters are v3.1; v3.1-only branch is mandatory sensitivity, not a complete solution",
  cross_cohort_boundary="Adalimumab clinical-remission context cannot settle GSE73661 IFX endoscopic construct overlap")
 jsonlite::write_json(summary,file.path(outdir,"analysis_summary.json"),auto_unbox=TRUE,pretty=TRUE,digits=16)
