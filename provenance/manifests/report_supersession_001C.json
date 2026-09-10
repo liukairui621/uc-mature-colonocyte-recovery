@@ -1,0 +1,14 @@
+{
+  "superseded_report": {
+    "path": "/root/projects/UC_Treatment_Recovery/reports/Stage1_report_20260910.md",
+    "bytes": 8254,
+    "sha256": "664f19a3df9a65efdd824916f6b5472a83d0405d7c9c19018eba42e733c78566"
+  },
+  "current_report": {
+    "path": "/root/projects/UC_Treatment_Recovery/reports/Review_response_and_001C_report_20260910.md",
+    "bytes": 12232,
+    "sha256": "29e5a42340464ece46eda31e4b3cb0a09b5f1b4921bb8c2498148b070bab7819"
+  },
+  "reason": "Replace significance-count framing with patient effects and CI; disclose pathway sensitivity; report new exploratory response-axis analysis",
+  "unchanged_valid_scope": "Prior source-ID pairing, expression preprocessing and under-declared-model numerical reproducibility remain valid."
+}

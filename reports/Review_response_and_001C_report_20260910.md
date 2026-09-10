@@ -107,3 +107,7 @@ IBrD的81基因由原始Table S8确认，原文评分采用PCA和slingshot伪时
 • runs/001C_programs/identity_qc/：配对诊断，新增配对0。
 • inputs/literature_001C/：原文、补充、基因定义、查询记录。
 • code/、config/、renv.lock、provenance/：代码、参数、环境锁和校验清单。
+
+## 最终采用状态
+
+本轮已通过独立数值与文字审查，状态为REVIEWED。六基因候选及GSE23597 W8主要验证规则已写入根目录signature_lock.json并冻结；冻结范围为分析对象和验证规则，不是生物学结论。独立验证表达尚未分析。

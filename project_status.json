@@ -1,15 +1,17 @@
 {
   "created_utc": "2026-09-10T08:23:12.775089+00:00",
-  "current_phase": "001B first exploratory screen completed and reviewed",
+  "current_phase": "001C completed and independently reviewed; candidate and validation rules frozen",
   "discovery_cohort": "GSE92415",
-  "candidate_frozen": false,
+  "candidate_frozen": true,
   "independent_validation_started": false,
-  "next_phase": "001C patient-level and cell-state program refinement",
+  "next_phase": "002A GSE23597 technical audit then prespecified W8 validation",
   "analysis_input_files": [
     "/root/projects/UC_Treatment_Recovery/inputs/discovery/GSE92415_series_matrix.relay.txt.gz"
   ],
   "review_pending": false,
-  "updated_utc": "2026-09-10T08:29:37.258541+00:00",
-  "stage_report": "/root/projects/UC_Treatment_Recovery/reports/Stage1_report_20260910.md",
-  "independent_review": "/root/projects/UC_Treatment_Recovery/provenance/reviews/discovery_independent_v1.json"
+  "updated_utc": "2026-09-10T14:58:12.264537+00:00",
+  "stage_report": "/root/projects/UC_Treatment_Recovery/reports/Review_response_and_001C_report_20260910.md",
+  "independent_review": "/root/projects/UC_Treatment_Recovery/provenance/reviews/discovery_independent_v1.json",
+  "signature_lock": "/root/projects/UC_Treatment_Recovery/signature_lock.json",
+  "completion_ledger": "/root/projects/UC_Treatment_Recovery/provenance/manifests/stage_001C_completion.json"
 }

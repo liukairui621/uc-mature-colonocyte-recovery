@@ -1,3 +1,11 @@
+# Current status: review corrections and001C complete
+
+Candidate and independent-test rules: signature_lock.json.
+Current report: reports/Review_response_and_001C_report_20260910.md.
+State ledger: provenance/manifests/stage_001C_completion.json.
+The earlier report is retained for history; use the revised report for interpretation.
+Independent validation has not been analyzed.
+
 # UC treatment-associated recovery study
 
 Stable project root: /root/projects/UC_Treatment_Recovery

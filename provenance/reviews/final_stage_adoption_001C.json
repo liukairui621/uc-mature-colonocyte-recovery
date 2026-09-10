@@ -1,0 +1,93 @@
+{
+  "review_id": "final_stage_adoption_001C",
+  "reviewer_role": "Independent metadata/statistical/provenance reviewer; bounded final report and freeze-rule audit",
+  "created_utc": "2026-09-10T14:56:37.482838+00:00",
+  "status": "REVIEWED",
+  "blocking_findings": [],
+  "decision": "No blocking issue. Adopt the reviewed stage report and freeze the exact six-gene exploratory object and single GSE23597 Week8 primary test specified in the hashed draft. This approves analysis-plan execution, not validation success or a novel biological state.",
+  "reviewed_inputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/reports/Review_response_and_001C_report_20260910.md",
+      "bytes": 11944,
+      "sha256": "14f315e5f96c5aa4274e710fd7ddcac2fbdaff8a197c1094144028e0752a00e2"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/planning/signature_lock.draft.json",
+      "bytes": 7226,
+      "sha256": "4f0ef4f9db59e913869e8582bba3c73fd2914d5119e3edbe19cc125315b44702"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/manifests/001C_figures.json",
+      "bytes": 4952,
+      "sha256": "5dc03e2da50743213f4315d6ae62c6c3ffa7b7e864f4f23e007e9e2525a16e43"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/final_stage_adoption_numeric_001C.json",
+      "bytes": 6271,
+      "sha256": "495017d8571ec17ed1ed0fb5492a930cceb606fe6c70d67ea71f4710ac2d8d1c"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/001B2_calibration_independent_v1.json",
+      "bytes": 44126,
+      "sha256": "bfe70f4faa4f0ebefafc9fab89661e46c8f323abcbd6a6d8b86a0846af432bcb"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/001C_identity_independent_v1.json",
+      "bytes": 7826,
+      "sha256": "e2cea6e9725aa34d0ff3d2c20f829080e88c6cfc0d7e96321e60a435c01ff2f9"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/001C_001C2_programs_independent_v1.json",
+      "bytes": 37297,
+      "sha256": "687ef24ea2b4a31521afc63ffae24604436ed6a883e46137df2dd82da44835ac"
+    }
+  ],
+  "report_checks": [
+    "Numerical claims and rounding agree with previously independently recomputed statistics, including the positive IFNG golimumab-minus-placebo coefficient and its two-sided interval.",
+    "CAMERA fixed versus estimated correlation are sensitivity assumptions; default correlation is not called a coding error. fry has a self-contained null and is not treated as an identical CAMERA replication.",
+    "Non-significant interaction does not establish equivalence or justify a common effect. Arm-adjusted pooled response associations remain exploratory conditional associations.",
+    "No expression-derived patient identities or new pairs are accepted. The 52/65 restricted-rank result explicitly includes 26 singleton-candidate cases.",
+    "Candidate selection is post hoc; all discovery P values remain exploratory and BH families are explicitly local, not global post-selection error control.",
+    "The candidate is strongly correlated with the published CT-colonocyte program (r=0.928722) and is not claimed as a new cell state. MARS means remain component proxies; IBrD 15/81 remains a partial-panel diagnostic, without original-score superiority claims."
+  ],
+  "freeze_checks": {
+    "candidate_genes": [
+      "AQP8",
+      "HMGCS2",
+      "GUCA2A",
+      "CA2",
+      "SLC26A3",
+      "MS4A12"
+    ],
+    "score": "Equal-weight arithmetic mean log2 gene expression, post minus baseline for exact source-ID pairs; all six genes required.",
+    "primary_test": "GSE23597 Week8: delta_candidate ~ response + treatment_dose + baseline_candidate + delta_inflammatory_response; one two-sided OLS t test, alpha 0.05.",
+    "support_rule": "ResponseYes coefficient must be positive and two-sided OLS P<0.05; estimate, 95% CI and exact P reported regardless of outcome.",
+    "identity_rule": "Exact W0-W8 source-ID pairs; exclude unresolved P13 primary pair; expression similarity cannot repair identity.",
+    "coverage_and_missingness": "Frozen inflammation coverage >=80%; all six candidate genes; complete cases and full-rank estimable fixed model. Stated non-evaluability rules prohibit substantive covariate removal or gene replacement to obtain significance.",
+    "robustness": "OLS remains primary; HC3 is sensitivity and cannot replace the primary method based on significance.",
+    "secondary_family": "Three frozen reference programs; BH across the three secondary tests with source coverage >=80%.",
+    "threshold_timing": "80% coverage and remaining rules documented as fixed before independent validation expression access.",
+    "frozen_input_hashes": "All seven current input hashes match.",
+    "no_tuning": "No outcome-dependent changes to genes, weights, direction, endpoint, covariates or thresholds; any changed object requires a separate exploratory version and independent evidence."
+  },
+  "figure_checks": {
+    "manifest_entries_verified": 20,
+    "hash_or_size_failures": 0,
+    "source_rows": [
+      10,
+      5,
+      7,
+      130
+    ],
+    "source_numeric_max_difference": 0.0,
+    "patient_scatter_panels": "65 unique subjects per panel; all scores, response and arm labels match patient-level source data.",
+    "visual_qa": "Root analyst reported viewing all four PNGs and fixing facet-label spacing. This reviewer audited plotting code, source data and manifest; did not independently rerender or visually inspect the PNGs in this final bounded pass."
+  },
+  "scope_limits": [
+    "No external validation expression was accessed by this reviewer.",
+    "No previously reviewed statistical model was rerun in this final pass; it relies on the linked prior independent recomputations plus exact source-table and report checks.",
+    "No additional literature search was performed; this bounded review is not a new comprehensive novelty or literature audit.",
+    "Stage adoption is compatible with an incremental publication-oriented study, but does not establish validation success, causal repair, drug equivalence, baseline prediction or superiority to original published scores.",
+    "Existing reviews, scientific scripts, raw data and current draft were not modified. The root analyst should create the final lock and preserve the reviewed draft/hash in provenance."
+  ]
+}

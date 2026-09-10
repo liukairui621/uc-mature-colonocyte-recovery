@@ -1,0 +1,18 @@
+{
+  "checked_utc": "2026-09-10T14:55:18.917403+00:00",
+  "manifests": [
+    "qc_001A.json",
+    "discovery_001B.json",
+    "pathways_001B.json",
+    "stage1_report.json",
+    "001B2_calibration.json",
+    "001C_identity_qc.json",
+    "001C_programs.json",
+    "001C2_refinement.json",
+    "001C2_HC3.json",
+    "001C_figures.json"
+  ],
+  "hash_entries_checked": 231,
+  "failures": [],
+  "status": "COMPLETE"
+}

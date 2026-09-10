@@ -1,0 +1,83 @@
+{
+  "artifact_id": "Review_response_and_001C_report_20260910",
+  "status": "REVIEWED",
+  "phase": "exploratory report",
+  "generated_utc": "2026-09-10T14:58:12.263398+00:00",
+  "cwd": "/root/projects/UC_Treatment_Recovery",
+  "command": "python3 code/build_report_001C.py followed by administrative adoption-status append",
+  "seed": null,
+  "output": {
+    "path": "/root/projects/UC_Treatment_Recovery/reports/Review_response_and_001C_report_20260910.md",
+    "bytes": 12232,
+    "sha256": "29e5a42340464ece46eda31e4b3cb0a09b5f1b4921bb8c2498148b070bab7819"
+  },
+  "code": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/build_report_001C.py",
+      "bytes": 14640,
+      "sha256": "b6b9b4b8bafc430dca4c61ec509a63839c50d5d8e47053265b5e96c69c349f85"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/finalize_stage001C.py",
+      "bytes": 6212,
+      "sha256": "3078137d85aac6d6287bacfc1082cfcc1a5d82ccff10080b44fe11ed589cf79d"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/Hallmark_patient_effects_CI.tsv",
+      "bytes": 74868,
+      "sha256": "29cdd7c6c4d2b3579ef84c09d93a413eaa0c1a78792e0cab9af23905e37d78df"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B2_calibration/review_numeric_audit.json",
+      "bytes": 475,
+      "sha256": "47e68a3cf165f9c5fc8c356b33b1c1fba44ea3a0ef633cd384a71d8a2e7d492b"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_overlap_and_delta_correlations.tsv",
+      "bytes": 15136,
+      "sha256": "d9604b6e801ff8ad36578019f61a5a2aaa884a1b0ffdf52a2c116c36608c43aa"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C2_refinement/refinement_response_effects_CI.tsv",
+      "bytes": 4551,
+      "sha256": "afdaae2e015b226ffe0b9e104967f248b05b06cf8ded5430d36f430121b1c380"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C2_refinement/HC3_common_model_sensitivity.tsv",
+      "bytes": 1976,
+      "sha256": "3f045896000310b6617bffcddd49617ca280ca4011fa1f8dc34d6def7f0a2518"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C2_refinement/refinement_leave_one_patient_out.tsv",
+      "bytes": 18529,
+      "sha256": "9ecef4db087c5ec3a78d09c95f0a60aea4c8a97a25aac42ca142b941f440a950"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/leave_one_candidate_gene_out.tsv",
+      "bytes": 661,
+      "sha256": "31f1e9ee671c9bfcecaf98aacfc6b7ad36b5eb56c586eb99eea0f6cee8af897c"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/discovery_model_summary.json",
+      "bytes": 2995,
+      "sha256": "4df509114757e57fac0a205d4b83487afe4b455a211fab49f6ab0163d1033823"
+    }
+  ],
+  "environment": {
+    "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+    "bytes": 144982,
+    "sha256": "d0b866e9d3af3a81cb6d35f4eee3cba387946f2e6ade554e22057e24bdf2ed86"
+  },
+  "review": {
+    "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/final_stage_adoption_001C.json",
+    "bytes": 6368,
+    "sha256": "eb7c4b6ac092d67e962f1ffe363a3e1d59f9f60de60b3f51a76b69d98d26d5b8"
+  },
+  "adoption_ledger": "/root/projects/UC_Treatment_Recovery/provenance/manifests/stage_001C_completion.json",
+  "limitations": [
+    "Exploratory conditional associations; validation not executed",
+    "MARS/IBrD proxy limitations explicitly retained"
+  ]
+}

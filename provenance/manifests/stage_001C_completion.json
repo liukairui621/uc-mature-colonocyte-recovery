@@ -1,0 +1,99 @@
+{
+  "stage": "001B2 corrections plus001C/001C2 patient-program refinement",
+  "completed_utc": "2026-09-10T14:58:12.262933+00:00",
+  "status": "REVIEWED",
+  "candidate_status": "FROZEN",
+  "signature_lock": {
+    "path": "/root/projects/UC_Treatment_Recovery/signature_lock.json",
+    "bytes": 7697,
+    "sha256": "2fb0f042fce83e223b71ea37cd19811c5f5af425635c5989021abf6b239a140e"
+  },
+  "report": {
+    "path": "/root/projects/UC_Treatment_Recovery/reports/Review_response_and_001C_report_20260910.md",
+    "bytes": 12232,
+    "sha256": "29e5a42340464ece46eda31e4b3cb0a09b5f1b4921bb8c2498148b070bab7819"
+  },
+  "report_version_reviewed_before_status_append": {
+    "path": "/root/projects/UC_Treatment_Recovery/reports/Review_response_and_001C_report_20260910.md",
+    "bytes": 11944,
+    "sha256": "14f315e5f96c5aa4274e710fd7ddcac2fbdaff8a197c1094144028e0752a00e2"
+  },
+  "report_append_scope": "Administrative adoption status only; numerical content unchanged",
+  "reviews": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/001B2_calibration_independent_v1.json",
+      "bytes": 44126,
+      "sha256": "bfe70f4faa4f0ebefafc9fab89661e46c8f323abcbd6a6d8b86a0846af432bcb"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/001C_identity_independent_v1.json",
+      "bytes": 7826,
+      "sha256": "e2cea6e9725aa34d0ff3d2c20f829080e88c6cfc0d7e96321e60a435c01ff2f9"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/001C_001C2_programs_independent_v1.json",
+      "bytes": 37297,
+      "sha256": "687ef24ea2b4a31521afc63ffae24604436ed6a883e46137df2dd82da44835ac"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/prior_programs_001C.json",
+      "bytes": 26671,
+      "sha256": "916d873b4c551d8e903c9030019fd74c08b0f4241f7f098d04b1ebe481c06771"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/final_stage_adoption_001C.json",
+      "bytes": 6368,
+      "sha256": "eb7c4b6ac092d67e962f1ffe363a3e1d59f9f60de60b3f51a76b69d98d26d5b8"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/stage_001C_hash_integrity.json",
+      "bytes": 409,
+      "sha256": "f3da5916151c583517a2164d24ae75e8d27c1c8ca9c3521197cd57809a4a9158"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/visual_QA_001C.json",
+      "bytes": 1681,
+      "sha256": "fe74543a4d5c01a08114d0b5f2fb32e9a274ad81b2e69664a4add5b74a45158b"
+    }
+  ],
+  "run_manifests": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/manifests/001B2_calibration.json",
+      "bytes": 16245,
+      "sha256": "d9533fc2526bd5e24ddfd17010ddac01fb072b6119d832865a242f0b90dc3901"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/manifests/001C_identity_qc.json",
+      "bytes": 3368,
+      "sha256": "3561a36ebce30a8eab6995ff906237955fd05f720370d5281a46ba005e4d2e4d"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/manifests/001C_programs.json",
+      "bytes": 6022,
+      "sha256": "4ec065fa1ae62a4cb3a776b4661c6e8bf808d5e474bd691c1a96b6bf650ac75f"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/manifests/001C2_refinement.json",
+      "bytes": 3404,
+      "sha256": "9e2bf2d6efb2b5215bf3ed029761cfe819801466a7fa7039ac99d3939bf1fb89"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/manifests/001C2_HC3.json",
+      "bytes": 1832,
+      "sha256": "ce13eaf6351d9a0020b1e215dce6d19c4c8e1339d2e8807734c8c5def876314b"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/manifests/001C_figures.json",
+      "bytes": 4952,
+      "sha256": "5dc03e2da50743213f4315d6ae62c6c3ffa7b7e864f4f23e007e9e2525a16e43"
+    }
+  ],
+  "provenance_note": "As-generated manifests retain their original COMPLETE/PENDING fields. This adoption ledger supplies their final reviewed status without changing reviewed hashes.",
+  "independent_validation_started": false,
+  "validation_expression_used": false,
+  "next_phase": "002A GSE23597 technical audit followed by locked W8 test",
+  "allowed_claims": [
+    "A fixed exploratory mature-epithelial-associated candidate has conditional clinical-response association in discovery",
+    "No novel cell state or original MARS/IBrD superiority established"
+  ]
+}
