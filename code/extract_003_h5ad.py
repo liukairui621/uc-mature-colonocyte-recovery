@@ -33,6 +33,7 @@ def main():
     ap=argparse.ArgumentParser()
     ap.add_argument("--input",required=True)
     ap.add_argument("--pairs",required=True)
+    ap.add_argument("--var",required=True)
     ap.add_argument("--outdir",required=True)
     ap.add_argument("--chunk-cells",type=int,default=25000)
     ap.add_argument("--smoke-cells",type=int,default=0,
@@ -41,7 +42,7 @@ def main():
     inp=Path(args.input); out=Path(args.outdir); out.mkdir(parents=True,exist_ok=True)
     pairs=pd.read_csv(args.pairs,sep="\t")
     selected=set(pairs.pre_sample_id)|set(pairs.post_sample_id)
-    var=pd.read_csv(inp.parent.parent/"002B_asset_audit/TAURUS_actual_var_features_full.tsv",sep="\t")
+    var=pd.read_csv(args.var,sep="\t")
     hits={g:var.index[var.gene_symbol.eq(g)].tolist() for g in CANDIDATES}
     if any(len(v)!=1 for v in hits.values()): raise RuntimeError(f"Candidate mapping not unique: {hits}")
     cand_idx=np.array([hits[g][0] for g in CANDIDATES],dtype=int)
@@ -121,14 +122,9 @@ def main():
                            mean_pct_mt=("pct_counts_mt","mean"),**named).reset_index())
                 ag.insert(0,"cell_set",cellset)
                 aggregates.append(ag)
-            q=(frame.groupby(["sample_id","Patient","Site","Treatment","Remission_status",
-                              "LibraryType","Batch"],observed=True)
-                 .agg(author_annotated_cells=("total_UMI","size"),
-                      predicted_doublets=("predicted_doublets","sum"),
-                      total_UMI=("total_UMI","sum"),
-                      median_n_genes=("n_genes_by_counts","median"),
-                      median_pct_mt=("pct_counts_mt","median")).reset_index())
-            qc.append(q)
+            qc.append(frame[["sample_id","Patient","Site","Treatment","Remission_status",
+                             "LibraryType","Batch","predicted_doublets","total_UMI",
+                             "n_genes_by_counts","pct_counts_mt"]].copy())
             selected_cells += len(frame)
             print(json.dumps({"chunk_end":end,"n_run":n_run,"selected_cells_cumulative":selected_cells}),flush=True)
     agg=pd.concat(aggregates,ignore_index=True) if aggregates else pd.DataFrame()
@@ -136,11 +132,11 @@ def main():
     if not qcdf.empty:
         qcdf=(qcdf.groupby(["sample_id","Patient","Site","Treatment","Remission_status",
                             "LibraryType","Batch"],as_index=False,observed=True)
-                  .agg(author_annotated_cells=("author_annotated_cells","sum"),
+                  .agg(author_annotated_cells=("total_UMI","size"),
                        predicted_doublets=("predicted_doublets","sum"),
                        total_UMI=("total_UMI","sum"),
-                       median_n_genes=("median_n_genes","median"),
-                       median_pct_mt=("median_pct_mt","median")))
+                       median_n_genes=("n_genes_by_counts","median"),
+                       median_pct_mt=("pct_counts_mt","median")))
     prefix="smoke_" if args.smoke_cells else ""
     agg.to_csv(out/f"{prefix}sample_state_candidate_aggregates.tsv.gz",sep="\t",index=False,
                compression="gzip")

@@ -1,0 +1,23 @@
+{
+  "amendment_id": "003-3",
+  "created_utc": "2026-09-10T22:39:08.524696+00:00",
+  "timing": "After expression-file request began but before any X-derived extraction or result was produced.",
+  "classification": "technical implementation correction; no scientific estimand, contrast, threshold, or interpretation rule changed",
+  "changes": [
+    {
+      "issue": "The extractor inferred the feature table from the H5AD path and resolved one directory too shallow.",
+      "correction": "Require an explicit --var argument and use the frozen audited feature table path at execution."
+    },
+    {
+      "issue": "Per-sample QC medians were medians of chunk medians if a sample spanned multiple chunks.",
+      "correction": "Retain selected-cell QC values across chunks and compute exact per-sample medians once after concatenation."
+    }
+  ],
+  "results_viewed_before_amendment": false,
+  "old_extractor_sha256_recorded_for_traceability": "00273e8e7ca6f896f48fdab23a4276a370958219030c19040f3a1f0e5ec5c8e",
+  "new_extractor_sha256": "e45186698145eafa239d26a5ae28217cf7f0ee806d77ce17c9149059093eef0d",
+  "verification": [
+    "python3 -m py_compile code/extract_003_h5ad.py: PASS"
+  ],
+  "scientific_change": false
+}
