@@ -1,0 +1,14 @@
+{
+  "amendment_id": "003-5",
+  "created_utc": "2026-09-10T23:57:02.207053+00:00",
+  "timing": "After the first full execution stopped while row-binding the descriptive epithelial-state family; primary model files had been written but their numerical contents had not been inspected.",
+  "classification": "execution compatibility correction; no estimand, cohort, threshold, multiplicity family, or interpretation rule changed",
+  "issue": "fit_group returned fewer columns for non-evaluable states than for evaluable states, so base R rbind stopped.",
+  "correction": "Return explicit missing mean_remission and mean_nonremission columns for non-evaluable states, preserving a rectangular result schema.",
+  "results_used_for_decision": false,
+  "new_analysis_script_sha256": "36c92def79f5e1bc56e585bca9c008baeff78114559a7b7050a41c998380dc7e",
+  "verification": [
+    "R parse: PASS"
+  ],
+  "scientific_change": false
+}

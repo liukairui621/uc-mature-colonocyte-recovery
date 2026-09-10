@@ -105,7 +105,8 @@ fit_group <- function(d, metric, branch) {
   ok <- is.finite(d[[metric]]) & d$remission %in% c("Remission","Non_Remission")
   z <- d[ok,]; z$g <- as.integer(z$remission=="Remission")
   if(nrow(z)<4 || length(unique(z$g))<2) return(data.frame(branch=branch,metric=metric,n=nrow(z),
-      remission=sum(z$g),nonremission=sum(1-z$g),estimate=NA,se=NA,lower=NA,upper=NA,p_OLS=NA,
+      remission=sum(z$g),nonremission=sum(1-z$g),mean_remission=NA,mean_nonremission=NA,
+      estimate=NA,se=NA,lower=NA,upper=NA,p_OLS=NA,
       se_HC3=NA,lower_HC3=NA,upper_HC3=NA,p_HC3=NA,p_exact_permutation=NA))
   fit <- lm(z[[metric]]~z$g); X <- model.matrix(fit); e <- residuals(fit); h <- hatvalues(fit)
   bread <- solve(crossprod(X)); meat <- crossprod(X,X*(e^2/(1-h)^2)); V <- bread%*%meat%*%bread
