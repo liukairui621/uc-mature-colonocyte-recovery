@@ -1,0 +1,601 @@
+{
+  "schema_version": "1.0",
+  "status": "REVIEWED",
+  "reviewer": "independent prior_program_review agent",
+  "completed_utc": "2026-09-10T17:11:00.325402+00:00",
+  "scope": "002B GSE282122 official data-asset, annotation and IBrD reproducibility audit; metadata/feature-only, not expression analysis",
+  "startup_decision_for_cell_source_composition_state_exploration": "START",
+  "core_asset_scientific_blockers": [],
+  "dataset": {
+    "GEO": "GSE282122",
+    "BioProject": "PRJNA1179412",
+    "PMID": "39438660",
+    "DOI": "10.1038/s41590-024-01994-8",
+    "modality": "10x Chromium 3prime GEX scRNAseq, not bulk",
+    "sample_chemistry_counts": {
+      "3prime_v3": 52,
+      "3prime_v3.1": 164
+    },
+    "sequencer": "Illumina NovaSeq6000",
+    "preprocessing": "CellRanger3.1.0 / GRCh38-3.0.0; authors Panpipes QC/BBKNN downstream",
+    "access": "Latest corrected processed matrices and listed SRA BAM are anonymous public; current Zenodo CC-BY4.0",
+    "actual_h5ad_dimensions": {
+      "cells": 987743,
+      "features": 33075,
+      "sample_categories": 216,
+      "fine_cell_annotation_categories": 109
+    },
+    "actual_obs_columns": [
+      "Age",
+      "Batch",
+      "CellsLoaded",
+      "Disease",
+      "Disease_duration",
+      "Ethnicity",
+      "G2M_score",
+      "Gender",
+      "Ileum_vs_Colon",
+      "Inflammation",
+      "Inflammation_score",
+      "LibraryType",
+      "Match",
+      "Patient",
+      "Remission_status",
+      "S_score",
+      "Site",
+      "Treatment",
+      "_index",
+      "bucket",
+      "cellbarcode",
+      "diff",
+      "doublet_scores",
+      "final_analysis",
+      "major",
+      "minor",
+      "n_genes_by_counts",
+      "pct_counts_hb",
+      "pct_counts_ig",
+      "pct_counts_mt",
+      "pct_counts_rp",
+      "phase",
+      "predicted_doublets",
+      "sample_id",
+      "sub_bucket",
+      "total_counts",
+      "total_counts_hb",
+      "total_counts_ig",
+      "total_counts_mt",
+      "total_counts_rp"
+    ],
+    "large_expression_matrix_fully_downloaded": false,
+    "expression_X_read": false
+  },
+  "version_correction": {
+    "use": "Zenodo14007626",
+    "open": true,
+    "license": "CC-BY4.0",
+    "avoid": "Zenodo13965420 and earlier pre2024-10-30 objects due author-declared erroneous metadata",
+    "restricted_historical_version": "13768608; not evidence latest record restricted"
+  },
+  "metadata_counts_and_qc": {
+    "geo_samples": 216,
+    "unique_patients": 41,
+    "geo_supplement_matching_fields": {
+      "patient": "Patient",
+      "disease": "Disease",
+      "site": "Site",
+      "treatment": "Treatment",
+      "librarytype": "LibraryType",
+      "inflammation": "Inflammation",
+      "match": "Match",
+      "batch": "Batch"
+    },
+    "geo_supplement_mismatches": [],
+    "UC_patients": 22,
+    "UC_samples": 108,
+    "UC_samples_by_treatment": {
+      "Post": 53,
+      "Pre": 55
+    },
+    "UC_site_matched_pairs_metadata_only": 43,
+    "UC_site_matched_unique_patients": 19,
+    "UC_site_matched_colonic_pairs_metadata_only": 41,
+    "UC_site_matched_colonic_patients": 19,
+    "UC_unresolved_duplicate_patient_site_visit": [],
+    "UC_clinical_outcomes_patient": {
+      "UC1": [
+        "Non_Remission"
+      ],
+      "UC10": [
+        "Remission"
+      ],
+      "UC11": [
+        "Remission"
+      ],
+      "UC12": [
+        "Remission"
+      ],
+      "UC13": [
+        "Remission"
+      ],
+      "UC14": [
+        "Non_Remission"
+      ],
+      "UC15": [
+        "Non_Remission"
+      ],
+      "UC16": [
+        "Non_Remission"
+      ],
+      "UC17": [
+        "Remission"
+      ],
+      "UC18": [
+        "Non_Remission"
+      ],
+      "UC19": [
+        "NA"
+      ],
+      "UC2": [
+        "Non_Remission"
+      ],
+      "UC20": [
+        "Non_Remission"
+      ],
+      "UC21": [
+        "NA"
+      ],
+      "UC22": [
+        "Non_Remission"
+      ],
+      "UC3": [
+        "Non_Remission"
+      ],
+      "UC4": [
+        "Non_Remission"
+      ],
+      "UC5": [
+        "Remission"
+      ],
+      "UC6": [
+        "Non_Remission"
+      ],
+      "UC7": [
+        "Non_Remission"
+      ],
+      "UC8": [
+        "Non_Remission"
+      ],
+      "UC9": [
+        "Non_Remission"
+      ]
+    },
+    "author_paired_list_n": 110,
+    "author_paired_list_category_counts": {
+      "CD_Non_Remission": 14,
+      "CD_Remission": 38,
+      "UC_Non_Remission": 42,
+      "UC_Remission": 16
+    },
+    "author_list_all_join_geo": true,
+    "UC_author_paired_list_samples": 58,
+    "UC_author_paired_patients": 17,
+    "table1_number_of_cells_total": 987743,
+    "SRA_ENA": {
+      "run_n": 216,
+      "experiment_n": 216,
+      "submitted_bam_public_urls_n": 216,
+      "FASTQ_urls_n": 0,
+      "submitted_bytes_total": 2334216366486,
+      "all_GEO_SRX_found": true
+    }
+  },
+  "UC_patient_outcomes": {
+    "Non_Remission": 14,
+    "Remission": 6,
+    "NA": 2
+  },
+  "UC_endpoint": "At least two of followup SSCAI<=2,UCEIS<=1,Nancy<=1; uncontrolled disease requiring escalation automatically nonremission. Different from GSE23597 week8 clinical response.",
+  "followup": "At least8 weeks up to1.5 years as original paper; per-cell diff column unit not established, cannot relabel as fixed week8",
+  "IBrD": {
+    "original_TableS8_verified": "inputs/literature_001C/IBrD_TableS8_Elsevier.csv",
+    "original_81_model_reproducible_with_this_asset": false,
+    "actual_feature_coverage": {
+      "n_source": 81,
+      "actual_n_features": 33075,
+      "exact_symbol_present": 39,
+      "canonical_symbol_present": 39,
+      "same_HGNC_Ensembl_present": 41,
+      "mapped_feature_present_any_route": 41,
+      "additional_recovered": [
+        {
+          "IBrD_source_symbol": "MIR223HG",
+          "canonical_HGNC_symbol": "MIR223HG",
+          "HGNC_mapping_route": "approved",
+          "HGNC_ensembl_gene_id": "ENSG00000274536",
+          "exact_symbol_present": false,
+          "canonical_symbol_present": false,
+          "same_HGNC_Ensembl_present": true,
+          "mapped_feature_present": true,
+          "matched_features": "AL034397.3",
+          "unique_actual_feature": true,
+          "HGNC_locus_group": "non-coding RNA"
+        },
+        {
+          "IBrD_source_symbol": "LINC02887",
+          "canonical_HGNC_symbol": "LINC02887",
+          "HGNC_mapping_route": "approved",
+          "HGNC_ensembl_gene_id": "ENSG00000280279",
+          "exact_symbol_present": false,
+          "canonical_symbol_present": false,
+          "same_HGNC_Ensembl_present": true,
+          "mapped_feature_present": true,
+          "matched_features": "AC240565.2",
+          "unique_actual_feature": true,
+          "HGNC_locus_group": "non-coding RNA"
+        }
+      ],
+      "missing": [
+        "SNORD36B",
+        "SNORD38A",
+        "MIR23A",
+        "MIR199A2",
+        "ARHGAP27P1-BPTFP1-KPNA2P3",
+        "RNA5SP265",
+        "KLHL25P1",
+        "PFN1P6",
+        "PRDX3P1",
+        "SNORD2",
+        "RNU6-322P",
+        "CASP1P2",
+        "NANOGP7",
+        "MIR4539",
+        "MIR4489",
+        "SNORD25",
+        "MIR6511A1",
+        "HERC2P2",
+        "MIR6511A2",
+        "MIR6080",
+        "MIR6732",
+        "MIR3916",
+        "MIR6758",
+        "MIR8085",
+        "SNORA63E",
+        "HCG9P5",
+        "MIR146A",
+        "SNORD36C",
+        "MIR4538",
+        "MIR4722",
+        "OR7E115P",
+        "SNORA3A",
+        "PTGES3P2",
+        "E2F3-IT1",
+        "MIR4257",
+        "MIR6840",
+        "MIR4691",
+        "SNORA56",
+        "ATP8A2P2",
+        "MIR6751"
+      ],
+      "ambiguous_actual_features": [],
+      "presence_not_detection": true,
+      "HGNC_sha256_used": "6a1423507780773fbcb373eaef84dba5f9357b36e7219db2aeaae13d8a42d62b"
+    },
+    "feature_presence_not_expression_detection": true,
+    "missing_MIR_gene_n": 18,
+    "missing_snoRNA_n": 8,
+    "IG_TR_present_n": 16,
+    "required_original_objects": "Author README says original SCE/prcomp objects must be obtained from lead authors; needed center/scale/rotation and original slingshot curve. Original score is pseudotime-derived, not gene mean.",
+    "library_warning": "3prime poly(dT) scRNAseq cannot be treated as complete small-RNA/81-feature profiling. Original IBrD bulk also used mRNA enrichment, so actual gene and read definitions matter more than generic RNAseq label.",
+    "permitted_future_proxy": "Any41-gene partial-panel exploration must be separately named and may not claim original IBrD reproduction or classifier performance."
+  },
+  "analysis_roles": {
+    "cell_source": "Possible using full corrected object and existing 109 fine cell states; candidate6/6 feature present.",
+    "composition": "Possible from sample-by-state counts with explicit denominator and patient/site structure. Entire-object denominator needed for tissue-wide compartments; colonic-only object supports epithelial internal proportions.",
+    "cell_state": "Possible from patient/visit/site/celltype pseudobulk using verified rawcounts; no expression comparisons run in this audit.",
+    "clinical_link": "Table1 provides UCEIS,Nancy,SSCAI and remission; observations nested within patient,2UC missing outcome must not become nonremission.",
+    "confounding": "Anatomic site,chemistry/batch,variable followup and captured cell composition; molecular inflammation score is not pathology score.",
+    "prior_work_boundary": "Original paper already studied longitudinal abundance/expression and nonremission IFN networks. Dataset reuse allowed, fine-grained overlap review needed after new observations; this audit does not establish a novel mechanism or successful validation."
+  },
+  "recommended_downloads": [
+    {
+      "file": "TAURUS_raw_counts_annotated_final.h5ad",
+      "bytes": 12708413650,
+      "url": "https://zenodo.org/api/records/14007626/files/TAURUS_raw_counts_annotated_final.h5ad/content",
+      "md5": "md5:c1bd13b92cacb164a401c6c4a4e7912c"
+    },
+    {
+      "file": "epicolonic_final.h5ad",
+      "bytes": 6031357405,
+      "url": "https://zenodo.org/api/records/14007626/files/epicolonic_final.h5ad/content",
+      "md5": "md5:99072da25c47bc797ceba8d8bd5d8c5a"
+    },
+    {
+      "file": "paired_sample_list.csv",
+      "bytes": 3102,
+      "url": "https://zenodo.org/api/records/14007626/files/paired_sample_list.csv/content",
+      "md5": "md5:3300a53889bb4b70c48ec66dbb66beea"
+    }
+  ],
+  "raw_data_access_checks": {
+    "run_n": 216,
+    "experiment_n": 216,
+    "submitted_bam_public_urls_n": 216,
+    "FASTQ_urls_n": 0,
+    "submitted_bytes_total": 2334216366486,
+    "all_GEO_SRX_found": true
+  },
+  "pending": [
+    {
+      "task": "optional sample-by-fine-state cell count export",
+      "status": "PENDING",
+      "reason": "Many HTTP range transfers slow; stopped bounded optional branch after fullvar export. No count table claimed produced. Scripts/progress retained for later full/backed metadata load."
+    },
+    {
+      "task": "raw-count numerics/QC and expression comparisons",
+      "status": "NOT_STARTED",
+      "reason": "Large matrix X deliberately not read."
+    },
+    {
+      "task": "interpretation and units of diff column",
+      "status": "UNRESOLVED_SOURCE_METADATA",
+      "reason": "Not documented in obtained Table1/source paper; retain original name and do not assume week8."
+    }
+  ],
+  "actionable_notes_path": "inputs/002B_asset_audit/GSE282122_actionable_asset_notes.md",
+  "environment": {
+    "python": "3.12.3",
+    "platform": "Linux-6.8.0-100-generic-x86_64-with-glibc2.39",
+    "deterministic_no_random_seed": true
+  },
+  "preserved_old_frozen_files": true,
+  "prior_IBrD_source_hashes": [
+    {
+      "path": "inputs/literature_001C/IBrD_TableS8_Elsevier.csv",
+      "sha256": "ef659e630046c14d73e8cd1c093ecb8a13cd922d433b91f54d2779b16ae673e3",
+      "bytes": 779
+    },
+    {
+      "path": "inputs/literature_001C/IBrD_author_README.md",
+      "sha256": "c616c14fb24a0228aed85942e927f79feff4d4ed6e6381e3cc9f7ccfc9d5ebea",
+      "bytes": 901
+    },
+    {
+      "path": "inputs/literature_001C/IBrD_author_IBrD_predict_new_samples.R",
+      "sha256": "3495992bb1a6cd363ae174c6210364aa8aa61257ffea25b365b93a1b7b278369",
+      "bytes": 3775
+    },
+    {
+      "path": "inputs/literature_001C/IBrD_text.txt",
+      "sha256": "0bcd88b5b14283faa4900ccadbb1f5fdda1fc5ce968473d372579444f300e768",
+      "bytes": 95663
+    },
+    {
+      "path": "inputs/annotation/hgnc_complete_set_20260910.txt",
+      "sha256": "6a1423507780773fbcb373eaef84dba5f9357b36e7219db2aeaae13d8a42d62b",
+      "bytes": 16911574
+    }
+  ],
+  "asset_manifest": [
+    {
+      "path": "inputs/002B_asset_audit/10x_3prime_polyA_technical_note.pdf",
+      "bytes": 1534933,
+      "sha256": "ac499301e98e1288c3e8e6ce6e81cabbb1fb39538444045a366a2dbd5b292fd3"
+    },
+    {
+      "path": "inputs/002B_asset_audit/10x_methods_query_log.json",
+      "bytes": 715,
+      "sha256": "f53f2033fa433a0e862caf81f9c766dc38d03215acc5a696fd263e51775b7a7b"
+    },
+    {
+      "path": "inputs/002B_asset_audit/10x_reference_build_notes.html",
+      "bytes": 32178,
+      "sha256": "7ae54d31eaa412e2d5d2290ae4a1542f6a2a3d57aac93944f2a9ce6f1a657546"
+    },
+    {
+      "path": "inputs/002B_asset_audit/10x_reference_build_notes.txt",
+      "bytes": 276,
+      "sha256": "d7f7a86afbf802f68158d8fb5781d63ecbbfcba74a4bdccec03b46f2c5b41b17"
+    },
+    {
+      "path": "inputs/002B_asset_audit/GSE282122_actionable_asset_notes.md",
+      "bytes": 6035,
+      "sha256": "41884c9d900496e44efd720af66f25dc249b0f28971182b6815285e7b85fbe5c"
+    },
+    {
+      "path": "inputs/002B_asset_audit/GSE282122_data_head_checks.json",
+      "bytes": 2851,
+      "sha256": "e0f7b52c8d5cabc3383373bbdfbdf572e19213d67a68821e18031663e91d8a41"
+    },
+    {
+      "path": "inputs/002B_asset_audit/GSE282122_download_inventory.tsv",
+      "bytes": 3641,
+      "sha256": "fea94dff4c8d20cbba04d17ab1c605aed0731cb2e7b16f9257250aed12ab8e47"
+    },
+    {
+      "path": "inputs/002B_asset_audit/GSE282122_family.soft.gz",
+      "bytes": 15370,
+      "sha256": "c2adac47894ac946185c404c2a3dbfda33415d1cd4a10e17478fb5617768d400"
+    },
+    {
+      "path": "inputs/002B_asset_audit/GSE282122_family.soft.txt",
+      "bytes": 650648,
+      "sha256": "eea1c0ddcbe37b3542591bc6e4ed66f54041e20d9dcefbfc220a696b2f2e699f"
+    },
+    {
+      "path": "inputs/002B_asset_audit/GSE282122_metadata_summary.json",
+      "bytes": 2147,
+      "sha256": "4a54cc54158b3067c7efb05871650fcf03ca190b9f49082c1f9d02a404181f56"
+    },
+    {
+      "path": "inputs/002B_asset_audit/GSE282122_query_log_initial.json",
+      "bytes": 815,
+      "sha256": "62700df9ee071f8d319cc6980a8dccfa622a41b708f9f1e45d487a2dbb5e9ac6"
+    },
+    {
+      "path": "inputs/002B_asset_audit/GSE282122_query_log_second.json",
+      "bytes": 724,
+      "sha256": "c4e9e6d180fd2b53abe2fc849efe349ed365ba2d7b7708da97cda36ca6978429"
+    },
+    {
+      "path": "inputs/002B_asset_audit/GSE282122_query_log_third.json",
+      "bytes": 1657,
+      "sha256": "8d12cf80f8fb183bdbf063d11ec7f885f0b042c3a6c72e15f86aca57e8cb843b"
+    },
+    {
+      "path": "inputs/002B_asset_audit/GSE282122_sample_metadata.tsv",
+      "bytes": 30492,
+      "sha256": "e550ff43814371c560581e54a4bd49dcbb32cfc4dde2afb735182a0fb7c7b2bd"
+    },
+    {
+      "path": "inputs/002B_asset_audit/GSE282122_self.soft.txt",
+      "bytes": 9813,
+      "sha256": "8f679cbc9aca9d72ddccb2d1938d35b371dff84af4b656a61e46c33e5b16c80e"
+    },
+    {
+      "path": "inputs/002B_asset_audit/GSE282122_supplement_listing.html",
+      "bytes": 751,
+      "sha256": "b24c6034effeb52a428034ad6d9ea8d6dd234454ce3f5eba980079daa907eff2"
+    },
+    {
+      "path": "inputs/002B_asset_audit/GSE282122_verified_sample_metadata.tsv",
+      "bytes": 38468,
+      "sha256": "599743eeacb5cf8d82c16b654f5878daba6896539563f80823c5ede0cf3aea0a"
+    },
+    {
+      "path": "inputs/002B_asset_audit/GSE282122_web_query_contract.json",
+      "bytes": 1087,
+      "sha256": "3030f6a501d170d61ea9daf474fbf746d7bdeb42b75f2a9c983f9c19abf8ab51"
+    },
+    {
+      "path": "inputs/002B_asset_audit/IBrD81_TAURUS_actual_feature_coverage.tsv",
+      "bytes": 7421,
+      "sha256": "4bcb1e0eaad0159f60c706df526dd9a253f9d0412656b3db0af4c55dbc995db6"
+    },
+    {
+      "path": "inputs/002B_asset_audit/IBrD81_TAURUS_feature_coverage_summary.json",
+      "bytes": 1959,
+      "sha256": "3f51c76fec93d85047931106a82f40e592ad1f1a04c86c960130517ea3377524"
+    },
+    {
+      "path": "inputs/002B_asset_audit/SRA_ENA_PRJNA1179412.tsv",
+      "bytes": 40515,
+      "sha256": "de0ee4c4b98f237c0066cdb16f19a7f35b9bde34f4a8cbcb24bc01509da204ea"
+    },
+    {
+      "path": "inputs/002B_asset_audit/Supp_Table_1A_ii_CDspecific.tsv",
+      "bytes": 1945,
+      "sha256": "83387cd2b5dcf628a9f81df049fc3d39fdb58d6e0601fdfd14fc9b9bd9615af5"
+    },
+    {
+      "path": "inputs/002B_asset_audit/Supp_Table_1A_iii_UCspecific.tsv",
+      "bytes": 4094,
+      "sha256": "cab65e3863ab99583f6066eb9c2c79176c339c47414bdcd5ab0385e8b4cb9295"
+    },
+    {
+      "path": "inputs/002B_asset_audit/Supp_Table_1B_SampleMetadataIBD.tsv",
+      "bytes": 47342,
+      "sha256": "bc45c52ade7f27a4a650662659d70d3a1d627047559683449f8f54161d352c55"
+    },
+    {
+      "path": "inputs/002B_asset_audit/TAURUS_Abundance_MASC_UC.r",
+      "bytes": 7593,
+      "sha256": "06b2817db696756dc58b7c9e254e632f10d7927c9fc006a922434ff86a3bc209"
+    },
+    {
+      "path": "inputs/002B_asset_audit/TAURUS_Deriving_inflammation_score.r",
+      "bytes": 2551,
+      "sha256": "7ab430e3fe757c89af5fa15fe6b9b34a64721ae61024a91df6bd17e5c9ca3f9f"
+    },
+    {
+      "path": "inputs/002B_asset_audit/TAURUS_GitHub_README.md",
+      "bytes": 607,
+      "sha256": "512c119deb2dbaa1b5ad66d3b1b40a5e5f77828b044f4eeee7f11845721098ba"
+    },
+    {
+      "path": "inputs/002B_asset_audit/TAURUS_GitHub_tree.json",
+      "bytes": 11290,
+      "sha256": "a5e981de94a5b085f4fd9b46f551f9946871b7e54bd4b6b13eb3b1089d73c286"
+    },
+    {
+      "path": "inputs/002B_asset_audit/TAURUS_actual_h5ad_metadata_audit.json",
+      "bytes": 38815,
+      "sha256": "23bc31c2c9887d0675210607b5682c904349ba9de166b7ead12fc91fb2128c8a"
+    },
+    {
+      "path": "inputs/002B_asset_audit/TAURUS_actual_metadata_counts_range_audit.json",
+      "bytes": 9111,
+      "sha256": "c4a4a7479f1b2328da1f9b25626eead7e89f0ff782f9f942589dea56db0f243c"
+    },
+    {
+      "path": "inputs/002B_asset_audit/TAURUS_actual_var_features.tsv",
+      "bytes": 303890,
+      "sha256": "dbb0bf86be3867e2af122ae280d4ab77b71165223fdf260087004be86aed95be"
+    },
+    {
+      "path": "inputs/002B_asset_audit/TAURUS_actual_var_features_full.tsv",
+      "bytes": 1103918,
+      "sha256": "b8ab308cc5c0aa3e5efd76652b9b447fca297ab7d6fc487f09030b06678be941"
+    },
+    {
+      "path": "inputs/002B_asset_audit/TAURUS_code_query_log.json",
+      "bytes": 996,
+      "sha256": "aeeff493d6f4079b8967ae21bf6d3837427b1f04f9a35c2b278b63de52918eca"
+    },
+    {
+      "path": "inputs/002B_asset_audit/Thomas2024_TableS1.xlsx",
+      "bytes": 71183,
+      "sha256": "9287ffe88b29134ede80bcbbee4f3bee6a95a4fc31719e817169dbb6f476e751"
+    },
+    {
+      "path": "inputs/002B_asset_audit/Thomas2024_nature.html",
+      "bytes": 751403,
+      "sha256": "2e92091811d05e14bbb70478b5693f6f4a64673dfc981077ed4a551f76340747"
+    },
+    {
+      "path": "inputs/002B_asset_audit/Thomas2024_nature.txt",
+      "bytes": 122979,
+      "sha256": "1f5d1038b07c5944d3632aa6e50db57f03b09bc48ec8cbe7a6c3250c635c63ad"
+    },
+    {
+      "path": "inputs/002B_asset_audit/Thomas2024_targeted_method_result_excerpts.json",
+      "bytes": 2937,
+      "sha256": "8d63c9b8b3e1314c5681d3aaa64f814eb0e4ce9dc0a259f380a0de0adcc206d2"
+    },
+    {
+      "path": "inputs/002B_asset_audit/Zenodo14007626.json",
+      "bytes": 8489,
+      "sha256": "fa37504ca8c09069e25df419da98aa99c54a608bc07f3169b40aa3445a4d99e5"
+    },
+    {
+      "path": "inputs/002B_asset_audit/Zenodo14007626_query.json",
+      "bytes": 196,
+      "sha256": "85d5a5a2d6a0ea9924e8f14f376b557e75469e6251840435c9c32099e98cd0ea"
+    },
+    {
+      "path": "inputs/002B_asset_audit/h5ad_range_probe.json",
+      "bytes": 1497,
+      "sha256": "b898ed5e3b1a41d51fbf39bd850062b534487e2b90ab4284fb979b67af000005"
+    },
+    {
+      "path": "inputs/002B_asset_audit/inspect_TAURUS_h5ad_metadata_ranges.py",
+      "bytes": 3418,
+      "sha256": "3705090ecd90cedfd1ab184155d17d7bc436a97b1249dd78b198c368a1fe93d6"
+    },
+    {
+      "path": "inputs/002B_asset_audit/inspect_TAURUS_metadata_counts_ranges.py",
+      "bytes": 4223,
+      "sha256": "d16323eb86daadb6c7daeb512f84df2613df2e996e4be2538b2bc6f49a033c02"
+    },
+    {
+      "path": "inputs/002B_asset_audit/optional_cellcount_export_stop_note.json",
+      "bytes": 421,
+      "sha256": "b935224dfa6f7fa1c257880f52dbf848878aa43f3e79d2f3dac8b36e08a678e6"
+    },
+    {
+      "path": "inputs/002B_asset_audit/paired_sample_list.csv",
+      "bytes": 3102,
+      "sha256": "2f40e364acb6f9cc86ee4c642bda1e187c61599576b408d90ad015030e1582f4"
+    }
+  ]
+}

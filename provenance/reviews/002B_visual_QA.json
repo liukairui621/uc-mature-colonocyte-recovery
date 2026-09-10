@@ -1,0 +1,49 @@
+{
+  "status": "REVIEWED",
+  "review_type": "Actual visual inspection by root of both final PNGs emitted from remote bytes; corresponding PDFs retained",
+  "inspected_figures": [
+    "Fig002B01_ConditionalPrecision.png",
+    "Fig002B02_EndoscopicSupport.png"
+  ],
+  "inspection_performed_before_record": true,
+  "recorded_utc": "2026-09-10T17:27:46.877992+00:00",
+  "findings": {
+    "readable_axes_and_legend": true,
+    "overlap_or_clipping_observed": false,
+    "precision_is_conditional_not_true_power": true,
+    "endoscopic_support_not_substitute_primary": true
+  },
+  "artifacts": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_figures/Fig002B01_ConditionalPrecision.pdf",
+      "bytes": 27165,
+      "sha256": "b6f788d3480dd71032e01f5ef68201894b26bad80bec9cf724100896892c58ad"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_figures/Fig002B01_ConditionalPrecision.png",
+      "bytes": 114015,
+      "sha256": "4c70f6cd6e8449c458daadb89235d354f24e6d59fd91569dcd1edc0102bd2625"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_figures/Fig002B01_ConditionalPrecision_source.tsv",
+      "bytes": 19195,
+      "sha256": "8c596e72db4b58872a1ceaa5694476df1bfe32f5b327bb55ced864c5d39173c3"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_figures/Fig002B02_EndoscopicSupport.pdf",
+      "bytes": 20214,
+      "sha256": "299705fab52f374da5816a9e40a51ff7bda7bffbe0ea1e65978d545137f56cd0"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_figures/Fig002B02_EndoscopicSupport.png",
+      "bytes": 75920,
+      "sha256": "176a73e5893330b38b4894c0a5573a4bb49b255b0ca0f61c370283444e05ec55"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_figures/Fig002B02_EndoscopicSupport_source.tsv",
+      "bytes": 1382,
+      "sha256": "1fc7d116998d580254a8fc7e2d74eb06abb9dbf832858499ec3d358681183133"
+    }
+  ],
+  "limitations": "This is visual QA. Independent numerical and report checks are separately recorded."
+}

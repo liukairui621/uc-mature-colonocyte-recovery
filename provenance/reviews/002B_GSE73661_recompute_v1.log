@@ -1,0 +1,59 @@
+                                                  program                    model method  estimate        se       lower    upper            p  n df rank standardized_condition
+adjusted_support.1         MATURE_COLONOCYTE6_EXPLORATORY         adjusted_support    OLS 1.1946910 0.3306127 0.502710785 1.886671 0.0018504290 23 19    4               1.762731
+adjusted_support.2         MATURE_COLONOCYTE6_EXPLORATORY         adjusted_support    HC3 1.1946910 0.2986194 0.569673382 1.819709 0.0007649432 23 19    4               1.762731
+parallel_no_baseline.1     MATURE_COLONOCYTE6_EXPLORATORY     parallel_no_baseline    OLS 0.8267097 0.3390336 0.119497989 1.533921 0.0242033947 23 20    3               1.372479
+parallel_no_baseline.2     MATURE_COLONOCYTE6_EXPLORATORY     parallel_no_baseline    HC3 0.8267097 0.3926299 0.007698103 1.645721 0.0480786548 23 20    3               1.372479
+parallel_no_inflammation.1 MATURE_COLONOCYTE6_EXPLORATORY parallel_no_inflammation    OLS 1.5941027 0.4288545 0.699527924 2.488678 0.0013618237 23 20    3               1.603347
+parallel_no_inflammation.2 MATURE_COLONOCYTE6_EXPLORATORY parallel_no_inflammation    HC3 1.5941027 0.4624429 0.629463708 2.558742 0.0025484387 23 20    3               1.603347
+                            max_VIF max_leverage
+adjusted_support.1         1.351497    0.5231665
+adjusted_support.2         1.351497    0.5231665
+parallel_no_baseline.1     1.103643    0.2579289
+parallel_no_baseline.2     1.103643    0.2579289
+parallel_no_inflammation.1 1.239930    0.3428751
+parallel_no_inflammation.2 1.239930    0.3428751
+                                                          program                 model method   estimate         se       lower      upper           p  n df rank
+1 UC_Maciag2024_TableS2_CT_Colonocytes_reported_marker_mean_proxy reference_descriptive    OLS  0.6272152 0.23001434  0.14578967  1.1086408 0.013389620 23 19    4
+2                            UC_IA13_JAKSTAT_2024_gene_mean_proxy reference_descriptive    OLS -0.8834119 0.23735504 -1.38020169 -0.3866221 0.001445724 23 19    4
+3                              HALLMARK_OXIDATIVE_PHOSPHORYLATION reference_descriptive    OLS  0.1563979 0.05807564  0.03484423  0.2779517 0.014404969 23 19    4
+  standardized_condition  max_VIF max_leverage BH_across_three_descriptive
+1               2.070261 1.628979    0.4225638                 0.014404969
+2               1.552440 1.185229    0.3986115                 0.004337172
+3               2.940124 2.679215    0.3654256                 0.014404969
+   subject  leverage cooks_distance   residual studentized_residual
+8       27 0.5231665    0.035885889 -0.1622472           -0.3532768
+1        5 0.2978032    0.049577769 -0.3722257           -0.6739205
+13      43 0.2464083    0.384450496  1.2229182            2.4333550
+18      57 0.2425277    0.045575339  0.4265989            0.7456995
+21      66 0.2357274    0.002700029  0.1062664            0.1823028
+$adjusted_residual_sigma
+[1] 0.649589
+
+$response_VIF
+[1] 1.351497
+
+$reconstructed_SE
+[1] 0.3306127
+
+$LOPO_estimate_range
+[1] 1.074453 1.345934
+
+$LOPO_p_range
+[1] 0.000296239 0.009686997
+
+$deposited_log2_probe
+[1] 0
+
+$all_gene_means
+[1] 0
+
+$all_program_scores
+[1] 8.881784e-15
+
+$all_baseline
+[1] 5.329071e-15
+
+$all_deltas
+[1] 1.065814e-14
+
+GSE73661_INDEPENDENT_RECOMPUTATION_PASSED

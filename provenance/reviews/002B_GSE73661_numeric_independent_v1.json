@@ -1,0 +1,288 @@
+{
+  "status": "INDEPENDENT_RECOMPUTATION_PASSED",
+  "role": "descriptive_supportive_only",
+  "raw_dimensions": [33252, 178],
+  "source_quantiles": {
+    "0%": 1.970675459,
+    "1%": 2.8416429618499999,
+    "25%": 5.0872540190000004,
+    "50%": 6.4889732675000005,
+    "75%": 7.9520488135000003,
+    "99%": 12.010486301000007,
+    "100%": 14.597217150000001
+  },
+  "log_transform_applied": false,
+  "normalization_applied": false,
+  "retained_probe_count": 19594,
+  "canonical_gene_count": 18583,
+  "IFX_pairs": 23,
+  "healing": 8,
+  "nonhealing": 15,
+  "coverage": [
+    {
+      "program": "MATURE_COLONOCYTE6_EXPLORATORY",
+      "source_n": 6,
+      "measured_n": 6,
+      "coverage": 1,
+      "_row": "MATURE_COLONOCYTE6_EXPLORATORY"
+    },
+    {
+      "program": "HALLMARK_INFLAMMATORY_RESPONSE",
+      "source_n": 200,
+      "measured_n": 194,
+      "coverage": 0.96999999999999997,
+      "_row": "HALLMARK_INFLAMMATORY_RESPONSE"
+    },
+    {
+      "program": "UC_Maciag2024_TableS2_CT_Colonocytes_reported_marker_mean_proxy",
+      "source_n": 20,
+      "measured_n": 16,
+      "coverage": 0.80000000000000004,
+      "_row": "UC_Maciag2024_TableS2_CT_Colonocytes_reported_marker_mean_proxy"
+    },
+    {
+      "program": "UC_IA13_JAKSTAT_2024_gene_mean_proxy",
+      "source_n": 13,
+      "measured_n": 13,
+      "coverage": 1,
+      "_row": "UC_IA13_JAKSTAT_2024_gene_mean_proxy"
+    },
+    {
+      "program": "HALLMARK_OXIDATIVE_PHOSPHORYLATION",
+      "source_n": 200,
+      "measured_n": 192,
+      "coverage": 0.95999999999999996,
+      "_row": "HALLMARK_OXIDATIVE_PHOSPHORYLATION"
+    }
+  ],
+  "scored_common_inflammation": 194,
+  "preprocessing_max_differences": {
+    "deposited_log2_probe": 0,
+    "all_gene_means": 0,
+    "all_program_scores": 8.8817841970012523e-15,
+    "all_baseline": 5.3290705182007514e-15,
+    "all_deltas": 1.0658141036401503e-14
+  },
+  "model_table_checks": [
+    {
+      "file": "candidate_support_models.tsv",
+      "n_rows": 6,
+      "max_numeric_difference": 4.6962433941644122e-14
+    },
+    {
+      "file": "reference_descriptive_models.tsv",
+      "n_rows": 3,
+      "max_numeric_difference": 1.6431300764452317e-14
+    },
+    {
+      "file": "leave_one_patient_out.tsv",
+      "n_rows": 23,
+      "max_numeric_difference": 5.7065463465733046e-14
+    },
+    {
+      "file": "patient_diagnostics.tsv",
+      "n_rows": 23,
+      "max_numeric_difference": 2.7727820040013285e-14
+    },
+    {
+      "file": "paired_score_plot_source.tsv",
+      "n_rows": 23,
+      "max_numeric_difference": 3.5527136788005009e-14
+    }
+  ],
+  "candidate_models": [
+    {
+      "program": "MATURE_COLONOCYTE6_EXPLORATORY",
+      "model": "adjusted_support",
+      "method": "OLS",
+      "estimate": 1.1946910437560734,
+      "se": 0.33061266412091145,
+      "lower": 0.50271078505899081,
+      "upper": 1.8866713024531561,
+      "p": 0.0018504289841358732,
+      "n": 23,
+      "df": 19,
+      "rank": 4,
+      "standardized_condition": 1.762731351757461,
+      "max_VIF": 1.3514967334378656,
+      "max_leverage": 0.52316650248045915,
+      "_row": "adjusted_support.1"
+    },
+    {
+      "program": "MATURE_COLONOCYTE6_EXPLORATORY",
+      "model": "adjusted_support",
+      "method": "HC3",
+      "estimate": 1.1946910437560734,
+      "se": 0.29861943568886479,
+      "lower": 0.56967338174544424,
+      "upper": 1.8197087057667025,
+      "p": 0.00076494321713007349,
+      "n": 23,
+      "df": 19,
+      "rank": 4,
+      "standardized_condition": 1.762731351757461,
+      "max_VIF": 1.3514967334378656,
+      "max_leverage": 0.52316650248045915,
+      "_row": "adjusted_support.2"
+    },
+    {
+      "program": "MATURE_COLONOCYTE6_EXPLORATORY",
+      "model": "parallel_no_baseline",
+      "method": "OLS",
+      "estimate": 0.82670970550839251,
+      "se": 0.33903360955844519,
+      "lower": 0.11949798857486893,
+      "upper": 1.533921422441916,
+      "p": 0.024203394700693017,
+      "n": 23,
+      "df": 20,
+      "rank": 3,
+      "standardized_condition": 1.3724794785562284,
+      "max_VIF": 1.1036425094891982,
+      "max_leverage": 0.25792886888669947,
+      "_row": "parallel_no_baseline.1"
+    },
+    {
+      "program": "MATURE_COLONOCYTE6_EXPLORATORY",
+      "model": "parallel_no_baseline",
+      "method": "HC3",
+      "estimate": 0.82670970550839251,
+      "se": 0.39262989197299769,
+      "lower": 0.0076981025487741217,
+      "upper": 1.6457213084680109,
+      "p": 0.048078654761436801,
+      "n": 23,
+      "df": 20,
+      "rank": 3,
+      "standardized_condition": 1.3724794785562284,
+      "max_VIF": 1.1036425094891982,
+      "max_leverage": 0.25792886888669947,
+      "_row": "parallel_no_baseline.2"
+    },
+    {
+      "program": "MATURE_COLONOCYTE6_EXPLORATORY",
+      "model": "parallel_no_inflammation",
+      "method": "OLS",
+      "estimate": 1.5941027377531731,
+      "se": 0.42885450139921805,
+      "lower": 0.69952792363897665,
+      "upper": 2.4886775518673696,
+      "p": 0.0013618237003447807,
+      "n": 23,
+      "df": 20,
+      "rank": 3,
+      "standardized_condition": 1.6033474035018471,
+      "max_VIF": 1.2399296342428801,
+      "max_leverage": 0.34287511603887605,
+      "_row": "parallel_no_inflammation.1"
+    },
+    {
+      "program": "MATURE_COLONOCYTE6_EXPLORATORY",
+      "model": "parallel_no_inflammation",
+      "method": "HC3",
+      "estimate": 1.5941027377531731,
+      "se": 0.46244292119121722,
+      "lower": 0.629463707701445,
+      "upper": 2.5587417678049014,
+      "p": 0.0025484387174840948,
+      "n": 23,
+      "df": 20,
+      "rank": 3,
+      "standardized_condition": 1.6033474035018471,
+      "max_VIF": 1.2399296342428801,
+      "max_leverage": 0.34287511603887605,
+      "_row": "parallel_no_inflammation.2"
+    }
+  ],
+  "reference_models": [
+    {
+      "program": "UC_Maciag2024_TableS2_CT_Colonocytes_reported_marker_mean_proxy",
+      "model": "reference_descriptive",
+      "method": "OLS",
+      "estimate": 0.62721521544712289,
+      "se": 0.23001433944334168,
+      "lower": 0.1457896701333708,
+      "upper": 1.108640760760875,
+      "p": 0.013389619937691936,
+      "n": 23,
+      "df": 19,
+      "rank": 4,
+      "standardized_condition": 2.0702605116119597,
+      "max_VIF": 1.6289794394307926,
+      "max_leverage": 0.42256384962105265,
+      "BH_across_three_descriptive": 0.014404969093563666
+    },
+    {
+      "program": "UC_IA13_JAKSTAT_2024_gene_mean_proxy",
+      "model": "reference_descriptive",
+      "method": "OLS",
+      "estimate": -0.8834118854932359,
+      "se": 0.23735503839478317,
+      "lower": -1.3802016902885248,
+      "upper": -0.38662208069794696,
+      "p": 0.0014457240159492411,
+      "n": 23,
+      "df": 19,
+      "rank": 4,
+      "standardized_condition": 1.5524400628885835,
+      "max_VIF": 1.1852292106064024,
+      "max_leverage": 0.39861146486498927,
+      "BH_across_three_descriptive": 0.0043371720478477234
+    },
+    {
+      "program": "HALLMARK_OXIDATIVE_PHOSPHORYLATION",
+      "model": "reference_descriptive",
+      "method": "OLS",
+      "estimate": 0.15639794148463099,
+      "se": 0.058075641292762041,
+      "lower": 0.034844227283691562,
+      "upper": 0.2779516556855704,
+      "p": 0.014404969093563666,
+      "n": 23,
+      "df": 19,
+      "rank": 4,
+      "standardized_condition": 2.9401243851824965,
+      "max_VIF": 2.6792147760084855,
+      "max_leverage": 0.36542561293110343,
+      "BH_across_three_descriptive": 0.014404969093563666
+    }
+  ],
+  "adjusted_residual_sigma": 0.6495890418844017,
+  "observed_candidate_delta_SD": 1.0932689073926145,
+  "response_residualized_SS": 3.8604542469563392,
+  "response_VIF": 1.3514967334378651,
+  "reconstructed_SE": 0.33061266412091145,
+  "LOPO_estimate_range": [1.074452643002934, 1.3459338796592186],
+  "LOPO_p_range": [0.00029623900138491384, 0.0096869967724089803],
+  "LOPO_all_full_rank": true,
+  "maximum_leverage_patient": [
+    {
+      "subject": "27",
+      "leverage": 0.52316650248045915,
+      "cooks_distance": 0.035885889193386249,
+      "residual": -0.16224724610685892,
+      "studentized_residual": -0.35327681029966446
+    }
+  ],
+  "maximum_Cooks_patient": [
+    {
+      "subject": "43",
+      "leverage": 0.24640826219629383,
+      "cooks_distance": 0.38445049644679019,
+      "residual": 1.2229181597856043,
+      "studentized_residual": 2.4333549880926446
+    }
+  ],
+  "high_leverage_descriptive": [
+    {
+      "subject": "27",
+      "leverage": 0.52316650248045915,
+      "cooks_distance": 0.035885889193386249,
+      "residual": -0.16224724610685892,
+      "studentized_residual": -0.35327681029966446
+    }
+  ],
+  "GSE23597_primary_support_remains_FALSE": true,
+  "confirmatory_primary_test_count": 0,
+  "methods": "Independent raw-table parser and raw-characteristic IFX pairing; deposited RMA values retained; canonical rowsum/probe-count aggregation; explicit membership weight matrix; SVD OLS/covariance, direct sandwich-column HC3, manual BH, analytical patient diagnostics and all LOPO. No limma avereps or lm call in independent recomputation."
+}

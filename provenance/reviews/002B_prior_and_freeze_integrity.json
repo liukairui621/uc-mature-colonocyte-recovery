@@ -1,0 +1,696 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-09-10T17:27:46.877992+00:00",
+  "checks": [
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/001D_annotation_protocol_independent_v1.json",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/code/amend_lock_001D.py",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/code/annotation_001D.py",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/code/annotation_bridge_001D.R",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/code/discovery_001D.R",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/code/download_annotations_001D.py",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/code/validation_002A.R",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/GPL13158.annot.gz",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/GPL570.annot.gz",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/GPL6244.relay.annot.gz",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/hgnc_complete_set_20260910.txt",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/program_membership_001C.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/planning/Analysis_Amendment_001D.md",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/001D_annotation_protocol_independent_v1.json",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/metadata_independent_v1_gsm_barcode.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/discovery_preprocessed_v1.rds",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_scores.rds",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/CT_conditioned_VIF.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/GPL13158_canonical_probe_mapping.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/GPL570_canonical_probe_mapping.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/GPL6244_canonical_probe_mapping.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/GPL6244_relay_provenance.json",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/annotation.log",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/annotation_bridge.log",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/annotation_only_full200_discovery_bridge.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/annotation_policy.json",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/annotation_summary.json",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/baseline_model_identity_check.json",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/candidate_reference_correlations.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/discovery.log",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/discovery_HC3.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/discovery_amendment_summary.json",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/discovery_model_fits.rds",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/discovery_preprocessed_canonical.rds",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/discovery_response_models.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/download.log",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/download_manifest.json",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/frozen_common_inflammation_members.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/incremental_logistic_association.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/leave_one_gene_out.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/leave_one_patient_out.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/membership_mapping_audit.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/platform_program_coverage.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/program_arm_changes.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/program_baseline.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/program_delta.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/program_membership_canonical.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/program_scores.rds",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/program_scoring_membership.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_001D_reviewed.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/sessionInfo.txt",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/signature_lock.json",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/expression_access_event.json",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_validation_results_independent_v1.json",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_report_independent_v1.json",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_visual_QA.json",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/hgnc_complete_set_20260910.txt",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/GPL13158.annot.gz",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/GPL570.annot.gz",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/GPL6244.relay.annot.gz",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/program_scoring_membership.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/program_membership_canonical.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/frozen_common_inflammation_members.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/platform_program_coverage.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/program_scores.rds",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_metadata_prevalidation_pairs_independent_v1.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_metadata_prevalidation_independent_v1.json",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/code/annotation_001D.py",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/code/discovery_001D.R",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/code/validation_002A.R",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/planning/Analysis_Amendment_001D.md",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/validation/GSE23597_series_matrix.txt.gz",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/actual_program_coverage.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/actual_scored_inflammation194.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/candidate_model_fits.rds",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/candidate_models.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/candidate_models_HC3.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/download_manifest.json",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/execution.json",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/execution_started_v1.json",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/expression_access_event.json",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/figures/Fig002A_PrimaryAndParallel.pdf",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/figures/Fig002A_PrimaryAndParallel.png",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/figures/Fig002A_PrimaryAndParallel_source.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/figures/Fig002B_ValidationSensitivity.pdf",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/figures/Fig002B_ValidationSensitivity.png",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/figures/Fig002B_ValidationSensitivity_source.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/leave_one_patient_out.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/plots.log",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/primary_VIF.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/primary_patient_data.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/primary_patient_diagnostics.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/primary_test.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/qc_summary.json",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/report.log",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/sample_qc.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/secondary_no_baseline_descriptive.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/secondary_reference_tests.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/sessionInfo.txt",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/validation.log",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/validation_scores.rds",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/validation_summary.json",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_final_hash_integrity.json",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_metadata_prevalidation_independent_v1.json",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_metadata_prevalidation_pairs_independent_v1.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_recomputed_candidate_HC3_v1.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_recomputed_candidate_OLS_v1.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_recomputed_patient_diagnostics_v1.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_recomputed_secondary_v1.tsv",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_report_independent_v1.json",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_validation_code_independent_v1.json",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_validation_numeric_v1.json",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_validation_recompute_v1.R",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_validation_recompute_v1.log",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_validation_results_independent_v1.json",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_visual_QA.json",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/code/validation_002A.R",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/code/plots_002A.R",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/code/report_002A.py",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/code/finalize_002A.py",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/code/figure_theme.R",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/reports/Annotation_amendment_and_GSE23597_validation_20260910.md",
+      "match": true
+    },
+    {
+      "manifest": "provenance/manifests/stage_002A_completion.json",
+      "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+      "match": true
+    },
+    {
+      "manifest": "support_plan_002B.frozen.json",
+      "path": "/root/projects/UC_Treatment_Recovery/signature_lock.json",
+      "match": true
+    },
+    {
+      "manifest": "support_plan_002B.frozen.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/GPL6244_canonical_probe_mapping.tsv",
+      "match": true
+    },
+    {
+      "manifest": "support_plan_002B.frozen.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/program_membership_canonical.tsv",
+      "match": true
+    },
+    {
+      "manifest": "support_plan_002B.frozen.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/GSE73661_IFX_pairs_metadata_independent_v1.tsv",
+      "match": true
+    },
+    {
+      "manifest": "support_plan_002B.frozen.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/GSE73661_preexpression_precision_scenarios.tsv",
+      "match": true
+    },
+    {
+      "manifest": "support_plan_002B.frozen.json",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/GSE73661_preexpression_summary.json",
+      "match": true
+    },
+    {
+      "manifest": "support_plan_002B.frozen.json",
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_GSE73661_IFX_metadata_independent_v1.json",
+      "match": true
+    },
+    {
+      "manifest": "support_plan_002B.frozen.json",
+      "path": "/root/projects/UC_Treatment_Recovery/code/support_73661_002B.R",
+      "match": true
+    },
+    {
+      "manifest": "support_plan_002B.frozen.json",
+      "path": "/root/projects/UC_Treatment_Recovery/code/design_73661_002B.R",
+      "match": true
+    },
+    {
+      "manifest": "support_plan_002B.frozen.json",
+      "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+      "match": true
+    },
+    {
+      "manifest": "support_plan_002B.frozen.json",
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_precision_independent_v1.json",
+      "match": true
+    },
+    {
+      "manifest": "support_plan_002B.frozen.json",
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_directional_power_independent_v1.json",
+      "match": true
+    },
+    {
+      "manifest": "known v1.1",
+      "path": "/root/projects/UC_Treatment_Recovery/signature_lock.json",
+      "match": true
+    },
+    {
+      "manifest": "known prior report",
+      "path": "/root/projects/UC_Treatment_Recovery/reports/Annotation_amendment_and_GSE23597_validation_20260910.md",
+      "match": true
+    }
+  ]
+}

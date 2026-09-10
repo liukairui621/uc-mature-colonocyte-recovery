@@ -1,0 +1,98 @@
+{
+  "figure_checks": [
+    {
+      "file": "Fig002B01_ConditionalPrecision_source.tsv",
+      "rows": 362,
+      "numeric_values": 1448,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "file": "Fig002B02_EndoscopicSupport_source.tsv",
+      "rows": 6,
+      "numeric_values": 66,
+      "max_absolute_difference": 0.0,
+      "model_labels_exact": true
+    }
+  ],
+  "source_numeric_comparisons": 1514,
+  "used": [
+    "code/plots_002B.R",
+    "planning/Next_stage_003_cell_context.md",
+    "planning/support_plan_002B.frozen.json",
+    "provenance/reviews/002B_GSE282122_asset_audit_v1.json",
+    "provenance/reviews/002B_GSE73661_numeric_independent_v1.json",
+    "provenance/reviews/002B_directional_power_independent_v1.json",
+    "provenance/reviews/002B_precision_numeric_independent_v1.json",
+    "reports/Precision_review_and_002B_support_20260910.md",
+    "runs/002A_GSE23597/candidate_models.tsv",
+    "runs/002A_GSE23597/validation_summary.json",
+    "runs/002B_GSE73661_support/actual_program_coverage.tsv",
+    "runs/002B_GSE73661_support/candidate_support_models.tsv",
+    "runs/002B_GSE73661_support/expression_access_event.json",
+    "runs/002B_GSE73661_support/header_identity_check.json",
+    "runs/002B_GSE73661_support/leave_one_patient_out.tsv",
+    "runs/002B_GSE73661_support/reference_descriptive_models.tsv",
+    "runs/002B_GSE73661_support/support_summary.json",
+    "runs/002B_figures/Fig002B01_ConditionalPrecision_source.tsv",
+    "runs/002B_figures/Fig002B02_EndoscopicSupport_source.tsv",
+    "runs/002B_precision/GSE73661_preexpression_precision_scenarios.tsv",
+    "runs/002B_precision/conditional_power_scenarios.tsv",
+    "runs/002B_precision/directional_power_definition.json",
+    "runs/002B_precision/directional_support_power_audit.tsv",
+    "runs/002B_precision/exact_SE_ratio_decomposition.tsv",
+    "runs/002B_precision/fitted_precision_components.tsv",
+    "runs/002B_precision/inflammation_conditioning_attenuation.tsv",
+    "runs/002B_precision/selected_power_scenarios.tsv"
+  ],
+  "primary": {
+    "program": "MATURE_COLONOCYTE6_EXPLORATORY",
+    "model": "primary_baseline_inflammation",
+    "estimate": 0.4008231430470785,
+    "se": 0.4288302447842439,
+    "lower": -0.4806500492873639,
+    "upper": 1.282296335381521,
+    "p": 0.358548763461803,
+    "n": 32,
+    "df": 26,
+    "rank": 6,
+    "raw_condition": 100.5530113724583,
+    "standardized_condition": 2.685376608264518,
+    "max_VIF": 2.220623316771648,
+    "max_leverage": 0.5257441330656496
+  },
+  "support_adjusted": {
+    "program": "MATURE_COLONOCYTE6_EXPLORATORY",
+    "model": "adjusted_support",
+    "method": "OLS",
+    "estimate": 1.194691043756073,
+    "se": 0.3306126641209124,
+    "lower": 0.502710785058988,
+    "upper": 1.886671302453157,
+    "p": 0.001850428984135929,
+    "n": 23,
+    "df": 19,
+    "rank": 4,
+    "standardized_condition": 1.762731351757462,
+    "max_VIF": 1.351496733437866,
+    "max_leverage": 0.5231665024804576,
+    "evaluable": true
+  },
+  "conditional_power": {
+    "assumed_true_effect": "0.599406927278263",
+    "two_sided_rejection_power": "0.270218005609501",
+    "positive_direction_support_probability": "0.269748348843112",
+    "negative_direction_rejection_probability": "0.000469656766388771"
+  },
+  "SE_product": 1.8989954198159902,
+  "LOPO": {
+    "estimate": [
+      1.07445264300293,
+      1.34593387965922
+    ],
+    "p": [
+      0.000296239001384923,
+      0.00968699677240935
+    ]
+  },
+  "no_inflammation_P": 0.0659919655815371
+}

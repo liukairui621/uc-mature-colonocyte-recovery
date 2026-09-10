@@ -1,0 +1,282 @@
+{
+  "schema_version": "1.0",
+  "status": "REVIEWED",
+  "reviewer": "independent prior_program_review agent",
+  "completed_utc": "2026-09-10T17:31:00.556796+00:00",
+  "scope": "Bounded final report and plot-source Reviewer Gate for002B; no large expression matrix recomputation, no additional literature search. Root performed PNG visual inspection separately.",
+  "report": {
+    "path": "reports/Precision_review_and_002B_support_20260910.md",
+    "sha256": "a01211e2a346e18fa60440fb0530f06582e9842e6f900b89a9432e8fcaf11da3",
+    "bytes": 16102
+  },
+  "next_stage_plan": {
+    "path": "planning/Next_stage_003_cell_context.md",
+    "sha256": "e5dd48fde080fe5aa8b2c0673d192f6078241e3f149295646e7ead1eb7f0a3f2"
+  },
+  "plot_code": {
+    "path": "code/plots_002B.R",
+    "sha256": "e8824d8d1e54bf2ddfea418f87ee15d5ad0cd3378cee43266f021c5f96a1dea2"
+  },
+  "blocking_findings": [],
+  "resolved_findings": [
+    {
+      "id": "002B-REPORT-NOINFL-P-DIGITS",
+      "severity": "mechanical numeric precision; no scientific inference impact",
+      "location": "report line70",
+      "old_report_value": 0.065991965628,
+      "source_value": 0.0659919655815371,
+      "absolute_difference": 4.646290296950184e-11,
+      "resolution": "Source-based corrected text P=0.0659919655815 verified in regenerated report.",
+      "status": "RESOLVED"
+    }
+  ],
+  "numeric_checks": {
+    "figure_checks": [
+      {
+        "file": "Fig002B01_ConditionalPrecision_source.tsv",
+        "rows": 362,
+        "numeric_values": 1448,
+        "max_absolute_difference": 0.0
+      },
+      {
+        "file": "Fig002B02_EndoscopicSupport_source.tsv",
+        "rows": 6,
+        "numeric_values": 66,
+        "max_absolute_difference": 0.0,
+        "model_labels_exact": true
+      }
+    ],
+    "total_figure_numeric_comparisons": 1514,
+    "all_figure_numeric_differences_zero": true,
+    "report_support_model_rows_checked": 6,
+    "report_reference_model_rows_checked": 3,
+    "report_precision_table_cells_checked": 14,
+    "report_beta_CI_rounding_tolerance": 5.00001e-07,
+    "report_nominal_P_source_tolerance": 1e-12,
+    "selected_power_scenarios_percent_rounding": "Matches source to3decimals",
+    "SE_factor_product": 1.8989954198159902,
+    "support_LOPO_ranges": {
+      "estimate": [
+        1.07445264300293,
+        1.34593387965922
+      ],
+      "p": [
+        0.000296239001384923,
+        0.00968699677240935
+      ]
+    },
+    "primary_GSE23597": {
+      "program": "MATURE_COLONOCYTE6_EXPLORATORY",
+      "model": "primary_baseline_inflammation",
+      "estimate": 0.4008231430470785,
+      "se": 0.4288302447842439,
+      "lower": -0.4806500492873639,
+      "upper": 1.282296335381521,
+      "p": 0.358548763461803,
+      "n": 32,
+      "df": 26,
+      "rank": 6,
+      "raw_condition": 100.5530113724583,
+      "standardized_condition": 2.685376608264518,
+      "max_VIF": 2.220623316771648,
+      "max_leverage": 0.5257441330656496
+    },
+    "support_GSE73661_adjusted": {
+      "program": "MATURE_COLONOCYTE6_EXPLORATORY",
+      "model": "adjusted_support",
+      "method": "OLS",
+      "estimate": 1.194691043756073,
+      "se": 0.3306126641209124,
+      "lower": 0.502710785058988,
+      "upper": 1.886671302453157,
+      "p": 0.001850428984135929,
+      "n": 23,
+      "df": 19,
+      "rank": 4,
+      "standardized_condition": 1.762731351757462,
+      "max_VIF": 1.351496733437866,
+      "max_leverage": 0.5231665024804576,
+      "evaluable": true
+    },
+    "all_report_coverage_and_freeze_order_checks": "Matched source tables/records",
+    "IBrD_feature_coverage": "39exact +2Ensembl =41/81;40missing; Xnotread",
+    "CT_coverage": "16/20 =80%, explicitly marker-mean proxy"
+  },
+  "claims_review": {
+    "27percent_definition": "Report lines41-47 correctly conditions on fixed observed covariates, homoscedastic normal errors and plug-in residualsigma; distinguishes27.022%two-sided rejection from26.975%positive-direction support; discovery-selected effect is an assumption not truth.",
+    "MDE": "Two-sided80%MDE1.248127 vs positive-support80%MDE1.248129 correctly distinguished; residualsigma uncertainty explicitly conditional.",
+    "observed_power": "14.681%arithmetic not used to explain failure or provide independent evidence.",
+    "SE_decomposition": "Exact binaryresponse OLS factor decomposition correct; raw deltaSD1.497329 ratio and residualsigma factors not attributed to pure platform/processing noise.",
+    "conditioning": "Inflammation attenuation31.3806%discovery and58.2812%validation are descriptive; no causal mediation or selection-bias quantification claimed.",
+    "primary_test": "GSE23597 primary support remainsfalse; P=.358548763462 and CIcrossing0 retained. No pooledP/new primary success from73661.",
+    "GSE73661": "23IFXpatients with postendoscopic Mayo0or1 and sourceW4/6 window; positive adjusted association reported as nominal descriptive/supportive evidence, not prediction/IFX causal effect or clinicalresponse rescue.",
+    "reference_programs": "CT16/20,IA13 13/13,OXPHOS192/200 denominators stated. Similar or different P/BH/beta not superiority or equivalence; no complete original classifier reproduction claim.",
+    "cross_cohort": "Significant versus nonsignificant does not establish effect heterogeneity or endoscopic specificity; endpoints differ.",
+    "internal_freeze": "Explicit internal and amendable chronology, after23597 results, before73661 expression; not public registration or immutable independent clocks.",
+    "GSE282122": "Corrected Zenodo14007626, actual dimensions/sample counts andIBrD41/81 fromassetreview; noX/proportions/pseudobulk/DE completed claim.",
+    "stage003": "ExplicitlyPLANNED, exploratorycellcontext afterknownbulkresults; rawcountvalidation andmodelprotocol beforecellassociation, originalannotation first,patient/site nested repeats,NAoutcomes notnonremission, noIBrDproxy revival."
+  },
+  "plot_label_review": {
+    "Fig002B01": "Y-axis two-sided conditional rejection probability; caption fixedobserveddesign/plug-insigma and no knowntruepower claim; not mislabeled as frozenpositive-support probability.",
+    "Fig002B02": "HealingYes coefficients from IFXendoscopicendpoint with W4/6sourcewindow; OLS/HC3 and model labels map exactly; caption preserves support-only role.",
+    "visual_scope": "No independent pixel-level QA performed here; root reported actual PNG inspection without clipping/overlap."
+  },
+  "recomputation_evidence": "Existing independent SVD/rawmatrix/SciPy review records read and hashed; not independentlyrerunagain inthisboundedgate.",
+  "old_frozen_artifacts_preserved": {
+    "primary_lock_sha256": "62462dfbc25bb857c94c872424173e215c6d1b8b6724a0bbc724a5c2683bfb36",
+    "asset_review_sha256": "ecf80860261c6f53177d2f6922b58cb6162bef1ac09d68a43fd61f1b276842f4"
+  },
+  "decision": "Corrected report, plot labels and source tables can be adopted with no remaining numeric/claim blocker. This does not alter the negative primary validation or upgrade73661 beyond endoscopic descriptive support.",
+  "source_manifest": [
+    {
+      "path": "code/plots_002B.R",
+      "bytes": 2501,
+      "sha256": "e8824d8d1e54bf2ddfea418f87ee15d5ad0cd3378cee43266f021c5f96a1dea2"
+    },
+    {
+      "path": "code/report_002B.py",
+      "bytes": 16687,
+      "sha256": "01046066a9f6c0b363e3a4525c03f865b4838e0f4f2f1a50be955210c81758c7"
+    },
+    {
+      "path": "planning/Next_stage_003_cell_context.md",
+      "bytes": 2820,
+      "sha256": "e5dd48fde080fe5aa8b2c0673d192f6078241e3f149295646e7ead1eb7f0a3f2"
+    },
+    {
+      "path": "planning/support_plan_002B.frozen.json",
+      "bytes": 7975,
+      "sha256": "d8e5549c0e9e0a60696488653b45933fda7e8470da174351ab4377fe7de43399"
+    },
+    {
+      "path": "provenance/reviews/002B_GSE282122_asset_audit_v1.json",
+      "bytes": 20847,
+      "sha256": "ecf80860261c6f53177d2f6922b58cb6162bef1ac09d68a43fd61f1b276842f4"
+    },
+    {
+      "path": "provenance/reviews/002B_GSE73661_numeric_independent_v1.json",
+      "bytes": 8992,
+      "sha256": "0f6033acda45fd7435e4b0e014f8138c66157d79cb93ecc45e47212395892067"
+    },
+    {
+      "path": "provenance/reviews/002B_directional_power_independent_v1.json",
+      "bytes": 2690,
+      "sha256": "71a9fd376c5560c395fdc3a226a4748c46e6a0e4921076beebd5470d2dbd9cf3"
+    },
+    {
+      "path": "provenance/reviews/002B_precision_numeric_independent_v1.json",
+      "bytes": 9361,
+      "sha256": "64f6142fe79c022635506dee6d92865dab5db22934badd136c451ce116c1c114"
+    },
+    {
+      "path": "provenance/reviews/002B_report_numeric_check_working.json",
+      "bytes": 3497,
+      "sha256": "8de39545bd47d3a1716a3d1133241941bde6aaa8f957cf953965dcbf63f6ac64"
+    },
+    {
+      "path": "reports/Precision_review_and_002B_support_20260910.md",
+      "bytes": 16102,
+      "sha256": "a01211e2a346e18fa60440fb0530f06582e9842e6f900b89a9432e8fcaf11da3"
+    },
+    {
+      "path": "runs/002A_GSE23597/candidate_models.tsv",
+      "bytes": 978,
+      "sha256": "a4d3041baa560e87443fbe856efd0fd848467ac827609c2b0db94fcf5bf71760"
+    },
+    {
+      "path": "runs/002A_GSE23597/validation_summary.json",
+      "bytes": 969,
+      "sha256": "6e90a597b8f8fa5eee98840b748cfdb4bb49aeeda695309bddeee4b754b1d618"
+    },
+    {
+      "path": "runs/002B_GSE73661_support/actual_program_coverage.tsv",
+      "bytes": 407,
+      "sha256": "b2d93f4a0371ffa78ff9d259fd862351160b16b9c1858fe271df41f19a129422"
+    },
+    {
+      "path": "runs/002B_GSE73661_support/candidate_support_models.tsv",
+      "bytes": 1376,
+      "sha256": "d59bcbd0d37d9361925725a37cdd4d944649375e5810d3edf5bd5e58484f0392"
+    },
+    {
+      "path": "runs/002B_GSE73661_support/expression_access_event.json",
+      "bytes": 628,
+      "sha256": "a8a77b944cac60b63e1a7f922daa40e1c4dc59d1186aea188a488c2812a350c8"
+    },
+    {
+      "path": "runs/002B_GSE73661_support/header_identity_check.json",
+      "bytes": 93,
+      "sha256": "b5205711176017fe0d8a643bfea9f8b869ef2d0ad5147c435687c2cdf25579b3"
+    },
+    {
+      "path": "runs/002B_GSE73661_support/leave_one_patient_out.tsv",
+      "bytes": 1067,
+      "sha256": "96c1e7c519e56b0663db289dc8f5db270c4584b33a702aa34eacee38d945519f"
+    },
+    {
+      "path": "runs/002B_GSE73661_support/reference_descriptive_models.tsv",
+      "bytes": 881,
+      "sha256": "bc9da3d0492123ca6b3e7f884030c9cfefbe2c475efa03f2b961a57158e15c88"
+    },
+    {
+      "path": "runs/002B_GSE73661_support/support_summary.json",
+      "bytes": 1426,
+      "sha256": "3ebd208e42d5df1115206d23c41c20506353344388a5b39c36917733b54a6158"
+    },
+    {
+      "path": "runs/002B_figures/Fig002B01_ConditionalPrecision_source.tsv",
+      "bytes": 19195,
+      "sha256": "8c596e72db4b58872a1ceaa5694476df1bfe32f5b327bb55ced864c5d39173c3"
+    },
+    {
+      "path": "runs/002B_figures/Fig002B02_EndoscopicSupport_source.tsv",
+      "bytes": 1382,
+      "sha256": "1fc7d116998d580254a8fc7e2d74eb06abb9dbf832858499ec3d358681183133"
+    },
+    {
+      "path": "runs/002B_precision/GSE73661_preexpression_precision_scenarios.tsv",
+      "bytes": 869,
+      "sha256": "97c1f213d5c2024e0d6b4df8adf3ae80e58395688ca9e927c20da960c404b227"
+    },
+    {
+      "path": "runs/002B_precision/conditional_power_scenarios.tsv",
+      "bytes": 19195,
+      "sha256": "8c596e72db4b58872a1ceaa5694476df1bfe32f5b327bb55ced864c5d39173c3"
+    },
+    {
+      "path": "runs/002B_precision/directional_power_definition.json",
+      "bytes": 363,
+      "sha256": "fee9ad49cef75d2a9e6714f6926b19780d88dc50047579198c66af60e5797800"
+    },
+    {
+      "path": "runs/002B_precision/directional_support_power_audit.tsv",
+      "bytes": 549,
+      "sha256": "b80534a97d295f13726dc1f0fe172df771ea309a265517757f9bd259a6b24d20"
+    },
+    {
+      "path": "runs/002B_precision/exact_SE_ratio_decomposition.tsv",
+      "bytes": 151,
+      "sha256": "bfd0e751e18d7180654394d19bba9ba0174f147f409fd3a68dd0db3af59c01ab"
+    },
+    {
+      "path": "runs/002B_precision/fitted_precision_components.tsv",
+      "bytes": 661,
+      "sha256": "c9018ae3399c232b740ad98f3b63752d28e73777ac8bd8209005fac7e881e46e"
+    },
+    {
+      "path": "runs/002B_precision/inflammation_conditioning_attenuation.tsv",
+      "bytes": 164,
+      "sha256": "1d7867c719d54ed2d0d5915ae80858524291d2bf82b39fa8a3a83af7d0aea641"
+    },
+    {
+      "path": "runs/002B_precision/selected_power_scenarios.tsv",
+      "bytes": 367,
+      "sha256": "266af309758408d5769ad7f86e9780536e08ac225efae64a330f2449c7fc5aea"
+    },
+    {
+      "path": "signature_lock.json",
+      "bytes": 19065,
+      "sha256": "62462dfbc25bb857c94c872424173e215c6d1b8b6724a0bbc724a5c2683bfb36"
+    }
+  ]
+}
