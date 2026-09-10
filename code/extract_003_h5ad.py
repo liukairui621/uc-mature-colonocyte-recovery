@@ -128,6 +128,22 @@ def main():
             selected_cells += len(frame)
             print(json.dumps({"chunk_end":end,"n_run":n_run,"selected_cells_cumulative":selected_cells}),flush=True)
     agg=pd.concat(aggregates,ignore_index=True) if aggregates else pd.DataFrame()
+    if not agg.empty:
+        group_cols=["cell_set","sample_id","Patient","Site","Treatment","Remission_status",
+                    "LibraryType","Batch","final_analysis","major","minor"]
+        agg["_n_genes_weighted"]=agg["mean_n_genes"]*agg["n_cells"]
+        agg["_pct_mt_weighted"]=agg["mean_pct_mt"]*agg["n_cells"]
+        sum_cols=["n_cells","total_UMI","_n_genes_weighted","_pct_mt_weighted"] + [
+            f"{g}_counts" for g in CANDIDATES] + [f"{g}_norm10k_sum" for g in CANDIDATES]
+        agg=agg.groupby(group_cols,as_index=False,dropna=False,observed=True)[sum_cols].sum()
+        agg["mean_n_genes"]=agg["_n_genes_weighted"]/agg["n_cells"]
+        agg["mean_pct_mt"]=agg["_pct_mt_weighted"]/agg["n_cells"]
+        agg=agg.drop(columns=["_n_genes_weighted","_pct_mt_weighted"])
+        ordered=group_cols+["n_cells","total_UMI","mean_n_genes","mean_pct_mt"] + [
+            f"{g}_counts" for g in CANDIDATES] + [f"{g}_norm10k_sum" for g in CANDIDATES]
+        agg=agg[ordered]
+        if agg.duplicated(group_cols).any():
+            raise RuntimeError("sample-state aggregation keys remain duplicated after chunk consolidation")
     qcdf=pd.concat(qc,ignore_index=True)
     if not qcdf.empty:
         qcdf=(qcdf.groupby(["sample_id","Patient","Site","Treatment","Remission_status",

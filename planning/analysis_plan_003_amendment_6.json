@@ -1,0 +1,17 @@
+{
+  "amendment_id": "003-6",
+  "created_utc": "2026-09-10T23:59:25.688564+00:00",
+  "timing": "After initial model tables were produced and inspected; triggered by structural duplicate-key QC, not by effect direction or P value.",
+  "classification": "chunk-consolidation correction",
+  "issue": "The extractor emitted one aggregate row per processing chunk. The primary make_sample routine summed those rows and was algebraically invariant, but the descriptive fixed epithelial-state family paired rows directly and could create Cartesian duplicates.",
+  "correction": "Before writing, consolidate chunk rows to unique cell_set x sample x released-state keys; sum counts and normalized sums, and recompute cell-weighted QC means. Abort if any key remains duplicated.",
+  "expected_impact": "The two main patient-level axes and decomposition should be numerically unchanged up to floating-point formatting. The descriptive epithelial-state family must be replaced.",
+  "scientific_choices_changed": false,
+  "outcome_dependent_choice": false,
+  "new_extractor_sha256": "f50809e9027c220945c46fa93539172df4378c18271c53f1c9e6189f23f33c9e",
+  "verification_plan": [
+    "full re-extraction",
+    "zero duplicate keys",
+    "exact comparison of primary and joint model tables before versus after"
+  ]
+}
