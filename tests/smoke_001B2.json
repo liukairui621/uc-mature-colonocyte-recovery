@@ -1,0 +1,5 @@
+{
+  "status": "TESTED",
+  "checks": ["camera fixed/estimated/rank and fry execute", "pooled OLS coefficients agree", "script parses"],
+  "seed": 20260910
+}

@@ -1,0 +1,6 @@
+{
+  "status": "TESTED",
+  "n_test_genes": 100,
+  "checks": ["matrix columns align to source subject IDs", "paired subtraction retains baseline/post identities", "limma coefficients match independent row means", "difference contrast matches direct arithmetic"],
+  "seed": 20260910
+}
