@@ -1,0 +1,10 @@
+{
+  "utc": "2026-09-10T08:20:46.877959+00:00",
+  "view_method": "R generated PNG streamed from server into image inspection; no local file persisted",
+  "panels": [
+    "runs/001A_qc/QC01_PCA.png",
+    "runs/001A_qc/QC02_Medians.png",
+    "runs/001B_discovery/Exploratory01_All_Hallmark.png"
+  ],
+  "observations": "Legends, axes and subtitles visible without overlap. QC figures retain all samples; Hallmark plot retains all 50 sets. Stage plots only, not final manuscript panels."
+}

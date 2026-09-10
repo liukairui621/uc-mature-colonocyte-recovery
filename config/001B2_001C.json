@@ -1,0 +1,31 @@
+{
+  "run_id": "001B2_001C",
+  "phase": "exploratory correction and patient-level program refinement",
+  "trigger": "User supplied review and authorized selective corrections",
+  "created_after_viewing_001B_and_external_review": true,
+  "random_seed": 20260910,
+  "source_cohort": "GSE92415",
+  "patients": 65,
+  "pairing_rule": "Only exact source-ID pairs; no recovery based on expression",
+  "primary_axis": "Association of paired transcript change with week6 clinical response, adjusted for randomized arm; newly registered exploratory axis",
+  "secondary_axis": "GLM minus Placebo change with CI; within-arm and interaction effects; no equivalence claim",
+  "pathway_branches": [
+    "CAMERA fixed intergene correlation .01",
+    "CAMERA estimated intergene correlation NA",
+    "CAMERA fixed .01 rank-based",
+    "fry directional and mixed self-contained null"
+  ],
+  "pathway_scope": "50 Hallmark; full prior GO remains supplementary exploratory, no count interpreted as discoveries",
+  "patient_scores": "Unweighted gene-wise mean log2 expression, delta post-baseline. Baseline mean differences do not affect paired delta.",
+  "candidate_definition": "Six review-proposed genes AQP8 HMGCS2 GUCA2A CA2 SLC26A3 MS4A12, explicitly post hoc; reference programs added from verified literature without using external expression",
+  "confidence_intervals": "Within-arm one-sample t CI, between-arm Welch CI; patient-level adjusted models OLS t CI",
+  "response_model_sensitivity": [
+    "arm + response + inferred barcode differences",
+    "arm + response + baseline program score + baseline total Mayo",
+    "clinical response association adjusting inflammation and epithelial abundance proxy; not causal"
+  ],
+  "multiplicity": "BH per declared contrast and family, additional combined contrast BH; full results retained",
+  "signature_frozen": false,
+  "external_validation_expression_access": false,
+  "created_utc": "2026-09-10T14:17:41.372041+00:00"
+}

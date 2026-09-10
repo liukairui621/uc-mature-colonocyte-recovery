@@ -1,0 +1,15 @@
+package	version
+limma	3.58.1
+Biobase	2.62.0
+GEOquery	2.70.0
+jsonlite	2.0.0
+ggplot2	4.0.2
+data.table	1.18.2.1
+matrixStats	1.5.0
+msigdbr	26.1.0
+fgsea	1.28.0
+GSVA	1.50.5
+org.Hs.eg.db	3.18.0
+GO.db	3.18.0
+AnnotationDbi	1.64.1
+hgu133plus2.db	NA

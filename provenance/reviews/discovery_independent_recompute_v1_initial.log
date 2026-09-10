@@ -1,0 +1,10 @@
+           used  (Mb) gc trigger  (Mb) max used  (Mb)
+Ncells   487052  26.1     974527  52.1   664368  35.5
+Vcells 26487388 202.1   77590302 592.0 56476188 430.9
+Warning message:
+In fread(text = paste(alines, collapse = "\n"), quote = "", fill = TRUE,  :
+  Stopped early on line 1551. Expected 393 fields but found 697. Consider fill=697 or even more based on your knowledge of the input file. Use fill=Inf for reading the whole file for detecting the number of fields. First discarded non-empty line: <<1554411_PM_at	catenin beta 1	CTNNB1	1499				Homo sapiens OK/SW-cl.35 mRNA for catenin beta 1, complete cds	21104409	AB062292				3p21	Chromosome 3, NC_000003.12 (41199451..41240448)	I-SMAD binding///RNA polymerase II activating transcription factor binding///RNA polymerase II transcription factor binding///SMAD binding///alpha-catenin binding///androgen receptor binding///cadherin binding///cadherin binding involved in cell-cell adhesion///double-stranded DNA binding///enzyme binding///estrogen r>>
+Error in rowsum.default(raw[good, , drop = FALSE], symbol[good], reorder = TRUE) : 
+  unimplemented type 'NULL' in 'HashTableSetup'
+Calls: rowsum -> rowsum.default
+Execution halted

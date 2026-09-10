@@ -1,0 +1,182 @@
+{
+  "run_id": "discovery_001B",
+  "phase": "exploratory discovery",
+  "status": "COMPLETE",
+  "review_status": "PENDING",
+  "cwd": "/root/projects/UC_Treatment_Recovery",
+  "command": "OPENBLAS_NUM_THREADS=4 OMP_NUM_THREADS=4 Rscript code/discovery_001B.R",
+  "seed": 20260910,
+  "generated_utc": "2026-09-10T08:11:39.485161+00:00",
+  "inputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/discovery_preprocessed_v1.rds",
+      "bytes": 54300911,
+      "sha256": "f7c3343f671b7178799c2c011cf26c3178f55dd4898d28fbeaff312680dbf216",
+      "mtime_utc": "2026-09-10T08:05:23.460191+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/metadata_independent_v1_gsm_barcode.tsv",
+      "bytes": 23689,
+      "sha256": "877c80e8cda4e8d23abf1137f9bd02c222f62f7c4ebd6b6734e1ab6ceaaa72df",
+      "mtime_utc": "2026-09-10T08:04:38.309899+00:00"
+    }
+  ],
+  "code": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/discovery_001B.R",
+      "bytes": 4202,
+      "sha256": "0e0d5049723239596e6cc83b7f5d88a9bff8051048166655b64af4b4f2e9843a",
+      "mtime_utc": "2026-09-10T08:06:59.079811+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/config/discovery_001B.json",
+      "bytes": 975,
+      "sha256": "06231d43710e2c39cde38a60ce35884d5a83fcc8e1518225848b48da262c444b",
+      "mtime_utc": "2026-09-10T08:06:59.080811+00:00"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/GLM_response_difference.tsv",
+      "bytes": 3260599,
+      "sha256": "0ab712cb981cfb300d7bc7ebacb749eefa396a7bd867141da872c74a8814e37d",
+      "mtime_utc": "2026-09-10T08:07:02.433833+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/GLM_change.tsv",
+      "bytes": 3281203,
+      "sha256": "6c24c09cb9bc991729eefd76e99681e6e3309af4936e06c11c4054fe96c50d50",
+      "mtime_utc": "2026-09-10T08:07:02.310832+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/GLM_minus_Placebo.tsv",
+      "bytes": 3265947,
+      "sha256": "8932e9853dfd8e99129004ac49822e8486edaa2912d3d4cf75dddc2006918082",
+      "mtime_utc": "2026-09-10T08:07:02.392833+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/GLM_response_difference.tsv",
+      "bytes": 3248140,
+      "sha256": "6198b53f2ce6a1ebf53955d792ef070605ea94230418a82a6bb1c421f7784b17",
+      "mtime_utc": "2026-09-10T08:07:00.921823+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/GLM_change.tsv",
+      "bytes": 3273131,
+      "sha256": "09b3c1036153c01186b68f3d2c460de149bd21acab5002234b2b1f61912607a1",
+      "mtime_utc": "2026-09-10T08:07:00.801822+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/GLM_minus_Placebo.tsv",
+      "bytes": 3260308,
+      "sha256": "99d8de5b4f541f57ac74932305c03e97385de08292cb5736453470cb1d716c75",
+      "mtime_utc": "2026-09-10T08:07:00.884823+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/Placebo_response_difference.tsv",
+      "bytes": 3252264,
+      "sha256": "732bd12141f86babfb7f327e2ee687cfe66abcfc46a0af745cdd3c14a7ecd60b",
+      "mtime_utc": "2026-09-10T08:07:02.476833+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/Placebo_change.tsv",
+      "bytes": 3269576,
+      "sha256": "3cb9843fb9acbb142c4c507cc6fc9eac082641d74e41e4e461f9c7ad6a4be07f",
+      "mtime_utc": "2026-09-10T08:07:02.351832+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/Placebo_response_difference.tsv",
+      "bytes": 3225784,
+      "sha256": "ca41d67af12872b9a6981b9bddd9f50f1301e5a4b02daea54410d22cddf39bc2",
+      "mtime_utc": "2026-09-10T08:07:00.957823+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/Placebo_change.tsv",
+      "bytes": 3262859,
+      "sha256": "3716c9532229d797ba23d9c9f2d9e2ea1cec831adbe061b8f7e8949c53ecd883",
+      "mtime_utc": "2026-09-10T08:07:00.843822+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/response_difference_interaction.tsv",
+      "bytes": 3232101,
+      "sha256": "2b23d0894edff5d0b983f72bf6fa764c673d4fb20f02632ff2c5661c0cb09e9e",
+      "mtime_utc": "2026-09-10T08:07:02.513833+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/response_difference_interaction.tsv",
+      "bytes": 3242411,
+      "sha256": "7455898332d5e3139f5c7bb3b3878dbe706fd72d690a9c036b6ff47379b07d4e",
+      "mtime_utc": "2026-09-10T08:07:00.998824+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/limma_fits.rds",
+      "bytes": 6831834,
+      "sha256": "9ba7a7e96008e9a3a8c1fd7722c54430b593555db1ca4a74c366b936414d8d05",
+      "mtime_utc": "2026-09-10T08:07:03.069837+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/limma_fits.rds",
+      "bytes": 6769219,
+      "sha256": "e7de76d2170e673660b7f19bc51257caeae81523f9e3710ded39dcc1bd6b16b7",
+      "mtime_utc": "2026-09-10T08:07:01.552827+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/model_summary.json",
+      "bytes": 1375,
+      "sha256": "1d0b23a810489d43a3a36bfa61266bf56db1bee6dc385991ff82a5d79bb907bf",
+      "mtime_utc": "2026-09-10T08:07:03.072837+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/model_summary.json",
+      "bytes": 1365,
+      "sha256": "dcef8efe9d95f6ce92580fc40bfe7e5107f1de3896273d964074cdc68fe3af48",
+      "mtime_utc": "2026-09-10T08:07:01.555827+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/pathway_summary.json",
+      "bytes": 1083,
+      "sha256": "b34b47e0b4344eaeb16e5bdcd2565e817a651513721d2e7d4eea90923f5bbf3f",
+      "mtime_utc": "2026-09-10T08:11:02.858391+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/discovery_model_summary.json",
+      "bytes": 2995,
+      "sha256": "4df509114757e57fac0a205d4b83487afe4b455a211fab49f6ab0163d1033823",
+      "mtime_utc": "2026-09-10T08:07:03.077837+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/tests/model_smoke_001B.json",
+      "bytes": 282,
+      "sha256": "db7270acd4b18152b51eb458cf978d66424af89ae5bd582f9323b107272baa39",
+      "mtime_utc": "2026-09-10T08:07:00.389820+00:00"
+    }
+  ],
+  "environment": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/environments/R_packages.tsv",
+      "bytes": 239,
+      "sha256": "4f7803bd7070e01c428f9ddf4dc17f04d9141b1a2788f5360e4c60b174137aa0",
+      "mtime_utc": "2026-09-10T07:58:58.023694+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/environments/sessionInfo.txt",
+      "bytes": 3778,
+      "sha256": "d7b4b8dd3951b390cc12587211878c2038e2d6b51abe2f67cf63f6ad71335f56",
+      "mtime_utc": "2026-09-10T07:58:58.078695+00:00"
+    }
+  ],
+  "log": {
+    "path": "/root/projects/UC_Treatment_Recovery/logs/discovery_001B.log",
+    "bytes": 2996,
+    "sha256": "5b0428a155ab236202f615a5d9c07cb5789de741d3e4388b80f4386919e9752b",
+    "mtime_utc": "2026-09-10T08:07:03.081837+00:00"
+  },
+  "allowed_claims": [
+    "Exploratory within-treatment and between-arm transcript changes; no causal attribution or frozen signature"
+  ],
+  "limitations": [
+    "Public retrospective expression reanalysis",
+    "CEL barcode is inferred, not verified technical batch",
+    "No validation cohort expression used"
+  ]
+}

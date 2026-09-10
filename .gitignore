@@ -1,0 +1,10 @@
+inputs/
+runs/
+logs/
+renv/library/
+renv/staging/
+renv/cache/
+*.rds
+*.RData
+*.gz
+__pycache__/

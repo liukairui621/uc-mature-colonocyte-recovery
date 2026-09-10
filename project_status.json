@@ -1,0 +1,15 @@
+{
+  "created_utc": "2026-09-10T08:23:12.775089+00:00",
+  "current_phase": "001B first exploratory screen completed and reviewed",
+  "discovery_cohort": "GSE92415",
+  "candidate_frozen": false,
+  "independent_validation_started": false,
+  "next_phase": "001C patient-level and cell-state program refinement",
+  "analysis_input_files": [
+    "/root/projects/UC_Treatment_Recovery/inputs/discovery/GSE92415_series_matrix.relay.txt.gz"
+  ],
+  "review_pending": false,
+  "updated_utc": "2026-09-10T08:29:37.258541+00:00",
+  "stage_report": "/root/projects/UC_Treatment_Recovery/reports/Stage1_report_20260910.md",
+  "independent_review": "/root/projects/UC_Treatment_Recovery/provenance/reviews/discovery_independent_v1.json"
+}

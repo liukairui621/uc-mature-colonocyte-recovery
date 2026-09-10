@@ -1,0 +1,27 @@
+{
+  "url": "https://ftp.ncbi.nlm.nih.gov/geo/series/GSE92nnn/GSE92415/matrix/GSE92415_series_matrix.txt.gz",
+  "path": "/root/projects/UC_Treatment_Recovery/inputs/discovery/GSE92415_series_matrix.relay.txt.gz",
+  "sha256": "61cd218f97a47c94902fc4094284424041203f7c809447bf45aae321749c8bf1",
+  "bytes": 27037708,
+  "seconds": 31.510565996170044,
+  "retrieved_utc": "2026-09-10T08:01:39.601352+00:00",
+  "access": "public anonymous",
+  "transport": "local network to SSH streaming relay; no local data file",
+  "headers": {
+    "Date": "Thu, 10 Sep 2026 08:01:09 GMT",
+    "Server": "Apache",
+    "Last-Modified": "Sun, 06 Sep 2026 04:37:22 GMT",
+    "Accept-Ranges": "bytes",
+    "Content-Length": "27037708",
+    "Cache-Control": "public, max-age=86400",
+    "Expires": "Thu, 17 Sep 2026 08:01:09 GMT",
+    "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET,POST,PUT,OPTIONS",
+    "Access-Control-Allow-Headers": "RANGE, Cache-control, If-None-Match, Content-Type",
+    "Access-Control-Expose-Headers": "Content-Length, Content-Range, Content-Type",
+    "Connection": "close",
+    "Content-Type": "application/x-gzip"
+  },
+  "status": "COMPLETE"
+}

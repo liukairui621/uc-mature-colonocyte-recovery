@@ -1,0 +1,46 @@
+R version 4.3.3 (2024-02-29)
+Platform: x86_64-pc-linux-gnu (64-bit)
+Running under: Ubuntu 24.04.4 LTS
+
+Matrix products: default
+BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.12.0 
+LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.12.0
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C               LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8     LC_MONETARY=en_US.UTF-8   
+ [6] LC_MESSAGES=en_US.UTF-8    LC_PAPER=en_US.UTF-8       LC_NAME=C                  LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+time zone: Asia/Shanghai
+tzcode source: system (glibc)
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+loaded via a namespace (and not attached):
+  [1] DBI_1.3.0                   bitops_1.0-9                GSEABase_1.64.0             rlang_1.2.0                
+  [5] magrittr_2.0.5              msigdbr_26.1.0              otel_0.2.0                  matrixStats_1.5.0          
+  [9] compiler_4.3.3              RSQLite_2.4.6               DelayedMatrixStats_1.24.0   png_0.1-9                  
+ [13] vctrs_0.7.3                 pkgconfig_2.0.3             crayon_1.5.3                fastmap_1.2.0              
+ [17] XVector_0.42.0              tzdb_0.5.0                  graph_1.80.0                purrr_1.2.2                
+ [21] bit_4.6.0                   zlibbioc_1.48.2             cachem_1.1.0                beachmat_2.18.1            
+ [25] GenomeInfoDb_1.38.8         jsonlite_2.0.0              blob_1.3.0                  rhdf5filters_1.14.1        
+ [29] DelayedArray_0.28.0         Rhdf5lib_1.24.2             BiocParallel_1.36.0         irlba_2.3.7                
+ [33] parallel_4.3.3              R6_2.6.1                    RColorBrewer_1.1-3          limma_3.58.1               
+ [37] GenomicRanges_1.54.1        Rcpp_1.1.1                  assertthat_0.2.1            SummarizedExperiment_1.32.0
+ [41] GSVA_1.50.5                 readr_2.2.0                 IRanges_2.36.0              Matrix_1.6-5               
+ [45] tidyselect_1.2.1            dichromat_2.0-0.1           abind_1.4-8                 codetools_0.2-20           
+ [49] curl_7.0.0                  lattice_0.22-9              tibble_3.3.1                Biobase_2.62.0             
+ [53] KEGGREST_1.42.0             S7_0.2.1                    xml2_1.5.2                  Biostrings_2.70.3          
+ [57] pillar_1.11.1               MatrixGenerics_1.14.0       stats4_4.3.3                generics_0.1.4             
+ [61] RCurl_1.98-1.18             S4Vectors_0.40.2            hms_1.1.4                   ggplot2_4.0.2              
+ [65] sparseMatrixStats_1.14.0    scales_1.4.0                xtable_1.8-8                glue_1.8.0                 
+ [69] tools_4.3.3                 data.table_1.18.2.1         ScaledMatrix_1.10.0         fgsea_1.28.0               
+ [73] annotate_1.80.0             babelgene_22.9              GEOquery_2.70.0             XML_3.99-0.23              
+ [77] fastmatch_1.1-8             cowplot_1.2.0               rhdf5_2.46.1                grid_4.3.3                 
+ [81] tidyr_1.3.2                 AnnotationDbi_1.64.1        SingleCellExperiment_1.24.0 GenomeInfoDbData_1.2.11    
+ [85] BiocSingular_1.18.0         HDF5Array_1.30.1            cli_3.6.6                   rsvd_1.0.5                 
+ [89] S4Arrays_1.2.1              dplyr_1.2.1                 gtable_0.3.6                BiocGenerics_0.48.1        
+ [93] SparseArray_1.2.4           org.Hs.eg.db_3.18.0         farver_2.1.2                memoise_2.0.1              
+ [97] lifecycle_1.0.5             httr_1.4.8                  GO.db_3.18.0                statmod_1.5.1              
+[101] bit64_4.6.0-1              

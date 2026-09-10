@@ -1,0 +1,81 @@
+{
+  "artifact": "Stage1_report_20260910",
+  "generated_utc": "2026-09-10T08:29:37.286384+00:00",
+  "review_status_text": "元数据核查及统计独立复算已完成，未发现阻断错误；GO 成员范围与对比系数字段已补充说明",
+  "path": "/root/projects/UC_Treatment_Recovery/reports/Stage1_report_20260910.md",
+  "sha256": "664f19a3df9a65efdd824916f6b5472a83d0405d7c9c19018eba42e733c78566",
+  "source_tables": [
+    "runs/001A_qc/qc_summary.json",
+    "runs/001B_discovery/discovery_model_summary.json"
+  ],
+  "code_sha256": "c183bd6749f16b74b2a23d8bd94f7032dca6c1e00497f8c98a71ef22e7b9881e",
+  "inputs_and_review_evidence": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_metadata/metadata_summary.json",
+      "bytes": 923,
+      "sha256": "ae8caec546d46d3e786a5e2eafd7c143b7058a7b7869a01b6eb5d35db5f07767"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_metadata/discovery_pairs_v1.tsv",
+      "bytes": 3586,
+      "sha256": "48122e4385f540fa3e8fb056c04ef6954201c641c33ea0fa9c437376ed9b8277"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/qc_summary.json",
+      "bytes": 1116,
+      "sha256": "fe50c5fcea8e392adddb3b9e17635fadef457aaa8f375da7fa5212a9cfd28922"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/discovery_model_summary.json",
+      "bytes": 2995,
+      "sha256": "4df509114757e57fac0a205d4b83487afe4b455a211fab49f6ab0163d1033823"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/contrast_dictionary.md",
+      "bytes": 2182,
+      "sha256": "f0f9ca582609050546a21acfc46c751947bbaa635d4cf8cc347d830b43681253"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/metadata_independent_v1.json",
+      "bytes": 266610,
+      "sha256": "59849a144c55388e83c564ae9ec3614d16fea8acf0d856606b9f5b81bde43dc0"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/discovery_independent_v1.json",
+      "bytes": 30558,
+      "sha256": "0c1e75b0c2286c3c8da4375e7b99703291f7ca27ceb73b8572306127d08300a4"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/visual_QA_001AB.json",
+      "bytes": 484,
+      "sha256": "d9178ba45471ded2c5e64a8537e751ac67b458605f978cdadd370d93a5cadfe1"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/build_stage1_report.py",
+      "bytes": 16427,
+      "sha256": "c183bd6749f16b74b2a23d8bd94f7032dca6c1e00497f8c98a71ef22e7b9881e"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/camera_Hallmark_all.tsv",
+      "bytes": 34125,
+      "sha256": "30db1916a11e5ef0fe27cccf30ce73958c4f05a4004298570e07736c72aaca14"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/camera_GO_BP_all.tsv",
+      "bytes": 3323972,
+      "sha256": "ddb26021cef2e5de50ba5007552c8122062378e8b11b29e1fac1d6913cc7faf6"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/camera_Hallmark_all.tsv",
+      "bytes": 35095,
+      "sha256": "f6cfa9366532f8fd19edab1f7379942e35e238a7f9eeb4a25e0dd29ee6fb63b7"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/camera_GO_BP_all.tsv",
+      "bytes": 3423141,
+      "sha256": "ab07bdcd7846c24e93b72a84e14f6d2312394ad2d17092d7d204e9bf1b1f28c1"
+    }
+  ],
+  "status": "REVIEWED",
+  "candidate_frozen": false
+}

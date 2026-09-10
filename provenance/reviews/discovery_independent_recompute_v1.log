@@ -1,0 +1,18 @@
+           used  (Mb) gc trigger  (Mb) max used  (Mb)
+Ncells   487052  26.1     974527  52.1   664368  35.5
+Vcells 26487388 202.1   77590302 592.0 56476188 430.9
+{
+  "raw_max_error": 0,
+  "collapse_max_error": 0,
+  "delta_max_error": 0,
+  "qc_count_summary_identical": true,
+  "coefficient_max_error": 4.996e-16,
+  "BH_max_error": 3.8858e-15,
+  "summary_mismatch_count": 0,
+  "CAMERA_repeat": {
+    "test": "Full Hallmark primary GLM_change repeated at identical parameters",
+    "P_max_abs_error": 4.996e-16,
+    "FDR_max_abs_error": 5.5511e-16,
+    "direction_identical": true
+  }
+} 

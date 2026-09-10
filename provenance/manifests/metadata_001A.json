@@ -1,0 +1,51 @@
+{
+  "run_id": "001A_metadata",
+  "inputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/metadata/GSE23597.matrix_header.txt",
+      "bytes": 154850,
+      "sha256": "4e2235639e0493d549ded32335e50898ee13eecb1d35c9b54522ca82bb7e0d09"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/metadata/GSE92415.matrix_header.txt",
+      "bytes": 314244,
+      "sha256": "81d62bb200dbd2e4c92840bdd946a0a993113b67286319a68619f2cb3fe554c1"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/metadata/GSE73661.matrix_header.txt",
+      "bytes": 284310,
+      "sha256": "47f478d2b6d7387493ad6f5ad78368d17c20692d3c541d7124de5d4904876980"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_metadata/sample_registry_v1.tsv",
+      "bytes": 82956,
+      "sha256": "51fb54b7d978c8d5ed025c00a04df69017f71c4875eccc227a5b17e5c6936ba5"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_metadata/raw_sample_fields.json",
+      "bytes": 378341,
+      "sha256": "25e2c03a93eae068a7c4a1b4c4ca0f84eaabdbd4d0e80bede5af195f42b76c19"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_metadata/metadata_summary.json",
+      "bytes": 923,
+      "sha256": "ae8caec546d46d3e786a5e2eafd7c143b7058a7b7869a01b6eb5d35db5f07767"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_metadata/discovery_pairs_v1.tsv",
+      "bytes": 3586,
+      "sha256": "48122e4385f540fa3e8fb056c04ef6954201c641c33ea0fa9c437376ed9b8277"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_metadata/discovery_unpaired_v1.tsv",
+      "bytes": 5199,
+      "sha256": "2ac83b54816097e91f3661c5519550c9926f9f82f24dda3e29d2b96aff353fa9"
+    }
+  ],
+  "code": "/root/projects/UC_Treatment_Recovery/code/metadata_001A.py",
+  "command": "python3 code/metadata_001A.py",
+  "status": "COMPLETE",
+  "code_sha256": "f5f7e79be2c7a97a749c1937ebfdd22d20de128ad2bed11f75cb1e536975ef2e"
+}

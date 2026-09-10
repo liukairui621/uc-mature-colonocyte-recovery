@@ -1,0 +1,41 @@
+{
+  "stage": "001A metadata and QC plus 001B exploratory screen",
+  "completed_utc": "2026-09-10T08:29:37.258541+00:00",
+  "status": "REVIEWED",
+  "review": {
+    "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/discovery_independent_v1.json",
+    "bytes": 30558,
+    "sha256": "0c1e75b0c2286c3c8da4375e7b99703291f7ca27ceb73b8572306127d08300a4"
+  },
+  "report": {
+    "path": "/root/projects/UC_Treatment_Recovery/reports/Stage1_report_20260910.md",
+    "bytes": 8254,
+    "sha256": "664f19a3df9a65efdd824916f6b5472a83d0405d7c9c19018eba42e733c78566"
+  },
+  "contrast_dictionary": {
+    "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/contrast_dictionary.md",
+    "bytes": 2182,
+    "sha256": "f0f9ca582609050546a21acfc46c751947bbaa635d4cf8cc347d830b43681253"
+  },
+  "reviewed_run_manifests": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/manifests/qc_001A.json",
+      "bytes": 5666,
+      "sha256": "c4ef5f7393967d54a160c2d9149729a6efa77a89da813efec96f61a8364a4b42"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/manifests/discovery_001B.json",
+      "bytes": 7986,
+      "sha256": "46d00329660c1040e6fb1c3d42f1c04882b57afe9cb08b76c55b56c2c44f26eb"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/manifests/pathways_001B.json",
+      "bytes": 11400,
+      "sha256": "117d2894cdd1d0d4690e4e94576eb3f4f3162ef99e63a71f4734c13e7204124e"
+    }
+  ],
+  "provenance_note": "Run manifests are preserved as written before review. This completion record supplies their final reviewed state without changing the hashes independently checked.",
+  "candidate_frozen": false,
+  "validation_expression_used": false,
+  "next_phase": "001C patient-level and cell-state program refinement"
+}

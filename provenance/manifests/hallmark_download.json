@@ -1,0 +1,11 @@
+{
+  "url": "https://data.broadinstitute.org/gsea-msigdb/msigdb/release/2025.1.Hs/h.all.v2025.1.Hs.symbols.gmt",
+  "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/h.all.v2025.1.Hs.symbols.gmt",
+  "library": "MSigDB Hallmark",
+  "release": "2025.1.Hs",
+  "access": "public anonymous",
+  "retrieved_utc": "2026-09-10T08:08:32.908964+00:00",
+  "status": "COMPLETE",
+  "bytes": 48689,
+  "sha256": "f22066af72e215ccb7b89d88e492c07e1eef17534c2ca7b0f9902cfecbbdd8e9"
+}

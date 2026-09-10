@@ -1,0 +1,141 @@
+{
+  "run_id": "qc_001A",
+  "phase": "technical QC",
+  "status": "COMPLETE",
+  "review_status": "PENDING",
+  "cwd": "/root/projects/UC_Treatment_Recovery",
+  "command": "OPENBLAS_NUM_THREADS=4 OMP_NUM_THREADS=4 Rscript code/qc_001A.R",
+  "seed": 20260910,
+  "generated_utc": "2026-09-10T08:11:38.708159+00:00",
+  "inputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/discovery/GSE92415_series_matrix.relay.txt.gz",
+      "bytes": 27037708,
+      "sha256": "61cd218f97a47c94902fc4094284424041203f7c809447bf45aae321749c8bf1",
+      "mtime_utc": "2026-09-10T08:01:40.006744+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/GPL13158.annot.gz",
+      "bytes": 8313277,
+      "sha256": "d9eddd653c200c9ac1b282b441079a19e890914929b35792a4e99ce4eba3b0d0",
+      "mtime_utc": "2026-09-10T08:02:53.916223+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_metadata/sample_registry_v1.tsv",
+      "bytes": 82956,
+      "sha256": "51fb54b7d978c8d5ed025c00a04df69017f71c4875eccc227a5b17e5c6936ba5",
+      "mtime_utc": "2026-09-10T08:02:36.154108+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_metadata/discovery_pairs_v1.tsv",
+      "bytes": 3586,
+      "sha256": "48122e4385f540fa3e8fb056c04ef6954201c641c33ea0fa9c437376ed9b8277",
+      "mtime_utc": "2026-09-10T08:02:36.161108+00:00"
+    }
+  ],
+  "code": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/qc_001A.R",
+      "bytes": 6107,
+      "sha256": "775ee48bd51cb2e4653d8849e97e8ae8f1ba036297b564d5718a7d53ec088800",
+      "mtime_utc": "2026-09-10T08:05:00.269041+00:00"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/sample_correlations.tsv",
+      "bytes": 8615,
+      "sha256": "2ce96e6ffd3870a3550d75f5fe91bc2cde283b624ffea353183ff6a92fc73d68",
+      "mtime_utc": "2026-09-10T08:05:17.648154+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/sample_qc_and_pca.tsv",
+      "bytes": 59174,
+      "sha256": "5826d51fd7ff60b6730817a5571bfaa3278f7ffc2f7da40bf65576ad7b444397",
+      "mtime_utc": "2026-09-10T08:05:08.707096+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/sessionInfo.txt",
+      "bytes": 1456,
+      "sha256": "34d84b73b55229837f034cf3d1f02078b11e3df683c886655ab8cb373f51d263",
+      "mtime_utc": "2026-09-10T08:05:24.647199+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/qc_summary.json",
+      "bytes": 1116,
+      "sha256": "fe50c5fcea8e392adddb3b9e17635fadef457aaa8f375da7fa5212a9cfd28922",
+      "mtime_utc": "2026-09-10T08:05:24.553199+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/QC01_PCA.pdf",
+      "bytes": 29921,
+      "sha256": "7d12850b5a3f6a5f4b2dd79d4193d91d3ff8aa36cc35abf82cca99539144e34a",
+      "mtime_utc": "2026-09-10T08:05:18.053157+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/probe_gene_mapping.tsv",
+      "bytes": 1589369,
+      "sha256": "63d69a3e2422a238d3185c3de2cfb68e3b5c13e83df60fff2309804a68265087",
+      "mtime_utc": "2026-09-10T08:05:06.723083+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/QC02_Medians.png",
+      "bytes": 85086,
+      "sha256": "d3e4999cd06d5ae7b62e421842ff2c24db6ba85c0f9ef772c34348779bc79f72",
+      "mtime_utc": "2026-09-10T08:05:18.918162+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/discovery_preprocessed_v1.rds",
+      "bytes": 54300911,
+      "sha256": "f7c3343f671b7178799c2c011cf26c3178f55dd4898d28fbeaff312680dbf216",
+      "mtime_utc": "2026-09-10T08:05:23.460191+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/QC02_Medians.pdf",
+      "bytes": 29192,
+      "sha256": "d22b071414627df0714c801170ac14c150b2f3f2abe629cbf8f3b6e5bb5ff525",
+      "mtime_utc": "2026-09-10T08:05:18.703161+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/pca_variance.tsv",
+      "bytes": 4379,
+      "sha256": "96e1936a21a3f2b2ed59f7e7a43b65e49e35602ead74a59ee9cd62606175dd09",
+      "mtime_utc": "2026-09-10T08:05:08.708096+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/QC01_PCA.png",
+      "bytes": 97289,
+      "sha256": "a85b0ad25ef0bdd38cc8ba39ec720160f5fc8ce3d1dfc47266657e6caccbc57e",
+      "mtime_utc": "2026-09-10T08:05:18.427159+00:00"
+    }
+  ],
+  "environment": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/environments/R_packages.tsv",
+      "bytes": 239,
+      "sha256": "4f7803bd7070e01c428f9ddf4dc17f04d9141b1a2788f5360e4c60b174137aa0",
+      "mtime_utc": "2026-09-10T07:58:58.023694+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/environments/sessionInfo.txt",
+      "bytes": 3778,
+      "sha256": "d7b4b8dd3951b390cc12587211878c2038e2d6b51abe2f67cf63f6ad71335f56",
+      "mtime_utc": "2026-09-10T07:58:58.078695+00:00"
+    }
+  ],
+  "log": {
+    "path": "/root/projects/UC_Treatment_Recovery/logs/qc_001A.log",
+    "bytes": 1117,
+    "sha256": "d6a6485ab101a0f2e9281443dadbf763a499355e7c065affba4ae19f3b846754",
+    "mtime_utc": "2026-09-10T08:05:24.649199+00:00"
+  },
+  "allowed_claims": [
+    "Input dimensions and scale compatible with RMA",
+    "65 source-ID paired UC participants retained; no automatic QC exclusion"
+  ],
+  "limitations": [
+    "Public retrospective expression reanalysis",
+    "CEL barcode is inferred, not verified technical batch",
+    "No validation cohort expression used"
+  ]
+}

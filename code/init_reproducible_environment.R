@@ -1,0 +1,15 @@
+options(repos=c(CRAN="https://cloud.r-project.org"),timeout=1200);set.seed(20260910)
+root<-"/root/projects/UC_Treatment_Recovery";setwd(root)
+oldlibs<-.libPaths()
+pkgs<-c("limma","data.table","jsonlite","ggplot2","AnnotationDbi","org.Hs.eg.db","GO.db","Biobase","matrixStats","statmod","renv")
+old<-installed.packages(lib.loc=oldlibs)[,c("Package","Version","LibPath"),drop=FALSE]
+write.table(old,"provenance/environments/pre_renv_packages.tsv",sep="\t",row.names=FALSE,quote=FALSE)
+renv::init(project=root,bare=TRUE,bioconductor="3.18",restart=FALSE)
+renv::hydrate(project=root,packages=pkgs,sources=oldlibs,prompt=FALSE)
+renv::snapshot(project=root,type="all",prompt=FALSE)
+new<-installed.packages()[,c("Package","Version","LibPath"),drop=FALSE]
+stopifnot(all(old[pkgs,"Version"]==new[pkgs,"Version"]))
+write.table(new,"provenance/environments/renv_packages.tsv",sep="\t",row.names=FALSE,quote=FALSE)
+capture.output(renv::status(project=root),file="provenance/environments/renv_status.txt")
+capture.output(sessionInfo(),file="provenance/environments/renv_sessionInfo.txt")
+cat("RENV_SETUP_COMPLETE\n")

@@ -1,0 +1,263 @@
+{
+  "run_id": "pathways_001B",
+  "status": "COMPLETE",
+  "review_status": "PENDING",
+  "phase": "exploratory",
+  "created_utc": "2026-09-10T08:20:46.822579+00:00",
+  "cwd": "/root/projects/UC_Treatment_Recovery",
+  "command": [
+    "Rscript code/pathways_001B.R",
+    "python3 code/clarify_go_membership.py",
+    "Rscript code/plot_program_overview_001B.R"
+  ],
+  "seed": 20260910,
+  "inputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/discovery_preprocessed_v1.rds",
+      "bytes": 54300911,
+      "sha256": "f7c3343f671b7178799c2c011cf26c3178f55dd4898d28fbeaff312680dbf216"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/h.all.v2025.1.Hs.symbols.gmt",
+      "bytes": 48689,
+      "sha256": "f22066af72e215ccb7b89d88e492c07e1eef17534c2ca7b0f9902cfecbbdd8e9"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/gene_sets_001B.rds",
+      "bytes": 3766442,
+      "sha256": "b1884c9b9c17b36d765503ac5f1bc6e0b257da11a81cdad694fbcb4a28dc80b3"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/OrgDb_metadata.txt",
+      "bytes": 2280,
+      "sha256": "817c34371022680e0a2152ad1ae9a8782d73a2cadfb643260f21490052a9d4c8"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/GOdb_metadata.txt",
+      "bytes": 803,
+      "sha256": "6f34111f6d2ff7b4aceabf4a3e2a1002ac2d1ccec2fa9093339157115d775f73"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/main_design.tsv",
+      "bytes": 995,
+      "sha256": "6a8b95b30e34d7bc6f25bd285b0e2e9e33f1c1c0a03cfb4d784be3b8d9bcef7b"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/response_design.tsv",
+      "bytes": 1265,
+      "sha256": "fbbeff4b7bb119ed1f474dea9a10a3dc79c0b80210ec9cdc41d369539bd1431a"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/main_design.tsv",
+      "bytes": 1617,
+      "sha256": "93206b406c69a503868c9a698d15663681d220850d023fa013c89506b10ec7d8"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/response_design.tsv",
+      "bytes": 1887,
+      "sha256": "f05478e3275ab50daa824dba12b1864bf55d4df58dc888dab3da0ac447738d37"
+    }
+  ],
+  "code": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/pathways_001B.R",
+      "bytes": 4118,
+      "sha256": "b56c5100d38e3164def06cf8f4640dbd0420a8e8c3704314773000388856a02a"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/plot_program_overview_001B.R",
+      "bytes": 2215,
+      "sha256": "c85c1788648655ad2fc8395e9e99da1ca553e47ca5d582bf8c55bd31331a0277"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/clarify_go_membership.py",
+      "bytes": 1361,
+      "sha256": "046da912520ed04e1d2c8fe504243c86ece915467716b8234b87b985765dbb4a"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/camera_Hallmark_GLM_minus_Placebo.tsv",
+      "bytes": 7697,
+      "sha256": "c447cdc02c090926fc55fd0c4da3ab249be73aca9f889e6a9888048b6b7d8d2a"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/camera_Hallmark_all.tsv",
+      "bytes": 34125,
+      "sha256": "30db1916a11e5ef0fe27cccf30ce73958c4f05a4004298570e07736c72aaca14"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/camera_Hallmark_GLM_response_difference.tsv",
+      "bytes": 7982,
+      "sha256": "28cb171105d9f16bfbca3cf6555792bade12e2dbe0c569c6719e04cb40267077"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/camera_GO_BP_all.tsv",
+      "bytes": 3323972,
+      "sha256": "ddb26021cef2e5de50ba5007552c8122062378e8b11b29e1fac1d6913cc7faf6"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/camera_GO_BP_Placebo_change.tsv",
+      "bytes": 732571,
+      "sha256": "09f48413bcd047127796102eca8214a973f6b14e5462171765e0e2d682e4d9da"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/camera_GO_BP_GLM_change.tsv",
+      "bytes": 714700,
+      "sha256": "8ebefa7f50b1e770ea372674c00012efaef23841d33087c2c1f413b4e0023d02"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/camera_Hallmark_GLM_change.tsv",
+      "bytes": 7383,
+      "sha256": "8c63566d8a201424806d69d547c28afbbecb4a7b77604efa5f307768f2f40faa"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/camera_GO_BP_GLM_minus_Placebo.tsv",
+      "bytes": 747360,
+      "sha256": "baa2ac9a0a2a11a44e2b3fee3366825ec77110ef486067b159db80cd357e0f0a"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/camera_Hallmark_Placebo_change.tsv",
+      "bytes": 7582,
+      "sha256": "1c2885380011f6f2d6b1b1666031a6477fc3ef4b298d84e0ce8c65fe78bd0a82"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/camera_GO_BP_GLM_response_difference.tsv",
+      "bytes": 774371,
+      "sha256": "3a53440811a839c03b4dd341ccf0a385e2f527d5ccff12cef543e018b31e0d86"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/Hallmark_coverage.tsv",
+      "bytes": 2200,
+      "sha256": "901b4279b15e82b9b6f4b1e499343c35a88016465326e7abfffb0a80e3796559"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/GO_BP_coverage.tsv",
+      "bytes": 96004,
+      "sha256": "26901a0a642459d13e94d0068e976fc92268b029548291bd0cec17cac0ab7b01"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/primary_paired/GO_BP_membership_scope_v2.tsv",
+      "bytes": 563567,
+      "sha256": "bbbdfd26a95113c5bacf4cfe3621138ffd84b01259c1abebba8e35374c8635ef"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/camera_Hallmark_GLM_minus_Placebo.tsv",
+      "bytes": 7906,
+      "sha256": "59d5e26e682c093759652451be51eba8f3344f7814c0754c87e052d3828ebdea"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/camera_Hallmark_all.tsv",
+      "bytes": 35095,
+      "sha256": "f6cfa9366532f8fd19edab1f7379942e35e238a7f9eeb4a25e0dd29ee6fb63b7"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/camera_Hallmark_GLM_response_difference.tsv",
+      "bytes": 8244,
+      "sha256": "dc6967ad32d7737ca911fb81b558a759fb280869ead5ab7967019da1915930d0"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/camera_GO_BP_all.tsv",
+      "bytes": 3423141,
+      "sha256": "ab07bdcd7846c24e93b72a84e14f6d2312394ad2d17092d7d204e9bf1b1f28c1"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/camera_GO_BP_Placebo_change.tsv",
+      "bytes": 760232,
+      "sha256": "8e17ce07394ada53ccc6d1c04f7ca17760d104616fd72126ed86bc620bc95b44"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/camera_GO_BP_GLM_change.tsv",
+      "bytes": 737542,
+      "sha256": "7bb69b69ee236d04ac186c8855c2b5e0b1218eaf3bc5af6f851fbfb9fe2cad2d"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/camera_Hallmark_GLM_change.tsv",
+      "bytes": 7609,
+      "sha256": "0b57495b9095ccd7349daa5f8541ffd21d55f18770bf58a0bec076b7dd9d1241"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/camera_GO_BP_GLM_minus_Placebo.tsv",
+      "bytes": 768206,
+      "sha256": "318f2888f5b1432b2d830bbc6016dc209e12dc7ad575e46c8684cd61b34927c8"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/camera_Hallmark_Placebo_change.tsv",
+      "bytes": 7839,
+      "sha256": "60a8335d258cd4cce24af75636e801793bb411e994d950e4a80887f81c2b8979"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/camera_GO_BP_GLM_response_difference.tsv",
+      "bytes": 801507,
+      "sha256": "981a7bbc6ee49e64475a136a84d7440a964727e12b9155d2192829da86d43eb4"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/Hallmark_coverage.tsv",
+      "bytes": 2200,
+      "sha256": "901b4279b15e82b9b6f4b1e499343c35a88016465326e7abfffb0a80e3796559"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/GO_BP_coverage.tsv",
+      "bytes": 96004,
+      "sha256": "26901a0a642459d13e94d0068e976fc92268b029548291bd0cec17cac0ab7b01"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/barcode_sensitivity/GO_BP_membership_scope_v2.tsv",
+      "bytes": 563567,
+      "sha256": "bbbdfd26a95113c5bacf4cfe3621138ffd84b01259c1abebba8e35374c8635ef"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/Exploratory01_All_Hallmark.pdf",
+      "bytes": 30972,
+      "sha256": "86bbe38e6073b354af127f740dc0af02898b34c8d89e9d134779555f2bc9d3f9"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/Exploratory01_All_Hallmark_source.tsv",
+      "bytes": 102532,
+      "sha256": "deb9f6a6f56f8b3ef62b2992803dca09d2f010e68dc82d50e478b147c9215ba2"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/Exploratory01_All_Hallmark.png",
+      "bytes": 156355,
+      "sha256": "28e7107eac25fd534acf73768419ca109a50f538888a0cbccc8a93093a9011ec"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001B_discovery/pathway_summary.json",
+      "bytes": 1083,
+      "sha256": "b34b47e0b4344eaeb16e5bdcd2565e817a651513721d2e7d4eea90923f5bbf3f"
+    }
+  ],
+  "environment": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/environments/installed_R_packages.tsv",
+      "bytes": 40437,
+      "sha256": "574905b91ffed804584a0633c38b602ba2c1214c7599b31c1f7e80d6eca4871e"
+    }
+  ],
+  "logs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/logs/pathways_001B.log",
+      "bytes": 688,
+      "sha256": "a027f677fc3ef1105793db93f2f85d9d9d981ae874d93d968a3b39c7f7d2e979"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/logs/pathways_001B_initial.log",
+      "bytes": 117,
+      "sha256": "90c898c76621670e0efa30052ef630398f930bf8c6e6258a7e24c471ade2a84d"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/logs/plot_program_overview_001B.log",
+      "bytes": 29,
+      "sha256": "0f7974a089fcde0a8d3ef67592e012ecaa727111a4a2cb643aa90b64cd55998b"
+    }
+  ],
+  "allowed_claims": [
+    "Exploratory relative coordinated transcript changes in paired patients"
+  ],
+  "limitations": [
+    "No signature frozen or independently validated",
+    "CAMERA direction is competitive, not absolute pathway activity",
+    "GO membership scope clarification in provenance/reviews/go_membership_clarification.json",
+    "CELL barcode is inferred, not confirmed batch"
+  ]
+}

@@ -1,0 +1,6 @@
+options(width=140)
+pk<-c('limma','Biobase','GEOquery','jsonlite','ggplot2','data.table','matrixStats','msigdbr','fgsea','GSVA','org.Hs.eg.db','GO.db','AnnotationDbi','hgu133plus2.db')
+v<-sapply(pk,function(p) if(requireNamespace(p,quietly=TRUE)) as.character(packageVersion(p)) else NA_character_)
+write.table(data.frame(package=names(v),version=v),'/root/projects/UC_Treatment_Recovery/provenance/environments/R_packages.tsv',sep='\t',row.names=FALSE,quote=FALSE)
+capture.output(sessionInfo(),file='/root/projects/UC_Treatment_Recovery/provenance/environments/sessionInfo.txt')
+cat('Environment saved\n')

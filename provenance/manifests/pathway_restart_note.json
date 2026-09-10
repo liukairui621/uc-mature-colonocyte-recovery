@@ -1,0 +1,6 @@
+{
+  "utc": "2026-09-10T08:10:16.773517+00:00",
+  "reason": "Move invariant coefficient table read outside the gene-set loop; identical mathematical method and parameters",
+  "original_code": "code/pathways_001B_initial.R",
+  "original_log": "logs/pathways_001B_initial.log"
+}

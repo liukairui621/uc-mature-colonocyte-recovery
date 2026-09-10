@@ -1,0 +1,19 @@
+{
+  "run_id": "001B",
+  "phase": "exploratory discovery",
+  "created_before_expression_contrast_results": true,
+  "discovery": "GSE92415",
+  "validation_expression_access": false,
+  "primary": "65 verified paired patients; gene-level log2 post-minus-baseline; limma separate arm means and GLM-minus-placebo",
+  "secondary": "Clinical response-stratified changes and between-arm response association interaction; not causal",
+  "sensitivity": "Same input and contrasts, adding differences in inferred CEL barcode-family indicators. This is a file-name proxy, not confirmed batch metadata.",
+  "gene_mapping": "GEO GPL13158 annotation; exclude ambiguous gene symbols and AFFX controls; average log2 probes within gene",
+  "no_result_based_exclusions": true,
+  "moderation": {
+    "robust": true,
+    "trend": false
+  },
+  "fdr": "BH within each contrast; exploratory contrasts clearly separated",
+  "random_seed": 20260910,
+  "created_utc": "2026-09-10T08:06:59.080575+00:00"
+}

@@ -1,0 +1,7 @@
+{
+  "created_utc": "2026-09-10T08:15:46.480995+00:00",
+  "change": "Clarify GO membership denominator; no change to genes tested, statistics, thresholds or models",
+  "deprecated_presentation": "*/GO_BP_coverage.tsv original_size and coverage are within tested universe, not global GO coverage",
+  "replacement": "*/GO_BP_membership_scope_v2.tsv",
+  "Hallmark": "Full original gene-set coverage remains valid"
+}

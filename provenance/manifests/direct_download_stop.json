@@ -1,0 +1,7 @@
+{
+  "status": "STOPPED_AFTER_ALTERNATIVE_COMPLETED",
+  "pid": 333426,
+  "reason": "Full discovery matrix obtained by faster streaming relay; required GPL annotation complete; redundant slow transfers stopped",
+  "utc": "2026-09-10T08:07:45.742975+00:00",
+  "partial_files_retained": true
+}

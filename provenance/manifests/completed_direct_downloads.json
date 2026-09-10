@@ -1,0 +1,30 @@
+[
+  {
+    "url": "https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPL13nnn/GPL13158/annot/GPL13158.annot.gz",
+    "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/GPL13158.annot.gz",
+    "database": "NCBI GEO",
+    "access": "public anonymous",
+    "started_utc": "2026-09-10T07:58:50.645662+00:00",
+    "headers": {
+      "Date": "Thu, 10 Sep 2026 07:58:51 GMT",
+      "Server": "Apache",
+      "Last-Modified": "Mon, 22 Aug 2016 22:06:10 GMT",
+      "Accept-Ranges": "bytes",
+      "Content-Length": "8313277",
+      "Cache-Control": "public, max-age=86400",
+      "Expires": "Thu, 17 Sep 2026 07:58:51 GMT",
+      "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET,POST,PUT,OPTIONS",
+      "Access-Control-Allow-Headers": "RANGE, Cache-control, If-None-Match, Content-Type",
+      "Access-Control-Expose-Headers": "Content-Length, Content-Range, Content-Type",
+      "Connection": "close",
+      "Content-Type": "application/x-gzip"
+    },
+    "status": "COMPLETE",
+    "sha256": "d9eddd653c200c9ac1b282b441079a19e890914929b35792a4e99ce4eba3b0d0",
+    "bytes": 8313277,
+    "seconds": 243.27943515777588,
+    "ended_utc": "2026-09-10T08:02:53.925114+00:00"
+  }
+]
