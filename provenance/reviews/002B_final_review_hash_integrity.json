@@ -1,0 +1,602 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-09-10T17:31:24.061730+00:00",
+  "checks": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/precision_002B.R",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/design_73661_002B.R",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/discovery_model_fits.rds",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/candidate_model_fits.rds",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/discovery_preprocessed_canonical.rds",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/validation_scores.rds",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/precision_summary.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/GSE73661_preexpression_summary.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/planning/support_plan_002B.draft.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/support_73661_002B.R",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/fitted_precision_components.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/exact_SE_ratio_decomposition.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/conditional_power_scenarios.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/selected_power_scenarios.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/observed_power_arithmetic_only.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/observed_delta_dispersion.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/score_variance_identity.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/inflammation_conditioning_attenuation.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/GSE73661_preexpression_precision_scenarios.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/future_sample_size_scenarios.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_precision_recompute_inputs_v1.R",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_precision_recompute_inputs_v1.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_precision_recompute_inputs_v1.log",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_precision_recompute_v1.py",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_precision_recompute_v1.log",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_precision_numeric_independent_v1.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_precision_independent_v1.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_precision_numeric_independent_v1.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/directional_power_002B.R",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/directional_support_power_audit.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/directional_power_definition.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/metadata/GSE73661.matrix_header.txt",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_metadata/sample_registry_v1.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/GSE73661_IFX_pairs_metadata_independent_v1.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/GSE73661_IFX_response_visit_metadata_independent_v1.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/GSE73661_IFX_availability_metadata_independent_v1.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/planning/support_plan_002B.frozen.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/signature_lock.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/support_73661_002B.R",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/metadata/GSE73661.matrix_header.txt",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/support/GSE73661_series_matrix.txt.gz",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_GSE73661_support/expression_access_event.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_GSE73661_support/download_manifest.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/GPL6244_canonical_probe_mapping.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/program_membership_canonical.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/GSE73661_IFX_pairs_metadata_independent_v1.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_GSE73661_support/support_scores.rds",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_GSE73661_support/support_summary.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/validation_summary.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_GSE73661_support/candidate_support_models.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_GSE73661_support/reference_descriptive_models.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_GSE73661_support/leave_one_patient_out.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_GSE73661_support/patient_diagnostics.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_GSE73661_support/paired_score_plot_source.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_GSE73661_recompute_v1.R",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_GSE73661_recompute_v1.log",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_GSE73661_numeric_independent_v1.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_GSE73661_recomputed_candidate_v1.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_GSE73661_recomputed_reference_v1.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_GSE73661_recomputed_diagnostics_v1.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_GSE73661_recomputed_LOPO_v1.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/IBrD_TableS8_Elsevier.csv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/IBrD_author_README.md",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/IBrD_author_IBrD_predict_new_samples.R",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/literature_001C/IBrD_text.txt",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/hgnc_complete_set_20260910.txt",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/10x_3prime_polyA_technical_note.pdf",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/10x_methods_query_log.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/10x_reference_build_notes.html",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/10x_reference_build_notes.txt",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/GSE282122_actionable_asset_notes.md",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/GSE282122_data_head_checks.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/GSE282122_download_inventory.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/GSE282122_family.soft.gz",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/GSE282122_family.soft.txt",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/GSE282122_metadata_summary.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/GSE282122_query_log_initial.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/GSE282122_query_log_second.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/GSE282122_query_log_third.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/GSE282122_sample_metadata.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/GSE282122_self.soft.txt",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/GSE282122_supplement_listing.html",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/GSE282122_verified_sample_metadata.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/GSE282122_web_query_contract.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/IBrD81_TAURUS_actual_feature_coverage.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/IBrD81_TAURUS_feature_coverage_summary.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/SRA_ENA_PRJNA1179412.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/Supp_Table_1A_ii_CDspecific.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/Supp_Table_1A_iii_UCspecific.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/Supp_Table_1B_SampleMetadataIBD.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/TAURUS_Abundance_MASC_UC.r",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/TAURUS_Deriving_inflammation_score.r",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/TAURUS_GitHub_README.md",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/TAURUS_GitHub_tree.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/TAURUS_actual_h5ad_metadata_audit.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/TAURUS_actual_metadata_counts_range_audit.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/TAURUS_actual_var_features.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/TAURUS_actual_var_features_full.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/TAURUS_code_query_log.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/Thomas2024_TableS1.xlsx",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/Thomas2024_nature.html",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/Thomas2024_nature.txt",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/Thomas2024_targeted_method_result_excerpts.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/Zenodo14007626.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/Zenodo14007626_query.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/h5ad_range_probe.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/inspect_TAURUS_h5ad_metadata_ranges.py",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/inspect_TAURUS_metadata_counts_ranges.py",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/optional_cellcount_export_stop_note.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/paired_sample_list.csv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/reports/Precision_review_and_002B_support_20260910.md",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/planning/Next_stage_003_cell_context.md",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/plots_002B.R",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/plots_002B.R",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/report_002B.py",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/planning/Next_stage_003_cell_context.md",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/planning/support_plan_002B.frozen.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_GSE282122_asset_audit_v1.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_GSE73661_numeric_independent_v1.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_directional_power_independent_v1.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_precision_numeric_independent_v1.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_report_numeric_check_working.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/reports/Precision_review_and_002B_support_20260910.md",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/candidate_models.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/validation_summary.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_GSE73661_support/actual_program_coverage.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_GSE73661_support/candidate_support_models.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_GSE73661_support/expression_access_event.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_GSE73661_support/header_identity_check.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_GSE73661_support/leave_one_patient_out.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_GSE73661_support/reference_descriptive_models.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_GSE73661_support/support_summary.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_figures/Fig002B01_ConditionalPrecision_source.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_figures/Fig002B02_EndoscopicSupport_source.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/GSE73661_preexpression_precision_scenarios.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/conditional_power_scenarios.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/directional_power_definition.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/directional_support_power_audit.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/exact_SE_ratio_decomposition.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/fitted_precision_components.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/inflammation_conditioning_attenuation.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_precision/selected_power_scenarios.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/signature_lock.json",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_figures/Fig002B01_ConditionalPrecision.pdf",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_figures/Fig002B01_ConditionalPrecision.png",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_figures/Fig002B01_ConditionalPrecision_source.tsv",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_figures/Fig002B02_EndoscopicSupport.pdf",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_figures/Fig002B02_EndoscopicSupport.png",
+      "match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_figures/Fig002B02_EndoscopicSupport_source.tsv",
+      "match": true
+    }
+  ]
+}
