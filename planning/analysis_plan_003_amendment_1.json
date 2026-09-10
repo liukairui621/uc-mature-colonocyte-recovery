@@ -1,0 +1,45 @@
+{
+  "status": "FROZEN",
+  "version": "003.1-amendment1",
+  "parent_plan": "planning/analysis_plan_003.frozen.json",
+  "parent_sha256": "1293d394184a40819059d0df04f6e070910d8d2e8d35405752c096d43508d340",
+  "timing": "Created after the full-object download request began but before any X-derived extraction or cell-context outcome was read. It corrects interpretation, not samples, states, thresholds, outcomes or models.",
+  "expression_download_started_utc": "2026-09-10T22:26:47.222719+00:00",
+  "X_derived_results_accessed": false,
+  "corrections": [
+    {
+      "old": "Composition positive and CT-state change unstable supports composition-dominant.",
+      "new": "Do not infer dominance from significant-versus-nonsignificant. A composition-dominant description requires jointly evaluable patient/site data, the two-group algebraic decomposition, effect estimates and uncertainty to support a materially larger composition contribution."
+    },
+    {
+      "old": "If both axes are null, the bulk association does not transfer.",
+      "new": "If neither axis receives support, state only that this cohort provides no support or is inconclusive; do not equate nonsignificance with non-transfer."
+    },
+    {
+      "old": "Kitagawa within-state contribution may be read as purely intracellular.",
+      "new": "The CT term is within the fixed CT state. The other-epithelium term also contains shifts among the heterogeneous non-CT epithelial substates, so the combined within-group term is not a pure intracellular regulatory effect."
+    },
+    {
+      "old": "Exact label permutation may appear to remove design confounding.",
+      "new": "Permutation is exact only under label exchangeability. All remitters are v3.1, so it cannot remove chemistry/outcome confounding; show the v3.1-only sensitivity alongside it."
+    }
+  ],
+  "unchanged": [
+    "candidate genes",
+    "fixed CT state and epithelial denominator",
+    "41 site pairs/19 patients",
+    "patient inferential unit",
+    "threshold20 and sensitivities10/50",
+    "two named main contrasts",
+    "zero confirmatory tests",
+    "cross-cohort nondecisive boundary"
+  ],
+  "analysis_code": {
+    "path": "/root/projects/UC_Treatment_Recovery/code/analyze_003_cell_context.R",
+    "bytes": 11764,
+    "sha256": "cf9a81d4f3d8e985b1beb4e2cefca23fdf8c0c1b95906c5942f3c66a2de997ba",
+    "synthetic_smoke_status": "TESTED",
+    "synthetic_smoke_log": "runs/003_smoke/smoke3.log"
+  },
+  "created_utc": "2026-09-10T22:33:45.063755+00:00"
+}
