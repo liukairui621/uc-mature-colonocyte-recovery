@@ -1,0 +1,181 @@
+{
+  "status": "FROZEN",
+  "version": "003.1",
+  "label": "Internal pre-expression-X analysis specification created after both bulk results; exploratory cell-context discrimination, not public preregistration or replacement validation",
+  "created_after_bulk_results": true,
+  "GSE282122_expression_X_accessed": false,
+  "GSE282122_sample_by_state_counts_accessed": false,
+  "n_confirmatory_primary_tests": 0,
+  "role": "exploratory_cell_context_discrimination",
+  "question": "In corrected GSE282122 UC colonic samples, does the six-gene signal after adalimumab reflect mature-colonocyte captured composition, within-state expression change, or both?",
+  "cross_cohort_boundary": "This adalimumab cohort uses clinical remission and variable follow-up; it can inform portability of composition-versus-state explanations but cannot prove why the GSE73661 IFX endoscopic association arose.",
+  "data_version": {
+    "record": "Zenodo 14007626 revision6, updated 2024-11-19, CC-BY-4.0",
+    "file": "TAURUS_raw_counts_annotated_final.h5ad",
+    "bytes": 12708413650,
+    "provider_md5": "c1bd13b92cacb164a401c6c4a4e7912c",
+    "url": "https://zenodo.org/api/records/14007626/files/TAURUS_raw_counts_annotated_final.h5ad/content",
+    "old_metadata_versions_forbidden": true
+  },
+  "candidate_genes": [
+    "AQP8",
+    "HMGCS2",
+    "GUCA2A",
+    "CA2",
+    "SLC26A3",
+    "MS4A12"
+  ],
+  "fixed_annotation_states": {
+    "mature_colonocyte": "Non ileal CT colonocyte",
+    "epithelial_denominator_major": "Non_ileal_epithelium",
+    "other_named_context_states": [
+      "Non ileal BEST4 OTOP2",
+      "Non ileal LGR5pos stem",
+      "Non ileal TA",
+      "Non ileal undiff enterocyte",
+      "Non ileal enterocyte DUOXA2pos",
+      "Non ileal enterocyte DUOXA2pos CXCL11pos",
+      "Non ileal enterocyte PLCG2hi"
+    ],
+    "rule": "Use released final_analysis/major labels; do not recluster or create a candidate-high state for this analysis."
+  },
+  "sample_unit": {
+    "disease": "UC",
+    "sites": "All non-terminal-ileum same-patient same-site Pre/Post pairs",
+    "fixed_pair_file": "runs/003_preexpression/fixed_UC_colonic_site_pairs.tsv",
+    "site_pairs": 41,
+    "patients": 19,
+    "remission_patients": 6,
+    "nonremission_patients": 13,
+    "patient_is_inferential_unit": true,
+    "site_handling": "Compute within-site Post-minus-Pre quantities, then take an equal-weight mean over eligible sites within each patient.",
+    "missing_outcome": "UC19 and UC21 are excluded from outcome contrasts and never recoded as non-remission.",
+    "author_paired_list": "29 site pairs/17 patients with both samples on author list; report as provenance/sensitivity subset, not replacement main sample."
+  },
+  "cell_rule": {
+    "main": "Corrected released cells with nonmissing final_analysis, restricted to fixed samples, excluding predicted_doublets==TRUE.",
+    "mandatory_sensitivity": "All corrected released annotated cells including the predicted_doublets flag.",
+    "no_new_global_QC_threshold": "Do not select mitochondrial/gene-count thresholds from response results. Report source QC distributions and any technical invalidity before modeling."
+  },
+  "composition_axis": {
+    "primary": "CT cell count / all non-ileal epithelial cells within each sample.",
+    "secondary": "CT cell count / all retained captured cells within each sample.",
+    "transform": "Empirical logit log((numerator+0.5)/(denominator-numerator+0.5)); compute site-pair Post-minus-Pre.",
+    "zero_rule": "Pseudocount 0.5 is fixed for both groups."
+  },
+  "within_state_axis": {
+    "primary_state": "Non ileal CT colonocyte",
+    "main_cell_threshold": "At least20 state cells in both visits of a site pair.",
+    "threshold_sensitivities": [
+      10,
+      50
+    ],
+    "aggregation": "Sum raw candidate counts and all-gene library counts within sample-by-state; no cell-level inferential P values.",
+    "score": "Mean across six genes of log2(((gene_count+0.5)/(state_total_UMI+1))*1e6); site-pair Post-minus-Pre, then patient equal-site mean.",
+    "broader_state_mapping": "Report all released non-ileal epithelial states descriptively with BH across the fixed state family; no relabeling or primary-state substitution."
+  },
+  "two_component_decomposition": {
+    "role": "Descriptive exact algebra on linear per-cell-normalized six-gene expression, not causal mediation.",
+    "groups": "CT versus all other non-ileal epithelial cells",
+    "eligibility": "Both groups present and at least20 CT cells in both visits; threshold10/50 sensitivities.",
+    "cell_expression": "For each cell/gene, count/total_cell_UMI*10000; average six genes and cells within CT or other.",
+    "formula": "Total change = composition contribution + within-state contribution by symmetric Kitagawa two-group decomposition.",
+    "claims": "May quantify whether observed normalized epithelial change is arithmetically carried by changing group weights versus changing group means; does not establish histologic equivalence or causality."
+  },
+  "statistics": {
+    "main_contrasts": [
+      "Patient-level change in primary composition metric by remission",
+      "Patient-level change in CT within-state six-gene score by remission"
+    ],
+    "reporting": "Group means, remission-minus-nonremission difference, OLS95%CI, HC3 sensitivity, exact label-permutation P when all combinations feasible; BH across the two named main contrasts. Also report all-patient paired change descriptively.",
+    "chemistry_confounding": "All remitters are v3.1. Mandatory sensitivity restricts to v3.1; chemistry-adjusted model may be shown as descriptive but cannot identify an outcome effect independently of all batch/time differences.",
+    "additional_metrics": "All-cell denominator, author paired subset, thresholds10/50, released-cell set are sensitivities. Do not select the branch with smallest P.",
+    "small_sample_rule": "Report exact patient/event counts and wide intervals. No clinical prediction claims."
+  },
+  "interpretation_rules": {
+    "composition_only_pattern": "Positive CT-composition change without a stable within-CT score change supports a composition-dominant explanation in this cohort.",
+    "state_pattern": "A stable within-CT score change supports a composition-incomplete explanation in this cohort.",
+    "both_pattern": "Report both without calling either causal or dominant unless decomposition estimates and uncertainty support that wording.",
+    "neither_pattern": "The bulk association does not transfer to this distinct adalimumab clinical-remission context.",
+    "nondecisive": "Any pattern cannot by itself settle construct overlap in GSE73661 because drug, endpoint and follow-up differ.",
+    "forbidden_claims": [
+      "GSE73661 construct overlap disproved",
+      "six-gene program independent of all inflammation",
+      "six-gene program superior to CT, IA13/JAK-STAT or OXPHOS",
+      "new cell state",
+      "confirmed mechanism",
+      "replacement primary validation",
+      "IBrD81 reproduction"
+    ]
+  },
+  "technical_amendment_rule": "If actual H5AD encoding or count semantics differ, stop before outcome modeling, record a versioned technical amendment and rerun from unchanged scientific contrasts. No outcome-dependent sample, state, threshold or normalization changes.",
+  "inputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/Zenodo14007626.json",
+      "bytes": 8489,
+      "sha256": "fa37504ca8c09069e25df419da98aa99c54a608bc07f3169b40aa3445a4d99e5"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/TAURUS_actual_h5ad_metadata_audit.json",
+      "bytes": 38815,
+      "sha256": "23bc31c2c9887d0675210607b5682c904349ba9de166b7ead12fc91fb2128c8a"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/TAURUS_actual_var_features_full.tsv",
+      "bytes": 1103918,
+      "sha256": "b8ab308cc5c0aa3e5efd76652b9b447fca297ab7d6fc487f09030b06678be941"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/GSE282122_verified_sample_metadata.tsv",
+      "bytes": 38468,
+      "sha256": "599743eeacb5cf8d82c16b654f5878daba6896539563f80823c5ede0cf3aea0a"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/002B_asset_audit/paired_sample_list.csv",
+      "bytes": 3102,
+      "sha256": "2f40e364acb6f9cc86ee4c642bda1e187c61599576b408d90ad015030e1582f4"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_GSE282122_asset_audit_v1.json",
+      "bytes": 20847,
+      "sha256": "ecf80860261c6f53177d2f6922b58cb6162bef1ac09d68a43fd61f1b276842f4"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/003_preexpression/fixed_UC_colonic_site_pairs.tsv",
+      "bytes": 6058,
+      "sha256": "5b4304eaeee8b1ffca5066bcb0699e7ab5739c3799eac501a9befade6ece8b32"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/003_preexpression/fixed_patient_structure.tsv",
+      "bytes": 865,
+      "sha256": "0c982e0ec965289a557bfb2d26485597a1a3be64e01e60a13307c4f2b5e7e5d1"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/003_preexpression/outcome_chemistry_batch_crosswalk.tsv",
+      "bytes": 309,
+      "sha256": "7898b5e4234ed0e30be3576abbbe86d4e5f039ef6a1e2fc9d3057675e96141de"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/003_preexpression/metadata_design_summary.json",
+      "bytes": 839,
+      "sha256": "b24977a5b0da9d97c4fce08a2b05897126018e0ab2a83b03c1fbe60b2719b2e3"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002C_construct_overlap/construct_overlap_statistics.tsv",
+      "bytes": 982,
+      "sha256": "e4e0032f913027e01efa37f78bf090735ee2ef75a8d7b2727efa8eae9627ecdb"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002C_construct_overlap/construct_overlap_summary.json",
+      "bytes": 1469,
+      "sha256": "d6caad047da5b131958e5a1e47802bca24e5f6a961ad16bfa44a63704f31e32b"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/extract_003_h5ad.py",
+      "bytes": 9269,
+      "sha256": "e668fc78de559fe2ab6195f46f22de8767a461ef16bbc7d8bf5fd05d112e9a58"
+    }
+  ],
+  "created_utc": "2026-09-10T22:26:10.729687+00:00",
+  "frozen_utc": "2026-09-10T22:26:10.729687+00:00"
+}
