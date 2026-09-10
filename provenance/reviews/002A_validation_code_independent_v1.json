@@ -1,0 +1,130 @@
+{
+  "review_id": "002A_validation_code_independent_v1",
+  "created_utc": "2026-09-10T15:34:29.188920+00:00",
+  "status": "REVIEWED",
+  "reviewer_role": "Independent Reviewer Gate: static code and annotation-input consistency only",
+  "blocking_findings": [],
+  "decision": "The reviewed implementation is consistent with the proposed version 1.1 model and technical rules. No blocking statistical, scale, contrast or aggregation implementation error was found. Actual expression QC, estimability and numerical validation are not yet reviewed. Formal execution requires the frozen version 1.1 lock and the root analyst execution notification.",
+  "inputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/validation_002A.R",
+      "bytes": 9179,
+      "sha256": "a1efe70b1b321af8072bf6a55635a4e73de23ad65218e95f4c9b4d091919e132"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/planning/signature_lock_v1.1.draft.json",
+      "bytes": 18388,
+      "sha256": "3ba110d454fe9b9eb6b3c76851de9ebb0a8e06e3333c4c3edbff859df12dd392"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/signature_lock.json",
+      "bytes": 7697,
+      "sha256": "2fb0f042fce83e223b71ea37cd19811c5f5af425635c5989021abf6b239a140e"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/GPL570_canonical_probe_mapping.tsv",
+      "bytes": 2514367,
+      "sha256": "db6a0c83ab5bd4f3fa94e84b8adc9925f26325d4dd1b6ca946571f2babbcee51"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/program_membership_canonical.tsv",
+      "bytes": 465739,
+      "sha256": "2c04c0f497502d5918a0f77dac89a078e6bc89e2ef0166b1ef1789b1f1e23f39"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_metadata_prevalidation_pairs_independent_v1.tsv",
+      "bytes": 2623,
+      "sha256": "a463f1c71e15f6cf54363fddfb9b39408608668f28812f2efe9f6944c698eddd"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_metadata_prevalidation_independent_v1.json",
+      "bytes": 11577,
+      "sha256": "5c749a7b57429b7986761ecc161510bc26312fa1076a367fb7fd91afe0119fea"
+    }
+  ],
+  "execution_boundary": {
+    "validation_expression_downloaded": false,
+    "validation_expression_opened": false,
+    "script_sourced_or_executed": false,
+    "R_parse_only_exit": 0,
+    "R_parse_only_output": "SYNTAX_PARSE_OK",
+    "current_lock_version_at_review": "1.0",
+    "draft_version_reviewed": "1.1",
+    "note": "R parse() checks syntax without evaluating the script or opening any expression input."
+  },
+  "checks": [
+    {
+      "lines": "7-14",
+      "topic": "GEO matrix and scale",
+      "result": "The gzip stream is advanced through the exact matrix start marker. read.delim preserves sample IDs, uses first column as probe IDs, and ignores the terminal ! marker as a comment. The finite/duplicate checks precede statistics. Quantile position 6 is the 99th percentile. The GCOS scaling rule implements the predeclared log2(pmax(x,1)) or retain-compatible-log-scale branch without second normalization; flooring is counted and source quantiles are exported."
+    },
+    {
+      "lines": "15-24",
+      "topic": "Samples and probe mapping",
+      "result": "Samples are matched by GSM to source metadata. Exactly 32 frozen source-ID pairs are required and P13 is excluded. Canonical mapping is aligned to input probe rows and only retained unambiguous genes are used. limma avereps averages multiple probes AFTER log2 conversion and canonicalization; no raw-intensity mean is mislabeled log2 mean."
+    },
+    {
+      "lines": "25-44",
+      "topic": "Frozen scores and units",
+      "result": "Candidate membership is asserted setequal to the six frozen genes. All six and all 194 unique common inflammatory genes are required. Original 200-member inflammation coverage is separately checked. Actual scored inflammation194 is now explicitly exported. Program scores are equal-weight means of per-gene log2 expression; paired delta is Week8 minus Week0. Therefore scores and response coefficients are on mean-log2-expression units, not counts, z scores, or inferred functional activity."
+    },
+    {
+      "lines": "48-62",
+      "topic": "Primary estimand",
+      "result": "Formula is loaded from the version 1.1 lock: delta_candidate ~ response + treatment_dose + baseline_candidate + delta_inflammatory_response. No is the response reference and Placebo the dose reference. ResponseYes is the desired conditional contrast; with all 32 pairs and six full-rank columns expected residual df is 26. Missing essential fields/rank failure do not authorize an alternative primary model. Primary OLS result is exported before optional branches."
+    },
+    {
+      "lines": "53-69",
+      "topic": "OLS and HC3",
+      "result": "OLS coefficient, t CI and two-sided P are correct. HC3 implements inverse(XtX) Xt diag(e_i^2/(1-h_i)^2) X inverse(XtX), with a residual-df t reference. OLS stays primary. The mandatory no-baseline formula, no-inflammation branch and IFX-only model retain their designated explanatory/sensitivity roles."
+    },
+    {
+      "lines": "70-87",
+      "topic": "Diagnostics and multiplicity",
+      "result": "Actual full-model leverage, residuals, influence, standardized design condition and VIF are exported. LOPO does not select or remove a patient in the primary analysis. Each secondary uses its own baseline score and the same frozen inflammation covariate. Low coverage or a rank-deficient secondary is marked non-evaluable. BH uses the fixed n=3 family, including when a secondary P is missing; descriptive no-baseline references are not mislabeled a second primary family."
+    },
+    {
+      "lines": "89-97",
+      "topic": "Final interpretation",
+      "result": "QC summaries record the selected transform, floor count and duplicate-expression flag. Primary support is positive ResponseYes coefficient AND two-sided OLS P<0.05. Completion language limits claims to concurrent conditional association and does not claim new state, causal repair, prediction, or comparator superiority."
+    }
+  ],
+  "annotation_only_consistency": {
+    "GPL570_mapping_rows": 54675,
+    "unique_probe_ids": 54675,
+    "retained_probes": 40659,
+    "candidate_members_match_lock": true,
+    "all_selected_program_weights_one": true,
+    "common_inflammation_unique_genes": 194,
+    "potential_platform_coverage": {
+      "candidate": "6/6",
+      "source_inflammation": "200/200",
+      "common_inflammation": "194/194",
+      "CT_colonocyte": "18/20",
+      "IA13": "13/13",
+      "OXPHOS": "196/200"
+    },
+    "boundary": "These are annotation-universe counts only, not measured expression coverage."
+  },
+  "resolved_during_code_review": [
+    "Added candidate lock-membership equality and 194-gene length/uniqueness assertions.",
+    "Added actual_scored_inflammation194.tsv to distinguish scored194 from source200 coverage.",
+    "Added primary_test.tsv before optional branches.",
+    "Added rank-deficient secondary non-evaluability handling without changing the n=3 BH family."
+  ],
+  "nonblocking_execution_notes": [
+    {
+      "topic": "LOPO and sensitivity boundary",
+      "note": "Full primary rank and non-singleton metadata cells do not mathematically guarantee full rank after deleting one observation: continuous baseline/inflammation covariates can create h=1 or near-singular cases. Actual full-model diagnostics remain unknown. If a sensitivity or LOPO fit is not estimable, record that branch as non-evaluable; preserve the primary result and frozen method, and do not infer that a patient should be deleted. Current code exports primary_test.tsv before these branches; the root analyst has committed to technical state handling if this boundary occurs."
+    },
+    {
+      "topic": "Pre-read gate",
+      "note": "The current executable lock was version 1.0 when read, and the script correctly requires FROZEN version 1.1. This is an intentional execution gate, not a script defect."
+    },
+    {
+      "topic": "Coverage and log evidence",
+      "note": "Observed matrix coverage and scale cannot be certified from code or GPL annotation. Any retain-log-scale branch must be interpreted together with its exported numerical/source evidence; the GCOS header alone does not prove RMA or log2 processing."
+    }
+  ],
+  "mutation_scope": "Only this new review JSON was written by the reviewer. No old review, source metadata, lock, production code or expression data was modified."
+}

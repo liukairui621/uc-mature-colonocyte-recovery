@@ -1,0 +1,476 @@
+{
+  "review_id": "002A_metadata_prevalidation_independent_v1",
+  "reviewer": "Independent metadata-only Reviewer Gate",
+  "created_utc": "2026-09-10T15:21:40.086980+00:00",
+  "status": "REVIEWED",
+  "inputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/metadata/GSE23597.matrix_header.txt",
+      "bytes": 154850,
+      "sha256": "4e2235639e0493d549ded32335e50898ee13eecb1d35c9b54522ca82bb7e0d09"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_metadata/sample_registry_v1.tsv",
+      "bytes": 82956,
+      "sha256": "51fb54b7d978c8d5ed025c00a04df69017f71c4875eccc227a5b17e5c6936ba5"
+    }
+  ],
+  "scope": "Only existing raw metadata header and source registry opened. No validation expression downloaded, opened, transformed, scored, filtered or analyzed. Existing lock, samples and previous artifacts unchanged.",
+  "software": {
+    "python": "3.12.3",
+    "numpy": "1.26.4"
+  },
+  "method": "Parse tab-delimited quoted GEO Sample rows with csv.reader; derive subject, dose, visit and each endpoint from characteristic rows independently of registry. Cross-check against titles, dosage_time_resp and registry. Retain exactly one W0 plus one W8 per exact source subject ID, excluding P13 by frozen rule. Build treatment-coded matrix [Intercept, ResponseYes, IFX_5mgkg, IFX_10mgkg] with Placebo/No references. Rank by SVD; hat diagonal by reduced QR, independently matched to diag(X inverse(XtX) Xt).",
+  "source_counts": {
+    "arrays": 113,
+    "patients": 48,
+    "arrays_by_visit": {
+      "W0": 45,
+      "W8": 36,
+      "W30": 32
+    },
+    "platform_counts": {
+      "GPL570": 113
+    },
+    "subject_ids": [
+      "P1",
+      "P2",
+      "P3",
+      "P4",
+      "P5",
+      "P6",
+      "P7",
+      "P8",
+      "P9",
+      "P10",
+      "P11",
+      "P12",
+      "P13",
+      "P14",
+      "P15",
+      "P16",
+      "P17",
+      "P18",
+      "P19",
+      "P20",
+      "P21",
+      "P22",
+      "P23",
+      "P24",
+      "P25",
+      "P26",
+      "P27",
+      "P28",
+      "P29",
+      "P30",
+      "P31",
+      "P32",
+      "P33",
+      "P34",
+      "P35",
+      "P36",
+      "P38",
+      "P39",
+      "P40",
+      "P41",
+      "P42",
+      "P43",
+      "P44",
+      "P45",
+      "P46",
+      "P47",
+      "P48",
+      "P49"
+    ]
+  },
+  "label_checks": {
+    "issues": [],
+    "registry_rows": 113,
+    "registry_differences": [],
+    "duplicate_subject_visits": [
+      {
+        "subject": "P13",
+        "visit": "W0",
+        "gsms": [
+          "GSM578740",
+          "GSM578741"
+        ]
+      }
+    ],
+    "within_subject_dose_wk8response_wk30response_platform_conflicts": 0,
+    "wk8_vs_wk30_note": "Different endpoint responses between weeks are allowed and do not constitute label conflict. W8 response is used for the primary test, including on subjects with W30 arrays. No W30 expression or W30 response substitutes for missing W8."
+  },
+  "pair_counts": {
+    "eligible_unique_W0_W8_pairs": 32,
+    "arrays_used": 64,
+    "response": {
+      "No": 12,
+      "Yes": 20
+    },
+    "treatment_dose": {
+      "IFX_5mgkg": 10,
+      "IFX_10mgkg": 14,
+      "Placebo": 8
+    },
+    "subjects_excluded_or_unpaired": 16,
+    "arrays_outside_primary_pairs": 49
+  },
+  "response_by_dose": [
+    {
+      "treatment_dose": "Placebo",
+      "response": "No",
+      "n": 5,
+      "subjects": [
+        "P7",
+        "P8",
+        "P25",
+        "P44",
+        "P46"
+      ],
+      "metadata_only_hat_leverage": 0.14602242391884676
+    },
+    {
+      "treatment_dose": "Placebo",
+      "response": "Yes",
+      "n": 3,
+      "subjects": [
+        "P6",
+        "P18",
+        "P48"
+      ],
+      "metadata_only_hat_leverage": 0.1833956219967966
+    },
+    {
+      "treatment_dose": "IFX_5mgkg",
+      "response": "No",
+      "n": 2,
+      "subjects": [
+        "P1",
+        "P29"
+      ],
+      "metadata_only_hat_leverage": 0.1956753870795516
+    },
+    {
+      "treatment_dose": "IFX_5mgkg",
+      "response": "Yes",
+      "n": 8,
+      "subjects": [
+        "P3",
+        "P9",
+        "P14",
+        "P16",
+        "P33",
+        "P38",
+        "P40",
+        "P45"
+      ],
+      "metadata_only_hat_leverage": 0.10597971169247203
+    },
+    {
+      "treatment_dose": "IFX_10mgkg",
+      "response": "No",
+      "n": 5,
+      "subjects": [
+        "P11",
+        "P19",
+        "P28",
+        "P32",
+        "P34"
+      ],
+      "metadata_only_hat_leverage": 0.13320875600640686
+    },
+    {
+      "treatment_dose": "IFX_10mgkg",
+      "response": "Yes",
+      "n": 9,
+      "subjects": [
+        "P2",
+        "P4",
+        "P10",
+        "P15",
+        "P17",
+        "P24",
+        "P27",
+        "P36",
+        "P41"
+      ],
+      "metadata_only_hat_leverage": 0.0904965296316071
+    }
+  ],
+  "exclusions": [
+    {
+      "subject": "P5",
+      "reasons": [
+        "No deposited W8 sample for exact source ID"
+      ],
+      "W0": [
+        "GSM578722"
+      ],
+      "W8": [],
+      "W30": [
+        "GSM578723"
+      ],
+      "dose": "10mg/kg",
+      "response": "Yes"
+    },
+    {
+      "subject": "P12",
+      "reasons": [
+        "No deposited W8 sample for exact source ID"
+      ],
+      "W0": [
+        "GSM578739"
+      ],
+      "W8": [],
+      "W30": [],
+      "dose": "5mg/kg",
+      "response": "Yes"
+    },
+    {
+      "subject": "P13",
+      "reasons": [
+        "Excluded by frozen rule: two distinct W0 arrays, identity/replicate resolution unavailable; neither chosen nor averaged"
+      ],
+      "W0": [
+        "GSM578740",
+        "GSM578741"
+      ],
+      "W8": [
+        "GSM578742"
+      ],
+      "W30": [],
+      "dose": "5mg/kg",
+      "response": "Yes"
+    },
+    {
+      "subject": "P20",
+      "reasons": [
+        "No deposited W8 sample for exact source ID"
+      ],
+      "W0": [
+        "GSM578760"
+      ],
+      "W8": [],
+      "W30": [
+        "GSM578761"
+      ],
+      "dose": "placebo",
+      "response": "No"
+    },
+    {
+      "subject": "P21",
+      "reasons": [
+        "No deposited W8 sample for exact source ID"
+      ],
+      "W0": [
+        "GSM578762"
+      ],
+      "W8": [],
+      "W30": [
+        "GSM578763"
+      ],
+      "dose": "10mg/kg",
+      "response": "Yes"
+    },
+    {
+      "subject": "P22",
+      "reasons": [
+        "No deposited W8 sample for exact source ID"
+      ],
+      "W0": [
+        "GSM578764"
+      ],
+      "W8": [],
+      "W30": [
+        "GSM578765"
+      ],
+      "dose": "10mg/kg",
+      "response": "Yes"
+    },
+    {
+      "subject": "P23",
+      "reasons": [
+        "No deposited W0 sample for exact source ID"
+      ],
+      "W0": [],
+      "W8": [
+        "GSM578766"
+      ],
+      "W30": [
+        "GSM578767"
+      ],
+      "dose": "5mg/kg",
+      "response": "Yes"
+    },
+    {
+      "subject": "P26",
+      "reasons": [
+        "No deposited W8 sample for exact source ID"
+      ],
+      "W0": [
+        "GSM578774"
+      ],
+      "W8": [],
+      "W30": [
+        "GSM578775"
+      ],
+      "dose": "placebo",
+      "response": "No"
+    },
+    {
+      "subject": "P30",
+      "reasons": [
+        "No deposited W8 sample for exact source ID"
+      ],
+      "W0": [
+        "GSM578785"
+      ],
+      "W8": [],
+      "W30": [
+        "GSM578786"
+      ],
+      "dose": "placebo",
+      "response": "No"
+    },
+    {
+      "subject": "P31",
+      "reasons": [
+        "No deposited W0 sample for exact source ID"
+      ],
+      "W0": [],
+      "W8": [
+        "GSM578787"
+      ],
+      "W30": [],
+      "dose": "placebo",
+      "response": "No"
+    },
+    {
+      "subject": "P35",
+      "reasons": [
+        "No deposited W8 sample for exact source ID"
+      ],
+      "W0": [
+        "GSM578795"
+      ],
+      "W8": [],
+      "W30": [
+        "GSM578796"
+      ],
+      "dose": "placebo",
+      "response": "Yes"
+    },
+    {
+      "subject": "P39",
+      "reasons": [
+        "No deposited W8 sample for exact source ID"
+      ],
+      "W0": [
+        "GSM578803"
+      ],
+      "W8": [],
+      "W30": [],
+      "dose": "placebo",
+      "response": "Yes"
+    },
+    {
+      "subject": "P42",
+      "reasons": [
+        "No deposited W0 sample for exact source ID"
+      ],
+      "W0": [],
+      "W8": [
+        "GSM578809"
+      ],
+      "W30": [
+        "GSM578810"
+      ],
+      "dose": "5mg/kg",
+      "response": "Yes"
+    },
+    {
+      "subject": "P43",
+      "reasons": [
+        "No deposited W8 sample for exact source ID"
+      ],
+      "W0": [
+        "GSM578811"
+      ],
+      "W8": [],
+      "W30": [],
+      "dose": "5mg/kg",
+      "response": "Yes"
+    },
+    {
+      "subject": "P47",
+      "reasons": [
+        "No deposited W8 sample for exact source ID"
+      ],
+      "W0": [
+        "GSM578821"
+      ],
+      "W8": [],
+      "W30": [],
+      "dose": "5mg/kg",
+      "response": "Yes"
+    },
+    {
+      "subject": "P49",
+      "reasons": [
+        "No deposited W0 sample for exact source ID",
+        "No deposited W8 sample for exact source ID"
+      ],
+      "W0": [],
+      "W8": [],
+      "W30": [
+        "GSM578825"
+      ],
+      "dose": "5mg/kg",
+      "response": "Yes"
+    }
+  ],
+  "metadata_only_design": {
+    "formula": "~ response + treatment_dose",
+    "n": 32,
+    "columns": [
+      "Intercept",
+      "ResponseYes",
+      "IFX_5mgkg",
+      "IFX_10mgkg"
+    ],
+    "rank": 4,
+    "n_parameters": 4,
+    "residual_df": 28,
+    "condition_number_unscaled": 5.0723931401686615,
+    "hat_leverage_min": 0.09049652963160704,
+    "hat_leverage_max": 0.1956753870795516,
+    "hat_leverage_mean": 0.125,
+    "hat_trace": 4.000000000000001,
+    "two_p_over_n_descriptive_threshold": 0.25,
+    "subjects_above_two_p_over_n": [],
+    "QR_vs_inverse_max_difference": 8.326672684688674e-17
+  },
+  "expected_full_primary_design": {
+    "formula": "delta_candidate ~ response + treatment_dose + baseline_candidate + delta_inflammatory_response",
+    "conditional_n": 32,
+    "expected_coefficient_parameters": 6,
+    "coefficient_breakdown": "Intercept 1 + ResponseYes 1 + treatment dose 2 + baseline candidate 1 + inflammation delta 1; residual variance is not counted in design rank.",
+    "expected_residual_df_if_all_complete_and_full_rank": 26,
+    "actual_rank": null,
+    "actual_residual_df": null,
+    "actual_hat_leverage": null,
+    "boundary": "These parameter and df counts are conditional expectations only. Actual completeness, continuous-column variability, full rank, leverage and effect estimation require held-out expression scores; metadata-only leverage is not full-model leverage."
+  },
+  "preprocessing_metadata_only_note": "The deposited header says GCOS 1.4 default analysis and global scaling, target trimmed mean intensity 500; it does not document RMA or prove that the numeric matrix is log2. Verify expression scale only after authorization and preserve the frozen no-double-log/no-repeat-normalization rule.",
+  "blocking_findings": [],
+  "nonblocking_limits": [
+    "P13 duplicate W0 records are unresolved and excluded, not merged as assumed technical replicates.",
+    "Response/dose cells are unbalanced and small, so stable metadata rank does not guarantee stable full-model estimates; no patients are excluded based on leverage.",
+    "Metadata alone cannot establish gene coverage, expression-scale validity, full primary estimability, complete-case count or successful independent validation."
+  ],
+  "pair_table": {
+    "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002A_metadata_prevalidation_pairs_independent_v1.tsv",
+    "bytes": 2623,
+    "sha256": "a463f1c71e15f6cf54363fddfb9b39408608668f28812f2efe9f6944c698eddd"
+  }
+}

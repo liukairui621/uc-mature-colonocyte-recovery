@@ -1,0 +1,325 @@
+{
+  "run_id": "001D_annotation_amendment",
+  "status": "REVIEWED",
+  "validation_expression_accessed": false,
+  "recorded_utc": "2026-09-10T15:36:16.596702+00:00",
+  "commands": [
+    "python3 code/download_annotations_001D.py",
+    "python3 code/annotation_001D.py",
+    "Rscript code/discovery_001D.R",
+    "Rscript code/annotation_bridge_001D.R",
+    "python3 code/amend_lock_001D.py"
+  ],
+  "working_directory": "/root/projects/UC_Treatment_Recovery",
+  "seed": 20260910,
+  "software_environment": "renv.lock; runs/001D_annotation/sessionInfo.txt",
+  "branch": "Version1.1 HGNC/probe annotation plus pre-validation common194 amendment; old001C retained",
+  "review": {
+    "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/001D_annotation_protocol_independent_v1.json",
+    "bytes": 38913,
+    "sha256": "c38b34d10265642fba60f3d62a10facb7696fc8129f5ccb6ae84ea63f68e8fbb",
+    "mtime_utc": "2026-09-10T15:35:24.340272+00:00"
+  },
+  "artifacts": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/amend_lock_001D.py",
+      "bytes": 6780,
+      "sha256": "77e9e7dddf459dd9fbfdf4bbcae467dbc9de0c3d9b0e515ae44cbebd10d9ae37",
+      "mtime_utc": "2026-09-10T15:28:15.729371+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/annotation_001D.py",
+      "bytes": 6092,
+      "sha256": "4275b8ccebd38678f368de3a0cfed02eea89c8c2bed306dfa3416a58bd239443",
+      "mtime_utc": "2026-09-10T15:26:43.656748+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/annotation_bridge_001D.R",
+      "bytes": 1508,
+      "sha256": "9190fcccf62b043fc1b982a31e8a5ebd13e40d7a6efd942d4d037eced751aadd",
+      "mtime_utc": "2026-09-10T15:32:10.321959+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/discovery_001D.R",
+      "bytes": 9067,
+      "sha256": "b6d36e01188d852809e657df4518c4b77569d220a98c36778eb666556c62b5fa",
+      "mtime_utc": "2026-09-10T15:25:30.858255+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/download_annotations_001D.py",
+      "bytes": 1337,
+      "sha256": "69a1a0dab9ea07a749c6bb3e2dc361539bd393cc88eaad66f71f76648d69dc42",
+      "mtime_utc": "2026-09-10T15:17:56.435179+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/validation_002A.R",
+      "bytes": 9179,
+      "sha256": "a1efe70b1b321af8072bf6a55635a4e73de23ad65218e95f4c9b4d091919e132",
+      "mtime_utc": "2026-09-10T15:32:42.728178+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/GPL13158.annot.gz",
+      "bytes": 8313277,
+      "sha256": "d9eddd653c200c9ac1b282b441079a19e890914929b35792a4e99ce4eba3b0d0",
+      "mtime_utc": "2026-09-10T08:02:53.916223+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/GPL570.annot.gz",
+      "bytes": 8471521,
+      "sha256": "d7cd44352127b1e34f3a720ebea86093ef255a38f1612a85a2962b71bde8f394",
+      "mtime_utc": "2026-09-10T15:22:53.938193+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/GPL6244.relay.annot.gz",
+      "bytes": 7193437,
+      "sha256": "99ee70f87e02c75ff1c8dc57b6c40c0482c7ef2760e004301315ac34344ac6dc",
+      "mtime_utc": "2026-09-10T15:26:24.117616+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/hgnc_complete_set_20260910.txt",
+      "bytes": 16911574,
+      "sha256": "6a1423507780773fbcb373eaef84dba5f9357b36e7219db2aeaae13d8a42d62b",
+      "mtime_utc": "2026-09-10T15:18:01.126211+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/program_membership_001C.tsv",
+      "bytes": 492800,
+      "sha256": "7595f24cf2f737c75dd40c795fa4d2c152e83d05e26559a8cee7326b2b70dafe",
+      "mtime_utc": "2026-09-10T14:31:39.529383+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/planning/Analysis_Amendment_001D.md",
+      "bytes": 4110,
+      "sha256": "ba97f17924059b85e43c4e4f6aac3f9e25a0b2b4ae6a67fa839fbd09ba42bb6a",
+      "mtime_utc": "2026-09-10T15:31:44.341783+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/001D_annotation_protocol_independent_v1.json",
+      "bytes": 38913,
+      "sha256": "c38b34d10265642fba60f3d62a10facb7696fc8129f5ccb6ae84ea63f68e8fbb",
+      "mtime_utc": "2026-09-10T15:35:24.340272+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/metadata_independent_v1_gsm_barcode.tsv",
+      "bytes": 23689,
+      "sha256": "877c80e8cda4e8d23abf1137f9bd02c222f62f7c4ebd6b6734e1ab6ceaaa72df",
+      "mtime_utc": "2026-09-10T08:04:38.309899+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+      "bytes": 144982,
+      "sha256": "d0b866e9d3af3a81cb6d35f4eee3cba387946f2e6ade554e22057e24bdf2ed86",
+      "mtime_utc": "2026-09-10T14:24:48.971605+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/discovery_preprocessed_v1.rds",
+      "bytes": 54300911,
+      "sha256": "f7c3343f671b7178799c2c011cf26c3178f55dd4898d28fbeaff312680dbf216",
+      "mtime_utc": "2026-09-10T08:05:23.460191+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_scores.rds",
+      "bytes": 95893,
+      "sha256": "cdbac51aa6c86cdb47e34a4b8a71cf0260f6d4d8458bf7865bae69ab790deed7",
+      "mtime_utc": "2026-09-10T14:31:48.671445+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/CT_conditioned_VIF.tsv",
+      "bytes": 170,
+      "sha256": "96d9a953d17e6110549633d223c54fa7a2153ac2a6c966e45631e9489f19bb52",
+      "mtime_utc": "2026-09-10T15:26:51.019798+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/GPL13158_canonical_probe_mapping.tsv",
+      "bytes": 2645945,
+      "sha256": "9a8b6c06a260caac6b117d87729d45873c5c8057341bc667910a80717a353a33",
+      "mtime_utc": "2026-09-10T15:26:44.488754+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/GPL570_canonical_probe_mapping.tsv",
+      "bytes": 2514367,
+      "sha256": "db6a0c83ab5bd4f3fa94e84b8adc9925f26325d4dd1b6ca946571f2babbcee51",
+      "mtime_utc": "2026-09-10T15:26:44.990757+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/GPL6244_canonical_probe_mapping.tsv",
+      "bytes": 1551454,
+      "sha256": "7db267d8b6fe4b01512d1aa67e235abbd86eac9679dc6608a1e5af74418b59ac",
+      "mtime_utc": "2026-09-10T15:26:45.338759+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/GPL6244_relay_provenance.json",
+      "bytes": 422,
+      "sha256": "74bc2a0797d4f28f902055ba9c0d467e2efb24247cce002e8ba062c98c6b8753",
+      "mtime_utc": "2026-09-10T15:26:43.656748+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/annotation.log",
+      "bytes": 5233,
+      "sha256": "6053d35271eca8dc442a8e3ee911e6b13108ed27076a81d80ad4c45685a705dc",
+      "mtime_utc": "2026-09-10T15:26:45.571761+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/annotation_bridge.log",
+      "bytes": 315,
+      "sha256": "3daae235a00def43d80c580be0eeaffc5b014d3bd32f2932400080a267075d3c",
+      "mtime_utc": "2026-09-10T15:32:15.040991+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/annotation_only_full200_discovery_bridge.tsv",
+      "bytes": 195,
+      "sha256": "3b12a58f5c191c8541ae87991b334d9fa56dd41b1c52275bc8204c0dfcf7404a",
+      "mtime_utc": "2026-09-10T15:32:15.013991+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/annotation_policy.json",
+      "bytes": 1094,
+      "sha256": "415a005cf45caa9dbac1ac833a53dffc8d522826c243168c8143d84702400c52",
+      "mtime_utc": "2026-09-10T15:26:44.012750+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/annotation_summary.json",
+      "bytes": 1519,
+      "sha256": "c0f7f7b03a8dccb7cbea56d68cc953ad16827f7154beae28413c5abbc9736420",
+      "mtime_utc": "2026-09-10T15:26:45.488760+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/baseline_model_identity_check.json",
+      "bytes": 163,
+      "sha256": "f3c296e159e35b4cf22d2f772107fade080d4e9d29f0ca684c187d5be084394f",
+      "mtime_utc": "2026-09-10T15:32:15.017991+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/candidate_reference_correlations.tsv",
+      "bytes": 4042,
+      "sha256": "5d0bf7ea411004d3d1830625d1a24ea0f0f82a1699cf9cc5a513f0dee816551a",
+      "mtime_utc": "2026-09-10T15:26:51.042798+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/discovery.log",
+      "bytes": 4224,
+      "sha256": "661655f089727b830c2dd29a54f6519c685f7547d597205cf8a20084f48c1f1e",
+      "mtime_utc": "2026-09-10T15:26:51.239799+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/discovery_HC3.tsv",
+      "bytes": 1381,
+      "sha256": "fa419d2be2bbb96b73aa1da1cd9d501e8bf13199f5dcc0791b597d80f0d7991d",
+      "mtime_utc": "2026-09-10T15:26:51.019798+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/discovery_amendment_summary.json",
+      "bytes": 801,
+      "sha256": "ec9116f7ef198b6611c8bc7d75178923bfdf555428f0f3c95afaf7cb7eb22f95",
+      "mtime_utc": "2026-09-10T15:26:51.186799+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/discovery_model_fits.rds",
+      "bytes": 102306,
+      "sha256": "df3ad353859fb4b0a5b6855f59d68f4c20f50816333227c9184fd081fca43034",
+      "mtime_utc": "2026-09-10T15:26:51.029798+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/discovery_preprocessed_canonical.rds",
+      "bytes": 20994139,
+      "sha256": "772f1753999758e5910b7017ccad65189d996c32fd6c79bfba322e20556b0e67",
+      "mtime_utc": "2026-09-10T15:26:50.694796+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/discovery_response_models.tsv",
+      "bytes": 7996,
+      "sha256": "76ea76ea538e97b4bdbf91f24dce4ca1ed49f674c8f5b23ff430e34863b00ddc",
+      "mtime_utc": "2026-09-10T15:26:51.018798+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/download.log",
+      "bytes": 3316,
+      "sha256": "0724d1140a193d21f51d7fab25c2344c69e86ed68037e0758941b483b7cf323e",
+      "mtime_utc": "2026-09-10T15:26:58.179846+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/download_manifest.json",
+      "bytes": 3717,
+      "sha256": "c23b3aab11f4cb608a7c7959ab1d544e7e5cf55ce4da47d928cebf5f608d4fcb",
+      "mtime_utc": "2026-09-10T15:26:58.179846+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/frozen_common_inflammation_members.tsv",
+      "bytes": 1737,
+      "sha256": "baa65e35b57d0475a304c36a2cb04db036b6ed3648eb82a7295f77f452cca8cd",
+      "mtime_utc": "2026-09-10T15:26:45.488760+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/incremental_logistic_association.tsv",
+      "bytes": 1017,
+      "sha256": "c0b306b81e4affc1336b9868e8c038424484cabb7a92aa4319bff737dce3c34b",
+      "mtime_utc": "2026-09-10T15:26:51.023798+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/leave_one_gene_out.tsv",
+      "bytes": 2842,
+      "sha256": "d826a5b66c92c4c2508677ad1a74b8446676a8d9147f9504b0743d783ef4da59",
+      "mtime_utc": "2026-09-10T15:26:51.071798+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/leave_one_patient_out.tsv",
+      "bytes": 7361,
+      "sha256": "128d3442488279de9d3c60a776e54820f2b60287087020fd017d8ac255376c15",
+      "mtime_utc": "2026-09-10T15:26:51.020798+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/membership_mapping_audit.tsv",
+      "bytes": 535222,
+      "sha256": "77a687a1f46a603f9ed6e493c906392e0f6f73386c74e826cfcdb5ecb4f94ee2",
+      "mtime_utc": "2026-09-10T15:26:45.479760+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/platform_program_coverage.tsv",
+      "bytes": 11501,
+      "sha256": "cc11ee6b99519c14fd3756f093a011615ad145fead16baf7eec89d9b5c4084a5",
+      "mtime_utc": "2026-09-10T15:26:45.487760+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/program_arm_changes.tsv",
+      "bytes": 16827,
+      "sha256": "1f448b9380f33513d91a1e22b8942dcf34921c035b60d0282ab0eb0d00510eb7",
+      "mtime_utc": "2026-09-10T15:26:51.182799+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/program_baseline.tsv",
+      "bytes": 36366,
+      "sha256": "b3f1731510409b78f2bf4201ef3252955b0eeb6936dbccfc0224ba0a68f6abf6",
+      "mtime_utc": "2026-09-10T15:26:50.703796+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/program_delta.tsv",
+      "bytes": 41407,
+      "sha256": "a157ac6c18c9e70f55d7204c62854e73b4345fe83c0d1064278521ec7380d204",
+      "mtime_utc": "2026-09-10T15:26:50.704796+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/program_membership_canonical.tsv",
+      "bytes": 465739,
+      "sha256": "2c04c0f497502d5918a0f77dac89a078e6bc89e2ef0166b1ef1789b1f1e23f39",
+      "mtime_utc": "2026-09-10T15:26:45.484760+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/program_scores.rds",
+      "bytes": 91588,
+      "sha256": "baae0b99b94ac292703de07b6fb1155265db7d820fef8ca7f9e46660ab542849",
+      "mtime_utc": "2026-09-10T15:26:50.701796+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/program_scoring_membership.tsv",
+      "bytes": 463071,
+      "sha256": "31020cde802a5c59401165c5b46e53cfedb4e2b784b57e1ea364bde25638900c",
+      "mtime_utc": "2026-09-10T15:26:49.116785+00:00"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/sessionInfo.txt",
+      "bytes": 988,
+      "sha256": "cdaa129a9b3820e13661e3e9eb27ac20d50873d93c8297f14906087c8533fb29",
+      "mtime_utc": "2026-09-10T15:26:51.233799+00:00"
+    }
+  ]
+}

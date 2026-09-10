@@ -1,0 +1,580 @@
+{
+  "status": "REVIEWED",
+  "scope": "Independent protocol, exhaustive three-platform annotation/membership/coverage audit, discovery probe-level reconstruction and numerical regression audit, and version1.1 pre-validation amendment review. No validation expression accessed or downloaded.",
+  "reviewer": "prior_program_review",
+  "code_reviewed": "code/annotation_001D.py",
+  "policy_file_expected": "runs/001D_annotation/annotation_policy.json",
+  "original_lock": "signature_lock.json version1.0",
+  "user_review_context": {
+    "B1": "Legacy HGNC symbols and different platform annotation eras can create missing genes and variable composition of the inflammation adjustment. Harmonize with one frozen dictionary, audit all three annotations without validation expression, rerun discovery, and record a pre-validation amendment.",
+    "B2": "Baseline adjustment determines exploratory significance, so mandatory no-baseline model must be reported alongside the unchanged primary test. Similar adjusted P values for candidate and OXPHOS are not evidence of superiority; identical BH values are not an equivalence test and coefficients have different units.",
+    "B3": "CT marker panel contains four candidate genes and is highly correlated with six-gene score; significance in one and not the other is not evidence of improvement. Assess scaled condition number and VIF instead of interpreting raw design kappa alone.",
+    "additional": "IBrD retired from substantive comparison; GSE73661 support-only and cannot replace GSE23597. Old lock must remain traceable; new version1.1 records changes and hashes."
+  },
+  "protocol_assessment": {
+    "approved_exact_first": "Correct: exact approved symbol is resolved before union of previous and alias targets.",
+    "alias_union": "Correct: mapping only if union of approved targets from alias/previous has size1; ambiguous and unmapped retained in audit and excluded from scoring.",
+    "original_probe_ambiguity": "Correct: blank, AFFX control, or original multiple-symbol annotations remain excluded before canonicalization; no splitting and mapping each token into a selected gene.",
+    "averaging": "Policy correctly requires arithmetic average of original log2 probe expression after canonicalization. Annotation code itself does not perform expression averaging; must verify in rerun code/output.",
+    "program_dictionary": "Correct: same canon() applies to probes and program gene memberships; original identities and mapping statuses preserved; IBrD omitted from operative new membership.",
+    "membership_dedup": "Current input has only +1 weights and no within-program canonical collisions, so dedup does not silently change conflicting signs or weights. This conclusion is specific to current frozen input.",
+    "common_inflammation": "Scientifically acceptable pre-validation technical amendment: define one set from three platform annotation universes; require 100% of this fixed set in actual matrices. Must describe it as a common measurable Hallmark subset, not the original 200-gene score. Original200 coverage still required and >=80% rule retained.",
+    "discovery_actual_probes": "No subset bug: old probe_gene_mapping.tsv contains all54715 original probe rows, so its probe-ID set can define actual discovery rows.",
+    "no_baseline": "Required parallel sensitivity is justified given discovery baseline dependence; it must not replace or retrospectively choose between primary tests.",
+    "comparator_claims": "No superiority, equivalence, new cell-state or predictive claims are supported by comparing P values or conditional coefficients across overlapping differently scaled programs.",
+    "cohort_roles": "Preserve GSE23597 sole prespecified primary independent test and GSE73661 supportive/context-only role regardless of outcomes."
+  },
+  "independent_read_only_checks": {
+    "HGNC_approved_rows": 45054,
+    "HGNC_unique_symbols": 45054,
+    "HGNC_unique_ids": 45054,
+    "operative_source_membership_rows": 1828,
+    "observed_weights": {
+      "1": 1828
+    },
+    "within_program_canonical_collisions": 0,
+    "discovery_probe_map_rows": 54715
+  },
+  "findings": [],
+  "pending_adoption_gates": [],
+  "blocking_issues_at_protocol_checkpoint": [],
+  "adoption_status": "No unresolved scientific or code blocker found. Version1.1 may be frozen after current code/input/output/environment manifests and this review are bound by hashes. Approval covers prespecified object and test plan, not a positive validation or biological novelty claim.",
+  "created_utc": "2026-09-10T15:26:36.914730+00:00",
+  "independent_numeric_verification": {
+    "probe_to_canonical_gene_max_error": 0,
+    "all_program_scores_max_error": 8.881784197001252e-15,
+    "all_paired_deltas_max_error": 1.5987211554602254e-14,
+    "candidate_old_new_max_error": 3.552713678800501e-15,
+    "genes": 19210,
+    "arrays": 183,
+    "patient_pairs": 65,
+    "models": {
+      "primary_baseline_inflammation": {
+        "estimate": 0.5994069272782617,
+        "se": 0.22581952558147433,
+        "lower": 0.14770062208934526,
+        "upper": 1.0511132324671781,
+        "p": 0.01015800995098267,
+        "n": 65,
+        "df": 60,
+        "raw_condition": 85.47903897626745,
+        "standardized_condition": 1.604401180007942,
+        "max_VIF": 1.205740855538244,
+        "VIF": {
+          "armgolimumab": 1.0514516244676841,
+          "responseYes": 1.205740855538244,
+          "baseline": 1.1362014356400096,
+          "inflam": 1.1880384037301992
+        },
+        "max_comparison_error": 4.263256414560601e-14,
+        "HC3_se": 0.24262717246009968,
+        "HC3_error": 1.304512053934559e-15
+      },
+      "no_baseline_inflammation": {
+        "estimate": 0.37529294660157575,
+        "se": 0.245333927399437,
+        "lower": -0.11528256082577454,
+        "upper": 0.8658684540289261,
+        "p": 0.13125492455833393,
+        "n": 65,
+        "df": 61,
+        "raw_condition": 5.745651012668078,
+        "standardized_condition": 1.4315283657265963,
+        "max_VIF": 1.133997187940432,
+        "VIF": {
+          "armgolimumab": 1.048859875333694,
+          "responseYes": 1.133997187940432,
+          "inflam": 1.0831705481388854
+        },
+        "max_comparison_error": 1.7763568394002505e-14,
+        "HC3_se": 0.2468679808576731,
+        "HC3_error": 1.1102230246251565e-16
+      },
+      "CT_conditioned": {
+        "estimate": 0.206681014922607,
+        "se": 0.08176680082981902,
+        "lower": 0.04300698007893708,
+        "upper": 0.37035504976627687,
+        "p": 0.014228187663912395,
+        "n": 65,
+        "df": 58,
+        "raw_condition": 566.0069470943305,
+        "standardized_condition": 7.971725018030053,
+        "max_VIF": 13.163463316060033,
+        "VIF": {
+          "armgolimumab": 1.0727868147146018,
+          "responseYes": 1.2749180017473745,
+          "baseline": 12.790791156794679,
+          "inflam": 1.345658587003614,
+          "ct_delta": 1.7243242898180104,
+          "ct_baseline": 13.163463316060033
+        },
+        "max_comparison_error": 5.684341886080801e-13,
+        "HC3_se": 0.09844172157999592,
+        "HC3_error": null
+      }
+    }
+  },
+  "numeric_recompute_script": "\nsuppressPackageStartupMessages(library(jsonlite))\np<-\"/root/projects/UC_Treatment_Recovery\"; o<-file.path(p,\"runs/001D_annotation\")\nold<-readRDS(file.path(p,\"runs/001A_qc/discovery_preprocessed_v1.rds\"))\nnew<-readRDS(file.path(o,\"discovery_preprocessed_canonical.rds\"))\nmp<-read.delim(file.path(o,\"GPL13158_canonical_probe_mapping.tsv\"),check.names=FALSE)\nj<-match(rownames(old$probe_expression),mp$probe);stopifnot(!anyNA(j));mp<-mp[j,]\nk<-mp$retained==1 & nzchar(mp$canonical_symbol)\nr<-rowsum(old$probe_expression[k,,drop=FALSE],group=mp$canonical_symbol[k],reorder=TRUE)\nnn<-table(mp$canonical_symbol[k]);r<-r/as.numeric(nn[rownames(r)])\nr<-r[rownames(new$gene_expression),colnames(new$gene_expression)]\ngx<-max(abs(r-new$gene_expression));stopifnot(gx<1e-12)\nmem<-read.delim(file.path(o,\"program_scoring_membership.tsv\"),check.names=FALSE)\nsc<-readRDS(file.path(o,\"program_scores.rds\"));ss<-matrix(NA_real_,nrow=nrow(sc$sample_scores),ncol=ncol(r),dimnames=dimnames(sc$sample_scores))\nfor(n in rownames(ss)){q<-mem[mem$program==n & mem$gene%in%rownames(r),];ss[n,]<-as.numeric(crossprod(q$weight,r[q$gene,,drop=FALSE])/sum(abs(q$weight)))}\nscore_error<-max(abs(ss-sc$sample_scores));stopifnot(score_error<1e-12)\npr<-old$pairs; D<-ss[,pr$post_gsm]-ss[,pr$baseline_gsm];colnames(D)<-pr$subject\nstopifnot(identical(colnames(D),colnames(sc$delta)),max(abs(D-sc$delta))<1e-12)\ncandidate<-\"MATURE_COLONOCYTE6_EXPLORATORY\";infl<-\"HALLMARK_INFLAMMATORY_RESPONSE\";ct<-\"UC_Maciag2024_TableS2_CT_Colonocytes_reported_marker_mean_proxy\"\ndd<-data.frame(arm=factor(pr$arm,levels=c(\"Placebo\",\"golimumab\")),response=factor(pr$response,levels=c(\"No\",\"Yes\")),baseline=ss[candidate,pr$baseline_gsm],inflam=D[infl,],ct_delta=D[ct,],ct_baseline=ss[ct,pr$baseline_gsm])\ntab<-read.delim(file.path(o,\"discovery_response_models.tsv\"),check.names=FALSE)\nhc<-read.delim(file.path(o,\"discovery_HC3.tsv\"),check.names=FALSE)\nresults<-list()\nfor(name in c(\"primary_baseline_inflammation\",\"no_baseline_inflammation\",\"CT_conditioned\")){\n fm<-switch(name,primary_baseline_inflammation=~arm+response+baseline+inflam,no_baseline_inflammation=~arm+response+inflam,CT_conditioned=~arm+response+baseline+inflam+ct_delta+ct_baseline)\n X<-model.matrix(fm,data=dd);y<-D[candidate,];beta<-qr.coef(qr(X),y);e<-y-as.vector(X%*%beta);df<-length(y)-ncol(X);bread<-solve(crossprod(X));s2<-sum(e^2)/df\n se<-sqrt(diag(bread*s2));estimate<-beta[\"responseYes\"];lower<-estimate-qt(.975,df)*se[\"responseYes\"];upper<-estimate+qt(.975,df)*se[\"responseYes\"];pv<-2*pt(-abs(estimate/se[\"responseYes\"]),df)\n h<-rowSums((X%*%bread)*X);v<-bread%*%crossprod(X*as.numeric(e/(1-h)))%*%bread\n hse<-sqrt(v[\"responseYes\",\"responseYes\"]);rawsv<-svd(X,nu=0,nv=0)$d;Z<-cbind(1,scale(X[,-1,drop=FALSE]));zsv<-svd(Z,nu=0,nv=0)$d\n VIF<-sapply(seq_len(ncol(X)-1),function(j){W<-X[,-1,drop=FALSE];a<-W[,j];b<-cbind(1,W[,-j,drop=FALSE]);res<-a-as.vector(b%*%qr.coef(qr(b),a));sum((a-mean(a))^2)/sum(res^2)})\n names(VIF)<-colnames(X)[-1]\n target<-tab[tab$program==candidate & tab$model==name,]\n errors<-c(estimate=abs(estimate-target$estimate),se=abs(se[\"responseYes\"]-target$se),lower=abs(lower-target$lower),upper=abs(upper-target$upper),p=abs(pv-target$p),raw_condition=abs(max(rawsv)/min(rawsv)-target$raw_condition),standardized_condition=abs(max(zsv)/min(zsv)-target$standardized_condition),max_VIF=abs(max(VIF)-target$max_VIF))\n stopifnot(max(errors)<1e-9)\n htarget<-hc[hc$program==candidate & hc$model==name,];herr<-if(nrow(htarget))abs(hse-htarget$se) else NA_real_;if(length(herr)&&!is.na(herr))stopifnot(herr<1e-10)\n results[[name]]<-list(estimate=unname(estimate),se=unname(se[\"responseYes\"]),lower=unname(lower),upper=unname(upper),p=unname(pv),n=length(y),df=df,raw_condition=max(rawsv)/min(rawsv),standardized_condition=max(zsv)/min(zsv),max_VIF=max(VIF),VIF=as.list(VIF),max_comparison_error=max(errors),HC3_se=unname(hse),HC3_error=unname(herr))\n}\noldscore<-readRDS(file.path(p,\"runs/001C_programs/program_scores.rds\"))\ncanddiff<-max(abs(ss[candidate,]-oldscore$sample_scores[candidate,]))\nstopifnot(canddiff<1e-12)\ncat(toJSON(list(probe_to_canonical_gene_max_error=gx,all_program_scores_max_error=score_error,all_paired_deltas_max_error=max(abs(D-sc$delta)),candidate_old_new_max_error=canddiff,genes=nrow(r),arrays=ncol(r),patient_pairs=nrow(pr),models=results),auto_unbox=TRUE,pretty=TRUE,digits=16,na=\"null\"))\n",
+  "numeric_recompute_stderr": "",
+  "review_script_note": "Initial independent crossprod arithmetic used bitwise candidate difference==0; replaced with tolerance1e-12 because arithmetic ordering differs from original colSums. Original exported candidate change remains exactly0, independent comparison reports actual floating-point error.",
+  "numeric_checked_utc": "2026-09-10T15:30:56.415601+00:00",
+  "independent_mapping_and_lock_check": {
+    "platforms": {
+      "GPL13158": {
+        "source_probe_rows": 54715,
+        "independently_retained_probes": 40884,
+        "independently_canonical_genes": 19210,
+        "mapping_mismatch_n": 0
+      },
+      "GPL570": {
+        "source_probe_rows": 54675,
+        "independently_retained_probes": 40659,
+        "independently_canonical_genes": 18992,
+        "mapping_mismatch_n": 0
+      },
+      "GPL6244": {
+        "source_probe_rows": 33297,
+        "independently_retained_probes": 19594,
+        "independently_canonical_genes": 18583,
+        "mapping_mismatch_n": 0
+      }
+    },
+    "coverage_rows_independently_checked": 128,
+    "canonical_membership_rows_checked": 1745,
+    "frozen_common_n": 194,
+    "same_common_in_scoring_and_lock": true,
+    "full_common_measured_in_discovery": true,
+    "all_six_preserved_and_annotation_measurable_on_three_platforms": true,
+    "original_lock_exact_copy_retained": true,
+    "old_and_new_candidate_object_identical": true,
+    "prespecified_primary_hypothesis_fields_unchanged": true,
+    "amended_reference_hashes_verified": 17,
+    "IBrD_absent_from_operative_membership": true,
+    "important_coverage": [
+      {
+        "platform_or_matrix": "GPL13158",
+        "program": "HALLMARK_INFLAMMATORY_RESPONSE",
+        "source_n": "200",
+        "canonical_n": "200",
+        "measured_n": "200",
+        "fraction_source": "1.0",
+        "missing_canonical": "",
+        "unresolved_source_symbols": ""
+      },
+      {
+        "platform_or_matrix": "GPL13158",
+        "program": "HALLMARK_INTERFERON_GAMMA_RESPONSE",
+        "source_n": "200",
+        "canonical_n": "200",
+        "measured_n": "200",
+        "fraction_source": "1.0",
+        "missing_canonical": "",
+        "unresolved_source_symbols": ""
+      },
+      {
+        "platform_or_matrix": "GPL13158",
+        "program": "HALLMARK_OXIDATIVE_PHOSPHORYLATION",
+        "source_n": "200",
+        "canonical_n": "200",
+        "measured_n": "199",
+        "fraction_source": "0.995",
+        "missing_canonical": "VDAC2",
+        "unresolved_source_symbols": ""
+      },
+      {
+        "platform_or_matrix": "GPL570",
+        "program": "HALLMARK_INFLAMMATORY_RESPONSE",
+        "source_n": "200",
+        "canonical_n": "200",
+        "measured_n": "200",
+        "fraction_source": "1.0",
+        "missing_canonical": "",
+        "unresolved_source_symbols": ""
+      },
+      {
+        "platform_or_matrix": "GPL570",
+        "program": "HALLMARK_INTERFERON_GAMMA_RESPONSE",
+        "source_n": "200",
+        "canonical_n": "200",
+        "measured_n": "197",
+        "fraction_source": "0.985",
+        "missing_canonical": "IFI30;KLRK1;PSME2",
+        "unresolved_source_symbols": ""
+      },
+      {
+        "platform_or_matrix": "GPL570",
+        "program": "HALLMARK_OXIDATIVE_PHOSPHORYLATION",
+        "source_n": "200",
+        "canonical_n": "200",
+        "measured_n": "196",
+        "fraction_source": "0.98",
+        "missing_canonical": "ATP6V1F;NDUFC2;NDUFS8;UQCRH",
+        "unresolved_source_symbols": ""
+      },
+      {
+        "platform_or_matrix": "GPL6244",
+        "program": "HALLMARK_INFLAMMATORY_RESPONSE",
+        "source_n": "200",
+        "canonical_n": "200",
+        "measured_n": "194",
+        "fraction_source": "0.97",
+        "missing_canonical": "CCL2;CCRL2;IL18R1;INHBA;RAF1;ROS1",
+        "unresolved_source_symbols": ""
+      },
+      {
+        "platform_or_matrix": "GPL6244",
+        "program": "HALLMARK_INTERFERON_GAMMA_RESPONSE",
+        "source_n": "200",
+        "canonical_n": "200",
+        "measured_n": "191",
+        "fraction_source": "0.955",
+        "missing_canonical": "CCL2;CD74;FCGR1A;HLA-A;HLA-B;HLA-DRB1;HLA-G;KLRK1;PSMA2",
+        "unresolved_source_symbols": ""
+      },
+      {
+        "platform_or_matrix": "GPL6244",
+        "program": "HALLMARK_OXIDATIVE_PHOSPHORYLATION",
+        "source_n": "200",
+        "canonical_n": "200",
+        "measured_n": "192",
+        "fraction_source": "0.96",
+        "missing_canonical": "ALAS1;ATP5F1E;COX17;GLUD1;GPI;MGST3;NDUFC2;VDAC3",
+        "unresolved_source_symbols": ""
+      },
+      {
+        "platform_or_matrix": "GSE92415_actual",
+        "program": "HALLMARK_INFLAMMATORY_RESPONSE",
+        "source_n": "200",
+        "canonical_n": "200",
+        "measured_n": "200",
+        "fraction_source": "1.0",
+        "missing_canonical": "",
+        "unresolved_source_symbols": ""
+      },
+      {
+        "platform_or_matrix": "GSE92415_actual",
+        "program": "HALLMARK_INTERFERON_GAMMA_RESPONSE",
+        "source_n": "200",
+        "canonical_n": "200",
+        "measured_n": "200",
+        "fraction_source": "1.0",
+        "missing_canonical": "",
+        "unresolved_source_symbols": ""
+      },
+      {
+        "platform_or_matrix": "GSE92415_actual",
+        "program": "HALLMARK_OXIDATIVE_PHOSPHORYLATION",
+        "source_n": "200",
+        "canonical_n": "200",
+        "measured_n": "199",
+        "fraction_source": "0.995",
+        "missing_canonical": "VDAC2",
+        "unresolved_source_symbols": ""
+      }
+    ]
+  },
+  "annotation_and_lock_checked_utc": "2026-09-10T15:32:28.516769+00:00",
+  "annotation_only_full200_bridge_independent": {
+    "panel_n": 200,
+    "estimate": 0.6095256017435616,
+    "se": 0.22597221620860683,
+    "lower": 0.15751386982575005,
+    "upper": 1.0615373336613732,
+    "p": 0.00906073109453314,
+    "max_export_error": 3.1086244689504383e-15
+  },
+  "annotation_only_full200_bridge_recompute_script": "\nsuppressPackageStartupMessages(library(jsonlite))\np<-\"/root/projects/UC_Treatment_Recovery\";d<-file.path(p,\"runs/001D_annotation\")\ng<-readRDS(file.path(d,\"discovery_preprocessed_canonical.rds\"))\ns<-readRDS(file.path(d,\"program_scores.rds\"))\nmem<-read.delim(file.path(d,\"program_membership_canonical.tsv\"));full<-mem$gene[mem$program==\"HALLMARK_INFLAMMATORY_RESPONSE\"]\nstopifnot(length(full)==200,all(full%in%rownames(g$gene_expression)))\ninfl<-colMeans(g$gene_expression[full,,drop=FALSE]);pr<-g$pairs;id<-\"MATURE_COLONOCYTE6_EXPLORATORY\"\ndata<-data.frame(arm=pr$arm,response=pr$response,baseline=s$baseline[id,],inflam=infl[pr$post_gsm]-infl[pr$baseline_gsm])\nX<-model.matrix(~arm+response+baseline+inflam,data=data);y<-s$delta[id,];b<-qr.coef(qr(X),y);e<-y-drop(X%*%b);df<-length(y)-ncol(X);v<-solve(crossprod(X))*sum(e^2)/df\nse<-sqrt(v[\"responseYes\",\"responseYes\"]);est<-b[\"responseYes\"];pv<-2*pt(-abs(est/se),df);ci<-est+c(-1,1)*qt(.975,df)*se\nreported<-read.delim(file.path(d,\"annotation_only_full200_discovery_bridge.tsv\"))\nerr<-max(abs(c(est,se,ci,pv)-unlist(reported[c(\"estimate\",\"se\",\"lower\",\"upper\",\"p\")])))\nstopifnot(err<1e-12)\ncat(toJSON(list(panel_n=200,estimate=unname(est),se=se,lower=unname(ci[1]),upper=unname(ci[2]),p=unname(pv),max_export_error=err),pretty=TRUE,auto_unbox=TRUE,digits=16))\n",
+  "completed_utc": "2026-09-10T15:35:23.974805+00:00",
+  "freeze_recommendation": "MAY_FREEZE_VERSION_1_1_AFTER_MANIFEST_BINDING",
+  "unresolved_scientific_blockers": [],
+  "runtime_validation_gates": [
+    "Retain one primary GSE23597 week8 response test and report mandatory no-baseline companion regardless of significance.",
+    "Before any fit, require all six candidate genes and exactly all194 fixed inflammation genes in actual expression; retain original200 coverage report.",
+    "Apply frozen source-informed GCOS scale decision rule; inspect actual matrix/source evidence before modeling; any ambiguous scale is a technical issue, not a choice based on outcomes.",
+    "Report partial/non-evaluable secondary reference programs, fixed BH family n=3, and no comparator superiority.",
+    "GSE73661 remains supportive only and cannot replace an unfavorable or non-evaluable GSE23597 primary result."
+  ],
+  "key_interpretations": [
+    "HGNC harmonization restores discovery IFNG coverage to200/200 and OXPHOS to199/200; VDAC2 remains excluded because original probe annotation is multigene. Original ambiguity exclusions were not relaxed.",
+    "The common194 inflammation subset is annotation-derived and identical across discovery scoring and new lock; it is not an unmodified200-gene score.",
+    "Candidate score is unchanged. Independent alternate arithmetic differs by3.55e-15 only, while original implementation old/new difference is exactly0.",
+    "Primary baseline-adjusted response association is positive, whereas mandatory no-baseline CI includes0. These describe different conditional estimands and cannot be interchanged as success criteria.",
+    "CT standardized condition number7.97 does not support diagnosing instability solely from raw566. However VIF13.16 for CT baseline and12.79 for candidate baseline confirms real redundancy in those covariates. Do not infer candidate superiority from its conditional significance.",
+    "Full200 annotation-only bridge and common194 branch are separately reported, distinguishing dictionary harmonization from panel-composition amendment.",
+    "IBrD is absent from operative scoring membership; old partial-panel numbers remain provenance only."
+  ],
+  "reviewed_draft_lock_path": "/root/projects/UC_Treatment_Recovery/planning/signature_lock_v1.1.draft.json",
+  "reviewed_draft_lock_sha256": "3ba110d454fe9b9eb6b3c76851de9ebb0a8e06e3333c4c3edbff859df12dd392",
+  "annotation_and_lock_recompute_script": "from pathlib import Path\nimport csv,gzip,json,collections,re,hashlib,datetime\nP=Path('/root/projects/UC_Treatment_Recovery');O=P/'runs/001D_annotation'\nH=list(csv.DictReader((P/'inputs/annotation/hgnc_complete_set_20260910.txt').open(),delimiter='\\t'))\nsymbol_to_id={r['symbol']:r['hgnc_id'] for r in H if r['status']=='Approved'}\nid_to_symbol={v:k for k,v in symbol_to_id.items()}\nindex=collections.defaultdict(set)\nfor r in H:\n if r['status']=='Approved':\n  for f in ['alias_symbol','prev_symbol']:\n   for t in r[f].split('|'):\n    if t:index[t].add(r['hgnc_id'])\ndef resolve(x):\n x=x.strip()\n if x in symbol_to_id:return x,'approved',x\n ids=index.get(x,set());names=sorted(id_to_symbol[z] for z in ids)\n return (names[0],'unique_alias_or_previous',';'.join(names)) if len(ids)==1 else ('','ambiguous_alias' if ids else 'unmapped',';'.join(names))\nU={};checks={};maprels=[]\nfor plat in ['GPL13158','GPL570','GPL6244']:\n name='GPL6244.relay.annot.gz' if plat=='GPL6244' else plat+'.annot.gz'\n with gzip.open(P/'inputs/annotation'/name,'rt') as f:\n  for line in f:\n   if line.startswith('ID\\t'):header=line.rstrip('\\n').split('\\t');break\n  source=list(csv.DictReader(f,fieldnames=header,delimiter='\\t',quoting=csv.QUOTE_NONE))\n observed={r['probe']:r for r in csv.DictReader((O/(plat+'_canonical_probe_mapping.tsv')).open(),delimiter='\\t')}\n eligible=[];diff=[];n=0\n for r in source:\n  q=r['ID']\n  if not q or q.startswith('!'):continue\n  n+=1;s=(r.get('Gene symbol') or '').strip()\n  unambig=s and not q.startswith('AFFX') and len(re.split(r'//+|;|\\|',s))==1\n  expected=resolve(s) if unambig else ('','original_ambiguous_blank_or_control','')\n  rr=observed[q]\n  got=(rr['canonical_symbol'],rr['mapping_status'],rr['possible_targets'])\n  if expected!=got or str(int(bool(expected[0])))!=rr['retained']:diff.append(q)\n  if expected[0]:eligible.append(expected[0])\n assert n==len(observed) and not diff\n U[plat]=set(eligible)\n checks[plat]={'source_probe_rows':n,'independently_retained_probes':len(eligible),'independently_canonical_genes':len(U[plat]),'mapping_mismatch_n':len(diff)}\nactual={r['probe'] for r in csv.DictReader((P/'runs/001A_qc/probe_gene_mapping.tsv').open(),delimiter='\\t')}\nr=list(csv.DictReader((O/'GPL13158_canonical_probe_mapping.tsv').open(),delimiter='\\t'))\nU['GSE92415_actual']={x['canonical_symbol'] for x in r if x['probe'] in actual and x['retained']=='1'}\nsource=list(csv.DictReader((P/'inputs/annotation/program_membership_001C.tsv').open(),delimiter='\\t'))\noriginal=collections.defaultdict(set);canon=collections.defaultdict(set)\nexpected_pairs=set()\nfor r in source:\n if r['program'].startswith('IBrD'):continue\n original[r['program']].add(r['gene']);c=resolve(r['gene'])[0]\n if c:canon[r['program']].add(c);expected_pairs.add((r['program'],c))\nactual_mem=list(csv.DictReader((O/'program_membership_canonical.tsv').open(),delimiter='\\t'))\nassert expected_pairs=={(r['program'],r['gene']) for r in actual_mem}\ncov=list(csv.DictReader((O/'platform_program_coverage.tsv').open(),delimiter='\\t'))\nfor r in cov:\n plat=r['platform_or_matrix'];name=r['program'];S=canon[name];meas=U[plat]&S\n assert len(meas)==int(r['measured_n']) and len(S)==int(r['canonical_n']) and len(original[name])==int(r['source_n'])\n assert sorted(S-U[plat])==([x for x in r['missing_canonical'].split(';') if x])\ncommon=set.intersection(canon['HALLMARK_INFLAMMATORY_RESPONSE'],U['GPL13158'],U['GPL570'],U['GPL6244'])\nfrozen=[r['gene'] for r in csv.DictReader((O/'frozen_common_inflammation_members.tsv').open(),delimiter='\\t')]\nassert common==set(frozen) and len(frozen)==len(common)==194 and common<=U['GSE92415_actual']\nscoring=list(csv.DictReader((O/'program_scoring_membership.tsv').open(),delimiter='\\t'))\nassert {r['gene'] for r in scoring if r['program']=='HALLMARK_INFLAMMATORY_RESPONSE'}==common\nassert not any(r['program'].startswith('IBrD') for r in scoring)\nsix=['AQP8','HMGCS2','GUCA2A','CA2','SLC26A3','MS4A12']\nassert canon['MATURE_COLONOCYTE6_EXPLORATORY']==set(six)\nassert all(set(six)<=u for u in U.values())\nold=json.loads((P/'signature_lock.json').read_text());new=json.loads((P/'planning/signature_lock_v1.1.draft.json').read_text())\nassert old['version']=='1.0' and new['version']=='1.1'\nassert old['candidate']==new['candidate']\nassert new['inflammation_covariate']['genes']==sorted(common)\nfor key in ['cohort','timepoint','endpoint','model','expected_direction','test','n_primary_tests']:\n assert old['primary_validation'][key]==new['primary_validation'][key]\nrefs=new['amended_frozen_inputs']+[new['supersedes']]\nfor r in refs:\n f=Path(r['path']);assert f.exists() and hashlib.sha256(f.read_bytes()).hexdigest()==r['sha256'],str(f)\nassert (P/'signature_lock.json').read_bytes()==Path(new['supersedes']['path']).read_bytes()\nresult={'platforms':checks,'coverage_rows_independently_checked':len(cov),'canonical_membership_rows_checked':len(actual_mem),'frozen_common_n':len(common),'same_common_in_scoring_and_lock':True,'full_common_measured_in_discovery':True,'all_six_preserved_and_annotation_measurable_on_three_platforms':True,'original_lock_exact_copy_retained':True,'old_and_new_candidate_object_identical':True,'prespecified_primary_hypothesis_fields_unchanged':True,'amended_reference_hashes_verified':len(refs),'IBrD_absent_from_operative_membership':True,'important_coverage':[r for r in cov if r['program'] in ['HALLMARK_INFLAMMATORY_RESPONSE','HALLMARK_OXIDATIVE_PHOSPHORYLATION','HALLMARK_INTERFERON_GAMMA_RESPONSE']]}\nf=P/'provenance/reviews/001D_annotation_protocol_independent_v1.json';j=json.loads(f.read_text());j['independent_mapping_and_lock_check']=result;j['annotation_and_lock_checked_utc']=datetime.datetime.now(datetime.timezone.utc).isoformat();f.write_text(json.dumps(j,ensure_ascii=False,indent=2))\nprint(json.dumps({k:v for k,v in result.items() if k!='important_coverage'},indent=2))\n",
+  "protocol_initial_source_snapshot": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/annotation_001D.py",
+      "bytes": 6024,
+      "sha256": "999ddc2c4b4bc95c97fdfc60afd72ef743c5d36d82ef811c1322155a4ce28176"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/download_annotations_001D.py",
+      "bytes": 1337,
+      "sha256": "69a1a0dab9ea07a749c6bb3e2dc361539bd393cc88eaad66f71f76648d69dc42"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/signature_lock.json",
+      "bytes": 7697,
+      "sha256": "2fb0f042fce83e223b71ea37cd19811c5f5af425635c5989021abf6b239a140e"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/hgnc_complete_set_20260910.txt",
+      "bytes": 16911574,
+      "sha256": "6a1423507780773fbcb373eaef84dba5f9357b36e7219db2aeaae13d8a42d62b"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/program_membership_001C.tsv",
+      "bytes": 492800,
+      "sha256": "7595f24cf2f737c75dd40c795fa4d2c152e83d05e26559a8cee7326b2b70dafe"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/probe_gene_mapping.tsv",
+      "bytes": 1589369,
+      "sha256": "63d69a3e2422a238d3185c3de2cfb68e3b5c13e83df60fff2309804a68265087"
+    }
+  ],
+  "source_and_output_manifest": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/annotation_001D.py",
+      "bytes": 6092,
+      "sha256": "4275b8ccebd38678f368de3a0cfed02eea89c8c2bed306dfa3416a58bd239443"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/discovery_001D.R",
+      "bytes": 9067,
+      "sha256": "b6d36e01188d852809e657df4518c4b77569d220a98c36778eb666556c62b5fa"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/validation_002A.R",
+      "bytes": 9179,
+      "sha256": "a1efe70b1b321af8072bf6a55635a4e73de23ad65218e95f4c9b4d091919e132"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/GPL13158.annot.gz",
+      "bytes": 8313277,
+      "sha256": "d9eddd653c200c9ac1b282b441079a19e890914929b35792a4e99ce4eba3b0d0"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/GPL570.annot.gz",
+      "bytes": 8471521,
+      "sha256": "d7cd44352127b1e34f3a720ebea86093ef255a38f1612a85a2962b71bde8f394"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/GPL6244.relay.annot.gz",
+      "bytes": 7193437,
+      "sha256": "99ee70f87e02c75ff1c8dc57b6c40c0482c7ef2760e004301315ac34344ac6dc"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/hgnc_complete_set_20260910.txt",
+      "bytes": 16911574,
+      "sha256": "6a1423507780773fbcb373eaef84dba5f9357b36e7219db2aeaae13d8a42d62b"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/annotation/program_membership_001C.tsv",
+      "bytes": 492800,
+      "sha256": "7595f24cf2f737c75dd40c795fa4d2c152e83d05e26559a8cee7326b2b70dafe"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/planning/Analysis_Amendment_001D.md",
+      "bytes": 4110,
+      "sha256": "ba97f17924059b85e43c4e4f6aac3f9e25a0b2b4ae6a67fa839fbd09ba42bb6a"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/planning/signature_lock_v1.0.json",
+      "bytes": 7697,
+      "sha256": "2fb0f042fce83e223b71ea37cd19811c5f5af425635c5989021abf6b239a140e"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/planning/signature_lock_v1.1.draft.json",
+      "bytes": 18388,
+      "sha256": "3ba110d454fe9b9eb6b3c76851de9ebb0a8e06e3333c4c3edbff859df12dd392"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_qc/discovery_preprocessed_v1.rds",
+      "bytes": 54300911,
+      "sha256": "f7c3343f671b7178799c2c011cf26c3178f55dd4898d28fbeaff312680dbf216"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001C_programs/program_scores.rds",
+      "bytes": 95893,
+      "sha256": "cdbac51aa6c86cdb47e34a4b8a71cf0260f6d4d8458bf7865bae69ab790deed7"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/CT_conditioned_VIF.tsv",
+      "bytes": 170,
+      "sha256": "96d9a953d17e6110549633d223c54fa7a2153ac2a6c966e45631e9489f19bb52"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/GPL13158_canonical_probe_mapping.tsv",
+      "bytes": 2645945,
+      "sha256": "9a8b6c06a260caac6b117d87729d45873c5c8057341bc667910a80717a353a33"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/GPL570_canonical_probe_mapping.tsv",
+      "bytes": 2514367,
+      "sha256": "db6a0c83ab5bd4f3fa94e84b8adc9925f26325d4dd1b6ca946571f2babbcee51"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/GPL6244_canonical_probe_mapping.tsv",
+      "bytes": 1551454,
+      "sha256": "7db267d8b6fe4b01512d1aa67e235abbd86eac9679dc6608a1e5af74418b59ac"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/GPL6244_relay_provenance.json",
+      "bytes": 422,
+      "sha256": "74bc2a0797d4f28f902055ba9c0d467e2efb24247cce002e8ba062c98c6b8753"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/annotation.log",
+      "bytes": 5233,
+      "sha256": "6053d35271eca8dc442a8e3ee911e6b13108ed27076a81d80ad4c45685a705dc"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/annotation_bridge.log",
+      "bytes": 315,
+      "sha256": "3daae235a00def43d80c580be0eeaffc5b014d3bd32f2932400080a267075d3c"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/annotation_only_full200_discovery_bridge.tsv",
+      "bytes": 195,
+      "sha256": "3b12a58f5c191c8541ae87991b334d9fa56dd41b1c52275bc8204c0dfcf7404a"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/annotation_policy.json",
+      "bytes": 1094,
+      "sha256": "415a005cf45caa9dbac1ac833a53dffc8d522826c243168c8143d84702400c52"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/annotation_summary.json",
+      "bytes": 1519,
+      "sha256": "c0f7f7b03a8dccb7cbea56d68cc953ad16827f7154beae28413c5abbc9736420"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/baseline_model_identity_check.json",
+      "bytes": 163,
+      "sha256": "f3c296e159e35b4cf22d2f772107fade080d4e9d29f0ca684c187d5be084394f"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/candidate_reference_correlations.tsv",
+      "bytes": 4042,
+      "sha256": "5d0bf7ea411004d3d1830625d1a24ea0f0f82a1699cf9cc5a513f0dee816551a"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/discovery.log",
+      "bytes": 4224,
+      "sha256": "661655f089727b830c2dd29a54f6519c685f7547d597205cf8a20084f48c1f1e"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/discovery_HC3.tsv",
+      "bytes": 1381,
+      "sha256": "fa419d2be2bbb96b73aa1da1cd9d501e8bf13199f5dcc0791b597d80f0d7991d"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/discovery_amendment_summary.json",
+      "bytes": 801,
+      "sha256": "ec9116f7ef198b6611c8bc7d75178923bfdf555428f0f3c95afaf7cb7eb22f95"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/discovery_model_fits.rds",
+      "bytes": 102306,
+      "sha256": "df3ad353859fb4b0a5b6855f59d68f4c20f50816333227c9184fd081fca43034"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/discovery_preprocessed_canonical.rds",
+      "bytes": 20994139,
+      "sha256": "772f1753999758e5910b7017ccad65189d996c32fd6c79bfba322e20556b0e67"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/discovery_response_models.tsv",
+      "bytes": 7996,
+      "sha256": "76ea76ea538e97b4bdbf91f24dce4ca1ed49f674c8f5b23ff430e34863b00ddc"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/download.log",
+      "bytes": 3316,
+      "sha256": "0724d1140a193d21f51d7fab25c2344c69e86ed68037e0758941b483b7cf323e"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/download_manifest.json",
+      "bytes": 3717,
+      "sha256": "c23b3aab11f4cb608a7c7959ab1d544e7e5cf55ce4da47d928cebf5f608d4fcb"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/frozen_common_inflammation_members.tsv",
+      "bytes": 1737,
+      "sha256": "baa65e35b57d0475a304c36a2cb04db036b6ed3648eb82a7295f77f452cca8cd"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/incremental_logistic_association.tsv",
+      "bytes": 1017,
+      "sha256": "c0b306b81e4affc1336b9868e8c038424484cabb7a92aa4319bff737dce3c34b"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/leave_one_gene_out.tsv",
+      "bytes": 2842,
+      "sha256": "d826a5b66c92c4c2508677ad1a74b8446676a8d9147f9504b0743d783ef4da59"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/leave_one_patient_out.tsv",
+      "bytes": 7361,
+      "sha256": "128d3442488279de9d3c60a776e54820f2b60287087020fd017d8ac255376c15"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/membership_mapping_audit.tsv",
+      "bytes": 535222,
+      "sha256": "77a687a1f46a603f9ed6e493c906392e0f6f73386c74e826cfcdb5ecb4f94ee2"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/platform_program_coverage.tsv",
+      "bytes": 11501,
+      "sha256": "cc11ee6b99519c14fd3756f093a011615ad145fead16baf7eec89d9b5c4084a5"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/program_arm_changes.tsv",
+      "bytes": 16827,
+      "sha256": "1f448b9380f33513d91a1e22b8942dcf34921c035b60d0282ab0eb0d00510eb7"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/program_baseline.tsv",
+      "bytes": 36366,
+      "sha256": "b3f1731510409b78f2bf4201ef3252955b0eeb6936dbccfc0224ba0a68f6abf6"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/program_delta.tsv",
+      "bytes": 41407,
+      "sha256": "a157ac6c18c9e70f55d7204c62854e73b4345fe83c0d1064278521ec7380d204"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/program_membership_canonical.tsv",
+      "bytes": 465739,
+      "sha256": "2c04c0f497502d5918a0f77dac89a078e6bc89e2ef0166b1ef1789b1f1e23f39"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/program_scores.rds",
+      "bytes": 91588,
+      "sha256": "baae0b99b94ac292703de07b6fb1155265db7d820fef8ca7f9e46660ab542849"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/program_scoring_membership.tsv",
+      "bytes": 463071,
+      "sha256": "31020cde802a5c59401165c5b46e53cfedb4e2b784b57e1ea364bde25638900c"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001D_annotation/sessionInfo.txt",
+      "bytes": 988,
+      "sha256": "cdaa129a9b3820e13661e3e9eb27ac20d50873d93c8297f14906087c8533fb29"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/signature_lock.json",
+      "bytes": 7697,
+      "sha256": "2fb0f042fce83e223b71ea37cd19811c5f5af425635c5989021abf6b239a140e"
+    }
+  ],
+  "latest_draft_reference_hashes_verified": 17
+}

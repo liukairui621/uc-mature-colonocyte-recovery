@@ -1,0 +1,11 @@
+{
+  "status": "REVIEWED_SOURCE_NOTE",
+  "source": "/root/projects/UC_Treatment_Recovery/provenance/reviews/001C_identity_independent_v1.json",
+  "source_sha256": "e2cea6e9725aa34d0ff3d2c20f829080e88c6cfc0d7e96321e60a435c01ff2f9",
+  "global_top1": 12,
+  "same_center_arm_top1": 52,
+  "known_pairs": 65,
+  "restricted_single_candidate_count": 26,
+  "interpretation": "52/65 restricted top1 is correct;26 have only one possible baseline in restricted set and are top1 by construction. Neither52/65 nor12/65 is validated identity-classification accuracy. Retain65 source-ID pairs, add0. Expression correlation does not establish genotype identity.",
+  "recorded_utc": "2026-09-10T15:35:40.399021+00:00"
+}
