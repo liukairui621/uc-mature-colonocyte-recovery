@@ -1,0 +1,14 @@
+{
+  "amendment_id": "003-8",
+  "created_utc": "2026-09-11T00:08:06.483095+00:00",
+  "classification": "implementation completion and provenance correction for amendment 003-7",
+  "issue": "The automated text replacement attempted with amendment 003-7 did not match the source block; amendment 003-7 was committed without its intended code change.",
+  "correction": "Apply the common-site-first joint aggregation by source anchors, parse-test the script, and rerun. Amendment 003-7 remains the scientific correction record; this file records its implementation.",
+  "results_used_to_choose_rule": false,
+  "scientific_choices_changed": false,
+  "new_analysis_script_sha256": "61ec8062d8ef649cbf6b01d7f02273f929a7df775df69b3c50bb84548841eaa7",
+  "verification": [
+    "R parse: PASS",
+    "independent reviewer recheck requested after rerun"
+  ]
+}

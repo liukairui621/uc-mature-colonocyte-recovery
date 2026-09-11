@@ -166,15 +166,20 @@ write.table(site_all,file.path(outdir,"site_pair_metrics.tsv"),sep="\t",quote=FA
 write.table(patient_all,file.path(outdir,"patient_metrics.tsv"),sep="\t",quote=FALSE,row.names=FALSE)
 write.table(model_all,file.path(outdir,"patient_group_models.tsv"),sep="\t",quote=FALSE,row.names=FALSE)
 write.table(change_all,file.path(outdir,"all_patient_change_models.tsv"),sep="\t",quote=FALSE,row.names=FALSE)
-joint <- patient_all[patient_all$cell_set=="exclude_predicted_doublets" &
-                     patient_all$scope=="all_fixed" & patient_all$threshold==20 &
-                     is.finite(patient_all$delta_ct_logit_epi) &
-                     is.finite(patient_all$delta_ct_state_score),]
+joint_site <- site_all[site_all$cell_set=="exclude_predicted_doublets" &
+                           site_all$scope=="all_fixed" & site_all$threshold==20 &
+                           is.finite(site_all$delta_ct_logit_epi) &
+                           is.finite(site_all$delta_ct_state_score),]
+joint <- patient_means(joint_site)
+joint$cell_set <- "exclude_predicted_doublets"
+joint$scope <- "all_fixed_joint_evaluable_sites"
+joint$threshold <- 20
 joint_models <- do.call(rbind,lapply(c("delta_ct_logit_epi","delta_ct_state_score",
                                       "composition_contribution","within_state_contribution"),
-                                    function(metric) fit_group(joint,metric,"joint_primary_patient_set")))
-write.table(joint,file.path(outdir,"joint_primary_patient_metrics.tsv"),sep="\t",quote=FALSE,row.names=FALSE)
-write.table(joint_models,file.path(outdir,"joint_primary_patient_models.tsv"),sep="\t",quote=FALSE,row.names=FALSE)
+                                    function(metric) fit_group(joint,metric,"joint_primary_site_then_patient_set")))
+write.table(joint_site,file.path(outdir,"joint_primary_site_metrics.tsv"),sep="	",quote=FALSE,row.names=FALSE)
+write.table(joint,file.path(outdir,"joint_primary_patient_metrics.tsv"),sep="	",quote=FALSE,row.names=FALSE)
+write.table(joint_models,file.path(outdir,"joint_primary_patient_models.tsv"),sep="	",quote=FALSE,row.names=FALSE)
 
 # Fixed-family non-ileal epithelial state mapping, main cell set and threshold20.
 a <- ag[ag$cell_set=="exclude_predicted_doublets" & ag$major=="Non_ileal_epithelium",]
