@@ -1,0 +1,93 @@
+{
+  "status": "FROZEN",
+  "version": "003D.1",
+  "label": "Post-result DecontX ambient-RNA sensitivity for the already fixed 15-state family; not public preregistration, not confirmatory validation",
+  "created_utc": "2026-09-11T01:19:03.223140+00:00",
+  "created_after_raw_count_stage003_results": true,
+  "decontx_results_accessed": false,
+  "n_confirmatory_tests": 0,
+  "question": "Do the raw-count CT, TA and LGR5-positive stem state-family associations persist after a fixed DecontX sensitivity analysis?",
+  "input": {
+    "h5ad": "inputs/singlecell/GSE282122_Zenodo14007626/TAURUS_raw_counts_annotated_final.h5ad",
+    "sha256": "60323cd4f8e32881316029ce08425131ca6aa2e64031d1d8ffa23d0f5c4f5028",
+    "count_semantics": "raw integer counts in X",
+    "background_empty_droplets": "not available; H5AD has no raw group or count layers"
+  },
+  "cells": {
+    "samples": "same 82 sample libraries from 41 fixed UC colonic/rectal Pre/Post site pairs",
+    "cell_rule": "released cells with nonmissing final_analysis; predicted_doublets are all false in this fixed set",
+    "expected_cells": 378575,
+    "all_genes": 33075,
+    "clusters": "released final_analysis labels",
+    "batch_handling": "run DecontX independently per sample_id because each sample is a distinct library/ambient pool"
+  },
+  "decontx": {
+    "implementation": "celda::decontX under R4.3/Bioconductor3.18",
+    "x": "all genes by all retained cells within each sample, sparse dgCMatrix",
+    "z": "released final_analysis",
+    "background": null,
+    "maxIter": 500,
+    "delta": [
+      10,
+      10
+    ],
+    "estimateDelta": true,
+    "convergence": 0.001,
+    "iterLogLik": 10,
+    "varGenes": 5000,
+    "seed": "deterministic sample-specific seed derived from fixed manifest order",
+    "corrected_count_rule": "retain non-integer posterior corrected counts; do not round",
+    "composition_rule": "do not change cell labels or composition counts"
+  },
+  "state_family": {
+    "states": "same 15 released non-ileal epithelial final_analysis states",
+    "candidate_genes": [
+      "AQP8",
+      "HMGCS2",
+      "GUCA2A",
+      "CA2",
+      "SLC26A3",
+      "MS4A12"
+    ],
+    "score": "mean of six log2((decontX-corrected gene sum +0.5)/(decontX-corrected all-gene UMI+1)*1e6) values",
+    "eligibility": "same at least20 raw labeled state cells in both visits of a site pair",
+    "unit": "site Post-minus-Pre followed by equal-site patient mean",
+    "contrast": "clinical remission minus non-remission",
+    "statistics": "OLS95CI, HC3 P, exact patient-label permutation P",
+    "multiplicity": "BH with n=15 fixed states; non-evaluable states remain NA"
+  },
+  "interpretation_rules": {
+    "CT_TA_LGR5_all_q_lt_0_05": "ambient-robust support for extending the state-family observation to CT, TA and LGR5-positive stem",
+    "CT_q_lt_0_05_but_TA_or_LGR5_not": "retain CT within-state result and report each other state individually; remove broad cross-lineage claim",
+    "CT_q_ge_0_05": "headline CT within-state association is ambient-sensitive",
+    "always": "DecontX without empty droplets is a model-based sensitivity, not proof of zero ambient RNA; no causal, unique-program or replacement-validation claim"
+  },
+  "mandatory_reporting": [
+    "all 15 states regardless of result",
+    "raw versus DecontX estimates and q values",
+    "sample failures and convergence logs",
+    "contamination distributions by sample and state",
+    "threshold20 and at most6 remission patients",
+    "three threshold20-ineligible patients are all non-remission; eligibility may be informative",
+    "threshold10 raw branch crosses zero and the prespecified threshold20 branch is strongest"
+  ],
+  "no_tuning": [
+    "no new cohort",
+    "no alternative decontamination algorithm",
+    "no change to clusters, state family, threshold, genes, score or multiplicity after DecontX results"
+  ],
+  "code": [
+    {
+      "path": "code/extract_003D_decontx_batches.py",
+      "sha256": "8ba356defefb3bc397b59e2ddf34104e9f90df73a5d151c474e1875c91b57e7c"
+    },
+    {
+      "path": "code/run_003D_decontx_sample.R",
+      "sha256": "2cb7346ab0b5a7688594cd1d9efee0a690fcea65739ea0467167989ad6667900"
+    },
+    {
+      "path": "code/analyze_003D_decontx_states.R",
+      "sha256": "8e9f4f529f9f87a0e5ddbd66253d128d390c5ed83ceea5048d49acbca92757bd"
+    }
+  ]
+}
