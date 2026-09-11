@@ -1,0 +1,129 @@
+{
+  "artifact_id": "003F_baseline_inflammation_qualification_v1",
+  "status": "COMPLETE",
+  "generated_utc": "2026-09-11T15:45:02.729794+00:00",
+  "command": "python code/analyze_003F_baseline_adjustment.py",
+  "role": "Post-result corrective sensitivity analysis",
+  "inputs": [
+    {
+      "path": "planning/analysis_plan_003F_baseline_adjustment.json",
+      "bytes": 2088,
+      "sha256": "7dd863231d5890583b654c174013e0196d1305dd82f5ed17b277f043146b91e2"
+    },
+    {
+      "path": "code/analyze_003F_baseline_adjustment.py",
+      "bytes": 10342,
+      "sha256": "be1fd14501788f4c10963502e6ec4c53d32bf76ee22aad874bcb8272e4e33937"
+    },
+    {
+      "path": "runs/003_cell_context/site_pair_metrics.tsv",
+      "bytes": 898502,
+      "sha256": "2786c45318cbff971db60be092b4ab5efa3013ddbd6c93d4543fd31a2ad2f564"
+    },
+    {
+      "path": "runs/003_cell_context/joint_primary_patient_models.tsv",
+      "bytes": 1297,
+      "sha256": "069d37a2f55248d59129363e64dab500e13461cc1ea8abb3a66eb0a991063490"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "runs/003F_baseline_adjustment/patient_visit_metrics.tsv",
+      "bytes": 6685,
+      "sha256": "06aaa0039a87c779401104a1a6c211c6889203b08ed0502ffbd60d4350332003"
+    },
+    {
+      "path": "runs/003F_baseline_adjustment/group_visit_descriptions.tsv",
+      "bytes": 1835,
+      "sha256": "e3c0b921f68c99b0db029a279048fbbeb5cd8116f59ad8a82625171429c05ac8"
+    },
+    {
+      "path": "runs/003F_baseline_adjustment/baseline_adjusted_models.tsv",
+      "bytes": 3397,
+      "sha256": "2923780e4ce85e3a177e13b52a0ea3bfa62530f39214780c0a2fcd6838e957f6"
+    },
+    {
+      "path": "runs/003F_baseline_adjustment/correlations.tsv",
+      "bytes": 284,
+      "sha256": "e05c4306bd749f5215360538b3a6c1de19de41ae02916e7b3f577bdb5fc81f64"
+    },
+    {
+      "path": "runs/003F_baseline_adjustment/outcome_by_chemistry.tsv",
+      "bytes": 117,
+      "sha256": "a3b2e6c24b796effc72df13164f6d97abb0440a0b1938449f604975299ff4be2"
+    },
+    {
+      "path": "runs/003F_baseline_adjustment/outcome_by_chemistry_batch.tsv",
+      "bytes": 291,
+      "sha256": "466eeea75f408f9ae16767fae1913d28baf24718c467157e2cc89cf963594dd2"
+    },
+    {
+      "path": "runs/003F_baseline_adjustment/analysis_summary.json",
+      "bytes": 1480,
+      "sha256": "37c628f5c4fa7451764c3f19f0d0b747f2787635220e0d3c4321e85eac736057"
+    },
+    {
+      "path": "runs/003F_baseline_adjustment/sessionInfo.txt",
+      "bytes": 77,
+      "sha256": "8ce08e1d15ce5b1204b8a460898bd71c067ea09d84020de6b00d74d2c86d7f88"
+    },
+    {
+      "path": "results/publication_tables/GSE282122_patient_visit_metrics.tsv",
+      "bytes": 6685,
+      "sha256": "06aaa0039a87c779401104a1a6c211c6889203b08ed0502ffbd60d4350332003"
+    },
+    {
+      "path": "results/publication_tables/GSE282122_group_visit_descriptions.tsv",
+      "bytes": 1835,
+      "sha256": "e3c0b921f68c99b0db029a279048fbbeb5cd8116f59ad8a82625171429c05ac8"
+    },
+    {
+      "path": "results/publication_tables/GSE282122_baseline_adjusted_models.tsv",
+      "bytes": 3397,
+      "sha256": "2923780e4ce85e3a177e13b52a0ea3bfa62530f39214780c0a2fcd6838e957f6"
+    },
+    {
+      "path": "results/publication_tables/GSE282122_baseline_inflammation_correlations.tsv",
+      "bytes": 284,
+      "sha256": "e05c4306bd749f5215360538b3a6c1de19de41ae02916e7b3f577bdb5fc81f64"
+    },
+    {
+      "path": "results/publication_tables/GSE282122_outcome_chemistry_batch.tsv",
+      "bytes": 291,
+      "sha256": "466eeea75f408f9ae16767fae1913d28baf24718c467157e2cc89cf963594dd2"
+    },
+    {
+      "path": "reports/Stage003F_baseline_and_inflammation_qualification_20260911.md",
+      "bytes": 3283,
+      "sha256": "fc1fa0857ddc4c7485b191d7e073bc6772176b524fa513fccdb2ba44a29cc040"
+    },
+    {
+      "path": "manuscript/Main_Manuscript.md",
+      "bytes": 31735,
+      "sha256": "b4eb79527f74e93704bf00afc560bf5b546aa4118b2d35b84b5abed58f7660db"
+    },
+    {
+      "path": "provenance/reviews/003F_internal_numeric_QA.json",
+      "bytes": 1276,
+      "sha256": "c0bd167a033dffb4c67e1ae763fe68898fb86d06cbeb8c4edc221cc7708e72f3"
+    }
+  ],
+  "software": {
+    "python": "3.12.10",
+    "numpy": "2.4.6",
+    "pandas": "2.3.3",
+    "scipy": "1.17.1",
+    "statsmodels": "0.14.6"
+  },
+  "numeric_QA": {
+    "path": "provenance/reviews/003F_internal_numeric_QA.json",
+    "bytes": 1276,
+    "sha256": "c0bd167a033dffb4c67e1ae763fe68898fb86d06cbeb8c4edc221cc7708e72f3"
+  },
+  "analysis_boundaries": {
+    "patient_unit": true,
+    "not_preregistered": true,
+    "does_not_replace_primary_validation": true,
+    "chemistry_stratified_permutation_identifiable": false
+  }
+}

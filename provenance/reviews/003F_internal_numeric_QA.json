@@ -1,0 +1,34 @@
+{
+  "artifact_id": "003F_internal_numeric_QA_v1",
+  "status": "PASSED",
+  "created_utc": "2026-09-11T15:45:02.727791+00:00",
+  "scope": "Deterministic internal numeric and claim-alignment checks; not an independent review.",
+  "checks": {
+    "stage003_raw_change_reproduced": true,
+    "patient_count_is_16": true,
+    "remitter_count_is_6": true,
+    "baseline_difference_matches": true,
+    "followup_difference_matches": true,
+    "baseline_adjusted_estimate_matches": true,
+    "inflammation_adjusted_estimate_matches": true,
+    "baseline_change_correlation_matches": true,
+    "inflammation_change_correlation_matches": true,
+    "all_remitters_v31": true,
+    "chemistry_stratified_permutation_not_identifiable": true
+  },
+  "headline_results": {
+    "unadjusted_change_beta": 2.556287215883271,
+    "baseline_adjusted_beta": 1.4423284005428252,
+    "baseline_adjusted_HC3_CI": [
+      0.1209681139039149,
+      2.763688687181736
+    ],
+    "baseline_adjusted_HC3_p": 0.0346950344398209,
+    "baseline_plus_inflammation_change_beta": 1.3397969047936231,
+    "baseline_plus_inflammation_change_HC3_CI": [
+      -0.8185137453802391,
+      3.498107554967486
+    ],
+    "baseline_plus_inflammation_change_HC3_p": 0.2011449550398729
+  }
+}

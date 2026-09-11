@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this analysis, please cite the associated manuscript."
-title: "UC mature colonocyte recovery"
+title: "Longitudinal bulk and single-cell transcriptomic reanalysis characterizes mucosal healing-associated recovery of a mature absorptive colonocyte score in ulcerative colitis"
 type: software
 authors:
   - family-names: Liu

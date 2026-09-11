@@ -1,0 +1,8 @@
+remission	library_type	batch	patients
+Non_Remission	3 prime V3	Batch_1	4
+Non_Remission	3 prime v3.1	Batch_2	3
+Non_Remission	3 prime v3.1	Batch_3	3
+Non_Remission	3 prime v3.1	Batch_4	3
+Remission	3 prime v3.1	Batch_2	1
+Remission	3 prime v3.1	Batch_3	4
+Remission	3 prime v3.1	Batch_4	1

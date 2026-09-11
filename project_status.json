@@ -1,17 +1,17 @@
 {
   "created_utc": "2026-09-10T08:23:12.775089+00:00",
-  "current_phase": "004A COMPLETE: external analysis ledger and interval interpretation compiled from existing results",
+  "current_phase": "MANUSCRIPT STATISTICAL REVISION COMPLETE: Stage003F baseline, inflammation and chemistry qualification integrated",
   "discovery_cohort": "GSE92415",
   "candidate_frozen": true,
   "independent_validation_started": true,
-  "next_phase": "Manuscript Results organization with five focal external analyses and full retained branch index; no new association or influence diagnostics requested",
+  "next_phase": "BMC Genomics submission after author metadata and final coauthor approval are completed",
   "analysis_input_files": [
     "/root/projects/UC_Treatment_Recovery/inputs/discovery/GSE92415_series_matrix.relay.txt.gz",
     "/root/projects/UC_Treatment_Recovery/inputs/validation/GSE23597_series_matrix.txt.gz",
     "/root/projects/UC_Treatment_Recovery/inputs/support/GSE73661_series_matrix.txt.gz"
   ],
   "review_pending": false,
-  "updated_utc": "2026-09-11T04:16:54.576584+00:00",
+  "updated_utc": "2026-09-11T15:43:26.009066+00:00",
   "stage_report": "/root/projects/UC_Treatment_Recovery/reports/External_analysis_ledger_and_interpretation_20260911.md",
   "independent_review": "/root/projects/UC_Treatment_Recovery/provenance/reviews/003_cell_context_independent_v1.json",
   "signature_lock": "/root/projects/UC_Treatment_Recovery/signature_lock.json",
@@ -65,5 +65,26 @@
   "external_analyses_overview": "/root/projects/UC_Treatment_Recovery/runs/004A_evidence_ledger/external_analysis_overview.tsv",
   "external_statistic_inventory": "/root/projects/UC_Treatment_Recovery/runs/004A_evidence_ledger/external_statistic_files.tsv",
   "VDZ_W6_principal_OLS_interval_contains_IFX_point": true,
-  "interval_containment_is_not_equivalence": true
+  "interval_containment_is_not_equivalence": true,
+  "stage003F_completed": true,
+  "stage003F_role": "post-result corrective sensitivity analysis; not preregistered and not replacement validation",
+  "stage003F_report": "reports/Stage003F_baseline_and_inflammation_qualification_20260911.md",
+  "stage003F_plan": "planning/analysis_plan_003F_baseline_adjustment.json",
+  "stage003F_code": "code/analyze_003F_baseline_adjustment.py",
+  "stage003F_all_fixed_patients": 16,
+  "stage003F_remitters": 6,
+  "stage003F_baseline_adjusted_beta": 1.4423284005428252,
+  "stage003F_baseline_adjusted_HC3_CI": [
+    0.12096811390391493,
+    2.7636886871817357
+  ],
+  "stage003F_baseline_adjusted_HC3_p": 0.03469503443982097,
+  "stage003F_inflammation_adjusted_beta": 1.3397969047936233,
+  "stage003F_inflammation_adjusted_HC3_CI": [
+    -0.8185137453802391,
+    3.498107554967486
+  ],
+  "stage003F_inflammation_adjusted_HC3_p": 0.20114495503987292,
+  "stage003F_chemistry_stratified_permutation_identifiable": false,
+  "manuscript_synced": "manuscript/Main_Manuscript.md"
 }

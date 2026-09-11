@@ -1,0 +1,3 @@
+analysis	x	y	n	pearson_r	p
+baseline_candidate_vs_candidate_change	pre_ct_state_score	delta_ct_state_score	16	-0.7749991734393704	0.00042156343332610467
+candidate_change_vs_inflammation_change	delta_ct_state_score	delta_inflammation_score	16	-0.5940494755768796	0.01524707473913963

@@ -1,0 +1,33 @@
+{
+  "status": "POSTHOC_CORRECTIVE_SPECIFICATION",
+  "stage": "003F",
+  "created_after_stage003_results": true,
+  "created_after_internal_peer_review": true,
+  "not_preregistered": true,
+  "purpose": "Quantify how baseline Candidate6 score, concurrent inflammation change, chemistry version, and released author-pair membership affect the Stage003 CT-colonocyte longitudinal association.",
+  "fixed_input": "runs/003_cell_context/site_pair_metrics.tsv",
+  "main_branch": {
+    "cell_set": "exclude_predicted_doublets",
+    "scope": "all_fixed",
+    "threshold": 20,
+    "aggregation": "Restrict to site pairs with evaluable CT state; average baseline, follow-up, and Post-minus-Pre quantities equally across eligible sites within patient.",
+    "unit": "patient"
+  },
+  "required_descriptions": [
+    "Patient-level baseline, follow-up, and change distributions by remission",
+    "Welch group comparisons at baseline and follow-up",
+    "Pearson correlation between baseline Candidate6 and Candidate6 change",
+    "HC3 ANCOVA: follow-up Candidate6 ~ remission + baseline Candidate6",
+    "HC3 association decomposition: Candidate6 change ~ remission + baseline Candidate6 + inflammation change",
+    "HC3 extended association decomposition adding baseline inflammation"
+  ],
+  "required_subsets": [
+    "all_fixed",
+    "v31_only",
+    "author_both"
+  ],
+  "technical_rule": "Because all remitters use 10x v3.1 and all v3 patients are non-remitters, an unrestricted chemistry-stratified remission permutation is not identifiable. Report the cross-tabulation and the v3.1-only subset instead.",
+  "interpretation": "The original unadjusted exact permutation remains the planned exploratory Stage003 result. Stage003F is a mandatory post-result qualification. It must not be described as prospectively specified or as a replacement validation.",
+  "causal_boundary": "Inflammation change may be part of the same recovery process; adjustment is used to describe shared longitudinal variation, not to estimate a controlled direct or causal effect.",
+  "created_utc": "2026-09-11T15:30:00Z"
+}

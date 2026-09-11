@@ -1,0 +1,7 @@
+item	recorded_analysis_history
+timing	Post hoc after broad GSE92415 transcriptome and Hallmark review; before 33-program patient-level benchmarking
+membership	AQP8;HMGCS2;GUCA2A;CA2;SLC26A3;MS4A12
+weights	Equal weights; no validation-cohort fitting
+published_CT_overlap	4/6 candidate genes overlap the 20-gene published CT-colonocyte panel: AQP8;GUCA2A;SLC26A3;MS4A12
+discovery_score_relationship	Candidate6 versus published CT-colonocyte score change: Pearson r=0.928722189988398, n=65
+claim_boundary	Compact mature-colonocyte readout; not a new cell state, optimized predictor or superior signature
