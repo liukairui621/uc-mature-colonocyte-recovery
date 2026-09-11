@@ -1,0 +1,22 @@
+{
+  "amendment_id": "003-7",
+  "created_utc": "2026-09-11T00:07:10.250750+00:00",
+  "timing": "After initial results were inspected; identified by independent reviewer during the required reviewer gate.",
+  "classification": "joint-evaluable-set correction",
+  "issue": "The prior joint patient table selected patients having both axes, but each metric retained its independently eligible site mean. Thus composition could include additional sites that were ineligible for the CT-state score.",
+  "correction": "First restrict to site pairs with both primary axes finite, then compute equal-site patient means and all joint models. Add an explicit joint site table.",
+  "unaffected": [
+    "the two frozen main contrasts",
+    "all independently defined sensitivity branches",
+    "decomposition values, which were already limited to eligible sites"
+  ],
+  "affected": [
+    "joint_primary_patient_metrics.tsv",
+    "joint_primary_patient_models.tsv",
+    "joint-primary decomposition figure source"
+  ],
+  "scientific_choices_changed": false,
+  "outcome_dependent_choice": false,
+  "new_analysis_script_sha256": "36c92def79f5e1bc56e585bca9c008baeff78114559a7b7050a41c998380dc7e",
+  "review_source": "metadata_review independent reviewer gate"
+}
