@@ -1,0 +1,11 @@
+{
+  "amendment_id": "003-10",
+  "created_utc": "2026-09-11T00:14:25.959553+00:00",
+  "timing": "After results; identified in independent review of the descriptive fixed-state family.",
+  "classification": "descriptive multiplicity-family clarification",
+  "issue": "The fixed family contains 15 released states, but 5 were non-evaluable. The prior automatic BH result used only 10 finite P values, making the column label ambiguous.",
+  "correction": "Retain BH among the 10 evaluable states as an explicitly named descriptive column and adopt BH with n=15 for the prespecified fixed-state family.",
+  "impact": "No effect on the two primary-axis BH correction. CT, TA and LGR5-positive stem state findings remain below 0.05 under n=15.",
+  "scientific_choices_changed": false,
+  "new_analysis_script_sha256": "61ec8062d8ef649cbf6b01d7f02273f929a7df775df69b3c50bb84548841eaa7"
+}
