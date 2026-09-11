@@ -1,0 +1,356 @@
+{
+  "artifact_id": "004A_external_analysis_ledger_independent_review_v1",
+  "status": "REVIEWED",
+  "decision": "Adopt the compiled ledger and report with their explicit original evidence roles. No unresolved blocker.",
+  "created_utc": "2026-09-11T04:18:53.396449+00:00",
+  "reviewer": "independent agent /root/vdz_metadata_review",
+  "scope": "Read-only verification of original frozen plans and executed statistical exports followed by numeric compilation checks. No regression, influence diagnostic or new scientific test run.",
+  "outputs_reviewed": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/004A_evidence_ledger/external_analysis_overview.tsv",
+      "sha256": "1ff47fc284ad96da15a6602292be98d2dc3b9d073af54233a6da5d0401c0f06a",
+      "bytes": 2300
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/004A_evidence_ledger/external_statistic_files.tsv",
+      "sha256": "8af5075b2a5b60f6411bf25dcbe79ccfd30fab1bc3b94459273ca488a8517834",
+      "bytes": 6980
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/004A_evidence_ledger/external_statistic_rows.jsonl",
+      "sha256": "49b07b991f7e4bbd6bd7ab49c4e453e31dda3a2426f908359b42719a7cab96bb",
+      "bytes": 266182
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/004A_evidence_ledger/inventory_scope.json",
+      "sha256": "f3927f683b11f36c3be98ce815075cabea680fa2b2056ca7ca21da8bdf241874",
+      "bytes": 1244
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/004A_evidence_ledger/interval_compatibility.json",
+      "sha256": "9f73c757584e38e2171a8e3db22b1d06b071e2c00221e1629805212bc155fc0a",
+      "bytes": 501
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/reports/External_analysis_ledger_and_interpretation_20260911.md",
+      "sha256": "3d5339ee0d3d5e000da4dc91bd8201f8128d6ab4dbf90a843cc8c303e8266273",
+      "bytes": 6044
+    }
+  ],
+  "producer_code": {
+    "path": "/root/projects/UC_Treatment_Recovery/code/build_004A_external_analysis_ledger.py",
+    "sha256": "228cdd56206539a3a74e7890036a5bc1cb4ec1d6cf91bd7b63ef616fb6d70cdd",
+    "bytes": 14584
+  },
+  "producer_manifest_snapshot": {
+    "path": "/root/projects/UC_Treatment_Recovery/provenance/manifests/stage_004A_evidence_ledger.json",
+    "sha256": "4a886dc44f47c24d2c31252e5293303dad2a1e3dfd5bfa5d7d2440df006c556c",
+    "bytes": 9806
+  },
+  "reviewer_code": {
+    "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/004A_external_analysis_ledger_review.py",
+    "sha256": "2e70e3f50c482ee149e089030ec57d3b7a138c7fcd99d5e9763a7a82ad1d4b75",
+    "bytes": 9113
+  },
+  "counts_verified_from_patient_sources": {
+    "002A": [
+      32,
+      20
+    ],
+    "002B": [
+      23,
+      8
+    ],
+    "002D_W6": [
+      27,
+      6
+    ],
+    "002D_W12": [
+      13,
+      3
+    ],
+    "003_CT": [
+      16,
+      6
+    ]
+  },
+  "count_source_files": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/primary_patient_data.tsv",
+      "sha256": "56fea05cf5e65d6edc3267d43dd9c603a12edf7b6b7cb3a26185270e92fd9e35",
+      "bytes": 4353
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_GSE73661_support/support_patient_data.tsv",
+      "sha256": "c8845c169efb21d17c5beaa8ed81691cab4275423d726f4bdd65bf6e8dfafe87",
+      "bytes": 4785
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_support/patient_level_scores.tsv",
+      "sha256": "892070149ad27a8ce5feaa888dcc5a6b1ae288ca51408491aad3a020c116c869",
+      "bytes": 4610
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/003_cell_context/joint_primary_patient_metrics.tsv",
+      "sha256": "84f2c4c5d133544e83951db41b33a634d12c9ed7c81222d6a406f21b4154d25d",
+      "bytes": 4257
+    }
+  ],
+  "numeric_checks": {
+    "all_five_headline_estimates_intervals_P_and_n_match": true,
+    "CT_two_axis_BH_separate_from_raw_fixed15_and_DecontX_fixed15": true,
+    "fixed_state_family": 15,
+    "evaluable_states": 10,
+    "included_tables": 24,
+    "indexed_rows": 484,
+    "mirrored_fields_compared": 6551,
+    "maximum_serialization_error": 8.881784197001252e-16,
+    "mirrored_rows_are_not_independent_test_count": true
+  },
+  "evidence_role_checks": {
+    "original_confirmatory_primary_test_count": 1,
+    "002B_effect_estimation_without_success_criterion": true,
+    "002D_W6_principal_supportive_not_confirmatory": true,
+    "002D_W12_secondary_not_replacement": true,
+    "003_exploratory": true,
+    "DecontX_same_patient_sensitivity_not_sixth_validation": true,
+    "explicit_post_result_BH15_implementation_amendment_disclosed": true
+  },
+  "retained_context": {
+    "composition_main19_and_joint16_in_inventory": true,
+    "threshold10_exact_nonsignificant_and_HC3_nominal_positive_disclosed": true,
+    "all15_states_including5_non_evaluable_retained": true,
+    "TA_LGR5_raw_positive_and_DecontX_BH_nonsignificant_retained": true,
+    "cross_sectional_sample_state_contamination_descriptive_only": true,
+    "repeated_source_P_values_not_new_tests": true,
+    "original_primary_negative_retained": true
+  },
+  "interpretation_checks": {
+    "VDZ_W6_OLS_CI_contains_IFX_point": true,
+    "VDZ_W6_OLS_CI_contains_zero": true,
+    "containment_not_equality_or_equivalence_test": true,
+    "HC3_not_assumed_more_conservative_than_OLS": true,
+    "HC3_OLS_difference_not_used_to_infer_heteroskedasticity_or_patient_dominance": true,
+    "no_effect_size_ranking_across_bulk_and_singlecell_units": true,
+    "no_global_any_positive_success_claim": true
+  },
+  "resolved_comment": "Producer replaced hardcoded outcome counts with source-table calculations, added count inputs to manifest, and retained threshold10 HC3 and joint-patient comparison limitations.",
+  "manifest_checks": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/build_004A_external_analysis_ledger.py",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/candidate_models.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/candidate_models_HC3.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/leave_one_patient_out.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/primary_test.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/secondary_no_baseline_descriptive.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/secondary_reference_tests.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_GSE73661_support/candidate_support_models.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_GSE73661_support/leave_one_patient_out.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_GSE73661_support/reference_descriptive_models.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002C_construct_overlap/construct_overlap_statistics.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002C_construct_overlap/patient_level_source.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_support/candidate_models.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_support/leave_one_patient_out.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_support/reference_models.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/003_cell_context/all_patient_change_models.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/003_cell_context/fixed_epithelial_state_models.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/003_cell_context/joint_primary_patient_models.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/003_cell_context/patient_group_models.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/003D_decontx_state_family/decontx_fixed15_state_models.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/003E_ambient_negative_controls/CT_contamination_cross_sectional_sample_state.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/003E_ambient_negative_controls/CT_contamination_patient_models.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/003E_ambient_negative_controls/negative_control_CT_models.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/003_posthoc_component_diagnostics/component_models.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/003_posthoc_design_diagnostics/v31_batch_adjusted_models.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002A_GSE23597/primary_patient_data.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_GSE73661_support/support_patient_data.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_support/patient_level_scores.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/signature_lock.json",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/planning/support_plan_002B.frozen.json",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/planning/support_plan_002D_VDZ.frozen.json",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/planning/analysis_plan_003.frozen.json",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/planning/analysis_plan_003_amendment_10.json",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/planning/analysis_plan_003_amendment_11.json",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/planning/analysis_plan_003D_decontx_sensitivity.frozen.json",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/004A_evidence_ledger/interval_compatibility.json",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/004A_evidence_ledger/build.log",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/004A_evidence_ledger/external_analysis_overview.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/004A_evidence_ledger/external_statistic_files.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/004A_evidence_ledger/inventory_scope.json",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/004A_evidence_ledger/external_statistic_rows.jsonl",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/reports/External_analysis_ledger_and_interpretation_20260911.md",
+      "sha256_match": true,
+      "size_match": true
+    }
+  ],
+  "unresolved_blockers": [],
+  "new_scientific_tests": false,
+  "old_reports_or_frozen_plans_modified_by_reviewer": false,
+  "environment": {
+    "python": "3.12.3"
+  }
+}
