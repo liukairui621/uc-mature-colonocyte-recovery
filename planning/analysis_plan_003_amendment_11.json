@@ -1,0 +1,9 @@
+{
+  "amendment_id": "003-11",
+  "created_utc": "2026-09-11T00:14:49.186988+00:00",
+  "classification": "implementation completion for amendment 003-10",
+  "issue": "The first automated replacement for amendment 003-10 did not match the source block, so that commit contained the provenance record without its intended code change.",
+  "correction": "Replace the exact BH assignment, parse-test, and rerun. Amendment 003-10 states the multiplicity decision; this file records implementation.",
+  "scientific_choices_changed": false,
+  "new_analysis_script_sha256": "b1fdf4f4f6a21fcc3a84bcf2da124f28f94b631706d0f1b99311c191c09f3ea3"
+}

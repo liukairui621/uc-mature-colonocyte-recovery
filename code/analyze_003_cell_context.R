@@ -196,7 +196,8 @@ sp <- aggregate(delta_state_score~patient+remission+final_analysis,data=st,FUN=m
 states <- sort(unique(a$final_analysis))
 state_models <- do.call(rbind,lapply(states,function(state) fit_group(sp[sp$final_analysis==state,],
                                                                      "delta_state_score",state)))
-state_models$BH_fixed_state_family <- p.adjust(state_models$p_exact_permutation,method="BH")
+state_models$BH_evaluable_states_n10 <- p.adjust(state_models$p_exact_permutation,method="BH")
+state_models$BH_fixed_state_family_n15 <- p.adjust(state_models$p_exact_permutation,method="BH",n=length(states))
 write.table(state_models,file.path(outdir,"fixed_epithelial_state_models.tsv"),sep="\t",quote=FALSE,row.names=FALSE)
 
 maxerr <- max(abs(site_all$decomposition_error),na.rm=TRUE)
