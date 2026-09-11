@@ -1,0 +1,68 @@
+{
+  "status": "FROZEN",
+  "version": "003E.1",
+  "label": "Post-result ambient-load and raw CT negative-control diagnostic; not preregistration and not confirmatory validation",
+  "created_utc": "2026-09-11T02:25:55.023364+00:00",
+  "created_after_stage003_and_decontx_results": true,
+  "negative_control_gene_counts_accessed": false,
+  "n_confirmatory_tests": 0,
+  "questions": [
+    "Does DecontX-estimated CT contamination change from Pre to Post differently between remission groups at the patient unit?",
+    "Do raw CT-pseudobulk immune and stromal negative-control transcripts show the same remission-associated change pattern as Candidate6?"
+  ],
+  "fixed_inputs": {
+    "sample_manifest": "runs/003D_decontx_batches/batch_manifest.tsv",
+    "sample_matrices": "same 82 sparse cell-by-gene NPZ files extracted from the audited GSE282122 H5AD",
+    "cell_metadata": "same 82 released metadata files",
+    "pair_file": "runs/003_preexpression/fixed_UC_colonic_site_pairs.tsv",
+    "decontx_state_aggregate": "runs/003D_decontx/sample_state_decontx_all.tsv",
+    "feature_table": "inputs/002B_asset_audit/TAURUS_actual_var_features_full.tsv"
+  },
+  "state": "Non ileal CT colonocyte",
+  "eligibility": "same raw labeled-state threshold: at least 20 CT cells at both visits of a site pair",
+  "unit": "site Post-minus-Pre followed by equal-site patient mean",
+  "contrast": "clinical remission minus non-remission",
+  "negative_controls": {
+    "genes": [
+      "PTPRC",
+      "COL1A1"
+    ],
+    "rationale": {
+      "PTPRC": "immune-lineage transcript not expected as a CT-colonocyte defining signal",
+      "COL1A1": "stromal-fibroblast transcript not expected as a CT-colonocyte defining signal"
+    },
+    "raw_score": "per gene log2((raw CT-pseudobulk count +0.5)/(raw CT all-gene UMI+1)*1e6)",
+    "composite": "unweighted mean of the two negative-control logCPM values",
+    "individual_multiplicity": "BH with n=2 fixed genes",
+    "positive_extraction_check": "recompute the frozen six-gene CT score and require exact numerical agreement with Stage003 within tolerance 1e-10"
+  },
+  "contamination_diagnostics": {
+    "metrics": [
+      "contamination_mean",
+      "contamination_median",
+      "contamination_q90"
+    ],
+    "primary_unit_for_interpretation": "patient-level Post-minus-Pre contrast using the same eligible site pairs",
+    "sample_state_cross_sectional": "reproduce as descriptive only because observations repeat within patients",
+    "statistics": "OLS 95CI, HC3 P and exact patient-label permutation for patient-level changes; Wilcoxon rank-sum for the descriptive sample-state snapshot"
+  },
+  "interpretation_rules": [
+    "No clear negative-control or patient-level contamination-change contrast weighs against a broad immune/stromal ambient-load explanation aligned with remission.",
+    "Such null diagnostics do not prove absence of gene-specific ambient RNA, misclassification or model-dependent effects.",
+    "A negative-control change aligned with Candidate6 or a clear patient-level contamination-change contrast strengthens the ambient-confounding concern.",
+    "DecontX using released state labels has asymmetric ability to remove cluster-typical versus cluster-atypical genes; CT survival is described as not overturned by this specific sensitivity, not as stronger after correction.",
+    "TA or LGR5 attenuation is insufficient to classify their raw signal as ambient RNA; it only removes support for the broad cross-lineage claim under the fixed family."
+  ],
+  "no_tuning": [
+    "no additional negative-control genes after results",
+    "no alternate cell labels",
+    "no alternate threshold",
+    "no new cohort",
+    "no change to Candidate6",
+    "no claim that null controls make an ambient artifact impossible"
+  ],
+  "code": {
+    "path": "code/analyze_003E_ambient_negative_controls.py",
+    "sha256": "a89462f45e49a53fe12d6f2c611104c996eea131b6ac5c9c729f5718b6189a10"
+  }
+}
