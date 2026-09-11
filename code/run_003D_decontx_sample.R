@@ -12,7 +12,7 @@ tryCatch({
   use_python("/usr/bin/python3",required=TRUE)
   sp<-import("scipy.sparse",convert=TRUE)
   cell_by_gene<-sp$load_npz(npz)
-  counts<-as(t(cell_by_gene),"dgCMatrix")
+  counts<-as(as(t(cell_by_gene),"TsparseMatrix"),"CsparseMatrix")
   md<-read.delim(meta_path,check.names=FALSE,stringsAsFactors=FALSE)
   var<-read.delim(var_path,check.names=FALSE,stringsAsFactors=FALSE)
   stopifnot(ncol(counts)==nrow(md),nrow(counts)==nrow(var))
