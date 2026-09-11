@@ -1,0 +1,245 @@
+{
+  "status": "COMPLETE_AND_REVIEWED",
+  "stage": "003_cell_context",
+  "created_utc": "2026-09-11T00:20:05.929217+00:00",
+  "adopted_analysis_commit": "8d96eca",
+  "evidence_role": "exploratory cell-context discrimination; zero confirmatory primary tests; cannot replace failed GSE23597 primary validation",
+  "input_h5ad": {
+    "path": "inputs/singlecell/GSE282122_Zenodo14007626/TAURUS_raw_counts_annotated_final.h5ad",
+    "bytes": 12708413650,
+    "md5": "c1bd13b92cacb164a401c6c4a4e7912c",
+    "sha256": "60323cd4f8e32881316029ce08425131ca6aa2e64031d1d8ffa23d0f5c4f5028",
+    "integrity": "PASS"
+  },
+  "fixed_sample": {
+    "site_pairs": 41,
+    "patients": 19,
+    "remission": 6,
+    "nonremission": 13
+  },
+  "main_results": [
+    {
+      "axis": "CT proportion within non-ileal epithelium",
+      "n": 19,
+      "estimate": -0.188234,
+      "ci": [
+        -0.755742,
+        0.379275
+      ],
+      "p_exact": 0.49027,
+      "BH2": 0.49027
+    },
+    {
+      "axis": "within-CT six-gene pseudobulk score",
+      "n": 16,
+      "estimate": 2.556287,
+      "ci": [
+        1.267447,
+        3.845127
+      ],
+      "p_exact": 0.0004995005,
+      "BH2": 0.000999001
+    }
+  ],
+  "joint_site_pairs": 33,
+  "review": {
+    "status": "REVIEWED",
+    "blocking_issues": [],
+    "primary": "provenance/reviews/003_cell_context_independent_v1.json",
+    "fixed_state_addendum": "provenance/reviews/003_fixed_state_family_n15_addendum_v1.json",
+    "max_abs_numeric_difference": 6.3e-15
+  },
+  "interpretation": "In this adalimumab clinical-remission cohort, a pure CT-proportion explanation is insufficient; within-state or within-group expression change is supported. This cannot settle GSE73661 IFX endoscopic construct overlap or establish mechanism.",
+  "files": [
+    {
+      "path": "planning/analysis_plan_003.frozen.json",
+      "bytes": 10344,
+      "sha256": "1293d394184a40819059d0df04f6e070910d8d2e8d35405752c096d43508d340"
+    },
+    {
+      "path": "planning/analysis_plan_003_amendment_1.json",
+      "bytes": 2501,
+      "sha256": "958d5695bfb65fc5a1b8aeabccba610971c066ca668fe049f0b8fb9fac2c85cf"
+    },
+    {
+      "path": "planning/analysis_plan_003_amendment_2.json",
+      "bytes": 1667,
+      "sha256": "d08fbfb1b61a765111c01a64e9cddb8dfc97e034be4e7bc297ceb93f898e8ae8"
+    },
+    {
+      "path": "planning/analysis_plan_003_amendment_3.json",
+      "bytes": 1218,
+      "sha256": "d0b2be3c84debb3bb64b8231f568e8b8147d9b9300ee6ddf00ccc7c6edf804e3"
+    },
+    {
+      "path": "planning/analysis_plan_003_amendment_4.json",
+      "bytes": 696,
+      "sha256": "ddd30c73e6db3e788348e2231086adadc7c69585100c25ad816d7dfa6fa2bb3d"
+    },
+    {
+      "path": "planning/analysis_plan_003_amendment_5.json",
+      "bytes": 920,
+      "sha256": "eb9e06c3a923bff5512ba44de5f9e0f7c25da1556c75faa6e43ff8fb43a5b71c"
+    },
+    {
+      "path": "planning/analysis_plan_003_amendment_6.json",
+      "bytes": 1298,
+      "sha256": "85b4427131e9ed2dd87237c41ae069a4ebb46a452fcf76100456bde5362f7bc2"
+    },
+    {
+      "path": "planning/analysis_plan_003_amendment_7.json",
+      "bytes": 1246,
+      "sha256": "330c3ee101af449cfe5b3e26a119b0e7179b140e78e743f6e6fb8d403a248472"
+    },
+    {
+      "path": "planning/analysis_plan_003_amendment_8.json",
+      "bytes": 846,
+      "sha256": "2dd763c88c81030b8fa0836f6710790ea92d2e2b4dbb13ee6bd12c14d3e82fe4"
+    },
+    {
+      "path": "planning/analysis_plan_003_amendment_10.json",
+      "bytes": 879,
+      "sha256": "1bf7182866a11e546bf5c45570b41cbfbdd36d102599566558216876d489d91f"
+    },
+    {
+      "path": "planning/analysis_plan_003_amendment_11.json",
+      "bytes": 633,
+      "sha256": "224c8aa914d0bffcf33a68513901155b27af0c6d4160192501e9dc530ded79fc"
+    },
+    {
+      "path": "runs/003_preexpression/fixed_UC_colonic_site_pairs.tsv",
+      "bytes": 6058,
+      "sha256": "5b4304eaeee8b1ffca5066bcb0699e7ab5739c3799eac501a9befade6ece8b32"
+    },
+    {
+      "path": "runs/003_extraction/extraction_summary.json",
+      "bytes": 1085,
+      "sha256": "3730a084151a0b4ebccd0ce2f5da4b55a971fd4d4f2651399c3bf403af3a8c45"
+    },
+    {
+      "path": "runs/003_extraction/sample_state_candidate_aggregates.tsv.gz",
+      "bytes": 656883,
+      "sha256": "935b011ceef2c976eb07912463e6f541e1a50c265c24dfaa042d624be59946d8"
+    },
+    {
+      "path": "runs/003_extraction/sample_qc_aggregates.tsv",
+      "bytes": 8305,
+      "sha256": "27499d7a9cd12d5fea80ad7e5c9fed32759fda4b8c7488f0b7d835717542489c"
+    },
+    {
+      "path": "runs/003_cell_context/patient_group_models.tsv",
+      "bytes": 37428,
+      "sha256": "8be9784a798542d94d0f184d36296a39879f9623f72ab83c5394e51a1ad6adf6"
+    },
+    {
+      "path": "runs/003_cell_context/site_pair_metrics.tsv",
+      "bytes": 898502,
+      "sha256": "2786c45318cbff971db60be092b4ab5efa3013ddbd6c93d4543fd31a2ad2f564"
+    },
+    {
+      "path": "runs/003_cell_context/patient_metrics.tsv",
+      "bytes": 63965,
+      "sha256": "efca7199293fc695c1eedf14b0f8b8271902164683dd431c478ff0d147955380"
+    },
+    {
+      "path": "runs/003_cell_context/joint_primary_site_metrics.tsv",
+      "bytes": 52458,
+      "sha256": "24819d52dbfbad50ad1a14baea3fe8125a624e00ffe79d4e7cda9b286974cebd"
+    },
+    {
+      "path": "runs/003_cell_context/joint_primary_patient_metrics.tsv",
+      "bytes": 4257,
+      "sha256": "84f2c4c5d133544e83951db41b33a634d12c9ed7c81222d6a406f21b4154d25d"
+    },
+    {
+      "path": "runs/003_cell_context/joint_primary_patient_models.tsv",
+      "bytes": 1297,
+      "sha256": "069d37a2f55248d59129363e64dab500e13461cc1ea8abb3a66eb0a991063490"
+    },
+    {
+      "path": "runs/003_cell_context/fixed_epithelial_state_models.tsv",
+      "bytes": 3631,
+      "sha256": "b9d852ad732c999b49aa32774297b958cd1ed2dc91b6df53c303f7405bbfc727"
+    },
+    {
+      "path": "runs/003_posthoc_component_diagnostics/component_models.tsv",
+      "bytes": 3214,
+      "sha256": "07c2a796d12599144ae747d9ef7fafd48b31137dc0b0af45428adc4ab1de08cd"
+    },
+    {
+      "path": "runs/003_posthoc_design_diagnostics/v31_batch_adjusted_models.tsv",
+      "bytes": 426,
+      "sha256": "6cc9d5d797ccbcd43a1330b3979c1555f1b547ae65c36aacd9064bd9b92cab10"
+    },
+    {
+      "path": "code/extract_003_h5ad.py",
+      "bytes": 10115,
+      "sha256": "f50809e9027c220945c46fa93539172df4378c18271c53f1c9e6189f23f33c9e"
+    },
+    {
+      "path": "code/analyze_003_cell_context.R",
+      "bytes": 13918,
+      "sha256": "b1fdf4f4f6a21fcc3a84bcf2da124f28f94b631706d0f1b99311c191c09f3ea3"
+    },
+    {
+      "path": "code/diagnose_003_gene_components.R",
+      "bytes": 3983,
+      "sha256": "f59f898517d8764cff41fadf069620da2076da03e44bd2f6a19f229d261b6135"
+    },
+    {
+      "path": "code/diagnose_003_design_adjusted.R",
+      "bytes": 1734,
+      "sha256": "b4377039d831aebd4bf6ec51f4710468e345a02878be4c1f93488e54cacddd69"
+    },
+    {
+      "path": "code/figure_003_cell_context.R",
+      "bytes": 5344,
+      "sha256": "6dc1db1cb7edebe52b62bc867ffe65498f5780f85a72d08c1b95e5ca5bbe504a"
+    },
+    {
+      "path": "reports/Stage003_cell_context_results_20260910.md",
+      "bytes": 9489,
+      "sha256": "9b27b6425afa06662ca3a15e3ff9227f713290e1bb6d404c66ec0e9caca758c6"
+    },
+    {
+      "path": "provenance/reviews/003_cell_context_independent_v1.json",
+      "bytes": 38645,
+      "sha256": "f3cc99852486a7de055db5cd3ff59bff16434aa04073aa00c4f9093a76b35407"
+    },
+    {
+      "path": "provenance/reviews/003_fixed_state_family_n15_addendum_v1.json",
+      "bytes": 6574,
+      "sha256": "0acb8f702db2748eb629a021da98ee72a67e84eb1e702a3d5d44c81cf5de78b2"
+    },
+    {
+      "path": "figures/stage003/figure003A_composition_vs_state.pdf",
+      "bytes": 25936,
+      "sha256": "a67410e7138d86fec7a6907393d2f2efb055704588006d05fc9de5df6843229f"
+    },
+    {
+      "path": "figures/stage003/figure003A_composition_vs_state.png",
+      "bytes": 96888,
+      "sha256": "9c0b1e6f9cbce8c2e2c9dc028e0b1174c436b039bb5b1e55dcfdb20e2c5714c5"
+    },
+    {
+      "path": "figures/stage003/figure003B_kitagawa_decomposition.pdf",
+      "bytes": 26894,
+      "sha256": "7390c93d676a4afbdbb2467de92cec93cea83fd71a0209b9bcbb95b30e6d097d"
+    },
+    {
+      "path": "figures/stage003/figure003B_kitagawa_decomposition.png",
+      "bytes": 108766,
+      "sha256": "36f4940370298b8ec5479537bb854208c47e59aa3d8ba4c70948cb2167a0d161"
+    },
+    {
+      "path": "figures/stage003/figure003C_sensitivity_forest.pdf",
+      "bytes": 32667,
+      "sha256": "7bf557b755c9bf2585cacbecc805e51fc5471ad8f2a2a41a4614b758f4fd47aa"
+    },
+    {
+      "path": "figures/stage003/figure003C_sensitivity_forest.png",
+      "bytes": 129773,
+      "sha256": "f7c22501cb3c15d7ef0cd12b2e05c28014832e7fd6b7faf18d5718cb8c524ef5"
+    }
+  ]
+}

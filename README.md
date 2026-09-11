@@ -1,10 +1,8 @@
-# Current status: review corrections and001C complete
+# Current status: Stage003 complete and independently reviewed
 
-Candidate and independent-test rules: signature_lock.json.
-Current report: reports/Review_response_and_001C_report_20260910.md.
-State ledger: provenance/manifests/stage_001C_completion.json.
-The earlier report is retained for history; use the revised report for interpretation.
-Independent validation has not been analyzed.
+Current report: reports/Stage003_cell_context_results_20260910.md.
+State ledger: provenance/manifests/stage_003_completion.json.
+GSE23597 primary clinical-response validation did not meet its frozen support rule. GSE73661 supplies supportive endoscopic association with construct-overlap limits. GSE282122 supports a within-state epithelial component in a distinct adalimumab clinical-remission context and cannot replace the failed primary validation.
 
 # UC treatment-associated recovery study
 

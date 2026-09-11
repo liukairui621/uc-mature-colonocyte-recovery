@@ -1,21 +1,21 @@
 {
   "created_utc": "2026-09-10T08:23:12.775089+00:00",
-  "current_phase": "002B COMPLETE AND REVIEWED: precision audit, GSE73661 supportive endoscopic analysis, GSE282122 metadata/feature asset audit",
+  "current_phase": "003 COMPLETE AND REVIEWED: GSE282122 patient-level composition versus within-state analysis",
   "discovery_cohort": "GSE92415",
   "candidate_frozen": true,
   "independent_validation_started": true,
-  "next_phase": "003 GSE282122 cell-source, composition and within-state exploration; expression X not yet accessed",
+  "next_phase": "004 manuscript evidence architecture, claim table and target-journal fit; no candidate retuning from validation results",
   "analysis_input_files": [
     "/root/projects/UC_Treatment_Recovery/inputs/discovery/GSE92415_series_matrix.relay.txt.gz",
     "/root/projects/UC_Treatment_Recovery/inputs/validation/GSE23597_series_matrix.txt.gz",
     "/root/projects/UC_Treatment_Recovery/inputs/support/GSE73661_series_matrix.txt.gz"
   ],
   "review_pending": false,
-  "updated_utc": "2026-09-10T17:31:24.061730+00:00",
-  "stage_report": "/root/projects/UC_Treatment_Recovery/reports/Precision_review_and_002B_support_20260910.md",
-  "independent_review": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_report_independent_v1.json",
+  "updated_utc": "2026-09-11T00:20:05.942031+00:00",
+  "stage_report": "/root/projects/UC_Treatment_Recovery/reports/Stage003_cell_context_results_20260910.md",
+  "independent_review": "/root/projects/UC_Treatment_Recovery/provenance/reviews/003_cell_context_independent_v1.json",
   "signature_lock": "/root/projects/UC_Treatment_Recovery/signature_lock.json",
-  "completion_ledger": "/root/projects/UC_Treatment_Recovery/provenance/manifests/stage_002B_completion.json",
+  "completion_ledger": "/root/projects/UC_Treatment_Recovery/provenance/manifests/stage_003_completion.json",
   "signature_lock_version": "1.1",
   "independent_validation_completed": true,
   "primary_validation_evaluable": true,
@@ -27,6 +27,11 @@
   "GSE73661_evidence_role": "descriptive_supportive_only; cannot replace GSE23597",
   "GSE73661_endoscopic_positive_association": true,
   "GSE282122_metadata_and_features_accessed": true,
-  "GSE282122_expression_X_accessed": false,
-  "GSE282122_cell_analyses_completed": false
+  "GSE282122_expression_X_accessed": true,
+  "GSE282122_cell_analyses_completed": true,
+  "GSE282122_analysis_role": "exploratory cell-context discrimination; cannot replace GSE23597",
+  "GSE282122_composition_axis_supported": false,
+  "GSE282122_within_CT_state_axis_supported": true,
+  "GSE282122_joint_site_pairs": 33,
+  "GSE282122_main_state_patients": 16
 }
