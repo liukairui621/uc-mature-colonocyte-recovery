@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this analysis, please cite the associated manuscript."
+title: "UC mature colonocyte recovery"
+type: software
+authors:
+  - family-names: Liu
+    given-names: Kairui
+  - family-names: Chen
+    given-names: Rong
+  - family-names: Huang
+    given-names: Yipei
+  - family-names: Huang
+    given-names: Youxing
+repository-code: "https://github.com/liukairui621/uc-mature-colonocyte-recovery"
+license: MIT
+version: 1.0.0
+date-released: 2026-09-11

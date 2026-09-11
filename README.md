@@ -1,41 +1,62 @@
-# Current status: Stage003E ambient diagnostics complete
+# UC mature colonocyte recovery
 
-Current report: reports/Stage003E_ambient_negative_control_review_20260910.md.
-State ledger: provenance/manifests/stage_003E_completion.json.
-GSE23597 primary clinical-response validation did not meet its frozen support rule. GSE73661 supplies a supportive endoscopic association with construct-overlap limits. In GSE282122, the common-patient decomposition and raw-count state analysis support a composition-beyond CT within-state component in a distinct adalimumab clinical-remission context. A post-result DecontX sensitivity using released state labels does not overturn the CT association (BH over the prespecified 15-state family, 10 evaluable = 0.0169), while TA and LGR5-positive stem do not retain fixed-family support (both BH = 0.1399). Because this model treats cluster-typical and cluster-atypical signals asymmetrically, the result is method-qualified. Fixed PTPRC and COL1A1 controls are not concordant with Candidate6 but do not exclude gene-specific ambient or background-composition effects. The broad cross-lineage claim is withdrawn, and no GSE282122 result can replace the failed primary validation.
+Reproducible analysis for **Longitudinal bulk and single-cell transcriptomic reanalysis links a mature absorptive colonocyte program to mucosal healing in ulcerative colitis**.
 
-# UC treatment-associated recovery study
+## Study question
 
-Stable project root: /root/projects/UC_Treatment_Recovery
+The project asks whether a six-gene mature absorptive colonocyte score observed in longitudinal UC biopsies reflects a change in captured colonocyte abundance, a change in expression within a defined colonocyte state, or both. The score contains **AQP8, HMGCS2, GUCA2A, CA2, SLC26A3, and MS4A12**.
 
-The agreed design is archived in planning/Study_Design_v1.md. Execution results are stored on this server. Discovery uses GSE92415 only. Held-out GSE23597 and GSE73661 expression and GSE282122 single-cell counts have now been analyzed only in their frozen validation, supportive, and cell-context roles; none was used to retune the candidate.
+## Evidence architecture
 
-## Completed first-stage execution
+| Dataset | Role | Main result |
+|---|---|---|
+| GSE92415 | Exploratory discovery | Clinical-response association in the conditional discovery model |
+| GSE23597 | Locked primary validation | Did not meet the prespecified support criterion |
+| GSE73661 IFX | Supportive endoscopic analysis | Positive association with endoscopic healing |
+| GSE73661 VDZ | Cross-drug extension | Positive, imprecise estimates at weeks 6 and 12 |
+| GSE282122 | Patient-level single-cell decomposition | Remission association within CT colonocytes without a matching increase in CT epithelial fraction |
 
-1. python3 code/metadata_001A.py
-2. OPENBLAS_NUM_THREADS=4 OMP_NUM_THREADS=4 Rscript code/qc_001A.R
-3. OPENBLAS_NUM_THREADS=4 OMP_NUM_THREADS=4 Rscript code/discovery_001B.R
-4. OPENBLAS_NUM_THREADS=4 OMP_NUM_THREADS=4 Rscript code/pathways_001B.R
-5. python3 code/clarify_go_membership.py
-6. Rscript code/plot_program_overview_001B.R
-7. python3 code/build_stage1_report.py <review-status-text>
+The positive supportive analyses do not replace the negative primary validation. Cross-platform effects and P values are not pooled.
 
-Use the input paths and hashes in provenance/manifests. The complete discovery matrix is GSE92415_series_matrix.relay.txt.gz; the other partial transfer is not an analysis input. Source normalization is RMA and is retained. The bootstrap download script is a retrieval utility, not the analysis pipeline.
+## Data
 
-Do not blindly overwrite this run for a new scientific decision. Create a new run/branch with the same frozen inputs and declared changes. These first-stage results are exploratory; no publication signature has been frozen.
+All inputs are public and de-identified.
 
-## Next bounded stage
+- [GSE92415](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE92415)
+- [GSE23597](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE23597)
+- [GSE73661](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE73661)
+- [GSE282122](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE282122)
+- [Zenodo record 14007626](https://zenodo.org/records/14007626)
 
-- Derive patient-level scores and assess relationships with changes in inflammatory burden and clinical response in the discovery set.
-- Refine broad epithelial annotations with UC-specific cell-state information; distinguish epithelial cell abundance, differentiated functions, and stress/regeneration.
-- Compare concrete candidates with existing inflammation, MARS and IBrD concepts before novelty claims.
-- Keep baseline prediction, post-treatment association, and endoscopic outcomes separate.
-- Freeze candidates and scoring rules before evaluating independent treatment cohorts.
+Raw and large processed matrices are not duplicated in this repository. Download manifests and provenance records identify the source files and checksums used.
 
-The three immediate follow-up needs are the public subject-count inconsistency, source-level exposure reconstruction for validation metadata, and cell-state-specific rather than generic pathway interpretation.
+## Repository map
 
-## Reproducibility and status
+- `code/`: analysis scripts for metadata, bulk cohorts, single-cell pseudobulk, DecontX and evidence ledgers
+- `config/`: fixed analysis configurations
+- `planning/`: timestamped internal specifications and amendments
+- `provenance/`: source and execution records
+- `results/publication_tables/`: compact, machine-readable result tables used in the manuscript
+- `figures/publication/`: manuscript and supplementary figures
+- `reports/`: complete analysis reports, including negative and sensitivity results
+- `renv.lock`: R dependency lock
+- `signature_lock.json`: frozen primary validation specification
 
-provenance/environments contains runtime/package versions; provenance/manifests contains hashes and commands; provenance/reviews contains independent checks. logs retains original transfer/performance restart records. tests/model_smoke_001B.json records checks before full paired statistics.
+## Reproduction
 
-reports/Stage1_report_20260910.md is the stage report, with direct references to source exports. Core arrays, gene mapping, all contrast tables, and all pathway results are retained, including negative results and sensitivity branches.
+1. Clone the repository and restore the R environment with `renv::restore()`.
+2. Download public source files listed in the provenance manifests into a local `inputs/` directory.
+3. Run numbered scripts in `code/` in stage order. Each script writes to a stage-specific directory under `runs/`.
+4. Compare generated compact tables with `results/publication_tables/`.
+
+The executed snapshot retains the original absolute Linux analysis root so that hashes and provenance remain interpretable. To work elsewhere without editing the audit snapshot, run `python tools/make_portable_copy.py /path/to/new/working-copy` and use the new copy. Rewritten paths intentionally invalidate frozen file hashes in that portable copy.
+
+Large `inputs/` and `runs/` directories are intentionally ignored. Some single-cell steps require substantial memory and disk space; the exact processed input is recorded in the stage-003 provenance.
+
+## Reproducibility boundaries
+
+The candidate was assembled after inspection of the discovery dataset. The GSE23597 primary model was fixed internally before validation expression access; this was not a public preregistration. The VDZ matrix and sample-level scores had already been accessed before its outcome-analysis rules were fixed. These timing distinctions are preserved in the repository.
+
+## License
+
+Code is released under the MIT License. Dataset rights remain with the original data producers and repositories.

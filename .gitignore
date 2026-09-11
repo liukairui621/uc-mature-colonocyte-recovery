@@ -8,3 +8,6 @@ renv/cache/
 *.RData
 *.gz
 __pycache__/
+
+submission_bmc_genomics/
+submission_work/
