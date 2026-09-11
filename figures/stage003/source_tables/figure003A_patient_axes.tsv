@@ -1,0 +1,36 @@
+patient	group	panel	value
+UC1	No clinical remission	A  CT proportion within epithelium	0.210906722857813
+UC10	Clinical remission	A  CT proportion within epithelium	-0.230240887559086
+UC11	Clinical remission	A  CT proportion within epithelium	0.681288638257294
+UC12	Clinical remission	A  CT proportion within epithelium	-0.164786816519879
+UC13	Clinical remission	A  CT proportion within epithelium	-0.248343801487029
+UC14	No clinical remission	A  CT proportion within epithelium	-0.351112523016767
+UC15	No clinical remission	A  CT proportion within epithelium	0.623501988381158
+UC16	No clinical remission	A  CT proportion within epithelium	0.415183719746402
+UC17	Clinical remission	A  CT proportion within epithelium	-1.05931848420772
+UC18	No clinical remission	A  CT proportion within epithelium	-0.797287439812542
+UC2	No clinical remission	A  CT proportion within epithelium	-0.662229657569368
+UC22	No clinical remission	A  CT proportion within epithelium	0.208337195910438
+UC3	No clinical remission	A  CT proportion within epithelium	-0.496834803841983
+UC4	No clinical remission	A  CT proportion within epithelium	0.854509329315484
+UC5	Clinical remission	A  CT proportion within epithelium	0.188558775437734
+UC6	No clinical remission	A  CT proportion within epithelium	0.615957589765404
+UC7	No clinical remission	A  CT proportion within epithelium	0.120758597974374
+UC8	No clinical remission	A  CT proportion within epithelium	0.274989900828783
+UC9	No clinical remission	A  CT proportion within epithelium	-0.374136005926186
+UC1	No clinical remission	B  Six-gene score within CT state	0.0145901478465742
+UC10	Clinical remission	B  Six-gene score within CT state	0.599903191945793
+UC11	Clinical remission	B  Six-gene score within CT state	1.88657080563061
+UC12	Clinical remission	B  Six-gene score within CT state	1.19980961501736
+UC13	Clinical remission	B  Six-gene score within CT state	0.794556551087827
+UC14	No clinical remission	B  Six-gene score within CT state	-1.98740551809641
+UC16	No clinical remission	B  Six-gene score within CT state	0.0128403851589578
+UC17	Clinical remission	B  Six-gene score within CT state	2.71205809667337
+UC2	No clinical remission	B  Six-gene score within CT state	0.358197830001649
+UC22	No clinical remission	B  Six-gene score within CT state	0.0413459376281748
+UC3	No clinical remission	B  Six-gene score within CT state	-1.31389133025378
+UC5	Clinical remission	B  Six-gene score within CT state	3.41661951946839
+UC6	No clinical remission	B  Six-gene score within CT state	0.515606210588525
+UC7	No clinical remission	B  Six-gene score within CT state	-2.52361710401707
+UC8	No clinical remission	B  Six-gene score within CT state	-2.49265774175615
+UC9	No clinical remission	B  Six-gene score within CT state	-0.505351342894272

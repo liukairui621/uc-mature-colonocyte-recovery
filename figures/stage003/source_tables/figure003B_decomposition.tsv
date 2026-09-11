@@ -1,0 +1,49 @@
+patient	group	panel	value
+UC1	No clinical remission	A  Composition contribution	0.200924760795137
+UC10	Clinical remission	A  Composition contribution	-0.138165984868674
+UC11	Clinical remission	A  Composition contribution	0.0918325526859896
+UC12	Clinical remission	A  Composition contribution	-0.108096903490561
+UC13	Clinical remission	A  Composition contribution	-0.212708281718839
+UC14	No clinical remission	A  Composition contribution	-0.15812105225723
+UC16	No clinical remission	A  Composition contribution	0.251926788513183
+UC17	Clinical remission	A  Composition contribution	-0.43570175185304
+UC2	No clinical remission	A  Composition contribution	-0.155976748092445
+UC22	No clinical remission	A  Composition contribution	0.3724912655532
+UC3	No clinical remission	A  Composition contribution	0.492411956143478
+UC5	Clinical remission	A  Composition contribution	0.156787532729502
+UC6	No clinical remission	A  Composition contribution	0.353811289795477
+UC7	No clinical remission	A  Composition contribution	0.130394004798706
+UC8	No clinical remission	A  Composition contribution	-0.260115498286729
+UC9	No clinical remission	A  Composition contribution	-0.890112863417281
+UC1	No clinical remission	B  Within-group contribution	0.11979206748801
+UC10	Clinical remission	B  Within-group contribution	-0.393385959603246
+UC11	Clinical remission	B  Within-group contribution	0.448538453347278
+UC12	Clinical remission	B  Within-group contribution	1.32486216490662
+UC13	Clinical remission	B  Within-group contribution	0.421418163485702
+UC14	No clinical remission	B  Within-group contribution	-1.7704470249365
+UC16	No clinical remission	B  Within-group contribution	-0.176980952607296
+UC17	Clinical remission	B  Within-group contribution	0.989833048567498
+UC2	No clinical remission	B  Within-group contribution	-0.351795785956145
+UC22	No clinical remission	B  Within-group contribution	-0.263042869894144
+UC3	No clinical remission	B  Within-group contribution	-1.64565465770072
+UC5	Clinical remission	B  Within-group contribution	1.3518707152718
+UC6	No clinical remission	B  Within-group contribution	1.48580129086855
+UC7	No clinical remission	B  Within-group contribution	-2.35632775530349
+UC8	No clinical remission	B  Within-group contribution	-1.7883241879364
+UC9	No clinical remission	B  Within-group contribution	-1.17927641632489
+UC1	No clinical remission	C  Total epithelial change	0.320716828283147
+UC10	Clinical remission	C  Total epithelial change	-0.53155194447192
+UC11	Clinical remission	C  Total epithelial change	0.540371006033268
+UC12	Clinical remission	C  Total epithelial change	1.21676526141606
+UC13	Clinical remission	C  Total epithelial change	0.208709881766863
+UC14	No clinical remission	C  Total epithelial change	-1.92856807719373
+UC16	No clinical remission	C  Total epithelial change	0.0749458359058868
+UC17	Clinical remission	C  Total epithelial change	0.554131296714458
+UC2	No clinical remission	C  Total epithelial change	-0.50777253404859
+UC22	No clinical remission	C  Total epithelial change	0.109448395659056
+UC3	No clinical remission	C  Total epithelial change	-1.15324270155724
+UC5	Clinical remission	C  Total epithelial change	1.50865824800131
+UC6	No clinical remission	C  Total epithelial change	1.83961258066402
+UC7	No clinical remission	C  Total epithelial change	-2.22593375050478
+UC8	No clinical remission	C  Total epithelial change	-2.04843968622313
+UC9	No clinical remission	C  Total epithelial change	-2.06938927974217

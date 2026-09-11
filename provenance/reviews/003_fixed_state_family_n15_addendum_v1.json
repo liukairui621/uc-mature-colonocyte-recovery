@@ -1,0 +1,175 @@
+{
+  "status": "REVIEWED",
+  "review_id": "003_fixed_state_family_n15_addendum_v1",
+  "created_utc": "2026-09-11T00:16:25.113418+00:00",
+  "parent_review": {
+    "path": "provenance/reviews/003_cell_context_independent_v1.json",
+    "bytes": 38645,
+    "sha256": "f3cc99852486a7de055db5cd3ff59bff16434aa04073aa00c4f9093a76b35407"
+  },
+  "decision": "ADOPT_EXPLICIT_FIXED15_BH_COLUMN",
+  "blocking_issues": [],
+  "scope": "Arithmetic and provenance audit of the newly clarified descriptive epithelial-state multiplicity family; no change to previously reviewed primary/secondary coefficients or P values.",
+  "method": "Independent Python sorted-rank BH with n=10 and n=15, reverse cumulative minima and cap1, applied to the10 finite exact permutation P values. Five non-evaluable states retained as NA and still count toward the fixed15 family.",
+  "checks": {
+    "BH_evaluable_states_n10": {
+      "family_n": 10,
+      "finite_test_count": 10,
+      "max_abs_difference": 9.992007221626409e-16
+    },
+    "BH_fixed_state_family_n15": {
+      "family_n": 15,
+      "finite_test_count": 10,
+      "max_abs_difference": 9.992007221626409e-16
+    }
+  },
+  "results": [
+    {
+      "branch": "Non ileal BEST4 OTOP2",
+      "n": 9,
+      "p_exact_permutation": 0.880952380952381,
+      "BH_evaluable_states_n10": 0.928571428571429,
+      "BH_fixed_state_family_n15": 1.0
+    },
+    {
+      "branch": "Non ileal CT colonocyte",
+      "n": 16,
+      "p_exact_permutation": 0.0004995004995005,
+      "BH_evaluable_states_n10": 0.004995004995005,
+      "BH_fixed_state_family_n15": 0.0074925074925074
+    },
+    {
+      "branch": "Non ileal EEC DDCpos CHGApos",
+      "n": 2,
+      "p_exact_permutation": null,
+      "BH_evaluable_states_n10": null,
+      "BH_fixed_state_family_n15": null
+    },
+    {
+      "branch": "Non ileal EEC GCGpos PYYpos",
+      "n": 2,
+      "p_exact_permutation": null,
+      "BH_evaluable_states_n10": null,
+      "BH_fixed_state_family_n15": null
+    },
+    {
+      "branch": "Non ileal EEC NEUROG3pos",
+      "n": 0,
+      "p_exact_permutation": null,
+      "BH_evaluable_states_n10": null,
+      "BH_fixed_state_family_n15": null
+    },
+    {
+      "branch": "Non ileal enterocyte DUOXA2pos",
+      "n": 13,
+      "p_exact_permutation": 0.0856643356643357,
+      "BH_evaluable_states_n10": 0.160602702619509,
+      "BH_fixed_state_family_n15": 0.240904053929264
+    },
+    {
+      "branch": "Non ileal enterocyte DUOXA2pos CXCL11pos",
+      "n": 10,
+      "p_exact_permutation": 0.928571428571429,
+      "BH_evaluable_states_n10": 0.928571428571429,
+      "BH_fixed_state_family_n15": 1.0
+    },
+    {
+      "branch": "Non ileal enterocyte PLCG2hi",
+      "n": 15,
+      "p_exact_permutation": 0.105228105228105,
+      "BH_evaluable_states_n10": 0.160602702619509,
+      "BH_fixed_state_family_n15": 0.240904053929264
+    },
+    {
+      "branch": "Non ileal goblet",
+      "n": 15,
+      "p_exact_permutation": 0.0397602397602398,
+      "BH_evaluable_states_n10": 0.0994005994005994,
+      "BH_fixed_state_family_n15": 0.149100899100899
+    },
+    {
+      "branch": "Non ileal LGR5pos stem",
+      "n": 16,
+      "p_exact_permutation": 0.0059940059940059,
+      "BH_evaluable_states_n10": 0.01998001998002,
+      "BH_fixed_state_family_n15": 0.02997002997003
+    },
+    {
+      "branch": "Non ileal M like",
+      "n": 2,
+      "p_exact_permutation": null,
+      "BH_evaluable_states_n10": null,
+      "BH_fixed_state_family_n15": null
+    },
+    {
+      "branch": "Non ileal paneth",
+      "n": 0,
+      "p_exact_permutation": null,
+      "BH_evaluable_states_n10": null,
+      "BH_fixed_state_family_n15": null
+    },
+    {
+      "branch": "Non ileal TA",
+      "n": 17,
+      "p_exact_permutation": 0.0057369101486748,
+      "BH_evaluable_states_n10": 0.01998001998002,
+      "BH_fixed_state_family_n15": 0.02997002997003
+    },
+    {
+      "branch": "Non ileal tuft",
+      "n": 6,
+      "p_exact_permutation": 0.466666666666667,
+      "BH_evaluable_states_n10": 0.583333333333333,
+      "BH_fixed_state_family_n15": 0.875
+    },
+    {
+      "branch": "Non ileal undiff enterocyte",
+      "n": 18,
+      "p_exact_permutation": 0.112421891833657,
+      "BH_evaluable_states_n10": 0.160602702619509,
+      "BH_fixed_state_family_n15": 0.240904053929264
+    }
+  ],
+  "core_result_invariance": {
+    "runs/003_cell_context/patient_group_models.tsv": {
+      "sha256": "8be9784a798542d94d0f184d36296a39879f9623f72ab83c5394e51a1ad6adf6",
+      "identical_to_REVIEWED": true
+    },
+    "runs/003_cell_context/joint_primary_patient_models.tsv": {
+      "sha256": "069d37a2f55248d59129363e64dab500e13461cc1ea8abb3a66eb0a991063490",
+      "identical_to_REVIEWED": true
+    },
+    "runs/003_cell_context/patient_metrics.tsv": {
+      "sha256": "efca7199293fc695c1eedf14b0f8b8271902164683dd431c478ff0d147955380",
+      "identical_to_REVIEWED": true
+    },
+    "runs/003_cell_context/site_pair_metrics.tsv": {
+      "sha256": "2786c45318cbff971db60be092b4ab5efa3013ddbd6c93d4543fd31a2ad2f564",
+      "identical_to_REVIEWED": true
+    }
+  },
+  "provenance_interpretation": "003-10 records the post-result family-size clarification and prior script hash; its automated edit did not apply. 003-11 explicitly records successful implementation and current SHA. The two records together provide the decision and implementation trail; neither is a new scientific result or new primary test.",
+  "interpretation": "Adopt BH_fixed_state_family_n15 as the fixed15-state correction. BH_evaluable_states_n10 remains explicitly descriptive. CT=0.00749250749 and TA/LGR5pos stem=0.02997002997. These are exploratory local-family results; no uniqueness, superiority, or confirmatory-validation claim follows. This addendum supersedes only the conditional secondary-table note in the prior review; that REVIEWED file remains byte-identical.",
+  "files": [
+    {
+      "path": "runs/003_cell_context/fixed_epithelial_state_models.tsv",
+      "bytes": 3631,
+      "sha256": "b9d852ad732c999b49aa32774297b958cd1ed2dc91b6df53c303f7405bbfc727"
+    },
+    {
+      "path": "planning/analysis_plan_003_amendment_10.json",
+      "bytes": 879,
+      "sha256": "1bf7182866a11e546bf5c45570b41cbfbdd36d102599566558216876d489d91f"
+    },
+    {
+      "path": "planning/analysis_plan_003_amendment_11.json",
+      "bytes": 633,
+      "sha256": "224c8aa914d0bffcf33a68513901155b27af0c6d4160192501e9dc530ded79fc"
+    },
+    {
+      "path": "code/analyze_003_cell_context.R",
+      "bytes": 13918,
+      "sha256": "b1fdf4f4f6a21fcc3a84bcf2da124f28f94b631706d0f1b99311c191c09f3ea3"
+    }
+  ]
+}

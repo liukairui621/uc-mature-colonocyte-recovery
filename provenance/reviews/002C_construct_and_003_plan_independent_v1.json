@@ -1,0 +1,247 @@
+{
+  "review_id": "002C_construct_and_003_plan_independent_v1",
+  "created_utc": "2026-09-10T22:35:40.536041+00:00",
+  "status": "REVIEWED",
+  "reviewer_role": "Independent numerical construct-diagnostic review plus bounded static003 plan review",
+  "decision": "002C numerical outputs are reproducible and may be adopted as post-result descriptive construct-overlap diagnostics. The003 fixed patient-level two-axis computation is methodologically reasonable; interpretation of resulting patterns must follow the clarifications below, communicated to root before this review. The reviewer did not amend the frozen plan.",
+  "blocking_numeric_findings": [],
+  "blocking_findings_for_running_fixed_computations": [],
+  "inputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_GSE73661_support/support_patient_data.tsv",
+      "bytes": 4785,
+      "sha256": "c8845c169efb21d17c5beaa8ed81691cab4275423d726f4bdd65bf6e8dfafe87"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_GSE73661_support/patient_diagnostics.tsv",
+      "bytes": 1919,
+      "sha256": "78ba85c5ce4a478a3c37bc43a8c3a59742cf6b03966f85750d9d1d24b2a28ec4"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_GSE73661_support/leave_one_patient_out.tsv",
+      "bytes": 1067,
+      "sha256": "96c1e7c519e56b0663db289dc8f5db270c4584b33a702aa34eacee38d945519f"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002C_construct_overlap/group_delta_ranges.tsv",
+      "bytes": 140,
+      "sha256": "36529202bfbf0a71e6b88c0a393c52618db0a03ca2b601066866740907ea7c1f"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002C_construct_overlap/construct_overlap_statistics.tsv",
+      "bytes": 982,
+      "sha256": "e4e0032f913027e01efa37f78bf090735ee2ef75a8d7b2727efa8eae9627ecdb"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002C_construct_overlap/construct_overlap_summary.json",
+      "bytes": 1469,
+      "sha256": "d6caad047da5b131958e5a1e47802bca24e5f6a961ad16bfa44a63704f31e32b"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002C_construct_overlap/patient_level_source.tsv",
+      "bytes": 7836,
+      "sha256": "6dcad4957e076ad11246687a6c1f5827de5609ebbcf4c2f282cb45513f7d9bc0"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/planning/analysis_plan_003.frozen.json",
+      "bytes": 10344,
+      "sha256": "1293d394184a40819059d0df04f6e070910d8d2e8d35405752c096d43508d340"
+    }
+  ],
+  "reviewer_artifacts": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002C_construct_recompute_v1.py",
+      "bytes": 8419,
+      "sha256": "535b51e1b7c6ed924fd7d676b94a147a0379bf93e3cb545400bf09ccd5bc37b6"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002C_construct_recompute_v1.log",
+      "bytes": 3439,
+      "sha256": "ecec293cf861e0b2d4fdf4deba4780c6070afc00af07cebcef95eb1dfe59fd63"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002C_construct_numeric_independent_v1.json",
+      "bytes": 3439,
+      "sha256": "ecec293cf861e0b2d4fdf4deba4780c6070afc00af07cebcef95eb1dfe59fd63"
+    }
+  ],
+  "numerical_review": {
+    "inferential_unit": "23 distinct patients, 8 endoscopic healing and15 nonhealing; no cell/sample duplication.",
+    "statistics": [
+      {
+        "analysis": "AUC_healing_from_delta_candidate",
+        "estimate": 0.925,
+        "p": null
+      },
+      {
+        "analysis": "Mann_Whitney_delta_by_healing",
+        "estimate": 111,
+        "p": 0.00039158580011992313
+      },
+      {
+        "analysis": "Spearman_delta_candidate_vs_delta_endoscopic",
+        "estimate": -0.5929344670601833,
+        "p": 0.00286565106683668
+      },
+      {
+        "analysis": "Spearman_post_candidate_vs_post_endoscopic",
+        "estimate": -0.5716567994816119,
+        "p": 0.004376108826418869
+      },
+      {
+        "analysis": "Spearman_baseline_candidate_vs_baseline_endoscopic",
+        "estimate": -0.17292861596651865,
+        "p": 0.4300773030743521
+      },
+      {
+        "analysis": "Pearson_post_candidate_vs_post_endoscopic",
+        "estimate": -0.5886063504664087,
+        "p": 0.0031306345321390084
+      },
+      {
+        "analysis": "Pearson_baseline_candidate_vs_baseline_endoscopic",
+        "estimate": -0.03575578194057952,
+        "p": 0.8713316610949525
+      }
+    ],
+    "AUC_derivation": {
+      "pairwise_wins": 111,
+      "comparisons": 120,
+      "AUC": 0.925
+    },
+    "Mann_Whitney": {
+      "U_or_R_adjusted_W": 111,
+      "unadjusted_rank_sum": 147,
+      "score_ties": false,
+      "exact_assignments": 490314,
+      "upper_tail_assignments": 96,
+      "two_sided_probability": "2*96/490314 = 0.000391585800119923",
+      "method": "Independent dynamic programming of rank-subset counts, cross-checked with SciPy exact Mann-Whitney; no normal approximation."
+    },
+    "Spearman_method": "Pearson correlation of average ranks, asymptotic t reference with n-2 df because ordinal endpoint ties; not exact Spearman P",
+    "delta_endoscopic_sign": "followup minus baseline; negative values are endoscopic improvement",
+    "baseline_Mayo_distribution": {
+      "3": 19,
+      "2": 4
+    },
+    "baseline_Mayo_by_healing": {
+      "Yes": {
+        "3": 6,
+        "2": 2
+      },
+      "No": {
+        "3": 13,
+        "2": 2
+      }
+    },
+    "group_ranges": [
+      {
+        "group": "healing_yes",
+        "n": 8,
+        "delta_min": 1.18052212133333,
+        "delta_max": 1.813690465,
+        "n_above_healing_min": 8
+      },
+      {
+        "group": "healing_no",
+        "n": 15,
+        "delta_min": -1.9289529665,
+        "delta_max": 2.88315443283333,
+        "n_above_healing_min": 2
+      }
+    ],
+    "nonhealing_at_or_above_healing_min": [
+      "43",
+      "45"
+    ],
+    "patient43": {
+      "healing": "No",
+      "endoscopic_baseline": 3,
+      "endoscopic_followup": 3,
+      "delta_candidate": 2.88315443283333,
+      "CookD": 0.38445049644678925,
+      "leverage": 0.2464082621962936,
+      "all_patient_adjusted_beta": 1.1946910437560712,
+      "beta_without_patient43": 1.3459338796592166,
+      "p_without_patient43": 0.00029623900138491796,
+      "coefficient_change_on_omission": 0.15124283590314547,
+      "direction": "Omitting patient43 increases the positive coefficient; patient43 does not create or solely drive the positive association."
+    },
+    "source_and_output_checks": {
+      "statistics7_rows_max_diff": 4.440892098500626e-16,
+      "patient_diagnostics23_rows_max_diff": 3.83026943495679e-14,
+      "LOPO23_rows_max_diff": 1.0658141036401503e-14,
+      "merged_source23_rows_max_diff": 4.085620730620576e-14
+    },
+    "diagnostic_model_reconstruction": "SVD reconstruction from the permitted patient table with healing, baseline candidate and inflammation change, including analytic leverage/CookD and all23 leave-one-patient-out fits."
+  },
+  "002C_interpretation_limits": [
+    "AUC=.925 describes empirical contemporaneous group separation using a post-minus-baseline molecular score; it is not a baseline prediction validation, and no ROC threshold was selected in this review.",
+    "The reported correlations and exact rank test are post-result descriptive diagnostics. Their nominal P values are not a newly prespecified confirmatory family and do not change GSE23597 primary support=false.",
+    "Candidate change versus endoscopy change uses post-minus-pre for both variables. Negative rho means higher candidate change accompanies a lower endoscopic score.",
+    "Baseline Mayo has only values2/3 and19of23 are3. The near-zero baseline Pearson correlation is range-restricted and cannot prove an absent biological association; a significant post correlation and nonsignificant baseline correlation do not themselves test a difference between those correlations.",
+    "Patient43 is a nonhealing patient with a large positive candidate change. Its omission increases the adjusted positive coefficient from1.194691 to1.345934, so it cannot be described as creating the positive association. It remains included.",
+    "Strong separation and correlation are consistent with construct overlap but do not establish measurement equivalence, histologic identity, causality, or that a molecular score is redundant with every clinical measurement.",
+    "In patient_level_source.tsv, estimate and p are joined LOPO results for omitting that row patient, not patient-specific effect estimates or P values. The n_above_healing_min field uses an inclusive at-or-above comparison; the two nonhealing IDs43/45 exceed the cutoff under either convention."
+  ],
+  "003_static_plan_review": {
+    "plan_record": {
+      "path": "/root/projects/UC_Treatment_Recovery/planning/analysis_plan_003.frozen.json",
+      "bytes": 10344,
+      "sha256": "1293d394184a40819059d0df04f6e070910d8d2e8d35405752c096d43508d340"
+    },
+    "scope": "Static plan only. No GSE282122 expression X, sample-by-state counts, or cell-level data read in this bounded review. The stated metadata counts/chemistry crosswalk were not independently re-derived here.",
+    "002C_frozen_plan_input_hash_checks": [
+      {
+        "path": "/root/projects/UC_Treatment_Recovery/runs/002C_construct_overlap/construct_overlap_statistics.tsv",
+        "sha256_match": true,
+        "bytes_match": true
+      },
+      {
+        "path": "/root/projects/UC_Treatment_Recovery/runs/002C_construct_overlap/construct_overlap_summary.json",
+        "sha256_match": true,
+        "bytes_match": true
+      }
+    ],
+    "supported_design_elements": [
+      "Patient is explicitly the inferential unit: within-site post-minus-pre quantities followed by equal-site patient means. The41 site pairs are not treated as41 independent patients.",
+      "Missing clinical outcomes are excluded from outcome contrasts and are not relabeled nonremission.",
+      "Captured CT composition and within-released-CT-state pseudobulk expression are specified as parallel axes, with frozen labels and candidate genes rather than outcome-driven reclustering.",
+      "Pseudobulk sums count genes and all-gene libraries by sample/state; no cell-level inferential P values are specified. The20-cell threshold and10/50 sensitivities are fixed before this expression analysis.",
+      "The symmetric two-group decomposition is explicitly descriptive algebra on a separate linear normalized scale, not causal mediation.",
+      "The plan names the adalimumab clinical-remission and follow-up differences, forbids using this cohort to decide why the IFX endoscopic GSE73661 association occurred, and forbids replacement validation.",
+      "The plan explicitly states all remitters are v3.1 and mandates a v3.1-restricted sensitivity. It does not claim chemistry adjustment resolves every batch/time difference. All-remitters-in-v3.1 alone does not prove mathematical complete confounding or prove a chemistry-adjusted model is rank deficient; actual overlap must be reported.",
+      "Two named exploratory main contrasts have a specified BH family; auxiliary cell sets, thresholds and denominators remain sensitivities, not candidates for smallest-P selection."
+    ],
+    "required_interpretation_clarifications": [
+      {
+        "field": "interpretation_rules.composition_only_pattern",
+        "issue": "A positive composition test and an unstable/nonsignificant within-CT test do not establish composition dominance.",
+        "requirement": "A composition-dominant description needs magnitude/uncertainty from the decomposition and comparable evaluable patients/sites; lack of state evidence alone is not evidence of zero state change."
+      },
+      {
+        "field": "interpretation_rules.neither_pattern",
+        "issue": "The phrase does not transfer is too definitive when neither pattern is supported.",
+        "requirement": "Use not supported or inconclusive in this distinct context unless interval-based evidence excludes a prespecified materially relevant transfer. Do not derive absence from nonsignificance."
+      },
+      {
+        "field": "two_component_decomposition",
+        "issue": "The other-epithelial group contains multiple states, so its within-group mean change can include changes of its subtype composition.",
+        "requirement": "Call the components changes between and within the two coarse groups, not proof of cell-intrinsic regulation. Within-CT changes also remain conditional on the released broad state definition."
+      },
+      {
+        "field": "statistics.reporting and chemistry_confounding",
+        "issue": "Enumerating every label assignment is computationally exact but does not make labels exchangeable or remove outcome-chemistry confounding.",
+        "requirement": "State the exchangeability assumption and descriptive status of full-cohort permutations; retain the v3.1 sensitivity and residual batch/time caveat. Do not claim exact permutation makes the association independent of chemistry."
+      },
+      {
+        "field": "composition_axis and comparison across axes",
+        "issue": "A zero epithelial denominator is an absent measurement, and cell-count eligibility may create different analysis sets for the two axes.",
+        "requirement": "Require positive epithelial denominator in both visits; if zero, mark that composition endpoint non-evaluable rather than assigning logit0 from pseudocounts. Report patient/site attrition and common evaluability, and use the same evaluable subset when comparing axes. This is a technical validity guard, not an outcome-based exclusion."
+      }
+    ],
+    "disposition": "Clarifications were sent to root before final review. They can be recorded in an appended interpretation/technical amendment without overwriting the existing frozen plan or changing its scientific contrasts. Unsupported dominance/nontransfer/causal claims are not approved by this review."
+  },
+  "scientific_selection_scope": "No new feature, patient, threshold, state, normalization, model or outcome was selected by the reviewer. No new significance-seeking analysis was performed.",
+  "mutation_scope": "Only dedicated new002C reviewer script, log, numeric output and this review were written. Frozen003 plan and all earlier scientific outputs remain unchanged."
+}

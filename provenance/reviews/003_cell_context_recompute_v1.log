@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/root/projects/UC_Treatment_Recovery/provenance/reviews/003_cell_context_recompute_v1.py", line 108, in <module>
+    checks['correct_common_site_joint_vs_current']=compare(JM,'runs/003_cell_context/joint_primary_patient_models.tsv',['branch','metric'],['n','mean_remission','mean_nonremission','estimate','se','lower','upper','p_OLS','p_HC3','p_exact_permutation'])
+                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/projects/UC_Treatment_Recovery/provenance/reviews/003_cell_context_recompute_v1.py", line 91, in compare
+    ref=pd.read_csv(P/path,sep='\t');u=ind.merge(ref,on=keycols,suffixes=('_ind','_ref'),validate='one_to_one');assert len(u)==len(ref)==len(ind),(path,len(u),len(ref),len(ind))
+                                                                                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ('runs/003_cell_context/joint_primary_patient_models.tsv', 0, 4, 4)

@@ -1,0 +1,347 @@
+{
+  "primary": [
+    {
+      "branch": "exclude_predicted_doublets::all_fixed::threshold20",
+      "metric": "delta_ct_logit_epi",
+      "n": 19,
+      "remission": 6,
+      "nonremission": 13,
+      "mean_remission": -0.13880709601311528,
+      "mean_nonremission": 0.04942650881638537,
+      "estimate": -0.18823360482950063,
+      "se": 0.26898491030602517,
+      "lower": -0.7557421587952498,
+      "upper": 0.37927494913624843,
+      "p_OLS": 0.4935225799597306,
+      "se_HC3": 0.29924007494103166,
+      "lower_HC3": -0.8195749764520981,
+      "upper_HC3": 0.44310776679309677,
+      "p_HC3": 0.5376854534406551,
+      "p_exact_permutation": 0.49026979212737726,
+      "df": 17,
+      "permutation_assignments": 27132,
+      "BH_two_main": 0.49026979212737726
+    },
+    {
+      "branch": "exclude_predicted_doublets::all_fixed::threshold20",
+      "metric": "delta_ct_state_score",
+      "n": 16,
+      "remission": 6,
+      "nonremission": 10,
+      "mean_remission": 1.7682529633038904,
+      "mean_nonremission": -0.7880342525793814,
+      "estimate": 2.556287215883272,
+      "se": 0.6009176020630962,
+      "lower": 1.2674471424428548,
+      "upper": 3.845127289323689,
+      "p_OLS": 0.0008019419302361891,
+      "se_HC3": 0.638053286160417,
+      "lower_HC3": 1.1877990215442003,
+      "upper_HC3": 3.9247754102223436,
+      "p_HC3": 0.0012996756044911313,
+      "p_exact_permutation": 0.0004995004995004995,
+      "df": 14,
+      "permutation_assignments": 8008,
+      "BH_two_main": 0.000999000999000999
+    }
+  ],
+  "joint": [
+    {
+      "branch": "joint_primary_site_then_patient_set",
+      "metric": "delta_ct_logit_epi",
+      "n": 16,
+      "remission": 6,
+      "nonremission": 10,
+      "mean_remission": -0.2326101036465407,
+      "mean_nonremission": -0.029393269307708914,
+      "estimate": -0.20321683433883178,
+      "se": 0.28878527401058773,
+      "lower": -0.8225996457034357,
+      "upper": 0.4161659770257722,
+      "p_OLS": 0.493161058952715,
+      "se_HC3": 0.3313257994721841,
+      "lower_HC3": -0.9138399984104959,
+      "upper_HC3": 0.5074063297328324,
+      "p_HC3": 0.5494843249946816,
+      "p_exact_permutation": 0.4872627372627373,
+      "df": 14,
+      "permutation_assignments": 8008
+    },
+    {
+      "branch": "joint_primary_site_then_patient_set",
+      "metric": "delta_ct_state_score",
+      "n": 16,
+      "remission": 6,
+      "nonremission": 10,
+      "mean_remission": 1.7682529633038904,
+      "mean_nonremission": -0.7880342525793814,
+      "estimate": 2.556287215883272,
+      "se": 0.6009176020630962,
+      "lower": 1.2674471424428548,
+      "upper": 3.845127289323689,
+      "p_OLS": 0.0008019419302361891,
+      "se_HC3": 0.638053286160417,
+      "lower_HC3": 1.1877990215442003,
+      "upper_HC3": 3.9247754102223436,
+      "p_HC3": 0.0012996756044911313,
+      "p_exact_permutation": 0.0004995004995004995,
+      "df": 14,
+      "permutation_assignments": 8008
+    },
+    {
+      "branch": "joint_primary_site_then_patient_set",
+      "metric": "composition_contribution",
+      "n": 16,
+      "remission": 6,
+      "nonremission": 10,
+      "mean_remission": -0.10767547275260365,
+      "mean_nonremission": 0.03376339035454952,
+      "estimate": -0.14143886310715317,
+      "se": 0.1828057314964545,
+      "lower": -0.5335181624958252,
+      "upper": 0.2506404362815188,
+      "p_OLS": 0.45196931226948667,
+      "se_HC3": 0.16733530858862966,
+      "lower_HC3": -0.5003374053866638,
+      "upper_HC3": 0.2174596791723575,
+      "p_HC3": 0.41218859502336325,
+      "p_exact_permutation": 0.46403596403596403,
+      "df": 14,
+      "permutation_assignments": 8008
+    },
+    {
+      "branch": "joint_primary_site_then_patient_set",
+      "metric": "within_state_contribution",
+      "n": 16,
+      "remission": 6,
+      "nonremission": 10,
+      "mean_remission": 0.6905227643292752,
+      "mean_nonremission": -0.7926256292303033,
+      "estimate": 1.4831483935595786,
+      "se": 0.5234064348970758,
+      "lower": 0.3605532396218136,
+      "upper": 2.605743547497344,
+      "p_OLS": 0.013271044505963276,
+      "se_HC3": 0.4892601783689928,
+      "lower_HC3": 0.4337896760654725,
+      "upper_HC3": 2.5325071110536848,
+      "p_HC3": 0.008974772811270194,
+      "p_exact_permutation": 0.01560939060939061,
+      "df": 14,
+      "permutation_assignments": 8008
+    }
+  ],
+  "attrition": [
+    {
+      "threshold": 10,
+      "metric": "delta_ct_logit_epi",
+      "site_pairs": 41,
+      "patients": 19,
+      "remission_patients": 6,
+      "excluded_patients": []
+    },
+    {
+      "threshold": 10,
+      "metric": "delta_ct_state_score",
+      "site_pairs": 38,
+      "patients": 18,
+      "remission_patients": 6,
+      "excluded_patients": [
+        "UC18"
+      ]
+    },
+    {
+      "threshold": 20,
+      "metric": "delta_ct_logit_epi",
+      "site_pairs": 41,
+      "patients": 19,
+      "remission_patients": 6,
+      "excluded_patients": []
+    },
+    {
+      "threshold": 20,
+      "metric": "delta_ct_state_score",
+      "site_pairs": 33,
+      "patients": 16,
+      "remission_patients": 6,
+      "excluded_patients": [
+        "UC15",
+        "UC18",
+        "UC4"
+      ]
+    },
+    {
+      "threshold": 50,
+      "metric": "delta_ct_logit_epi",
+      "site_pairs": 41,
+      "patients": 19,
+      "remission_patients": 6,
+      "excluded_patients": []
+    },
+    {
+      "threshold": 50,
+      "metric": "delta_ct_state_score",
+      "site_pairs": 28,
+      "patients": 13,
+      "remission_patients": 5,
+      "excluded_patients": [
+        "UC15",
+        "UC16",
+        "UC17",
+        "UC18",
+        "UC4",
+        "UC8"
+      ]
+    }
+  ],
+  "checks": {
+    "patient_metrics": {
+      "rows": 306,
+      "max_abs_difference": 5.773159728050814e-15,
+      "by_column": {
+        "delta_ct_logit_epi": 4.6629367034256575e-15,
+        "delta_ct_logit_all": 3.774758283725532e-15,
+        "delta_ct_state_score": 5.773159728050814e-15,
+        "delta_epi_score": 5.773159728050814e-15,
+        "composition_contribution": 6.661338147750939e-16,
+        "within_state_contribution": 4.884981308350689e-15,
+        "total_epi_linear_change": 4.6629367034256575e-15,
+        "decomposition_error": 1.5543122344752188e-15,
+        "n_site_pairs": 0.0,
+        "n_joint_axis_site_pairs": 0.0
+      }
+    },
+    "site_metrics": {
+      "rows": 612,
+      "max_abs_difference": 6.217248937900877e-15,
+      "by_column": {
+        "delta_ct_logit_epi": 4.6629367034256575e-15,
+        "delta_ct_logit_all": 5.10702591327572e-15,
+        "delta_ct_state_score": 6.217248937900877e-15,
+        "delta_epi_score": 5.773159728050814e-15,
+        "composition_contribution": 3.552713678800501e-15,
+        "within_state_contribution": 4.884981308350689e-15,
+        "total_epi_linear_change": 4.884981308350689e-15,
+        "decomposition_error": 1.5543122344752188e-15,
+        "pre_ct_n": 0.0,
+        "post_ct_n": 0.0,
+        "pre_epi_n": 0.0,
+        "post_epi_n": 0.0
+      }
+    },
+    "models": {
+      "rows": 126,
+      "max_abs_difference": 5.773159728050814e-15,
+      "by_column": {
+        "n": 0.0,
+        "remission": 0.0,
+        "nonremission": 0.0,
+        "mean_remission": 3.774758283725532e-15,
+        "mean_nonremission": 5.551115123125783e-16,
+        "estimate": 5.329070518200751e-15,
+        "se": 3.9968028886505635e-15,
+        "lower": 4.884981308350689e-15,
+        "upper": 5.773159728050814e-15,
+        "p_OLS": 6.661338147750939e-16,
+        "se_HC3": 3.552713678800501e-15,
+        "lower_HC3": 1.9984014443252818e-15,
+        "upper_HC3": 5.551115123125783e-15,
+        "p_HC3": 1.2212453270876722e-15,
+        "p_exact_permutation": 4.440892098500626e-16,
+        "BH_two_main": 2.7755575615628914e-16
+      }
+    },
+    "pre_post_chunk_main_models": {
+      "rows": 126,
+      "max_abs_difference": 9.992007221626409e-15,
+      "by_column": {
+        "n": 0.0,
+        "estimate": 9.992007221626409e-15,
+        "lower": 9.992007221626409e-16,
+        "upper": 9.992007221626409e-16,
+        "p_OLS": 9.992007221626409e-16,
+        "p_HC3": 9.992007221626409e-16,
+        "p_exact_permutation": 0.0,
+        "BH_two_main": 0.0
+      }
+    },
+    "correct_common_site_joint_vs_current": {
+      "rows": 4,
+      "max_abs_difference": 4.884981308350689e-15,
+      "by_column": {
+        "n": 0.0,
+        "mean_remission": 4.440892098500626e-16,
+        "mean_nonremission": 4.440892098500626e-16,
+        "estimate": 1.7763568394002505e-15,
+        "se": 4.996003610813204e-16,
+        "lower": 4.884981308350689e-15,
+        "upper": 3.9968028886505635e-15,
+        "p_OLS": 6.661338147750939e-16,
+        "p_HC3": 1.2212453270876722e-15,
+        "p_exact_permutation": 2.7755575615628914e-16
+      }
+    }
+  },
+  "aggregate": {
+    "rows": 14690,
+    "full_key_columns": [
+      "cell_set",
+      "sample_id",
+      "Patient",
+      "Site",
+      "Treatment",
+      "Remission_status",
+      "LibraryType",
+      "Batch",
+      "final_analysis",
+      "major",
+      "minor"
+    ],
+    "full_key_duplicates": 0,
+    "simple_cellset_sample_finalstate_duplicates": 12,
+    "epithelial_simple_key_duplicates": 0,
+    "cells_per_set": {
+      "author_annotated": 378575,
+      "exclude_predicted_doublets": 378575
+    },
+    "cell_sets_identical": true,
+    "old_rows": 16856,
+    "old_full_key_duplicates": 2166,
+    "reconsolidation_differences": {
+      "n_cells": 0.0,
+      "total_UMI": 0.0,
+      "AQP8_counts": 0.0,
+      "HMGCS2_counts": 0.0,
+      "GUCA2A_counts": 0.0,
+      "CA2_counts": 0.0,
+      "SLC26A3_counts": 0.0,
+      "MS4A12_counts": 0.0,
+      "AQP8_norm10k_sum": 2.842170943040401e-14,
+      "HMGCS2_norm10k_sum": 4.547473508864641e-13,
+      "GUCA2A_norm10k_sum": 2.2737367544323206e-13,
+      "CA2_norm10k_sum": 1.8189894035458565e-12,
+      "SLC26A3_norm10k_sum": 9.094947017729282e-13,
+      "MS4A12_norm10k_sum": 2.2737367544323206e-13,
+      "mean_n_genes": 9.094947017729282e-13,
+      "mean_pct_mt": 1.9030761748695113e-06
+    }
+  },
+  "decomp": [
+    {
+      "remission": "Non_Remission",
+      "composition_contribution": 0.033763390354549526,
+      "ct_within_contribution": -0.3656896133779851,
+      "other_within_contribution": -0.4269360158523184,
+      "within_state_contribution": -0.7926256292303033,
+      "total_epi_linear_change": -0.7588622388757538
+    },
+    {
+      "remission": "Remission",
+      "composition_contribution": -0.10767547275260365,
+      "ct_within_contribution": 0.2715956165071032,
+      "other_within_contribution": 0.4189271478221721,
+      "within_state_contribution": 0.6905227643292754,
+      "total_epi_linear_change": 0.5828472915766717
+    }
+  ]
+}

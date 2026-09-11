@@ -1,0 +1,107 @@
+{
+  "status": "RECOMPUTATION_PASSED",
+  "statistics": [
+    {
+      "analysis": "AUC_healing_from_delta_candidate",
+      "estimate": 0.925,
+      "p": null
+    },
+    {
+      "analysis": "Mann_Whitney_delta_by_healing",
+      "estimate": 111,
+      "p": 0.00039158580011992313
+    },
+    {
+      "analysis": "Spearman_delta_candidate_vs_delta_endoscopic",
+      "estimate": -0.5929344670601833,
+      "p": 0.00286565106683668
+    },
+    {
+      "analysis": "Spearman_post_candidate_vs_post_endoscopic",
+      "estimate": -0.5716567994816119,
+      "p": 0.004376108826418869
+    },
+    {
+      "analysis": "Spearman_baseline_candidate_vs_baseline_endoscopic",
+      "estimate": -0.17292861596651865,
+      "p": 0.4300773030743521
+    },
+    {
+      "analysis": "Pearson_post_candidate_vs_post_endoscopic",
+      "estimate": -0.5886063504664087,
+      "p": 0.0031306345321390084
+    },
+    {
+      "analysis": "Pearson_baseline_candidate_vs_baseline_endoscopic",
+      "estimate": -0.03575578194057952,
+      "p": 0.8713316610949525
+    }
+  ],
+  "AUC_pairwise_wins": 111,
+  "AUC_pair_comparisons": 120,
+  "MW_rank_sum": 147,
+  "MW_exact_null_assignments": 490314,
+  "MW_upper_tail_assignments": 96,
+  "MW_no_score_ties": true,
+  "endoscopic_change_definition": "followup minus baseline; negative values are endoscopic improvement",
+  "Spearman_method": "Pearson correlation of average ranks, asymptotic t reference with n-2 df because ordinal endpoint ties; not exact Spearman P",
+  "baseline_Mayo_distribution": {
+    "3": 19,
+    "2": 4
+  },
+  "baseline_Mayo_by_healing": {
+    "Yes": {
+      "3": 6,
+      "2": 2
+    },
+    "No": {
+      "3": 13,
+      "2": 2
+    }
+  },
+  "group_ranges": [
+    {
+      "group": "healing_yes",
+      "n": 8,
+      "delta_min": 1.18052212133333,
+      "delta_max": 1.813690465,
+      "n_above_healing_min": 8
+    },
+    {
+      "group": "healing_no",
+      "n": 15,
+      "delta_min": -1.9289529665,
+      "delta_max": 2.88315443283333,
+      "n_above_healing_min": 2
+    }
+  ],
+  "nonhealing_at_or_above_healing_min": [
+    "43",
+    "45"
+  ],
+  "patient43": {
+    "healing": "No",
+    "endoscopic_baseline": 3,
+    "endoscopic_followup": 3,
+    "delta_candidate": 2.88315443283333,
+    "CookD": 0.38445049644678925,
+    "leverage": 0.2464082621962936,
+    "all_patient_adjusted_beta": 1.1946910437560712,
+    "beta_without_patient43": 1.3459338796592166,
+    "p_without_patient43": 0.00029623900138491796,
+    "coefficient_change_on_omission": 0.15124283590314547,
+    "direction": "Omitting patient43 increases the positive coefficient; patient43 does not create or solely drive the positive association."
+  },
+  "checks": {
+    "statistics7_rows_max_diff": 4.440892098500626e-16,
+    "patient_diagnostics23_rows_max_diff": 3.83026943495679e-14,
+    "LOPO23_rows_max_diff": 1.0658141036401503e-14,
+    "merged_source23_rows_max_diff": 4.085620730620576e-14
+  },
+  "limitations": [
+    "AUC is empirical contemporaneous separation using post-minus-baseline expression, not prospective baseline prediction.",
+    "These construct diagnostics are post-result descriptive and do not constitute independently prespecified confirmation.",
+    "Baseline endoscopy has only2/3 with19of23 at3; lack of baseline correlation does not establish absence of biological association.",
+    "High AUC and correlations are compatible with shared construct content, not measurement equivalence or causal identity."
+  ]
+}
