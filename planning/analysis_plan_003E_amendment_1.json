@@ -1,0 +1,12 @@
+{
+  "amendment_id": "003E-1",
+  "created_utc": "2026-09-11T02:35:17.481705+00:00",
+  "timing": "After numerical results were generated and inspected.",
+  "classification": "JSON serialization correction only",
+  "issue": "Non-applicable BH cells were written as NaN in analysis_summary.json, which Python accepts but strict JSON does not.",
+  "correction": "Serialize non-finite values as JSON null with allow_nan=False and rerun the identical frozen analysis.",
+  "scientific_choices_changed": false,
+  "numerical_tables_changed": false,
+  "old_code_sha256": "a89462f45e49a53fe12d6f2c611104c996eea131b6ac5c9c729f5718b6189a10",
+  "new_code_sha256": "d15ab9fd315a8ee8843ec0c5720dc59ab95e14adfcee56624b6e8c52c003fe41"
+}

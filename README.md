@@ -1,8 +1,8 @@
-# Current status: Stage003D DecontX sensitivity complete
+# Current status: Stage003E ambient diagnostics complete
 
-Current report: reports/Stage003D_DecontX_state_family_20260910.md.
-State ledger: provenance/manifests/stage_003D_completion.json.
-GSE23597 primary clinical-response validation did not meet its frozen support rule. GSE73661 supplies a supportive endoscopic association with construct-overlap limits. In GSE282122, the common-patient decomposition and raw-count state analysis support a composition-beyond CT within-state component in a distinct adalimumab clinical-remission context. The post-result DecontX sensitivity retains the CT state association (BH over the fixed 15-state family = 0.0169) but not the TA or LGR5-positive stem extensions (both BH = 0.1399). The broad cross-lineage claim is withdrawn, and no GSE282122 result can replace the failed primary validation.
+Current report: reports/Stage003E_ambient_negative_control_review_20260910.md.
+State ledger: provenance/manifests/stage_003E_completion.json.
+GSE23597 primary clinical-response validation did not meet its frozen support rule. GSE73661 supplies a supportive endoscopic association with construct-overlap limits. In GSE282122, the common-patient decomposition and raw-count state analysis support a composition-beyond CT within-state component in a distinct adalimumab clinical-remission context. A post-result DecontX sensitivity using released state labels does not overturn the CT association (BH over the prespecified 15-state family, 10 evaluable = 0.0169), while TA and LGR5-positive stem do not retain fixed-family support (both BH = 0.1399). Because this model treats cluster-typical and cluster-atypical signals asymmetrically, the result is method-qualified. Fixed PTPRC and COL1A1 controls are not concordant with Candidate6 but do not exclude gene-specific ambient or background-composition effects. The broad cross-lineage claim is withdrawn, and no GSE282122 result can replace the failed primary validation.
 
 # UC treatment-associated recovery study
 

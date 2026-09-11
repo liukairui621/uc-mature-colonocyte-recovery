@@ -184,5 +184,12 @@ summary={
   "Sample-state cross-sectional Wilcoxon rows are repeated within patients; patient-level Post-minus-Pre models are the aligned analysis."
  ]
 }
-(OUT/"analysis_summary.json").write_text(json.dumps(summary,indent=2)+"\n")
-print(json.dumps(summary,indent=2))
+def json_clean(obj):
+    if isinstance(obj,dict): return {k:json_clean(v) for k,v in obj.items()}
+    if isinstance(obj,list): return [json_clean(v) for v in obj]
+    if isinstance(obj,(float,np.floating)) and not np.isfinite(obj): return None
+    if isinstance(obj,np.generic): return obj.item()
+    return obj
+summary=json_clean(summary)
+(OUT/"analysis_summary.json").write_text(json.dumps(summary,indent=2,allow_nan=False)+"\n")
+print(json.dumps(summary,indent=2,allow_nan=False))

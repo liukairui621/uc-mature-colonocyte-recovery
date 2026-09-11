@@ -1,6 +1,6 @@
 {
   "created_utc": "2026-09-10T08:23:12.775089+00:00",
-  "current_phase": "003D COMPLETE: DecontX sensitivity retains CT state only; TA/LGR5 fixed-family extension withdrawn",
+  "current_phase": "003E COMPLETE: released-label DecontX does not overturn CT; ambient diagnostics remain method-qualified",
   "discovery_cohort": "GSE92415",
   "candidate_frozen": true,
   "independent_validation_started": true,
@@ -11,11 +11,11 @@
     "/root/projects/UC_Treatment_Recovery/inputs/support/GSE73661_series_matrix.txt.gz"
   ],
   "review_pending": false,
-  "updated_utc": "2026-09-11T02:04:18.614612+00:00",
-  "stage_report": "/root/projects/UC_Treatment_Recovery/reports/Stage003D_DecontX_state_family_20260910.md",
+  "updated_utc": "2026-09-11T02:34:31.394662+00:00",
+  "stage_report": "/root/projects/UC_Treatment_Recovery/reports/Stage003E_ambient_negative_control_review_20260910.md",
   "independent_review": "/root/projects/UC_Treatment_Recovery/provenance/reviews/003_cell_context_independent_v1.json",
   "signature_lock": "/root/projects/UC_Treatment_Recovery/signature_lock.json",
-  "completion_ledger": "/root/projects/UC_Treatment_Recovery/provenance/manifests/stage_003D_completion.json",
+  "completion_ledger": "/root/projects/UC_Treatment_Recovery/provenance/manifests/stage_003E_completion.json",
   "signature_lock_version": "1.1",
   "independent_validation_completed": true,
   "primary_validation_evaluable": true,
@@ -42,6 +42,15 @@
   "GSE282122_decontx_TA_BH_n15": 0.13986013986013987,
   "GSE282122_decontx_LGR5_BH_n15": 0.13986013986013987,
   "GSE282122_cross_lineage_state_claim_supported": false,
-  "GSE282122_CT_within_state_ambient_sensitivity_supported": true,
-  "decontx_arithmetic_verification": "/root/projects/UC_Treatment_Recovery/runs/003D_decontx_state_family/arithmetic_verification.json"
+  "decontx_arithmetic_verification": "/root/projects/UC_Treatment_Recovery/runs/003D_decontx_state_family/arithmetic_verification.json",
+  "GSE282122_released_z_DecontX_CT_not_overturned": true,
+  "GSE282122_DecontX_cluster_typical_asymmetry_limit": true,
+  "GSE282122_ambient_negative_controls_completed": true,
+  "GSE282122_PTPRC_BH_n2": 0.24775224775224775,
+  "GSE282122_COL1A1_BH_n2": 0.28471528471528473,
+  "GSE282122_negative_controls_exclude_ambient": false,
+  "GSE282122_patient_delta_contamination_exact_p_range": [
+    0.07642357642357642,
+    0.2606143856143856
+  ]
 }

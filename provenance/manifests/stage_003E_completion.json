@@ -1,0 +1,221 @@
+{
+  "stage": "003E",
+  "status": "COMPLETE",
+  "role": "post-result ambient-load and fixed raw CT negative-control diagnostic; zero confirmatory tests",
+  "completed_utc": "2026-09-11T02:36:54.265442+00:00",
+  "freeze": {
+    "path": "planning/analysis_plan_003E_ambient_negative_controls.frozen.json",
+    "sha256": "8e89028a9b7ae7ddc833ec215ec66b0555d263c4188ce98b552b223db0d89d80",
+    "negative_control_gene_counts_accessed_at_freeze": false
+  },
+  "serialization_amendment": {
+    "path": "planning/analysis_plan_003E_amendment_1.json",
+    "sha256": "323fdc88df8484bae0b71a5f1808d1b58362503b580ddcbf423bc7b2d341dc7c",
+    "scientific_choices_changed": false
+  },
+  "design": {
+    "state": "Non ileal CT colonocyte",
+    "threshold": 20,
+    "site_pairs": 33,
+    "patients": 16,
+    "remission": 6,
+    "nonremission": 10,
+    "negative_controls": [
+      "PTPRC",
+      "COL1A1"
+    ],
+    "individual_gene_BH_n": 2
+  },
+  "positive_control": {
+    "expected_beta": 2.55628721588327,
+    "recomputed_beta": 2.5562872158832715,
+    "absolute_difference": 1.3322676295501878e-15
+  },
+  "negative_controls": {
+    "PTPRC": {
+      "estimate": -1.6967931199775506,
+      "ci": [
+        -3.919769347707922,
+        0.526183107752821
+      ],
+      "exact_p": 0.12387612387612387,
+      "BH_n2": 0.24775224775224775
+    },
+    "COL1A1": {
+      "estimate": -0.7692467038357635,
+      "ci": [
+        -2.2564908727598967,
+        0.7179974650883694
+      ],
+      "exact_p": 0.28471528471528473,
+      "BH_n2": 0.28471528471528473
+    },
+    "composite": {
+      "estimate": -1.2330199119066572,
+      "ci": [
+        -2.5911990345244496,
+        0.12515921071113523
+      ],
+      "exact_p": 0.07280219780219781
+    }
+  },
+  "patient_contamination_change": {
+    "mean": {
+      "estimate": 0.11537174734000352,
+      "ci": [
+        -0.02056902201262434,
+        0.2513125166926314
+      ],
+      "exact_p": 0.08953546453546453
+    },
+    "median": {
+      "estimate": 0.09324389385080875,
+      "ci": [
+        -0.07691966447749846,
+        0.263407452179116
+      ],
+      "exact_p": 0.2606143856143856
+    },
+    "q90": {
+      "estimate": 0.28176023742843415,
+      "ci": [
+        -0.04859922151951962,
+        0.612119696376388
+      ],
+      "exact_p": 0.07642357642357642
+    }
+  },
+  "interpretation": "Released-label DecontX did not overturn CT but has asymmetric sensitivity; fixed negative controls are not concordant with Candidate6 and do not exclude gene-specific ambient or background-composition effects.",
+  "files": [
+    {
+      "path": "planning/analysis_plan_003E_ambient_negative_controls.frozen.json",
+      "bytes": 3938,
+      "sha256": "8e89028a9b7ae7ddc833ec215ec66b0555d263c4188ce98b552b223db0d89d80"
+    },
+    {
+      "path": "planning/analysis_plan_003E_ambient_negative_controls.sha256",
+      "bytes": 123,
+      "sha256": "882f7c5c9c3139773b91215c9814c504a8c0d5e59fb2a5048414c4b0b6f43bb0"
+    },
+    {
+      "path": "planning/analysis_plan_003E_amendment_1.json",
+      "bytes": 718,
+      "sha256": "323fdc88df8484bae0b71a5f1808d1b58362503b580ddcbf423bc7b2d341dc7c"
+    },
+    {
+      "path": "planning/analysis_plan_003E_amendment_1.sha256",
+      "bytes": 111,
+      "sha256": "15d473d1c8750662d19cc326c1fd0fe380177d235abef1bc687c40b1cafda3e5"
+    },
+    {
+      "path": "code/analyze_003E_ambient_negative_controls.py",
+      "bytes": 9888,
+      "sha256": "d15ab9fd315a8ee8843ec0c5720dc59ab95e14adfcee56624b6e8c52c003fe41"
+    },
+    {
+      "path": "code/plot_003E_ambient_diagnostics.py",
+      "bytes": 2687,
+      "sha256": "6fd2e673e7457bca9bebc76c6930e728b412e94a0bcd9c73f77ec66d75b85b02"
+    },
+    {
+      "path": "runs/003E_ambient_negative_controls/analysis_summary.json",
+      "bytes": 5339,
+      "sha256": "09f3a5ca9308cbb6968f658c2bd57d6d23a504c482233f09f2a3d3b431204a7f"
+    },
+    {
+      "path": "runs/003E_ambient_negative_controls/CT_contamination_cross_sectional_sample_state.tsv",
+      "bytes": 531,
+      "sha256": "f669a829fea1203480c9460888ec8c3ff1d974e6d888557f2185aed627c46ce9"
+    },
+    {
+      "path": "runs/003E_ambient_negative_controls/CT_contamination_patient_deltas.tsv",
+      "bytes": 1361,
+      "sha256": "3c729c56f0a1465cb8c6dab9defd61afbb081f9b0447a0cd74c4c30522c560f4"
+    },
+    {
+      "path": "runs/003E_ambient_negative_controls/CT_contamination_patient_models.tsv",
+      "bytes": 696,
+      "sha256": "fca310bcb2db87e3206773182de0c5390652d656a682c7cdaa85c53f27928223"
+    },
+    {
+      "path": "runs/003E_ambient_negative_controls/CT_contamination_site_deltas.tsv",
+      "bytes": 11178,
+      "sha256": "ac436e85ab7a00e94aa13850d4e470a7fef7074d9b1e724faf78ef8b4855291e"
+    },
+    {
+      "path": "runs/003E_ambient_negative_controls/negative_control_CT_models.tsv",
+      "bytes": 2051,
+      "sha256": "8784a0ad28670d001416e13e8ca06a07a1485bd20c444e5d56fe5dc1712a2e39"
+    },
+    {
+      "path": "runs/003E_ambient_negative_controls/negative_control_CT_patient_deltas.tsv",
+      "bytes": 3607,
+      "sha256": "a4f4e970e0ccb03d69a93f60cc3d512263232cad33ef39f31f44424b22427566"
+    },
+    {
+      "path": "runs/003E_ambient_negative_controls/negative_control_CT_site_deltas.tsv",
+      "bytes": 24357,
+      "sha256": "23580e20dc3bdb1b315c5d8381e84c2fda4c2e63e5db33931280c6379d47eca7"
+    },
+    {
+      "path": "runs/003E_ambient_negative_controls/raw_CT_sample_negative_control_counts.tsv",
+      "bytes": 25415,
+      "sha256": "56045144fd34b8eb8cbb6954557c64d0651bb40a671aa076b11ae0ea7898926f"
+    },
+    {
+      "path": "reports/Stage003E_ambient_negative_control_review_20260910.md",
+      "bytes": 9241,
+      "sha256": "f86c4380358dff6c1b67ad2d13dc5a211c3b4266b5fe584130bdf2ab3fe6d59f"
+    },
+    {
+      "path": "reports/Stage003D_DecontX_state_family_20260910.md",
+      "bytes": 12199,
+      "sha256": "104cd1d78b3a11fbd386e096abc246b756911c0adc51e837a982683ce62a90bf"
+    },
+    {
+      "path": "reports/Stage003_cell_context_results_20260910.md",
+      "bytes": 10601,
+      "sha256": "2bff7fa080b6ee9d63f9222622456b4333b55d3fec36e49af7e61eaede4bc3b7"
+    },
+    {
+      "path": "figures/Stage003E_ambient_negative_control_diagnostics.png",
+      "bytes": 195875,
+      "sha256": "65d2866ab9feca837169fa3c848101a977a4744db8f8abb9b22dbeedfce508fd"
+    },
+    {
+      "path": "figures/Stage003E_ambient_negative_control_diagnostics.pdf",
+      "bytes": 27833,
+      "sha256": "cecf18939175a1dde43cbf69e7e66383954eced386c6468ba74d1e1009bcb2b9"
+    },
+    {
+      "path": "figures/Stage003E_ambient_negative_control_diagnostics.source.tsv",
+      "bytes": 1647,
+      "sha256": "18e9c0adf2ad1a83004d2839348c89466b207e787f9a1dad8cc3ded6c37153c3"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3966,
+      "sha256": "b443dc66ec9c1772ea8e3ec40cc43ef4bbf085e786cfc55b72667354f4ee3286"
+    },
+    {
+      "path": "project_status.json",
+      "bytes": 3236,
+      "sha256": "7b663168576f5904a41a0fc087b79e1a2d24433428d482697349990db6777588"
+    },
+    {
+      "path": "code/verify_003E_ambient_diagnostics.R",
+      "bytes": 2553,
+      "sha256": "0e522e5cb24ddb6da28bc63f93993284cb0d6af5b0f0a4055129a9bc0c39fa5a"
+    },
+    {
+      "path": "runs/003E_ambient_negative_controls/arithmetic_verification_R.json",
+      "bytes": 3028,
+      "sha256": "656a160d84df6f468100cce0efd8d22b55511de1020ca6ae06e865411050d3bf"
+    }
+  ],
+  "arithmetic_verification": {
+    "status": "PASS",
+    "implementation": "independent R",
+    "maximum_absolute_difference": 3.552713678800501e-15
+  }
+}

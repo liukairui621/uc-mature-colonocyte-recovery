@@ -203,13 +203,13 @@
     },
     {
       "path": "reports/Stage003D_DecontX_state_family_20260910.md",
-      "bytes": 10172,
-      "sha256": "db8e2785421ed9a294674f6611ef289efd9951679d23d0c475ab617fee8c78e2"
+      "bytes": 12199,
+      "sha256": "104cd1d78b3a11fbd386e096abc246b756911c0adc51e837a982683ce62a90bf"
     },
     {
       "path": "reports/Stage003_cell_context_results_20260910.md",
-      "bytes": 10321,
-      "sha256": "71c5e08b04466bd60da89bd85500efe57e5373f0306e8b3f441d6a3fd8d9177c"
+      "bytes": 10601,
+      "sha256": "2bff7fa080b6ee9d63f9222622456b4333b55d3fec36e49af7e61eaede4bc3b7"
     },
     {
       "path": "figures/Stage003D_DecontX_raw_vs_corrected.png",
@@ -241,5 +241,14 @@
       "bytes": 316521,
       "sha256": "2424132d24861ee91dd7148b05ecf6f4417ae99fadfaf8f9f00139e12b17c361"
     }
-  ]
+  ],
+  "post_completion_interpretive_update": {
+    "stage": "003E",
+    "reason": "Qualified released-label DecontX asymmetry and added fixed raw CT negative controls.",
+    "updated_files": [
+      "reports/Stage003D_DecontX_state_family_20260910.md",
+      "reports/Stage003_cell_context_results_20260910.md"
+    ],
+    "report": "reports/Stage003E_ambient_negative_control_review_20260910.md"
+  }
 }
