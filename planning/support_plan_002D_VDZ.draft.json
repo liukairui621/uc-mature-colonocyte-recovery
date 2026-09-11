@@ -1,0 +1,135 @@
+{
+  "status": "DRAFT",
+  "version": "002D.1",
+  "role": "Post hoc cross-drug supportive extension with analysis rules specified before the new VDZ patient-level association run; not public preregistration or fresh blinded validation",
+  "can_replace_GSE23597": false,
+  "n_confirmatory_primary_tests": 0,
+  "n_principal_supportive_tests": 1,
+  "cohort": "GSE73661 VDZ subgroups",
+  "principal_visit": "W6",
+  "secondary_visit": "W12",
+  "prior_access": {
+    "expression_matrix_downloaded": true,
+    "all_sample_scores_computed_in_002B": true,
+    "prior_VDZ_scored_arrays": 113,
+    "prior_VDZ_patient_level_association_found_in_retained_project_code": false,
+    "claim_limit": "Prior whole-matrix scoring is proven. Absence of a retained VDZ association script is not proof of no historical or external inspection."
+  },
+  "pair_file": "runs/002D_VDZ_metadata/VDZ_pairs.tsv",
+  "sample_rules": {
+    "W6": {
+      "n": 27,
+      "healing": 6,
+      "nonhealing": 21,
+      "paths": [
+        "vdz_vdz4w",
+        "vdz_vdz8w",
+        "vdz_plac"
+      ],
+      "exposure": "Include the three vdz_plac W6 samples as VDZ induction; future maintenance assignment is not a W6 exclusion or adjustment covariate.",
+      "healing_by_future_path": {
+        "vdz_plac": "3/3",
+        "vdz_vdz4w": "3/20",
+        "vdz_vdz8w": "0/4"
+      },
+      "path_label_caution": "Path labels include future maintenance assignment and are not baseline covariates; all three VDZ induction paths included."
+    },
+    "W12": {
+      "n": 13,
+      "healing": 3,
+      "nonhealing": 10,
+      "paths": [
+        "vdz4w"
+      ],
+      "timing": "Use deposited W12 visit; no relabeling to W6 or W14.",
+      "distinct_patients_from_W6": true
+    },
+    "disjoint_subject_ID_groups": true,
+    "missing_W6": "Subject30 has baseline but no W6; do not substitute W52.",
+    "noncore": "W52 and off-schedule visits retained in the visit/disposition inventory, not used for inferential rescue.",
+    "placebo": "Three W6 placebo pairs; no efficacy comparison planned."
+  },
+  "endpoint": "Follow-up Mayo endoscopic subscore0or1; separate from clinical response and histological healing.",
+  "scoring": "Reuse exactly the frozen Candidate6, equal-weight mean log2 canonical gene expression and fixed common194 inflammation scores already in 002B. Follow-up minus baseline. No gene, weight, normalization or annotation tuning.",
+  "models": {
+    "adjusted_support": "delta_candidate ~ endoscopic_healing + baseline_candidate + delta_common194_inflammation",
+    "parallel_no_baseline": "delta_candidate ~ endoscopic_healing + delta_common194_inflammation",
+    "parallel_no_inflammation": "delta_candidate ~ endoscopic_healing + baseline_candidate"
+  },
+  "evaluation": "At least two patients per endpoint group, complete fixed scores, full rank, residual df>=5. Non-evaluable primary is reported and not replaced by a secondary model. No expression- or influence-based exclusions.",
+  "reporting": "OLS and HC3 t-based95%CI and exact two-sided nominalP for all three models at both visits; W6 adjusted OLS is the one principal supportive comparison. All patient influences and leave-one-patient-out estimates reported. No baseline prediction AUC or cutoff optimization.",
+  "references": "Three already frozen reference programs, identical model within visit, descriptive BH over six reference comparisons. No superiority claim from comparingP values.",
+  "interpretation_rule": {
+    "positive_W6": "Positive coefficient and two-sidedP<0.05 provides supportive cross-drug association in sampled VDZ W6 biopsies, subject to CI and parallel models; not proof of a shared causal repair mechanism.",
+    "other_W6": "Cross-drug support not established in this cohort/window. No inference of absence or antiTNF-specificity from nonsignificance.",
+    "W12": "Secondary evidence always reported, never replaces principalW6."
+  },
+  "forbidden_claims": [
+    "Replaces or rescues the original GSE23597 primary result",
+    "Pooling clinical response and endoscopic healing P values",
+    "Prospectively unaccessed or never-scored VDZ data",
+    "A negative VDZ P value proves antiTNF specificity",
+    "IFX-versus-VDZ efficacy ranking or treatment interaction from separate significance tests",
+    "Baseline prediction, new repair mechanism, or independence from inflammation",
+    "Candidate6 superiority over CT_Colonocytes, OXPHOS, MARS or IBrD"
+  ],
+  "limits": [
+    "Only the fixed194 panel is adjusted; not all inflammation",
+    "Bulk score and endoscopic healing may share tissue composition or histological constructs",
+    "Small and imbalanced endpoint groups; W12 three healers only",
+    "VDZ versus IFX differences in time, prior treatment and exposure paths remain; disjoint released IDs within the series support separate participants, not independent institutions",
+    "Biopsy availability and off-schedule/withdrawal selection may bias the sampled groups"
+  ],
+  "seed": 20260911,
+  "created_utc": "2026-09-11T03:51:12.652212+00:00",
+  "inputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/signature_lock.json",
+      "sha256": "62462dfbc25bb857c94c872424173e215c6d1b8b6724a0bbc724a5c2683bfb36",
+      "bytes": 19065
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+      "sha256": "2424132d24861ee91dd7148b05ecf6f4417ae99fadfaf8f9f00139e12b17c361",
+      "bytes": 316521
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_GSE73661_support/support_scores.rds",
+      "sha256": "5a24c16f5f6b337b35abb9c1516ef7ff18cbd2dc821806bc363092d92eb679ea",
+      "bytes": 68919550
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_metadata/sample_registry_v1.tsv",
+      "sha256": "51fb54b7d978c8d5ed025c00a04df69017f71c4875eccc227a5b17e5c6936ba5",
+      "bytes": 82956
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/metadata/GSE73661.matrix_header.txt",
+      "sha256": "47f478d2b6d7387493ad6f5ad78368d17c20692d3c541d7124de5d4904876980",
+      "bytes": 284310
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/VDZ_pairs.tsv",
+      "sha256": "4014f6eef5aa988c5ec5e689ee396800dbef3aa8a38108b243759cc5fe5513e9",
+      "bytes": 1891
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/audit_summary.json",
+      "sha256": "bfc9fc581fe3bb1124dc0cd0cd3426a01634a9d84c73cdbf84b7ca1c5f36bdce",
+      "bytes": 656
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/prior_score_scope.json",
+      "sha256": "dbccfeecf086a256356e157c0fe3350178489ebc7417930290fc1f628fc483ea",
+      "bytes": 575
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/support_002D_VDZ.R",
+      "sha256": "41529db02a43b4c7a749ac81b45cdd90fa3549ae0c5b88cd2409cb9d150ccd80",
+      "bytes": 5092
+    }
+  ],
+  "metadata_precision_note": "W6 has6healers of27 versus IFX8of23. Larger totalN does not imply greater information or double evidence. W12 has3healers of13.",
+  "expansion_policy": "Prioritize this bounded endoscopic extension now. Suspend broad clinical-response dataset searching for workload reasons; do not claim public data are exhausted or future validation impossible. GSE16879 excluded from eligible independent evidence until provenance independence is established; overlap not asserted as fact.",
+  "baseline_only_cohorts": "Not used for current delta-score claim; any future baseline-prediction study would require a separate question and validation, and cannot be called validation of this lock."
+}

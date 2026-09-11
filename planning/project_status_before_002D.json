@@ -1,28 +1,28 @@
 {
   "created_utc": "2026-09-10T08:23:12.775089+00:00",
-  "current_phase": "002D COMPLETE: VDZ W6 and W12 estimates positive but principal cross-drug support not established",
+  "current_phase": "003E COMPLETE: released-label DecontX does not overturn CT; ambient diagnostics remain method-qualified",
   "discovery_cohort": "GSE92415",
   "candidate_frozen": true,
   "independent_validation_started": true,
-  "next_phase": "004 manuscript evidence architecture, including unchanged GSE23597 failure, IFX endoscopic support, VDZ W6/W12 extension, and qualified CT state evidence; no further model rescue",
+  "next_phase": "004 manuscript evidence architecture, claim table and target-journal fit; no candidate retuning from validation or DecontX results",
   "analysis_input_files": [
     "/root/projects/UC_Treatment_Recovery/inputs/discovery/GSE92415_series_matrix.relay.txt.gz",
     "/root/projects/UC_Treatment_Recovery/inputs/validation/GSE23597_series_matrix.txt.gz",
     "/root/projects/UC_Treatment_Recovery/inputs/support/GSE73661_series_matrix.txt.gz"
   ],
   "review_pending": false,
-  "updated_utc": "2026-09-11T03:59:39.349750+00:00",
-  "stage_report": "/root/projects/UC_Treatment_Recovery/reports/VDZ_extension_review_response_20260911.md",
+  "updated_utc": "2026-09-11T02:34:31.394662+00:00",
+  "stage_report": "/root/projects/UC_Treatment_Recovery/reports/Stage003E_ambient_negative_control_review_20260910.md",
   "independent_review": "/root/projects/UC_Treatment_Recovery/provenance/reviews/003_cell_context_independent_v1.json",
   "signature_lock": "/root/projects/UC_Treatment_Recovery/signature_lock.json",
-  "completion_ledger": "/root/projects/UC_Treatment_Recovery/provenance/manifests/stage_002D_completion.json",
+  "completion_ledger": "/root/projects/UC_Treatment_Recovery/provenance/manifests/stage_003E_completion.json",
   "signature_lock_version": "1.1",
   "independent_validation_completed": true,
   "primary_validation_evaluable": true,
   "primary_validation_support": false,
   "validation_expression_accessed": true,
   "GSE73661_expression_accessed": true,
-  "independent_result_review": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002D_VDZ_results_review.json",
+  "independent_result_review": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002B_GSE73661_results_independent_v1.json",
   "GSE73661_analysis_completed": true,
   "GSE73661_evidence_role": "descriptive_supportive_only; cannot replace GSE23597",
   "GSE73661_endoscopic_positive_association": true,
@@ -52,14 +52,5 @@
   "GSE282122_patient_delta_contamination_exact_p_range": [
     0.07642357642357642,
     0.2606143856143856
-  ],
-  "GSE73661_VDZ_analysis_completed": true,
-  "GSE73661_VDZ_W6_principal_support": false,
-  "GSE73661_VDZ_W12_secondary_nominal_support": false,
-  "GSE73661_VDZ_prior_scores_computed_in_002B": true,
-  "GSE73661_IFX_endoscopic_positive_association": true,
-  "GSE73661_legacy_positive_field_scope": "The pre-existing GSE73661_endoscopic_positive_association field refers only to the IFX subgroup",
-  "GSE73661_VDZ_claim": "Cross-drug support not established in these cohorts/windows; no antiTNF-specificity inference",
-  "GSE16879_independence_confirmed": false,
-  "GSE16879_currently_eligible_for_independent_validation": false
+  ]
 }

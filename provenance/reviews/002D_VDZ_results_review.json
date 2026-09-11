@@ -1,0 +1,479 @@
+{
+  "artifact_id": "002D_VDZ_results_independent_review_v1",
+  "run_id": "002D_VDZ_support",
+  "status": "REVIEWED",
+  "decision": "Results may be adopted within the frozen supportive role and interpretation limits.",
+  "created_utc": "2026-09-11T03:58:33.849335+00:00",
+  "reviewer": "independent agent /root/vdz_metadata_review",
+  "scope": "Audit of already specified and executed models only; no new biological tests or alternative analytical choices.",
+  "method": "Recomputed sample scores from frozen RDS gene_expression using each frozen gene set. Independent QR calculation of OLS coefficients, residual variance, leverage and HC3 weighted outer-product covariance; compared all scheduled candidate, reference, patient-score and leave-one-patient-out exports.",
+  "inputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/planning/support_plan_002D_VDZ.frozen.json",
+      "bytes": 8276,
+      "sha256": "1e126bc12598bb778cf368bae9311eed96548a0bddeda56c52539d48bc0160bf"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/signature_lock.json",
+      "bytes": 19065,
+      "sha256": "62462dfbc25bb857c94c872424173e215c6d1b8b6724a0bbc724a5c2683bfb36"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_GSE73661_support/support_scores.rds",
+      "bytes": 68919550,
+      "sha256": "5a24c16f5f6b337b35abb9c1516ef7ff18cbd2dc821806bc363092d92eb679ea"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/VDZ_pairs.tsv",
+      "bytes": 1891,
+      "sha256": "4014f6eef5aa988c5ec5e689ee396800dbef3aa8a38108b243759cc5fe5513e9"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/support_002D_VDZ.R",
+      "bytes": 5245,
+      "sha256": "9604248a7174957c9324b2d58a6d3f920797fc104c011d1004619d56a17b11a0"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_support/execution.json",
+      "bytes": 334,
+      "sha256": "a57c24cb8c9036ad93a64b2132105d25d8885234e078f8596de83b8e7bf73ad2"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_support/candidate_models.tsv",
+      "bytes": 2483,
+      "sha256": "26906bda3caa8f8362c70cfc1eb0c536687acda72bd114ae87d25664b8ecf015"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_support/reference_models.tsv",
+      "bytes": 1527,
+      "sha256": "131755a2c4c01e573a19bf1c614815b64f3cbee809d746813df565ae0efcecb7"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_support/patient_level_scores.tsv",
+      "bytes": 4610,
+      "sha256": "892070149ad27a8ce5feaa888dcc5a6b1ae288ca51408491aad3a020c116c869"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_support/leave_one_patient_out.tsv",
+      "bytes": 8211,
+      "sha256": "74fe3fca89802b467979762438d3cc0e5f9d33844397ca52e7aa0f6c07f0edef"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_support/analysis_summary.json",
+      "bytes": 1466,
+      "sha256": "1b46c6e625af08b4fef2dcceabd99386a560b29c1f950c68e263a65d6aef81de"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/manifests/stage_002D_completion.json",
+      "bytes": 8454,
+      "sha256": "1319ce3e2ad40beab3d627ab46b144d05781849f656db391c47b907930d4b5f9"
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+      "bytes": 316521,
+      "sha256": "2424132d24861ee91dd7148b05ecf6f4417ae99fadfaf8f9f00139e12b17c361"
+    }
+  ],
+  "reviewer_code": {
+    "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002D_VDZ_results_recompute.R",
+    "bytes": 4962,
+    "sha256": "bfc5de457015987a9cae29700819ecc26c55e55909a9674f3540ed57baee64c2"
+  },
+  "reviewer_command": "Rscript --vanilla /root/projects/UC_Treatment_Recovery/provenance/reviews/002D_VDZ_results_recompute.R",
+  "reviewer_log": {
+    "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002D_VDZ_results_recompute.log",
+    "bytes": 2269,
+    "sha256": "c66c9c49451b116789efa0f46fd92f55160d38991256a1ce8639d1e6b598e47a"
+  },
+  "recomputation_evidence": {
+    "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002D_VDZ_results_recomputation.json",
+    "bytes": 11052,
+    "sha256": "443d0409126c5385ff018191926ec175ccbe8cc7e4b8d37fcf83abc4dd60886a"
+  },
+  "candidate_unchanged": true,
+  "candidate_genes": [
+    "AQP8",
+    "CA2",
+    "GUCA2A",
+    "HMGCS2",
+    "MS4A12",
+    "SLC26A3"
+  ],
+  "common_inflammation_genes": 194,
+  "score_reconstruction_max_error": 0,
+  "recomputed_tables": [
+    {
+      "file": "candidate_models.tsv",
+      "n_rows": 12,
+      "max_abs_error": {
+        "n": 0,
+        "df": 0,
+        "estimate": 4.218847493575595e-15,
+        "se": 3.497202527569243e-15,
+        "lower": 7.271960811294775e-15,
+        "upper": 7.771561172376096e-15,
+        "p": 3.622102617839573e-15,
+        "max_leverage": 3.219646771412954e-15,
+        "residual_sigma": 4.218847493575595e-15
+      },
+      "matched": true
+    },
+    {
+      "file": "reference_models.tsv",
+      "n_rows": 6,
+      "max_abs_error": {
+        "n": 0,
+        "df": 0,
+        "estimate": 3.3306690738754696e-16,
+        "se": 8.770761894538737e-15,
+        "lower": 1.8193779816044753e-14,
+        "upper": 1.7819079545233762e-14,
+        "p": 9.10035935497433e-15,
+        "max_leverage": 3.963496197911809e-13,
+        "residual_sigma": 3.774758283725532e-15,
+        "BH_across_six_descriptive": 5.4414805994440485e-14
+      },
+      "matched": true
+    },
+    {
+      "file": "leave_one_patient_out.tsv",
+      "n_rows": 40,
+      "max_abs_error": {
+        "n": 0,
+        "df": 0,
+        "estimate": 3.774758283725532e-15,
+        "se": 2.9976021664879227e-15,
+        "lower": 6.772360450213455e-15,
+        "upper": 1.0436096431476471e-14,
+        "p": 3.219646771412954e-15,
+        "max_leverage": 7.438494264988549e-15,
+        "residual_sigma": 7.771561172376096e-16
+      },
+      "matched": true
+    },
+    {
+      "file": "patient_level_scores.tsv",
+      "n_rows": 40,
+      "max_abs_error": {
+        "baseline_candidate": 3.375077994860476e-14,
+        "post_candidate": 3.375077994860476e-14,
+        "delta_candidate": 4.884981308350689e-15,
+        "delta_common194_inflammation": 4.718447854656915e-16
+      },
+      "matched": true
+    }
+  ],
+  "LOPO_summary": {
+    "W12": {
+      "n": 13,
+      "estimate_range": [
+        0.5995937756028217,
+        1.1988401105219666
+      ],
+      "p_range": [
+        0.04908869516812097,
+        0.3783408024926659
+      ],
+      "all_estimates_positive": true
+    },
+    "W6": {
+      "n": 27,
+      "estimate_range": [
+        0.41402949371094905,
+        0.6099714620173373
+      ],
+      "p_range": [
+        0.19909289382987508,
+        0.432012062081918
+      ],
+      "all_estimates_positive": true
+    }
+  },
+  "manifest_and_preexecution_review_hash_checks": [
+    {
+      "field": "completion_manifest.inputs[0]",
+      "path": "/root/projects/UC_Treatment_Recovery/signature_lock.json",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.inputs[1]",
+      "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.inputs[2]",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_GSE73661_support/support_scores.rds",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.inputs[3]",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_metadata/sample_registry_v1.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.inputs[4]",
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/metadata/GSE73661.matrix_header.txt",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.inputs[5]",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/VDZ_pairs.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.inputs[6]",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/audit_summary.json",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.inputs[7]",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/prior_score_scope.json",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.inputs[8]",
+      "path": "/root/projects/UC_Treatment_Recovery/code/support_002D_VDZ.R",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.code[0]",
+      "path": "/root/projects/UC_Treatment_Recovery/code/support_002D_VDZ.R",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.code[1]",
+      "path": "/root/projects/UC_Treatment_Recovery/code/audit_002D_VDZ_metadata.py",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.code[2]",
+      "path": "/root/projects/UC_Treatment_Recovery/code/audit_002D_prior_score_scope.R",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.configuration",
+      "path": "/root/projects/UC_Treatment_Recovery/planning/support_plan_002D_VDZ.frozen.json",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.environment[0]",
+      "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.environment[1]",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_support/sessionInfo.txt",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.outputs[0]",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_support/leave_one_patient_out.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.outputs[1]",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_support/sessionInfo.txt",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.outputs[2]",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_support/patient_level_scores.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.outputs[3]",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_support/analysis_summary.json",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.outputs[4]",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_support/model_fits.rds",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.outputs[5]",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_support/candidate_models.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.outputs[6]",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_support/analysis.log",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.outputs[7]",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_support/reference_models.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.outputs[8]",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_support/patient_diagnostics.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.outputs[9]",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_support/execution.json",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.metadata_outputs[0]",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/healing_counts.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.metadata_outputs[1]",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/audit_summary.json",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.metadata_outputs[2]",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/VDZ_all_samples_disposition.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.metadata_outputs[3]",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/environment_precheck.log",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.metadata_outputs[4]",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/audit.log",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.metadata_outputs[5]",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/prior_score_scope.log",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.metadata_outputs[6]",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/syntax_check.log",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.metadata_outputs[7]",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/conditional_sample_size_scenarios.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.metadata_outputs[8]",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/prior_score_scope.json",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.metadata_outputs[9]",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/visit_inventory.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "completion_manifest.metadata_outputs[10]",
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/VDZ_pairs.tsv",
+      "sha256_match": true,
+      "size_match": true
+    },
+    {
+      "field": "frozen_plan.preexecution_review",
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002D_VDZ_metadata_review.json",
+      "sha256_match": true,
+      "size_match": true
+    }
+  ],
+  "temporal_check": {
+    "frozen_utc": "2026-09-11T03:54:57.916700+00:00",
+    "frozen_file_mtime_utc": "2026-09-11T03:54:57.996846+00:00",
+    "run_started_utc": "2026-09-11T03:54:57.997581+00:00",
+    "candidate_output_mtime_utc": "2026-09-11T03:55:01.954872+00:00",
+    "run_completed_utc": "2026-09-11T03:55:02.017082+00:00",
+    "order_consistent": true,
+    "executed_plan_hash_matches_frozen": true,
+    "limitation": "Internal machine timestamps and retained records are mutually consistent, not external trusted timestamps or public preregistration. Matrix and all sample scores existed before this plan."
+  },
+  "verified_main_results": {
+    "W6": {
+      "visit": "W6",
+      "program": "MATURE_COLONOCYTE6_EXPLORATORY",
+      "model": "adjusted_support",
+      "method": "OLS",
+      "evaluable": true,
+      "n": 27,
+      "df": 23,
+      "estimate": 0.5212628962750351,
+      "se": 0.4624758916212884,
+      "lower": -0.435441376562678,
+      "upper": 1.4779671691127483,
+      "p": 0.2713165041541656,
+      "max_leverage": 0.4242235055851871,
+      "residual_sigma": 0.841481220134764,
+      "reason": ""
+    },
+    "W12": {
+      "visit": "W12",
+      "program": "MATURE_COLONOCYTE6_EXPLORATORY",
+      "model": "adjusted_support",
+      "method": "OLS",
+      "evaluable": true,
+      "n": 13,
+      "df": 9,
+      "estimate": 0.8527526030848883,
+      "se": 0.5472083501455881,
+      "lower": -0.3851186857399419,
+      "upper": 2.0906238919097184,
+      "p": 0.1535743169074179,
+      "max_leverage": 0.547421544609917,
+      "residual_sigma": 0.8065678957982849,
+      "reason": ""
+    }
+  },
+  "execution_blockers": [],
+  "interpretation_required": [
+    "W6 principal adjusted OLS support not established; W12 remains secondary and does not replace W6.",
+    "Do not claim anti-TNF specificity or absence of VDZ association from nonsignificance.",
+    "Do not describe every analysis as negative: W6 no-inflammation HC3 is nominally significant (P=0.0145094721255658), but its OLS P=0.0662818081975703 and it is not the principal model.",
+    "W6 OXPHOS reference has nominal P=0.0170906007716888 but BH over six descriptive comparisons is 0.102543604630133; no multiplicity-adjusted reference support or superiority claim.",
+    "W12 leave-one-out has one nominal P below0.05; patient omission is diagnostic and cannot replace the full-cohort result.",
+    "Retain initial GSE23597 failed clinical-response validation and the endpoint-score construct overlap.",
+    "W6 27 pairs include only6healers; W12 13 pairs include only3healers; their released subject IDs are disjoint.",
+    "No comparative drug-efficacy or causal common-repair inference."
+  ],
+  "environment": {
+    "R": "R version 4.3.3 (2024-02-29)",
+    "review_metadata_python": "3.12.3"
+  },
+  "new_scientific_tests": false,
+  "metadata_review_file_preserved_to_keep_frozen_hash": true
+}

@@ -1,0 +1,80 @@
+options(stringsAsFactors=FALSE)
+suppressPackageStartupMessages(library(jsonlite))
+root<-"/root/projects/UC_Treatment_Recovery"
+plan<-read_json(file.path(root,"planning/support_plan_002D_VDZ.frozen.json"),simplifyVector=TRUE)
+lock<-read_json(file.path(root,"signature_lock.json"),simplifyVector=TRUE)
+z<-readRDS(file.path(root,"runs/002B_GSE73661_support/support_scores.rds"))
+pairs<-read.delim(file.path(root,plan$pair_file),check.names=FALSE)
+cand<-lock$candidate$id
+infl<-"HALLMARK_INFLAMMATORY_RESPONSE"
+stopifnot(setequal(z$sets[[cand]],c("AQP8","HMGCS2","GUCA2A","CA2","SLC26A3","MS4A12")))
+stopifnot(setequal(z$sets[[infl]],lock$inflammation_covariate$genes))
+S<-matrix(NA_real_,nrow=length(z$sets),ncol=ncol(z$gene_expression),dimnames=list(names(z$sets),colnames(z$gene_expression)))
+for (id in names(z$sets)) S[id,]<-colMeans(z$gene_expression[z$sets[[id]],,drop=FALSE])
+score_error<-max(abs(S-z$sample_scores))
+stopifnot(score_error<1e-10)
+pairs$endoscopic_healing<-factor(pairs$endoscopic_healing,levels=c("No","Yes"))
+estimate<-function(form,data,method="OLS"){
+ frame<-model.frame(as.formula(form),data=data,na.action=na.fail)
+ X<-model.matrix(as.formula(form),data=frame)
+ y<-model.response(frame)
+ q<-qr(X);stopifnot(q$rank==ncol(X))
+ b<-as.numeric(qr.coef(q,y))
+ e<-as.numeric(y-X%*%b)
+ B<-chol2inv(chol(crossprod(X)))
+ h<-rowSums((X%*%B)*X)
+ df<-nrow(X)-ncol(X)
+ sig<-sqrt(sum(e*e)/df)
+ k<-match("endoscopic_healingYes",colnames(X))
+ if(method=="OLS"){V<-sig^2*B}else{
+  U<-sweep(X,1,e/(1-h),"*")
+  V<-B%*%crossprod(U)%*%B
+ }
+ se<-sqrt(V[k,k]);beta<-b[k]
+ data.frame(n=nrow(X),df=df,estimate=beta,se=se,lower=beta-qt(.975,df)*se,upper=beta+qt(.975,df)*se,p=2*pt(-abs(beta/se),df),max_leverage=max(h),residual_sigma=sig)
+}
+modelrows<-list();refrows<-list();loorows<-list();patrows<-list()
+for(visit in c("W6","W12")){
+ d<-pairs[pairs$visit==visit,,drop=FALSE]
+ d$baseline_candidate<-as.numeric(S[cand,d$baseline_gsm])
+ d$post_candidate<-as.numeric(S[cand,d$followup_gsm])
+ d$delta_candidate<-d$post_candidate-d$baseline_candidate
+ d$delta_common194_inflammation<-as.numeric(S[infl,d$followup_gsm]-S[infl,d$baseline_gsm])
+ patrows[[visit]]<-d
+ for(label in names(plan$models))for(method in c("OLS","HC3")){
+  s<-estimate(plan$models[[label]],d,method)
+  modelrows[[length(modelrows)+1]]<-cbind(visit=visit,program=cand,model=label,method=method,s)
+ }
+ for(id in lock$secondary_reference_programs){
+  dr<-d
+  dr$baseline_candidate<-as.numeric(S[id,d$baseline_gsm])
+  dr$delta_candidate<-as.numeric(S[id,d$followup_gsm]-S[id,d$baseline_gsm])
+  s<-estimate(plan$models$adjusted_support,dr)
+  refrows[[length(refrows)+1]]<-cbind(visit=visit,program=id,model="reference_descriptive",method="OLS",s)
+ }
+ for(i in seq_len(nrow(d))){
+  s<-estimate(plan$models$adjusted_support,d[-i,,drop=FALSE])
+  loorows[[length(loorows)+1]]<-cbind(visit=visit,program=cand,model="leave_one_patient_out",method="OLS",omitted_subject=d$subject[i],s)
+ }
+}
+mods<-do.call(rbind,modelrows);refs<-do.call(rbind,refrows);loos<-do.call(rbind,loorows);pat<-do.call(rbind,patrows)
+refs$BH_across_six_descriptive<-p.adjust(refs$p,"BH",n=6)
+compare<-function(file,new,keys,nums){
+ old<-read.delim(file.path(root,"runs/002D_VDZ_support",file),check.names=FALSE)
+ a<-do.call(paste,c(old[keys],sep="|"));b<-do.call(paste,c(new[keys],sep="|"))
+ stopifnot(!anyDuplicated(a),!anyDuplicated(b),setequal(a,b))
+ new<-new[match(a,b),]
+ dif<-sapply(nums,function(n)max(abs(old[[n]]-new[[n]])))
+ stopifnot(all(dif<1e-8))
+ list(file=file,n_rows=nrow(old),max_abs_error=as.list(dif),matched=TRUE)
+}
+nums<-c("n","df","estimate","se","lower","upper","p","max_leverage","residual_sigma")
+checks<-list(
+ compare("candidate_models.tsv",mods,c("visit","program","model","method"),nums),
+ compare("reference_models.tsv",refs,c("visit","program","model","method"),c(nums,"BH_across_six_descriptive")),
+ compare("leave_one_patient_out.tsv",loos,c("visit","omitted_subject"),nums),
+ compare("patient_level_scores.tsv",pat,c("visit","subject"),c("baseline_candidate","post_candidate","delta_candidate","delta_common194_inflammation"))
+)
+result<-list(reviewer_computation="Independent QR coefficient calculation; residual OLS variance; HC3 outer-products from weighted design; scores rebuilt from frozen gene_expression using frozen gene sets.",candidate_genes=sort(z$sets[[cand]]),inflammation_genes=length(z$sets[[infl]]),max_rebuilt_sample_score_error=score_error,checks=checks,rebuilt_candidate_models=mods,rebuilt_reference_models=refs,LOPO_summary=lapply(split(loos,loos$visit),function(v)list(n=nrow(v),estimate_range=range(v$estimate),p_range=range(v$p),all_estimates_positive=all(v$estimate>0))),r_version=R.version.string)
+write_json(result,file.path(root,"provenance/reviews/002D_VDZ_results_recomputation.json"),pretty=TRUE,auto_unbox=TRUE,digits=16)
+cat(toJSON(list(all_matched=TRUE,score_error=score_error,checks=checks,LOPO_summary=result$LOPO_summary),pretty=TRUE,auto_unbox=TRUE,digits=16))

@@ -1,0 +1,854 @@
+{
+  "artifact_id": "002D_VDZ_metadata_independent_review_v1",
+  "run_id": "002D_VDZ_extension_metadata_only",
+  "reviewer": "independent agent /root/vdz_metadata_review",
+  "created_utc": "2026-09-11T03:52:11.822555+00:00",
+  "scope": "Metadata counts, prior scoring scope, and interpretation of expansion design only; no new VDZ expression values, scores, deltas or outcome models computed or displayed.",
+  "status": "REVIEWED",
+  "plan_execution_approval": "No unresolved execution blocker after independent source and metadata review; freeze reviewed configuration before association execution.",
+  "inputs": [
+    {
+      "path": "inputs/metadata/GSE73661.matrix_header.txt",
+      "size": 284310,
+      "sha256": "47f478d2b6d7387493ad6f5ad78368d17c20692d3c541d7124de5d4904876980"
+    },
+    {
+      "path": "runs/002B_GSE73661_support/downloaded_matrix_header.txt",
+      "size": 284310,
+      "sha256": "47f478d2b6d7387493ad6f5ad78368d17c20692d3c541d7124de5d4904876980"
+    },
+    {
+      "path": "code/support_73661_002B.R",
+      "size": 7956,
+      "sha256": "7e94818193ab6011c6d4e469751e0216e0706b3cf19f149ecb359c7387ebd952"
+    },
+    {
+      "path": "runs/002B_GSE73661_support/support_scores.rds",
+      "size": 68919550,
+      "sha256": "5a24c16f5f6b337b35abb9c1516ef7ff18cbd2dc821806bc363092d92eb679ea"
+    },
+    {
+      "path": "planning/Study_Design_v1.md",
+      "size": 23025,
+      "sha256": "297562063dcf4dc81833cf0a32a5e7133c36b015770c0862707a57456cd833aa"
+    },
+    {
+      "path": "planning/support_plan_002B.frozen.json",
+      "size": 7975,
+      "sha256": "d8e5549c0e9e0a60696488653b45933fda7e8470da174351ab4377fe7de43399"
+    },
+    {
+      "path": "renv.lock",
+      "size": 316521,
+      "sha256": "2424132d24861ee91dd7148b05ecf6f4417ae99fadfaf8f9f00139e12b17c361"
+    }
+  ],
+  "methods": {
+    "metadata": "Python csv parser of published GEO matrix header; exact subject IDs and scheduled week labels; healing defined as released Mayo endoscopic subscore <=1",
+    "RDS": "Read existing object; inspect only names, dimensions, sample IDs and IFX pair IDs; no score values extracted or printed",
+    "code_evidence": {
+      "whole_matrix_scoring_line": 37,
+      "IFX_pair_subset_line": 38,
+      "save_full_object_line": 39
+    },
+    "random_seed": "not applicable; deterministic metadata review",
+    "command": "python3 provenance/reviews/002D_VDZ_metadata_review.py",
+    "python": "3.12.3",
+    "r_structure_command": [
+      "Rscript",
+      "--vanilla",
+      "-e",
+      "suppressPackageStartupMessages(library(jsonlite)); obj<-readRDS(\"/root/projects/UC_Treatment_Recovery/runs/002B_GSE73661_support/support_scores.rds\"); cat(toJSON(list(object_names=names(obj),score_dimensions=dim(obj$sample_scores),gene_expression_dimensions=dim(obj$gene_expression),score_gsm_names=colnames(obj$sample_scores),IFX_pair_count=nrow(obj$pairs),IFX_pair_subjects=as.character(obj$pairs$subject),R_version=R.version.string),auto_unbox=TRUE))"
+    ]
+  },
+  "counts": {
+    "all_samples": 178,
+    "active_VDZ_unique_subjects": 41,
+    "IFX_unique_subjects": 23,
+    "all_trial_subjects_including_placebo": 44,
+    "VDZ_IFX_subject_overlap": [],
+    "week6_week12_subject_overlap": [],
+    "paths_by_week": {
+      "CO": {
+        "CO": 12
+      },
+      "IFX": {
+        "W0": 23,
+        "W4_W6": 23
+      },
+      "plac_plac": {
+        "W0": 3,
+        "W6": 3,
+        "W14": 1
+      },
+      "vdz4w": {
+        "W12": 13,
+        "W52": 8,
+        "W0": 13
+      },
+      "vdz_plac": {
+        "W0": 4,
+        "W6": 3,
+        "W52": 2,
+        "W10": 1
+      },
+      "vdz_vdz4w": {
+        "W0": 20,
+        "W6": 20,
+        "W8": 3,
+        "W52": 8,
+        "W28": 2,
+        "W9": 1,
+        "W38": 1,
+        "W32": 1,
+        "W18": 1,
+        "W16": 1
+      },
+      "vdz_vdz8w": {
+        "W0": 4,
+        "W6": 4,
+        "W52": 1,
+        "W26": 1,
+        "W8": 1
+      }
+    },
+    "pairs": {
+      "W6": {
+        "n_pairs": 27,
+        "n_healing": 6,
+        "n_nonhealing": 21,
+        "pairs": [
+          {
+            "subject": "13",
+            "path": "vdz_vdz4w",
+            "baseline_gsm": "GSM1900288",
+            "followup_gsm": "GSM1900289",
+            "baseline_mayo": 3,
+            "followup_mayo": 3,
+            "healing": false
+          },
+          {
+            "subject": "15",
+            "path": "vdz_vdz8w",
+            "baseline_gsm": "GSM1900227",
+            "followup_gsm": "GSM1900228",
+            "baseline_mayo": 3,
+            "followup_mayo": 2,
+            "healing": false
+          },
+          {
+            "subject": "16",
+            "path": "vdz_vdz4w",
+            "baseline_gsm": "GSM1900291",
+            "followup_gsm": "GSM1900292",
+            "baseline_mayo": 2,
+            "followup_mayo": 2,
+            "healing": false
+          },
+          {
+            "subject": "17",
+            "path": "vdz_plac",
+            "baseline_gsm": "GSM1900299",
+            "followup_gsm": "GSM1900300",
+            "baseline_mayo": 3,
+            "followup_mayo": 0,
+            "healing": true
+          },
+          {
+            "subject": "18",
+            "path": "vdz_vdz4w",
+            "baseline_gsm": "GSM1900274",
+            "followup_gsm": "GSM1900275",
+            "baseline_mayo": 3,
+            "followup_mayo": 3,
+            "healing": false
+          },
+          {
+            "subject": "20",
+            "path": "vdz_vdz4w",
+            "baseline_gsm": "GSM1900230",
+            "followup_gsm": "GSM1900231",
+            "baseline_mayo": 3,
+            "followup_mayo": 3,
+            "healing": false
+          },
+          {
+            "subject": "22",
+            "path": "vdz_vdz4w",
+            "baseline_gsm": "GSM1900233",
+            "followup_gsm": "GSM1900234",
+            "baseline_mayo": 3,
+            "followup_mayo": 3,
+            "healing": false
+          },
+          {
+            "subject": "28",
+            "path": "vdz_vdz4w",
+            "baseline_gsm": "GSM1900236",
+            "followup_gsm": "GSM1900237",
+            "baseline_mayo": 3,
+            "followup_mayo": 1,
+            "healing": true
+          },
+          {
+            "subject": "34",
+            "path": "vdz_vdz4w",
+            "baseline_gsm": "GSM1900265",
+            "followup_gsm": "GSM1900266",
+            "baseline_mayo": 2,
+            "followup_mayo": 0,
+            "healing": true
+          },
+          {
+            "subject": "39",
+            "path": "vdz_vdz4w",
+            "baseline_gsm": "GSM1900285",
+            "followup_gsm": "GSM1900286",
+            "baseline_mayo": 3,
+            "followup_mayo": 3,
+            "healing": false
+          },
+          {
+            "subject": "40",
+            "path": "vdz_vdz8w",
+            "baseline_gsm": "GSM1900310",
+            "followup_gsm": "GSM1900311",
+            "baseline_mayo": 2,
+            "followup_mayo": 2,
+            "healing": false
+          },
+          {
+            "subject": "41",
+            "path": "vdz_vdz8w",
+            "baseline_gsm": "GSM1900307",
+            "followup_gsm": "GSM1900308",
+            "baseline_mayo": 3,
+            "followup_mayo": 2,
+            "healing": false
+          },
+          {
+            "subject": "42",
+            "path": "vdz_vdz4w",
+            "baseline_gsm": "GSM1900271",
+            "followup_gsm": "GSM1900272",
+            "baseline_mayo": 3,
+            "followup_mayo": 3,
+            "healing": false
+          },
+          {
+            "subject": "47",
+            "path": "vdz_vdz4w",
+            "baseline_gsm": "GSM1900277",
+            "followup_gsm": "GSM1900278",
+            "baseline_mayo": 3,
+            "followup_mayo": 3,
+            "healing": false
+          },
+          {
+            "subject": "49",
+            "path": "vdz_vdz4w",
+            "baseline_gsm": "GSM1900280",
+            "followup_gsm": "GSM1900281",
+            "baseline_mayo": 3,
+            "followup_mayo": 1,
+            "healing": true
+          },
+          {
+            "subject": "50",
+            "path": "vdz_vdz4w",
+            "baseline_gsm": "GSM1900268",
+            "followup_gsm": "GSM1900269",
+            "baseline_mayo": 2,
+            "followup_mayo": 3,
+            "healing": false
+          },
+          {
+            "subject": "54",
+            "path": "vdz_vdz4w",
+            "baseline_gsm": "GSM1900241",
+            "followup_gsm": "GSM1900242",
+            "baseline_mayo": 3,
+            "followup_mayo": 3,
+            "healing": false
+          },
+          {
+            "subject": "55",
+            "path": "vdz_vdz4w",
+            "baseline_gsm": "GSM1900297",
+            "followup_gsm": "GSM1900298",
+            "baseline_mayo": 2,
+            "followup_mayo": 2,
+            "healing": false
+          },
+          {
+            "subject": "58",
+            "path": "vdz_vdz4w",
+            "baseline_gsm": "GSM1900283",
+            "followup_gsm": "GSM1900284",
+            "baseline_mayo": 2,
+            "followup_mayo": 2,
+            "healing": false
+          },
+          {
+            "subject": "59",
+            "path": "vdz_vdz8w",
+            "baseline_gsm": "GSM1900244",
+            "followup_gsm": "GSM1900245",
+            "baseline_mayo": 3,
+            "followup_mayo": 3,
+            "healing": false
+          },
+          {
+            "subject": "62",
+            "path": "vdz_plac",
+            "baseline_gsm": "GSM1900305",
+            "followup_gsm": "GSM1900306",
+            "baseline_mayo": 2,
+            "followup_mayo": 1,
+            "healing": true
+          },
+          {
+            "subject": "63",
+            "path": "vdz_vdz4w",
+            "baseline_gsm": "GSM1900248",
+            "followup_gsm": "GSM1900249",
+            "baseline_mayo": 3,
+            "followup_mayo": 2,
+            "healing": false
+          },
+          {
+            "subject": "68",
+            "path": "vdz_vdz4w",
+            "baseline_gsm": "GSM1900251",
+            "followup_gsm": "GSM1900252",
+            "baseline_mayo": 3,
+            "followup_mayo": 3,
+            "healing": false
+          },
+          {
+            "subject": "73",
+            "path": "vdz_plac",
+            "baseline_gsm": "GSM1900260",
+            "followup_gsm": "GSM1900261",
+            "baseline_mayo": 2,
+            "followup_mayo": 0,
+            "healing": true
+          },
+          {
+            "subject": "74",
+            "path": "vdz_vdz4w",
+            "baseline_gsm": "GSM1900257",
+            "followup_gsm": "GSM1900258",
+            "baseline_mayo": 3,
+            "followup_mayo": 3,
+            "healing": false
+          },
+          {
+            "subject": "76",
+            "path": "vdz_vdz4w",
+            "baseline_gsm": "GSM1900294",
+            "followup_gsm": "GSM1900295",
+            "baseline_mayo": 2,
+            "followup_mayo": 2,
+            "healing": false
+          },
+          {
+            "subject": "77",
+            "path": "vdz_vdz4w",
+            "baseline_gsm": "GSM1900302",
+            "followup_gsm": "GSM1900303",
+            "baseline_mayo": 2,
+            "followup_mayo": 2,
+            "healing": false
+          }
+        ]
+      },
+      "W12": {
+        "n_pairs": 13,
+        "n_healing": 3,
+        "n_nonhealing": 10,
+        "pairs": [
+          {
+            "subject": "24",
+            "path": "vdz4w",
+            "baseline_gsm": "GSM1900317",
+            "followup_gsm": "GSM1900165",
+            "baseline_mayo": 2,
+            "followup_mayo": 3,
+            "healing": false
+          },
+          {
+            "subject": "26",
+            "path": "vdz4w",
+            "baseline_gsm": "GSM1900325",
+            "followup_gsm": "GSM1900174",
+            "baseline_mayo": 3,
+            "followup_mayo": 3,
+            "healing": false
+          },
+          {
+            "subject": "32",
+            "path": "vdz4w",
+            "baseline_gsm": "GSM1900318",
+            "followup_gsm": "GSM1900167",
+            "baseline_mayo": 3,
+            "followup_mayo": 3,
+            "healing": false
+          },
+          {
+            "subject": "35",
+            "path": "vdz4w",
+            "baseline_gsm": "GSM1900323",
+            "followup_gsm": "GSM1900161",
+            "baseline_mayo": 2,
+            "followup_mayo": 2,
+            "healing": false
+          },
+          {
+            "subject": "37",
+            "path": "vdz4w",
+            "baseline_gsm": "GSM1900313",
+            "followup_gsm": "GSM1900163",
+            "baseline_mayo": 3,
+            "followup_mayo": 0,
+            "healing": true
+          },
+          {
+            "subject": "44",
+            "path": "vdz4w",
+            "baseline_gsm": "GSM1900314",
+            "followup_gsm": "GSM1900164",
+            "baseline_mayo": 2,
+            "followup_mayo": 1,
+            "healing": true
+          },
+          {
+            "subject": "51",
+            "path": "vdz4w",
+            "baseline_gsm": "GSM1900319",
+            "followup_gsm": "GSM1900168",
+            "baseline_mayo": 2,
+            "followup_mayo": 2,
+            "healing": false
+          },
+          {
+            "subject": "56",
+            "path": "vdz4w",
+            "baseline_gsm": "GSM1900321",
+            "followup_gsm": "GSM1900170",
+            "baseline_mayo": 3,
+            "followup_mayo": 0,
+            "healing": true
+          },
+          {
+            "subject": "64",
+            "path": "vdz4w",
+            "baseline_gsm": "GSM1900320",
+            "followup_gsm": "GSM1900171",
+            "baseline_mayo": 3,
+            "followup_mayo": 3,
+            "healing": false
+          },
+          {
+            "subject": "70",
+            "path": "vdz4w",
+            "baseline_gsm": "GSM1900324",
+            "followup_gsm": "GSM1900169",
+            "baseline_mayo": 2,
+            "followup_mayo": 3,
+            "healing": false
+          },
+          {
+            "subject": "71",
+            "path": "vdz4w",
+            "baseline_gsm": "GSM1900322",
+            "followup_gsm": "GSM1900173",
+            "baseline_mayo": 2,
+            "followup_mayo": 3,
+            "healing": false
+          },
+          {
+            "subject": "75",
+            "path": "vdz4w",
+            "baseline_gsm": "GSM1900315",
+            "followup_gsm": "GSM1900162",
+            "baseline_mayo": 3,
+            "followup_mayo": 3,
+            "healing": false
+          },
+          {
+            "subject": "78",
+            "path": "vdz4w",
+            "baseline_gsm": "GSM1900316",
+            "followup_gsm": "GSM1900166",
+            "baseline_mayo": 3,
+            "followup_mayo": 2,
+            "healing": false
+          }
+        ]
+      }
+    }
+  },
+  "prior_object_structure": {
+    "object_names": [
+      "gene_expression",
+      "probe_expression_log2",
+      "metadata",
+      "pairs",
+      "sample_scores",
+      "baseline",
+      "post",
+      "delta",
+      "sets"
+    ],
+    "score_dimensions": [
+      5,
+      178
+    ],
+    "gene_expression_dimensions": [
+      18583,
+      178
+    ],
+    "score_gsm_names": [
+      "GSM1900148",
+      "GSM1900149",
+      "GSM1900150",
+      "GSM1900151",
+      "GSM1900152",
+      "GSM1900153",
+      "GSM1900154",
+      "GSM1900155",
+      "GSM1900156",
+      "GSM1900157",
+      "GSM1900158",
+      "GSM1900159",
+      "GSM1900160",
+      "GSM1900161",
+      "GSM1900162",
+      "GSM1900163",
+      "GSM1900164",
+      "GSM1900165",
+      "GSM1900166",
+      "GSM1900167",
+      "GSM1900168",
+      "GSM1900169",
+      "GSM1900170",
+      "GSM1900171",
+      "GSM1900172",
+      "GSM1900173",
+      "GSM1900174",
+      "GSM1900175",
+      "GSM1900176",
+      "GSM1900177",
+      "GSM1900178",
+      "GSM1900179",
+      "GSM1900180",
+      "GSM1900181",
+      "GSM1900182",
+      "GSM1900183",
+      "GSM1900184",
+      "GSM1900185",
+      "GSM1900186",
+      "GSM1900187",
+      "GSM1900188",
+      "GSM1900189",
+      "GSM1900190",
+      "GSM1900191",
+      "GSM1900192",
+      "GSM1900193",
+      "GSM1900194",
+      "GSM1900195",
+      "GSM1900196",
+      "GSM1900197",
+      "GSM1900198",
+      "GSM1900199",
+      "GSM1900200",
+      "GSM1900201",
+      "GSM1900202",
+      "GSM1900203",
+      "GSM1900204",
+      "GSM1900205",
+      "GSM1900206",
+      "GSM1900207",
+      "GSM1900208",
+      "GSM1900209",
+      "GSM1900210",
+      "GSM1900211",
+      "GSM1900212",
+      "GSM1900213",
+      "GSM1900214",
+      "GSM1900215",
+      "GSM1900216",
+      "GSM1900217",
+      "GSM1900218",
+      "GSM1900219",
+      "GSM1900220",
+      "GSM1900221",
+      "GSM1900222",
+      "GSM1900223",
+      "GSM1900224",
+      "GSM1900225",
+      "GSM1900226",
+      "GSM1900227",
+      "GSM1900228",
+      "GSM1900229",
+      "GSM1900230",
+      "GSM1900231",
+      "GSM1900232",
+      "GSM1900233",
+      "GSM1900234",
+      "GSM1900235",
+      "GSM1900236",
+      "GSM1900237",
+      "GSM1900238",
+      "GSM1900239",
+      "GSM1900240",
+      "GSM1900241",
+      "GSM1900242",
+      "GSM1900243",
+      "GSM1900244",
+      "GSM1900245",
+      "GSM1900246",
+      "GSM1900247",
+      "GSM1900248",
+      "GSM1900249",
+      "GSM1900250",
+      "GSM1900251",
+      "GSM1900252",
+      "GSM1900253",
+      "GSM1900254",
+      "GSM1900255",
+      "GSM1900256",
+      "GSM1900257",
+      "GSM1900258",
+      "GSM1900259",
+      "GSM1900260",
+      "GSM1900261",
+      "GSM1900262",
+      "GSM1900263",
+      "GSM1900264",
+      "GSM1900265",
+      "GSM1900266",
+      "GSM1900267",
+      "GSM1900268",
+      "GSM1900269",
+      "GSM1900270",
+      "GSM1900271",
+      "GSM1900272",
+      "GSM1900273",
+      "GSM1900274",
+      "GSM1900275",
+      "GSM1900276",
+      "GSM1900277",
+      "GSM1900278",
+      "GSM1900279",
+      "GSM1900280",
+      "GSM1900281",
+      "GSM1900282",
+      "GSM1900283",
+      "GSM1900284",
+      "GSM1900285",
+      "GSM1900286",
+      "GSM1900287",
+      "GSM1900288",
+      "GSM1900289",
+      "GSM1900290",
+      "GSM1900291",
+      "GSM1900292",
+      "GSM1900293",
+      "GSM1900294",
+      "GSM1900295",
+      "GSM1900296",
+      "GSM1900297",
+      "GSM1900298",
+      "GSM1900299",
+      "GSM1900300",
+      "GSM1900301",
+      "GSM1900302",
+      "GSM1900303",
+      "GSM1900304",
+      "GSM1900305",
+      "GSM1900306",
+      "GSM1900307",
+      "GSM1900308",
+      "GSM1900309",
+      "GSM1900310",
+      "GSM1900311",
+      "GSM1900312",
+      "GSM1900313",
+      "GSM1900314",
+      "GSM1900315",
+      "GSM1900316",
+      "GSM1900317",
+      "GSM1900318",
+      "GSM1900319",
+      "GSM1900320",
+      "GSM1900321",
+      "GSM1900322",
+      "GSM1900323",
+      "GSM1900324",
+      "GSM1900325"
+    ],
+    "IFX_pair_count": 23,
+    "IFX_pair_subjects": [
+      "5",
+      "8",
+      "9",
+      "10",
+      "11",
+      "19",
+      "23",
+      "27",
+      "31",
+      "33",
+      "36",
+      "38",
+      "43",
+      "45",
+      "46",
+      "48",
+      "53",
+      "57",
+      "60",
+      "65",
+      "66",
+      "67",
+      "72"
+    ],
+    "R_version": "R version 4.3.3 (2024-02-29)"
+  },
+  "findings": [
+    {
+      "severity": "BLOCKING_if_unfixed",
+      "id": "prior_score_access",
+      "finding": "The claim that VDZ sample scores were never computed is false. Existing 002B code computed all 178 sample scores and saved them in support_scores.rds. Only IFX paired differences and outcome association were the target of the inspected 002B code.",
+      "required_resolution": "Disclose matrix and sample scores already computed; describe plan as prospective to new VDZ paired outcome-association analysis, not prospective to expression or scoring access. Do not claim that source files prove no human ever inspected the VDZ values."
+    },
+    {
+      "severity": "MAJOR",
+      "id": "small_healing_group",
+      "finding": "W6 has 27 pairs but only 6 healing; W12 13 pairs but only 3 healing. Total pairs alone overstates precision and model support."
+    },
+    {
+      "severity": "MAJOR",
+      "id": "future_path_conditioning",
+      "finding": "All 3 vdz_plac W6 samples are healing, accounting for half the W6 healing group. Excluding them by future maintenance path would substantially select the endpoint group. Future maintenance treatment is not a baseline covariate."
+    },
+    {
+      "severity": "MAJOR",
+      "id": "W12_distinct_group",
+      "finding": "W12 and W6 subjects do not overlap. Do not describe W12 as an extended follow-up of W6 participants or freely pool them; verify LTS exposure histories with original trial sources."
+    },
+    {
+      "severity": "MAJOR",
+      "id": "power_not_hard_threshold",
+      "finding": "The 72-128 pair calculation is a conditional planning approximation under fixed beta, residual variance, response balance and design collinearity. It is not a minimum validity criterion and does not establish impossibility of clinical-response validation. The fixed beta was selected in discovery and remains uncertain."
+    },
+    {
+      "severity": "MAJOR",
+      "id": "negative_VDZ_not_specificity",
+      "finding": "A nonsignificant VDZ association does not demonstrate anti-TNF specificity; cross-drug effect differences require compatible estimands and an interaction/heterogeneity assessment, which this cross-study design may not identify causally."
+    },
+    {
+      "severity": "MAJOR",
+      "id": "positive_VDZ_not_common_mechanism",
+      "finding": "A positive VDZ association would support cross-drug endoscopic association in sampled patients, not establish a universal recovery mechanism or drug efficacy ranking."
+    },
+    {
+      "severity": "MAJOR",
+      "id": "same_dataset_evidence_role",
+      "finding": "Nonoverlapping subject IDs support distinct patients within the same GEO study. This is cross-drug patient evidence sharing study, platform and processing context; it is not a new external dataset."
+    }
+  ],
+  "boundaries": [
+    "Keep GSE23597 failed clinical-response primary test unchanged.",
+    "New endoscopic analysis cannot replace the clinical-response primary or be pooled with its P value.",
+    "Keep candidate genes and scoring rules fixed.",
+    "Retain vdz_plac W6 as induction exposure after checking original trial timing.",
+    "Do not classify all W52 samples as continuous VDZ.",
+    "List off-window visits separately without relabeling to W6 or W12.",
+    "Placebo W6 has only 3 pairs; avoid credible drug-placebo efficacy claims.",
+    "Retain endpoint-score construct overlap and bulk tissue composition limitations.",
+    "GSE16879 independence remains unverified until patient-level evidence resolves potential overlap; shared institution is not proof of duplicate patients."
+  ],
+  "new_biological_models_run": false,
+  "new_VDZ_scores_computed": false,
+  "expression_values_displayed": false,
+  "pre_execution_plan_review": {
+    "reviewed_utc": "2026-09-11T03:53:55.898266+00:00",
+    "plan_path": "/root/projects/UC_Treatment_Recovery/planning/support_plan_002D_VDZ.draft.json",
+    "plan_sha256": "57fdffc866e31629b3ca08ba5865f8cc853805ce5c1dc3d32bb2bfc4fdd1f808",
+    "code_path": "/root/projects/UC_Treatment_Recovery/code/support_002D_VDZ.R",
+    "code_sha256": "41529db02a43b4c7a749ac81b45cdd90fa3549ae0c5b88cd2409cb9d150ccd80",
+    "inputs_hashes_verified": [
+      {
+        "path": "/root/projects/UC_Treatment_Recovery/signature_lock.json",
+        "matches": true
+      },
+      {
+        "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+        "matches": true
+      },
+      {
+        "path": "/root/projects/UC_Treatment_Recovery/runs/002B_GSE73661_support/support_scores.rds",
+        "matches": true
+      },
+      {
+        "path": "/root/projects/UC_Treatment_Recovery/runs/001A_metadata/sample_registry_v1.tsv",
+        "matches": true
+      },
+      {
+        "path": "/root/projects/UC_Treatment_Recovery/inputs/metadata/GSE73661.matrix_header.txt",
+        "matches": true
+      },
+      {
+        "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/VDZ_pairs.tsv",
+        "matches": true
+      },
+      {
+        "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/audit_summary.json",
+        "matches": true
+      },
+      {
+        "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/prior_score_scope.json",
+        "matches": true
+      },
+      {
+        "path": "/root/projects/UC_Treatment_Recovery/code/support_002D_VDZ.R",
+        "matches": true
+      }
+    ],
+    "pair_file_matches_independent_header_reconstruction": true,
+    "r_parse_succeeded": true,
+    "models_executed": false,
+    "execution_blockers": [],
+    "scientific_choice_checks": {
+      "W6_principal_supportive_only": true,
+      "W12_secondary_disjoint_patients": true,
+      "three_parallel_models": true,
+      "whole_matrix_prior_scoring_disclosed": true,
+      "vdz_plac_W6_included": true,
+      "future_maintenance_path_not_covariate": true,
+      "fixed_candidate_and_common194": true,
+      "clinical_primary_retained_as_failed": true,
+      "no_cross_endpoint_P_pooling": true,
+      "no_specificity_claim_from_negative": true,
+      "no_superiority_or_causal_mechanism_claims": true
+    },
+    "comments": [
+      {
+        "severity": "MINOR",
+        "comment": "HC3 P values use a nominal residual-df t reference. The word exact should mean exact numeric reporting, not finite-sample exact robust inference."
+      },
+      {
+        "severity": "MINOR",
+        "comment": "The script stops on missing values/group-count failures before writing non-evaluable results. Current metadata has valid group counts and inherited scores were generated from finite input, so this is not an observed blocker; retain a failed-run record if such a precondition fails."
+      },
+      {
+        "severity": "MINOR",
+        "comment": "An output-existence guard is preferable before formal run to prevent accidental overwrite. This review does not authorize replacing old runs."
+      }
+    ],
+    "decision": "No unresolved execution blocker in the inspected draft. Freeze the reviewed plan/code with current hashes before the new VDZ association run."
+  }
+}

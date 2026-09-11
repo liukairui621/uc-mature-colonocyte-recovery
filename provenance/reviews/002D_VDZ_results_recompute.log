@@ -1,0 +1,80 @@
+{
+  "all_matched": true,
+  "score_error": 0,
+  "checks": [
+    {
+      "file": "candidate_models.tsv",
+      "n_rows": 12,
+      "max_abs_error": {
+        "n": 0,
+        "df": 0,
+        "estimate": 4.2188474935755949e-15,
+        "se": 3.4972025275692431e-15,
+        "lower": 7.2719608112947753e-15,
+        "upper": 7.7715611723760958e-15,
+        "p": 3.6221026178395732e-15,
+        "max_leverage": 3.219646771412954e-15,
+        "residual_sigma": 4.2188474935755949e-15
+      },
+      "matched": true
+    },
+    {
+      "file": "reference_models.tsv",
+      "n_rows": 6,
+      "max_abs_error": {
+        "n": 0,
+        "df": 0,
+        "estimate": 3.3306690738754696e-16,
+        "se": 8.7707618945387367e-15,
+        "lower": 1.8193779816044753e-14,
+        "upper": 1.7819079545233762e-14,
+        "p": 9.10035935497433e-15,
+        "max_leverage": 3.9634961979118088e-13,
+        "residual_sigma": 3.7747582837255322e-15,
+        "BH_across_six_descriptive": 5.4414805994440485e-14
+      },
+      "matched": true
+    },
+    {
+      "file": "leave_one_patient_out.tsv",
+      "n_rows": 40,
+      "max_abs_error": {
+        "n": 0,
+        "df": 0,
+        "estimate": 3.7747582837255322e-15,
+        "se": 2.9976021664879227e-15,
+        "lower": 6.7723604502134549e-15,
+        "upper": 1.0436096431476471e-14,
+        "p": 3.219646771412954e-15,
+        "max_leverage": 7.4384942649885488e-15,
+        "residual_sigma": 7.7715611723760958e-16
+      },
+      "matched": true
+    },
+    {
+      "file": "patient_level_scores.tsv",
+      "n_rows": 40,
+      "max_abs_error": {
+        "baseline_candidate": 3.3750779948604759e-14,
+        "post_candidate": 3.3750779948604759e-14,
+        "delta_candidate": 4.8849813083506888e-15,
+        "delta_common194_inflammation": 4.7184478546569153e-16
+      },
+      "matched": true
+    }
+  ],
+  "LOPO_summary": {
+    "W12": {
+      "n": 13,
+      "estimate_range": [0.59959377560282168, 1.1988401105219666],
+      "p_range": [0.04908869516812097, 0.37834080249266588],
+      "all_estimates_positive": true
+    },
+    "W6": {
+      "n": 27,
+      "estimate_range": [0.41402949371094905, 0.60997146201733732],
+      "p_range": [0.19909289382987508, 0.432012062081918],
+      "all_estimates_positive": true
+    }
+  }
+}

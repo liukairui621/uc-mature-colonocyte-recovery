@@ -1,0 +1,242 @@
+{
+  "run_id": "002D_VDZ_support",
+  "artifact_id": "VDZ_supportive_association_002D_v1",
+  "status": "REVIEWED",
+  "role": "Post hoc cross-drug supportive extension with analysis rules specified before the new VDZ patient-level association run; not public preregistration or fresh blinded validation",
+  "created_utc": "2026-09-11T03:56:17.360971+00:00",
+  "inputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/signature_lock.json",
+      "sha256": "62462dfbc25bb857c94c872424173e215c6d1b8b6724a0bbc724a5c2683bfb36",
+      "bytes": 19065
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+      "sha256": "2424132d24861ee91dd7148b05ecf6f4417ae99fadfaf8f9f00139e12b17c361",
+      "bytes": 316521
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002B_GSE73661_support/support_scores.rds",
+      "sha256": "5a24c16f5f6b337b35abb9c1516ef7ff18cbd2dc821806bc363092d92eb679ea",
+      "bytes": 68919550
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/001A_metadata/sample_registry_v1.tsv",
+      "sha256": "51fb54b7d978c8d5ed025c00a04df69017f71c4875eccc227a5b17e5c6936ba5",
+      "bytes": 82956
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/inputs/metadata/GSE73661.matrix_header.txt",
+      "sha256": "47f478d2b6d7387493ad6f5ad78368d17c20692d3c541d7124de5d4904876980",
+      "bytes": 284310
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/VDZ_pairs.tsv",
+      "sha256": "4014f6eef5aa988c5ec5e689ee396800dbef3aa8a38108b243759cc5fe5513e9",
+      "bytes": 1891
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/audit_summary.json",
+      "sha256": "bfc9fc581fe3bb1124dc0cd0cd3426a01634a9d84c73cdbf84b7ca1c5f36bdce",
+      "bytes": 656
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/prior_score_scope.json",
+      "sha256": "dbccfeecf086a256356e157c0fe3350178489ebc7417930290fc1f628fc483ea",
+      "bytes": 575
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/support_002D_VDZ.R",
+      "sha256": "9604248a7174957c9324b2d58a6d3f920797fc104c011d1004619d56a17b11a0",
+      "bytes": 5245
+    }
+  ],
+  "code": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/support_002D_VDZ.R",
+      "sha256": "9604248a7174957c9324b2d58a6d3f920797fc104c011d1004619d56a17b11a0",
+      "bytes": 5245
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/audit_002D_VDZ_metadata.py",
+      "sha256": "b4190e9503fc8c69f64aa54ec1339e58689222c6efcd63819a034e4d6dcdf2be",
+      "bytes": 3509
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/code/audit_002D_prior_score_scope.R",
+      "sha256": "ee9554b6a9209e3cdebd9e49792e692c7ef069b6375cf8e41cc2a20d71e189c1",
+      "bytes": 864
+    }
+  ],
+  "configuration": {
+    "path": "/root/projects/UC_Treatment_Recovery/planning/support_plan_002D_VDZ.frozen.json",
+    "sha256": "1e126bc12598bb778cf368bae9311eed96548a0bddeda56c52539d48bc0160bf",
+    "bytes": 8276
+  },
+  "execution": {
+    "status": "COMPLETE",
+    "started_utc": "2026-09-11T03:54:57.997581+00:00",
+    "command": "Rscript code/support_002D_VDZ.R",
+    "cwd": "/root/projects/UC_Treatment_Recovery",
+    "plan_sha256": "1e126bc12598bb778cf368bae9311eed96548a0bddeda56c52539d48bc0160bf",
+    "exit_code": 0,
+    "completed_utc": "2026-09-11T03:55:02.017082+00:00"
+  },
+  "seed": 20260911,
+  "environment": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/renv.lock",
+      "sha256": "2424132d24861ee91dd7148b05ecf6f4417ae99fadfaf8f9f00139e12b17c361",
+      "bytes": 316521
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_support/sessionInfo.txt",
+      "sha256": "bb98082e78596165a34f64c5253c191b8dd5a0c525a4076f2ce50032ccd350a0",
+      "bytes": 948
+    }
+  ],
+  "outputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_support/leave_one_patient_out.tsv",
+      "sha256": "74fe3fca89802b467979762438d3cc0e5f9d33844397ca52e7aa0f6c07f0edef",
+      "bytes": 8211
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_support/sessionInfo.txt",
+      "sha256": "bb98082e78596165a34f64c5253c191b8dd5a0c525a4076f2ce50032ccd350a0",
+      "bytes": 948
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_support/patient_level_scores.tsv",
+      "sha256": "892070149ad27a8ce5feaa888dcc5a6b1ae288ca51408491aad3a020c116c869",
+      "bytes": 4610
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_support/analysis_summary.json",
+      "sha256": "1b46c6e625af08b4fef2dcceabd99386a560b29c1f950c68e263a65d6aef81de",
+      "bytes": 1466
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_support/model_fits.rds",
+      "sha256": "69d7109cd04053649e36ced1f6606d93a08e00cc05c92de10a67e661e8d2158e",
+      "bytes": 7077
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_support/candidate_models.tsv",
+      "sha256": "26906bda3caa8f8362c70cfc1eb0c536687acda72bd114ae87d25664b8ecf015",
+      "bytes": 2483
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_support/analysis.log",
+      "sha256": "900766353ece6133862df67ca846e1667dec8ffd0b5e4be988507456ed11c061",
+      "bytes": 4640
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_support/reference_models.tsv",
+      "sha256": "131755a2c4c01e573a19bf1c614815b64f3cbee809d746813df565ae0efcecb7",
+      "bytes": 1527
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_support/patient_diagnostics.tsv",
+      "sha256": "57ce507010d0e68913d920408c3dc1abec52bf532338fc4946d49be9c6208385",
+      "bytes": 2671
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_support/execution.json",
+      "sha256": "a57c24cb8c9036ad93a64b2132105d25d8885234e078f8596de83b8e7bf73ad2",
+      "bytes": 334
+    }
+  ],
+  "metadata_outputs": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/healing_counts.tsv",
+      "sha256": "0f3fce8440898ecb6dcf6b9754d16ecc0e9a48af14d75836625b720c098756f3",
+      "bytes": 30
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/audit_summary.json",
+      "sha256": "bfc9fc581fe3bb1124dc0cd0cd3426a01634a9d84c73cdbf84b7ca1c5f36bdce",
+      "bytes": 656
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/VDZ_all_samples_disposition.tsv",
+      "sha256": "b6431ec7a1397eff45236ca16becb2a2361737cb6891ed4addf16435b035566e",
+      "bytes": 25199
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/environment_precheck.log",
+      "sha256": "4a77f2103a499e6321996bab4102a038fd6fe70dda535536090516e6d00fe3a0",
+      "bytes": 24
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/audit.log",
+      "sha256": "77c9488d1d6468191d3456996dedfb7c5ac0733f7d969246f155ab3eb335079c",
+      "bytes": 1353
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/prior_score_scope.log",
+      "sha256": "5519f405c7e6a42b1a965c13af67eb98a57deebd6672dbeb0c906fb62e85141e",
+      "bytes": 675
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/syntax_check.log",
+      "sha256": "df42ba595559ee7f34002f4cf5bdeb595e9feeee567a8c482de49ff00aed663e",
+      "bytes": 6787
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/conditional_sample_size_scenarios.tsv",
+      "sha256": "29e6bb5095f11b58a32b01f3a4b44217541e59bafce26ab3266056fa90c6da5a",
+      "bytes": 509
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/prior_score_scope.json",
+      "sha256": "dbccfeecf086a256356e157c0fe3350178489ebc7417930290fc1f628fc483ea",
+      "bytes": 575
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/source_query_contract.json",
+      "sha256": "fad2f0d5d14d419246eaf5204fa330d19c05d22789fc10cfa97c53ce8376cbee",
+      "bytes": 931
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/visit_inventory.tsv",
+      "sha256": "3e776ff9e39a229f6807000fd99db34c15bf7916ae47cd1bc573b65b7d4da70b",
+      "bytes": 352
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/runs/002D_VDZ_metadata/VDZ_pairs.tsv",
+      "sha256": "4014f6eef5aa988c5ec5e689ee396800dbef3aa8a38108b243759cc5fe5513e9",
+      "bytes": 1891
+    }
+  ],
+  "review_status": "NO_UNRESOLVED_BLOCKING_ISSUES",
+  "result_review": {
+    "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002D_VDZ_results_review.json",
+    "sha256": "89e7a62a1df4e4854895e17fd3488d09738fb3c2a3ee1c1df335f335d79fec9f",
+    "bytes": 17591
+  },
+  "report": {
+    "path": "/root/projects/UC_Treatment_Recovery/reports/VDZ_extension_review_response_20260911.md",
+    "sha256": "bd376c9a00a69999440c3bba8184e8369c5c8a12adc7b3b0460cbb4836c739ba",
+    "bytes": 6547
+  },
+  "reviewed_utc": "2026-09-11T03:59:39.348963+00:00",
+  "source_git_note": "Frozen source_git_commit is the repository base HEAD at freeze; new source is bound by SHA256. This completion commit is after execution and not claimed as a pre-execution commit.",
+  "independent_recomputation": [
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002D_VDZ_results_recomputation.json",
+      "sha256": "443d0409126c5385ff018191926ec175ccbe8cc7e4b8d37fcf83abc4dd60886a",
+      "bytes": 11052
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002D_VDZ_results_recompute.log",
+      "sha256": "c66c9c49451b116789efa0f46fd92f55160d38991256a1ce8639d1e6b598e47a",
+      "bytes": 2269
+    },
+    {
+      "path": "/root/projects/UC_Treatment_Recovery/provenance/reviews/002D_VDZ_results_recompute.R",
+      "sha256": "bfc5de457015987a9cae29700819ecc26c55e55909a9674f3540ed57baee64c2",
+      "bytes": 4962
+    }
+  ]
+}
