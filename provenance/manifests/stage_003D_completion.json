@@ -1,0 +1,245 @@
+{
+  "stage": "003D",
+  "status": "COMPLETE",
+  "role": "post-result DecontX ambient-RNA sensitivity; zero confirmatory tests",
+  "completed_utc": "2026-09-11T02:04:18.611006+00:00",
+  "freeze": {
+    "path": "planning/analysis_plan_003D_decontx_sensitivity.frozen.json",
+    "sha256": "8cf38ed6f56bebd70cfe13a135380bde3457294d6f9885545500fea2c186f36f",
+    "created_utc": "2026-09-11T01:19:03.223140+00:00"
+  },
+  "technical_amendment": {
+    "path": "planning/analysis_plan_003D_amendment_1.json",
+    "sha256": "f534749a6f1be97548103bd11e6f20d4fceac2cbb3befa833b1dbddb27795b0b",
+    "scientific_choices_changed": false
+  },
+  "execution": {
+    "samples_expected": 82,
+    "samples_complete": 82,
+    "samples_failed": 0,
+    "cells": 378575,
+    "genes": 33075,
+    "ambient_pool": "sample library",
+    "background_empty_droplets_used": false,
+    "celda_version": "1.18.2",
+    "matrix_version": "1.6.5",
+    "reticulate_version": "1.47.0"
+  },
+  "quality": {
+    "cell_weighted_contamination_mean": 0.06710521234791689,
+    "overall_retained_UMI_fraction": 0.9437908719616304,
+    "all_integrity_checks_pass": true,
+    "arithmetic_verification": "PASS"
+  },
+  "fixed_family": {
+    "states": 15,
+    "evaluable": 10,
+    "threshold": 20,
+    "CT": {
+      "estimate": 2.854169698574173,
+      "ci": [
+        1.2589490454125845,
+        4.449390351735762
+      ],
+      "exact_p": 0.001123876123876124,
+      "BH_n15": 0.01685814185814186,
+      "supported": true
+    },
+    "TA": {
+      "estimate": 0.5760210134253315,
+      "ci": [
+        0.02759817106166318,
+        1.124443855789
+      ],
+      "exact_p": 0.041289592760181,
+      "BH_n15": 0.13986013986013987,
+      "supported": false
+    },
+    "LGR5pos_stem": {
+      "estimate": 0.5790163645209294,
+      "ci": [
+        0.04458444294415298,
+        1.113448286097706
+      ],
+      "exact_p": 0.03771228771228771,
+      "BH_n15": 0.13986013986013987,
+      "supported": false
+    }
+  },
+  "interpretation": "Retain the CT within-state association; withdraw the broad cross-lineage extension.",
+  "commands": [
+    "python3 code/extract_003D_decontx_batches.py [frozen args]",
+    "DECONTX_WORKERS=8 python3 code/run_003D_decontx_parallel.py",
+    "python3 code/consolidate_003D_decontx.py",
+    "Rscript code/analyze_003D_decontx_states.R [frozen args]",
+    "python3 code/verify_003D_decontx.py",
+    "python3 code/plot_003D_decontx.py"
+  ],
+  "files": [
+    {
+      "path": "planning/analysis_plan_003D_decontx_sensitivity.frozen.json",
+      "bytes": 4332,
+      "sha256": "8cf38ed6f56bebd70cfe13a135380bde3457294d6f9885545500fea2c186f36f"
+    },
+    {
+      "path": "planning/analysis_plan_003D_decontx_sensitivity.sha256",
+      "bytes": 117,
+      "sha256": "7066e672a9d58a62945e730532f73f93c5146cc9bcebce78ecc00eeaba192d2e"
+    },
+    {
+      "path": "planning/analysis_plan_003D_amendment_1.json",
+      "bytes": 1733,
+      "sha256": "f534749a6f1be97548103bd11e6f20d4fceac2cbb3befa833b1dbddb27795b0b"
+    },
+    {
+      "path": "planning/analysis_plan_003D_amendment_1.sha256",
+      "bytes": 111,
+      "sha256": "2b6254d9cb0a0e477289d9d03dc14e13a4c9344b8a354c9c1257447ba7b94a2c"
+    },
+    {
+      "path": "code/extract_003D_decontx_batches.py",
+      "bytes": 4784,
+      "sha256": "8ba356defefb3bc397b59e2ddf34104e9f90df73a5d151c474e1875c91b57e7c"
+    },
+    {
+      "path": "code/run_003D_decontx_sample.R",
+      "bytes": 3412,
+      "sha256": "90e973312a2b1aaa010a57f71976bb15fff4ba3ed92980d15167b2ef9d7432ec"
+    },
+    {
+      "path": "code/run_003D_decontx_parallel.py",
+      "bytes": 2240,
+      "sha256": "b9c10eb3f8b7c293594201bd789377009b08327507c382daeff8b317b9e3253e"
+    },
+    {
+      "path": "code/consolidate_003D_decontx.py",
+      "bytes": 5812,
+      "sha256": "6facaaf692d2416c9c1b60fa323257e65802b433c40d75bca14fe143dd43646a"
+    },
+    {
+      "path": "code/analyze_003D_decontx_states.R",
+      "bytes": 4417,
+      "sha256": "8e9f4f529f9f87a0e5ddbd66253d128d390c5ed83ceea5048d49acbca92757bd"
+    },
+    {
+      "path": "code/verify_003D_decontx.py",
+      "bytes": 3711,
+      "sha256": "c68aa28b6ea8f30d93be0260eb5cc27808b575f5169971fdb3d6bdddf325105c"
+    },
+    {
+      "path": "code/plot_003D_decontx.py",
+      "bytes": 2061,
+      "sha256": "4e82b71b3ad9782d939f4ca4573b3ee23a2ee7971a3d60278f83641332e084f7"
+    },
+    {
+      "path": "runs/003D_decontx_batches/batch_manifest.tsv",
+      "bytes": 21989,
+      "sha256": "75f1b074019f3c319e590e308829f4f99d346cc7002ff215f50d55df67a822d9"
+    },
+    {
+      "path": "runs/003D_decontx_batches/extraction_summary.json",
+      "bytes": 459,
+      "sha256": "f5971389009ff9f2ba109056c95fa2604978ddc8300b4fc1799f2aacbe6c3fe8"
+    },
+    {
+      "path": "runs/003D_decontx/jobs.tsv",
+      "bytes": 15054,
+      "sha256": "ae908ab0e0fc4705e1b205f9e839d12cd7b58576a1a6d5c057627d648289c9d3"
+    },
+    {
+      "path": "runs/003D_decontx/coordinator.log",
+      "bytes": 5263,
+      "sha256": "a07846606b7461383b09fc61e753d5f29ed8e5ce5b14227cdcb6927098570747"
+    },
+    {
+      "path": "runs/003D_decontx/consolidation_summary.json",
+      "bytes": 793,
+      "sha256": "df97c864112992da8bdb00b670822223359b40b2843f4c73f2942f74f0cfcf35"
+    },
+    {
+      "path": "runs/003D_decontx/sample_decontx_status.tsv",
+      "bytes": 24849,
+      "sha256": "20f3ad9be36bf0c72a2f7c8955255679c19c5a365b9a97adf432396f83573777"
+    },
+    {
+      "path": "runs/003D_decontx/sample_integrity_checks.tsv",
+      "bytes": 2708,
+      "sha256": "bb548d4c46eabc8d0940107e64368edf860628440150cab3c1fc364713509ee3"
+    },
+    {
+      "path": "runs/003D_decontx/contamination_by_state.tsv",
+      "bytes": 11187,
+      "sha256": "0d515d03b68685e664da58afba1b61a58b4c8e7e8d4cf7eaed1ebfa7b73f02c5"
+    },
+    {
+      "path": "runs/003D_decontx/sample_state_decontx_all.tsv",
+      "bytes": 1559819,
+      "sha256": "82c03dec7e60aeca62b692b8e61a823d68f054c63549f4f2752002c47a9a85a9"
+    },
+    {
+      "path": "runs/003D_decontx_state_family/decontx_fixed15_state_models.tsv",
+      "bytes": 3563,
+      "sha256": "36e9a0cdf1a8aab9f1aa98e93dbd43ca2f724c6cf48f68bfd26ff90adf6a19a0"
+    },
+    {
+      "path": "runs/003D_decontx_state_family/decontx_state_patient_deltas.tsv",
+      "bytes": 8431,
+      "sha256": "e5653d8abbd4c89c277b68197efb16883b8d24eb0a511e059c0685ca51575e0a"
+    },
+    {
+      "path": "runs/003D_decontx_state_family/decontx_state_site_pairs.tsv",
+      "bytes": 63119,
+      "sha256": "2a5e35711b7a7f99cd39bcd60c0ca63ccef35cf0a22dc0c064d50a9002258285"
+    },
+    {
+      "path": "runs/003D_decontx_state_family/analysis_summary.json",
+      "bytes": 2843,
+      "sha256": "c006161b9993409b80a9644a97a306857a60506497af465d90bff66546c8da20"
+    },
+    {
+      "path": "runs/003D_decontx_state_family/arithmetic_verification.json",
+      "bytes": 8313,
+      "sha256": "55b90e1a3ca5ef11d31dbc93be88e301c1d295e6e2bf5bc31c896c3099c7e6d0"
+    },
+    {
+      "path": "reports/Stage003D_DecontX_state_family_20260910.md",
+      "bytes": 10172,
+      "sha256": "db8e2785421ed9a294674f6611ef289efd9951679d23d0c475ab617fee8c78e2"
+    },
+    {
+      "path": "reports/Stage003_cell_context_results_20260910.md",
+      "bytes": 10321,
+      "sha256": "71c5e08b04466bd60da89bd85500efe57e5373f0306e8b3f441d6a3fd8d9177c"
+    },
+    {
+      "path": "figures/Stage003D_DecontX_raw_vs_corrected.png",
+      "bytes": 186852,
+      "sha256": "0e7448d1a5492bf167b3af6422307286e42fa983fb3f317faf87c19b39f96a01"
+    },
+    {
+      "path": "figures/Stage003D_DecontX_raw_vs_corrected.pdf",
+      "bytes": 30810,
+      "sha256": "17f2b6b7525786997332271abad2cca3502c44a4bb69b88ff21b3b04702a42df"
+    },
+    {
+      "path": "figures/Stage003D_DecontX_raw_vs_corrected.source.tsv",
+      "bytes": 3195,
+      "sha256": "ee0304a5505ec3a17eb29461480ba2f8cd229ac3440e8b4451636ccc07eca837"
+    },
+    {
+      "path": "provenance/environments/003D_decontx_R_sessionInfo.txt",
+      "bytes": 837,
+      "sha256": "0298b87dee218c7d0efa2532d84cdb076fa1aaa9ce92a8b4dd498a5fe8b3c1c1"
+    },
+    {
+      "path": "provenance/environments/003D_decontx_python.txt",
+      "bytes": 104,
+      "sha256": "36f7d57ddef5e9e318ad24cf6ebc3563a386956d4b3ac223ca678df6930f44fa"
+    },
+    {
+      "path": "renv.lock",
+      "bytes": 316521,
+      "sha256": "2424132d24861ee91dd7148b05ecf6f4417ae99fadfaf8f9f00139e12b17c361"
+    }
+  ]
+}

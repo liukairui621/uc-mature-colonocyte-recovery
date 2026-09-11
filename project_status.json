@@ -1,21 +1,21 @@
 {
   "created_utc": "2026-09-10T08:23:12.775089+00:00",
-  "current_phase": "003 COMPLETE AND REVIEWED: GSE282122 patient-level composition versus within-state analysis",
+  "current_phase": "003D COMPLETE: DecontX sensitivity retains CT state only; TA/LGR5 fixed-family extension withdrawn",
   "discovery_cohort": "GSE92415",
   "candidate_frozen": true,
   "independent_validation_started": true,
-  "next_phase": "004 manuscript evidence architecture, claim table and target-journal fit; no candidate retuning from validation results",
+  "next_phase": "004 manuscript evidence architecture, claim table and target-journal fit; no candidate retuning from validation or DecontX results",
   "analysis_input_files": [
     "/root/projects/UC_Treatment_Recovery/inputs/discovery/GSE92415_series_matrix.relay.txt.gz",
     "/root/projects/UC_Treatment_Recovery/inputs/validation/GSE23597_series_matrix.txt.gz",
     "/root/projects/UC_Treatment_Recovery/inputs/support/GSE73661_series_matrix.txt.gz"
   ],
   "review_pending": false,
-  "updated_utc": "2026-09-11T00:20:05.942031+00:00",
-  "stage_report": "/root/projects/UC_Treatment_Recovery/reports/Stage003_cell_context_results_20260910.md",
+  "updated_utc": "2026-09-11T02:04:18.614612+00:00",
+  "stage_report": "/root/projects/UC_Treatment_Recovery/reports/Stage003D_DecontX_state_family_20260910.md",
   "independent_review": "/root/projects/UC_Treatment_Recovery/provenance/reviews/003_cell_context_independent_v1.json",
   "signature_lock": "/root/projects/UC_Treatment_Recovery/signature_lock.json",
-  "completion_ledger": "/root/projects/UC_Treatment_Recovery/provenance/manifests/stage_003_completion.json",
+  "completion_ledger": "/root/projects/UC_Treatment_Recovery/provenance/manifests/stage_003D_completion.json",
   "signature_lock_version": "1.1",
   "independent_validation_completed": true,
   "primary_validation_evaluable": true,
@@ -33,5 +33,15 @@
   "GSE282122_composition_axis_supported": false,
   "GSE282122_within_CT_state_axis_supported": true,
   "GSE282122_joint_site_pairs": 33,
-  "GSE282122_main_state_patients": 16
+  "GSE282122_main_state_patients": 16,
+  "GSE282122_decontx_completed": true,
+  "GSE282122_decontx_role": "post-result ambient-RNA sensitivity; not replacement validation",
+  "GSE282122_decontx_samples_complete": 82,
+  "GSE282122_decontx_samples_failed": 0,
+  "GSE282122_decontx_CT_BH_n15": 0.01685814185814186,
+  "GSE282122_decontx_TA_BH_n15": 0.13986013986013987,
+  "GSE282122_decontx_LGR5_BH_n15": 0.13986013986013987,
+  "GSE282122_cross_lineage_state_claim_supported": false,
+  "GSE282122_CT_within_state_ambient_sensitivity_supported": true,
+  "decontx_arithmetic_verification": "/root/projects/UC_Treatment_Recovery/runs/003D_decontx_state_family/arithmetic_verification.json"
 }

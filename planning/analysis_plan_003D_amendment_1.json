@@ -1,0 +1,37 @@
+{
+  "amendment_id": "003D-1",
+  "created_utc": "2026-09-11T01:34:45+00:00",
+  "parent_plan": "planning/analysis_plan_003D_decontx_sensitivity.frozen.json",
+  "parent_plan_sha256": "8cf38ed6f56bebd70cfe13a135380bde3457294d6f9885545500fea2c186f36f",
+  "timing": "After two failed smoke-test attempts and one successful smoke test; before the formal 82-sample run. The first two failures occurred before celda::decontX was invoked. No fixed-family effect estimate or P value existed.",
+  "classification": "technical dependency and sparse-class compatibility amendment",
+  "issues": [
+    {
+      "issue": "reticulate was available outside but not inside the project renv library.",
+      "correction": "Install reticulate 1.47.0 into the project library."
+    },
+    {
+      "issue": "SciPy sparse loading converted the cell-by-gene matrix to an R dgRMatrix, for which the installed Matrix version had no direct dgRMatrix-to-dgCMatrix coercion after transpose.",
+      "correction": "Coerce the transposed object through TsparseMatrix to CsparseMatrix."
+    }
+  ],
+  "scientific_choices_changed": false,
+  "unchanged": [
+    "82 sample libraries",
+    "378575 cells",
+    "released final_analysis clusters",
+    "all 33075 genes",
+    "six candidate genes",
+    "threshold20 eligibility",
+    "patient unit",
+    "contrast",
+    "statistics",
+    "BH n=15",
+    "interpretation rules"
+  ],
+  "old_worker_sha256": "2cb7346ab0b5a7688594cd1d9efee0a690fcea65739ea0467167989ad6667900",
+  "new_worker_sha256": "90e973312a2b1aaa010a57f71976bb15fff4ba3ed92980d15167b2ef9d7432ec",
+  "technical_fix_commit": "4c0b5064f0dda4c41e73eed140e7e1dc1a037e04",
+  "formal_run_started_utc": "2026-09-11T01:36:41.136192+00:00",
+  "formal_run_failures": 0
+}
