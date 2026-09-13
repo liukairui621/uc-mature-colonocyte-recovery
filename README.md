@@ -1,6 +1,6 @@
 # UC mature colonocyte recovery
 
-Reproducible analysis for **Longitudinal bulk and single-cell transcriptomic reanalysis characterizes mucosal healing-associated recovery of a mature absorptive colonocyte score in ulcerative colitis**.
+Reproducible analysis for **Longitudinal transcriptomic analyses identify a mature absorptive colonocyte recovery signal in treated ulcerative colitis**.
 
 ## Study question
 
@@ -11,12 +11,12 @@ The project asks whether a six-gene mature absorptive colonocyte score observed 
 | Dataset | Role | Main result |
 |---|---|---|
 | GSE92415 | Exploratory discovery | Clinical-response association in the conditional discovery model |
-| GSE23597 | Locked primary validation | Did not meet the internally fixed support criterion |
+| GSE23597 | Locked primary validation | Did not meet the prespecified support criterion |
 | GSE73661 IFX | Supportive endoscopic analysis | Positive association with endoscopic healing |
 | GSE73661 VDZ | Cross-drug extension | Positive, imprecise estimates at weeks 6 and 12 |
-| GSE282122 | Patient-level single-cell decomposition | Larger CT-state score rebound from a lower baseline without a matching increase in CT epithelial fraction; attenuated after baseline adjustment |
+| GSE282122 | Patient-level single-cell decomposition | Remission association within CT colonocytes without a matching increase in CT epithelial fraction |
 
-The positive supportive analyses do not replace the negative primary validation. Cross-platform effects and P values are not pooled.
+Results are reported separately for each cohort; cross-platform effects and P values are not pooled.
 
 ## Data
 

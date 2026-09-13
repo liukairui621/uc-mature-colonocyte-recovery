@@ -1,17 +1,17 @@
 {
   "created_utc": "2026-09-10T08:23:12.775089+00:00",
-  "current_phase": "MANUSCRIPT STATISTICAL REVISION COMPLETE: Stage003F baseline, inflammation and chemistry qualification integrated",
+  "current_phase": "BMC GENOMICS MANUSCRIPT LANGUAGE REVISION COMPLETE",
   "discovery_cohort": "GSE92415",
   "candidate_frozen": true,
   "independent_validation_started": true,
-  "next_phase": "BMC Genomics submission after author metadata and final coauthor approval are completed",
+  "next_phase": "Complete missing author emails and ORCIDs, obtain final author approval, and submit",
   "analysis_input_files": [
     "/root/projects/UC_Treatment_Recovery/inputs/discovery/GSE92415_series_matrix.relay.txt.gz",
     "/root/projects/UC_Treatment_Recovery/inputs/validation/GSE23597_series_matrix.txt.gz",
     "/root/projects/UC_Treatment_Recovery/inputs/support/GSE73661_series_matrix.txt.gz"
   ],
   "review_pending": false,
-  "updated_utc": "2026-09-11T15:43:26.009066+00:00",
+  "updated_utc": "2026-09-13T05:13:04.533499+00:00",
   "stage_report": "/root/projects/UC_Treatment_Recovery/reports/External_analysis_ledger_and_interpretation_20260911.md",
   "independent_review": "/root/projects/UC_Treatment_Recovery/provenance/reviews/003_cell_context_independent_v1.json",
   "signature_lock": "/root/projects/UC_Treatment_Recovery/signature_lock.json",
@@ -86,5 +86,12 @@
   ],
   "stage003F_inflammation_adjusted_HC3_p": 0.20114495503987292,
   "stage003F_chemistry_stratified_permutation_identifiable": false,
-  "manuscript_synced": "manuscript/Main_Manuscript.md"
+  "manuscript_synced": "manuscript/Main_Manuscript.md",
+  "manuscript_title": "Longitudinal transcriptomic analyses identify a mature absorptive colonocyte recovery signal in treated ulcerative colitis",
+  "manuscript_style_revision_completed": true,
+  "reference_DOIs_checked": 20,
+  "all_references_cited": true,
+  "main_figures_cited": 4,
+  "main_tables_cited": 2,
+  "manuscript_style_audit": "reports/Manuscript_style_citation_audit_20260912.md"
 }

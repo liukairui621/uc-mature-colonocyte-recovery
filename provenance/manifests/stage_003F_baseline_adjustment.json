@@ -99,8 +99,8 @@
     },
     {
       "path": "manuscript/Main_Manuscript.md",
-      "bytes": 31735,
-      "sha256": "b4eb79527f74e93704bf00afc560bf5b546aa4118b2d35b84b5abed58f7660db"
+      "bytes": 25529,
+      "sha256": "d056760068ddeca2bc616733f90b2e9d41e4c2104b38a1d1975869f3bf45b80f"
     },
     {
       "path": "provenance/reviews/003F_internal_numeric_QA.json",
@@ -125,5 +125,7 @@
     "not_preregistered": true,
     "does_not_replace_primary_validation": true,
     "chemistry_stratified_permutation_identifiable": false
-  }
+  },
+  "manuscript_language_revision_utc": "2026-09-13T05:13:04.550061+00:00",
+  "manuscript_style_audit": "reports/Manuscript_style_citation_audit_20260912.md"
 }
