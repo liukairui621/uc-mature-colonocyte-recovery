@@ -52,8 +52,8 @@ pb <- ggplot(b,aes(group,value,colour=group))+
  labs(x=NULL,y="Patient-level Post - Pre contribution",
       title="The epithelial score difference is carried by within-group expression",
       subtitle="Jointly evaluable patients (n=16); decomposition is algebraic and not causal")+
- theme003()+theme(axis.text.x=element_text(angle=18,hjust=1))
-save_panel(pb,"figure003B_kitagawa_decomposition",11.5,4.6)
+ theme003()+theme(axis.text.x=element_text(angle=18,hjust=1),panel.spacing.x=grid::unit(3.8,"lines"))
+save_panel(pb,"figure003B_kitagawa_decomposition",12.8,4.8)
 
 # Sensitivity source is generated directly from the branch field.
 m <- read.delim("runs/003_cell_context/patient_group_models.tsv",check.names=FALSE,stringsAsFactors=FALSE)
@@ -77,6 +77,6 @@ pc <- ggplot(z,aes(estimate,branch_label))+
  labs(x="Remission - non-remission difference (HC3 95% CI)",y=NULL,
       title="Sensitivity branches preserve the axis contrast",
       subtitle="Thresholds and subsets were fixed before expression-matrix extraction")+
- theme003()+theme(legend.position="bottom",legend.title=element_blank())
-save_panel(pc,"figure003C_sensitivity_forest",10.5,5.8)
+ theme003()+theme(legend.position="bottom",legend.title=element_blank(),panel.spacing.x=grid::unit(4.2,"lines"))
+save_panel(pc,"figure003C_sensitivity_forest",12.2,6.0)
 cat("FIGURE003_COMPLETE")

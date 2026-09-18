@@ -48,7 +48,8 @@ Raw and large processed matrices are not duplicated in this repository. Download
 1. Clone the repository and restore the R environment with `renv::restore()`.
 2. Download public source files listed in the provenance manifests into a local `inputs/` directory.
 3. Run numbered scripts in `code/` in stage order. Each script writes to a stage-specific directory under `runs/`.
-4. Compare generated compact tables with `results/publication_tables/`.
+4. Run `code/plot_publication_main_figures.py`, `code/figure_003_cell_context.R`, and the stage-specific plotting scripts to regenerate the final figures.
+5. Compare generated compact tables with `results/publication_tables/`.
 
 The executed snapshot retains the original absolute Linux analysis root so that hashes and provenance remain interpretable. To work elsewhere without editing the audit snapshot, run `python tools/make_portable_copy.py /path/to/new/working-copy` and use the new copy. Rewritten paths intentionally invalidate frozen file hashes in that portable copy.
 

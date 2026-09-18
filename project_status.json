@@ -93,5 +93,8 @@
   "all_references_cited": true,
   "main_figures_cited": 4,
   "main_tables_cited": 2,
-  "manuscript_style_audit": "reports/Manuscript_style_citation_audit_20260912.md"
+  "manuscript_style_audit": "reports/Manuscript_style_citation_audit_20260912.md",
+  "figure_layout_revision_completed": true,
+  "figure_layout_revision_date": "2026-09-18",
+  "figure_layout_audit": "reports/Figure_layout_revision_20260918.md"
 }

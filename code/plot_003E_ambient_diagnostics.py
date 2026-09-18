@@ -14,15 +14,21 @@ order=["delta_COL1A1_logCPM","delta_PTPRC_logCPM","delta_NegativeControl2_score"
 sel=sel.set_index("metric").loc[order].reset_index()
 sel["label"]=["COL1A1","PTPRC","Negative-control mean","Candidate6"]
 colors=["#777777","#777777","#777777","#0072B2"]
-fig,axes=plt.subplots(1,2,figsize=(10.5,4.8),gridspec_kw={"width_ratios":[1.2,1]})
+fig=plt.figure(figsize=(12.8,5.1))
+# The middle GridSpec column is an intentional blank gutter. It prevents the
+# right-side P-value labels in panel A from colliding with panel B after the
+# figure is reduced to manuscript width.
+gs=fig.add_gridspec(1,3,width_ratios=[1.2,0.26,1.0],wspace=0.02)
+axes=[fig.add_subplot(gs[0,0]),fig.add_subplot(gs[0,2])]
 ax=axes[0]; y=np.arange(len(sel))
 ax.axvline(0,color="#777777",ls="--",lw=1)
 for i,r in sel.iterrows():
  ax.errorbar(r.estimate,i,xerr=[[r.estimate-r.lower],[r.upper-r.estimate]],fmt="o",color=colors[i],ecolor=colors[i],capsize=3,lw=1.4)
  ax.text(r.upper+.12,i,f"exact P={r.p_exact_permutation:.4f}",va="center",fontsize=8)
 ax.set_yticks(y); ax.set_yticklabels(sel.label)
+ax.set_xlim(-4.4,6.6)
 ax.set_xlabel("Remission minus non-remission\nPost-minus-Pre logCPM change")
-ax.set_title("A  Raw CT-pseudobulk controls",loc="left",fontweight="bold")
+ax.set_title("A  Raw CT-pseudobulk controls",loc="left",fontweight="bold",pad=8)
 ax.spines["top"].set_visible(False); ax.spines["right"].set_visible(False); ax.grid(axis="x",color="#dddddd",lw=.6)
 ax=axes[1]; y=np.arange(len(c))
 labels=["Mean","Median","90th percentile"]
@@ -31,11 +37,12 @@ for i,r in c.iterrows():
  ax.errorbar(r.estimate,i,xerr=[[r.estimate-r.lower],[r.upper-r.estimate]],fmt="o",color="#D55E00",ecolor="#D55E00",capsize=3,lw=1.4)
  ax.text(r.upper+.015,i,f"exact P={r.p_exact_permutation:.4f}",va="center",fontsize=8)
 ax.set_yticks(y); ax.set_yticklabels(labels)
+ax.set_xlim(-0.11,0.88)
 ax.set_xlabel("Remission minus non-remission\nPost-minus-Pre contamination change")
-ax.set_title("B  DecontX CT contamination",loc="left",fontweight="bold")
+ax.set_title("B  DecontX CT contamination",loc="left",fontweight="bold",pad=8)
 ax.spines["top"].set_visible(False); ax.spines["right"].set_visible(False); ax.grid(axis="x",color="#dddddd",lw=.6)
-fig.suptitle("Ambient-RNA diagnostics use the patient as the statistical unit",fontweight="bold",y=1.02)
-fig.tight_layout()
+fig.suptitle("Ambient-RNA diagnostics use the patient as the statistical unit",fontweight="bold",y=.97)
+fig.subplots_adjust(left=.12,right=.985,bottom=.19,top=.80)
 out=figdir/"Stage003E_ambient_negative_control_diagnostics"
 fig.savefig(out.with_suffix(".png"),dpi=300,bbox_inches="tight")
 fig.savefig(out.with_suffix(".pdf"),bbox_inches="tight")
