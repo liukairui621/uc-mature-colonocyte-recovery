@@ -1,0 +1,93 @@
+[
+  {
+    "program": "GOBP_INTESTINAL_ABSORPTION",
+    "url": "https://www.gsea-msigdb.org/gsea/msigdb/human/download_geneset.jsp?geneSetName=GOBP_INTESTINAL_ABSORPTION&fileType=json",
+    "source_n": 44,
+    "source_metadata": {
+      "systematicName": "M16771",
+      "pmid": "",
+      "exactSource": "GO:0050892",
+      "geneSymbols": [
+        "ABCG5",
+        "ABCG8",
+        "ACO1",
+        "ADRA2A",
+        "AKR1C1",
+        "APOA1",
+        "APOA2",
+        "APOA4",
+        "CD36",
+        "CEL",
+        "CLDN15",
+        "CLDN2",
+        "CYP8B1",
+        "ENPP7",
+        "EPB41",
+        "EZR",
+        "F11R",
+        "FABP2",
+        "FOLH1",
+        "GCNT3",
+        "HAMP",
+        "HEPH",
+        "IREB2",
+        "KCNQ1",
+        "LDLR",
+        "LEP",
+        "LIMA1",
+        "LPCAT3",
+        "MOGAT2",
+        "NPC1",
+        "NPC1L1",
+        "PLS1",
+        "PNLIP",
+        "PRAP1",
+        "SCARB1",
+        "SLC26A6",
+        "SLC2A5",
+        "SLC46A1",
+        "SLC5A1",
+        "SOAT2",
+        "TJP2",
+        "UGCG",
+        "VDR",
+        "VIL1"
+      ],
+      "msigdbURL": "https://www.gsea-msigdb.org/gsea/msigdb/human/geneset/GOBP_INTESTINAL_ABSORPTION",
+      "externalDetailsURL": [
+        "http://amigo.geneontology.org/amigo/term/GO:0050892"
+      ],
+      "filteredBySimilarity": [],
+      "externalNamesForSimilarTerms": [],
+      "collection": "C5:GO:BP"
+    },
+    "sha256": "26fafc5bd4aa18b45778f8f2fe500d219e3dfdf0ef49efa5827d425572442996"
+  },
+  {
+    "program": "GOBP_BRUSH_BORDER_ASSEMBLY",
+    "url": "https://www.gsea-msigdb.org/gsea/msigdb/human/download_geneset.jsp?geneSetName=GOBP_BRUSH_BORDER_ASSEMBLY&fileType=json",
+    "source_n": 7,
+    "source_metadata": {
+      "systematicName": "M25307",
+      "pmid": "",
+      "exactSource": "GO:1904970",
+      "geneSymbols": [
+        "ANKS4B",
+        "CALML4",
+        "CDHR2",
+        "CDHR5",
+        "MYO7B",
+        "TMIGD1",
+        "USH1C"
+      ],
+      "msigdbURL": "https://www.gsea-msigdb.org/gsea/msigdb/human/geneset/GOBP_BRUSH_BORDER_ASSEMBLY",
+      "externalDetailsURL": [
+        "http://amigo.geneontology.org/amigo/term/GO:1904970"
+      ],
+      "filteredBySimilarity": [],
+      "externalNamesForSimilarTerms": [],
+      "collection": "C5:GO:BP"
+    },
+    "sha256": "793f57a40a2fe40e0fb8b9465ae6cde9c69608fa8b00747cc3f42685b8a129a2"
+  }
+]
