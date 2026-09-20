@@ -54,8 +54,10 @@ ct=ct[ct.model.eq('baseline_ANCOVA') & ~ct.program.eq('CANDIDATE6')]
 checks['all_five_reference_models_in_supplement'] = len(ct)==5 and all(
     f'{r.estimate:.3f} ({r.lower:.3f}, {r.upper:.3f})' in supp for r in ct.itertuples())
 checks['frozen_005_plan_unchanged'] = hashlib.sha256((ROOT/'planning/analysis_plan_005_health_function.json').read_bytes()).hexdigest() == '4b4213df3666d6d98723f2106dc0dfe7ee39bab7b79d3d0f2c54fe91203833b2'
-checks['new_tables_copied_byte_exact'] = all(
-    p.read_bytes()==(OUT/'supplementary_files'/('Stage005_'+p.name)).read_bytes()
+# TSV content is portable across Windows CRLF and Linux LF; the frozen plan
+# above deliberately keeps a stricter byte-level hash check.
+checks['new_tables_copied_text_exact'] = all(
+    p.read_text(encoding='utf-8')==(OUT/'supplementary_files'/('Stage005_'+p.name)).read_text(encoding='utf-8')
     for p in (ROOT/'runs/005_health_function').glob('*.tsv'))
 result={'passed':all(checks.values()),'n_checks':len(checks),'checks':checks,
         'failed':[k for k,v in checks.items() if not v]}

@@ -15,7 +15,7 @@
     "all_16_health_contrasts_in_supplement": true,
     "all_five_reference_models_in_supplement": true,
     "frozen_005_plan_unchanged": true,
-    "new_tables_copied_byte_exact": true
+    "new_tables_copied_text_exact": true
   },
   "failed": []
 }
