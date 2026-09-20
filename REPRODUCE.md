@@ -50,4 +50,25 @@ Stage003F starts from `runs/003_cell_context/site_pair_metrics.tsv`. It retains 
 - all-patient, 10x v3.1-only and released author-paired subsets;
 - outcome-by-chemistry and outcome-by-batch tables.
 
-All remitters used 10x v3.1 and the v3 stratum contained only non-remitters. A chemistry-stratified remission permutation is therefore not identifiable. The v3.1-only subset is reported without presenting it as an independent validation.
+All remitters used 10x v3.1 and the v3 stratum contained only non-remitters. The original implementation did not perform a stratified permutation under its stricter all-strata-overlap rule. This does not imply that every stratified test is mathematically inestimable: v3.1 contains both outcome groups. The executed v3.1-only sensitivity is retained; no new permutation P value has been substituted.
+
+## Stage005 healthy-reference and non-overlapping reference programs
+
+This is a post-result exploratory extension. The original candidate, primary-validation result and paired patient sets remain unchanged. The committed plan and memberships in `planning/analysis_plan_005_health_function.json` and `runs/005_preparation/` are the reproduction inputs; do not regenerate them from a newer gene-set release.
+
+On the existing Linux project root, use Python 3.12 with `requirements_stage005.txt` and the existing R environment:
+
+```bash
+Rscript code/export_005_bulk.R
+python code/extract_005_ct_programs.py --smoke
+python code/extract_005_ct_programs.py
+python code/analyze_005_health_function.py
+Rscript code/verify_005_results.R
+python code/plot_005_extension.py
+```
+
+Scripts refuse to overwrite completed output. Reproduction should use a fresh writable project copy with the original input assets. The extraction needs the corrected TAURUS h5ad, its existing feature table, the original fixed sample pairs and the 2026-09-10 HGNC dictionary. Bulk export reads the existing canonical discovery and GSE73661 RDS objects. See `reports/Stage005_health_function_20260920.md` for results and the cross-language self-check.
+
+The archived source memberships are from Maciag et al. (2024), GO:0050892 and GO:1904970 from human MSigDB (retrieved 2026-09-20), and the previously fixed Hallmark panels. MSigDB memberships retain their source CC-BY-4.0 attribution; their inclusion does not change the source license.
+
+The current manuscript source is `manuscript/manuscript_content.py`. After preparing publication figures, rebuild Word and copy/paste documents with `python code/build_submission_package.py --prebuilt-figures`. This authoring step uses pandas, python-docx and Pillow; rendering and visual inspection are separate from statistical validation.

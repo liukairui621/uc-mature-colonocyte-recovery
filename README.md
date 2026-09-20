@@ -1,6 +1,6 @@
 # UC mature colonocyte recovery
 
-Reproducible analysis for **Longitudinal transcriptomic analyses identify a mature absorptive colonocyte recovery signal in treated ulcerative colitis**.
+Reproducible analysis for **Recovery and incomplete normalization of a colonocyte expression signature in treated ulcerative colitis**.
 
 ## Study question
 
@@ -17,6 +17,10 @@ The project asks whether a six-gene mature absorptive colonocyte score observed 
 | GSE282122 | Patient-level single-cell decomposition | Remission association within CT colonocytes without a matching increase in CT epithelial fraction |
 
 Results are reported separately for each cohort; cross-platform effects and P values are not pooled.
+
+## Healthy-reference and program extension
+
+The post-result Stage005 extension used the original candidate and paired patient sets. Early infliximab and vedolizumab healers retained lower Candidate6 scores than within-study non-IBD controls. Three programs excluding all six candidate genes showed no positive baseline-adjusted remission association or clear change correlation with Candidate6. The complete results, including negative comparisons, are in `runs/005_health_function/` and `reports/Stage005_health_function_20260920.md`.
 
 ## Data
 

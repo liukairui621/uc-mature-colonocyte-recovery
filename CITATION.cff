@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this analysis, please cite the associated manuscript."
-title: "Longitudinal transcriptomic analyses identify a mature absorptive colonocyte recovery signal in treated ulcerative colitis"
+title: "Recovery and incomplete normalization of a colonocyte expression signature in treated ulcerative colitis"
 type: software
 authors:
   - family-names: Liu

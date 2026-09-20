@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "n_checks": 14,
+  "checks": {
+    "titles_synchronized": true,
+    "abstract_synchronized": true,
+    "all_21_references_cited": true,
+    "all_six_figures_cited": true,
+    "six_figure_legends": true,
+    "figure_inventory_synchronized": true,
+    "post_result_role_explicit": true,
+    "primary_negative_retained": true,
+    "chemistry_wording_corrected": true,
+    "no_internal_response_wording": true,
+    "all_16_health_contrasts_in_supplement": true,
+    "all_five_reference_models_in_supplement": true,
+    "frozen_005_plan_unchanged": true,
+    "new_tables_copied_byte_exact": true
+  },
+  "failed": []
+}

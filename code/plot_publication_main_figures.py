@@ -62,59 +62,41 @@ def add_box(ax, x, y, w, h, color, heading, detail, heading_size=11.2, detail_si
 
 
 def figure1(destinations: list[Path]) -> None:
-    fig, ax = plt.subplots(figsize=(7.4, 10.2))
+    fig, ax = plt.subplots(figsize=(7.4, 10.6))
     ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis("off")
-    ax.text(0.5, 0.975, "Longitudinal evidence map for the mature-colonocyte score",
-            ha="center", va="top", weight="bold", fontsize=15, color=INK)
-
-    x, w, h = 0.14, 0.72, 0.105
+    ax.text(0.5, 0.985, "Patient-level evidence for colonocyte expression recovery",
+            ha="center", va="top", weight="bold", fontsize=13, color=INK)
+    x, w, h = 0.08, 0.84, 0.088
     stages = [
-        (0.825, BLUE, "GSE92415 | Exploratory cohort | 65 paired patients",
+        (0.850, BLUE, "GSE92415 | Exploratory cohort | 65 paired patients",
          "Candidate6 derived from longitudinal expression change"),
-        (0.675, GRAY, "Fixed analysis",
+        (0.715, GRAY, "Fixed analysis",
          "Genes, equal weights, aliases and primary model specified"),
-        (0.525, RED, "GSE23597 | Clinical-response validation | 32 pairs",
+        (0.580, RED, "GSE23597 | Clinical-response validation | 32 pairs",
          "Response coefficient 0.401; 95% CI -0.481 to 1.282"),
-        (0.375, ORANGE, "GSE73661 | Endoscopic healing",
+        (0.445, ORANGE, "GSE73661 | Endoscopic healing",
          "IFX: positive association | VDZ: estimates positive, CIs spanning zero"),
+        (0.310, GREEN, "GSE282122 | Longitudinal CT-colonocyte analysis",
+         "Composition and within-compartment expression assessed separately\nLarger six-gene rebound from a lower baseline in remitters"),
+        (0.175, BLUE, "Healthy-reference and reference-program extension",
+         "Within-study control comparison in bulk biopsies\nThree CT programs excluding all six candidate genes"),
     ]
     for y, color, heading, detail in stages:
-        add_box(ax, x, y, w, h, color, heading, detail)
-
-    # Single-cell stage is taller because it contains two distinct axes.
-    y5, h5 = 0.145, 0.165
-    box = FancyBboxPatch((x, y5), w, h5, boxstyle="round,pad=0.012,rounding_size=0.012",
-                         facecolor=GREEN, edgecolor=GREEN, alpha=0.12, linewidth=1.8)
-    ax.add_patch(box)
-    ax.text(0.5, y5 + h5 * 0.79, "GSE282122 | Longitudinal single-cell analysis",
-            ha="center", va="center", weight="bold", fontsize=11.5, color=INK)
-    ax.plot([0.5, 0.5], [y5 + 0.025, y5 + h5 * 0.62], color="#B7DCD7", lw=1.3)
-    ax.text(0.31, y5 + h5 * 0.50, "Composition axis", ha="center", va="center",
-            weight="bold", fontsize=10.2, color=GRAY)
-    ax.text(0.31, y5 + h5 * 0.23, "No remission-associated\nCT-fraction increase",
-            ha="center", va="center", fontsize=9.0, color=MUTED)
-    ax.text(0.69, y5 + h5 * 0.50, "CT within-state axis", ha="center", va="center",
-            weight="bold", fontsize=10.2, color=GREEN)
-    ax.text(0.69, y5 + h5 * 0.23, "Larger rebound from\na lower baseline",
-            ha="center", va="center", fontsize=9.0, color=MUTED)
-
-    # Straight vertical arrows keep the study sequence visually unambiguous.
-    centers = [0.825, 0.675, 0.525, 0.375]
+        add_box(ax, x, y, w, h, color, heading, detail, heading_size=10.2, detail_size=8.8)
+    centers = [s[0] for s in stages]
     for upper, lower in zip(centers[:-1], centers[1:]):
         ax.annotate("", xy=(0.5, lower + h + 0.008), xytext=(0.5, upper - 0.008),
                     arrowprops=dict(arrowstyle="-|>", lw=1.8, color="#465362"))
-    ax.annotate("", xy=(0.5, y5 + h5 + 0.008), xytext=(0.5, 0.375 - 0.008),
-                arrowprops=dict(arrowstyle="-|>", lw=1.8, color="#465362"))
-
-    conclusion = FancyBboxPatch((0.10, 0.025), 0.80, 0.072,
+    conclusion = FancyBboxPatch((0.08, 0.040), 0.84, 0.085,
                                 boxstyle="round,pad=0.010,rounding_size=0.012",
                                 facecolor="#EAF6F3", edgecolor=GREEN, linewidth=1.5)
     ax.add_patch(conclusion)
-    ax.text(0.5, 0.061,
-            "Study finding: Candidate6 captures mature absorptive epithelial recovery;\n"
-            "its clearest signals are endoscopic healing and CT-colonocyte state recovery.",
-            ha="center", va="center", fontsize=9.5, color=INK, linespacing=1.15)
-    ax.annotate("", xy=(0.5, 0.100), xytext=(0.5, y5 - 0.008),
+    ax.text(0.5, 0.082,
+            "The six-gene signature rebounds during healing, with a residual\n"
+            "bulk expression deficit after early healing. Broader reference\n"
+            "programs show different longitudinal patterns.",
+            ha="center", va="center", fontsize=9.5, color=INK, linespacing=1.20)
+    ax.annotate("", xy=(0.5, 0.135), xytext=(0.5, 0.175 - 0.008),
                 arrowprops=dict(arrowstyle="-|>", lw=1.8, color="#465362"))
     fig.subplots_adjust(left=0.04, right=0.96, bottom=0.025, top=0.97)
     save(fig, "Figure1_study_design", destinations)
@@ -186,7 +168,10 @@ def figure2(destinations: list[Path]) -> None:
 
 
 def figure3(destinations: list[Path]) -> None:
-    visits = pd.read_csv(ROOT / "runs/003F_baseline_adjustment/patient_visit_metrics.tsv", sep="\t")
+    visit_path = ROOT / "runs/003F_baseline_adjustment/patient_visit_metrics.tsv"
+    if not visit_path.exists():
+        visit_path = ROOT / "results/publication_tables/GSE282122_patient_visit_metrics.tsv"
+    visits = pd.read_csv(visit_path, sep="\t")
     visits = visits.loc[visits["scope"] == "all_fixed"].copy()
     visits["group"] = visits["remission"].map({"Remission": "Clinical remission", "Non_Remission": "No clinical remission"})
     composition = pd.read_csv(ROOT / "runs/003_cell_context/patient_metrics.tsv", sep="\t")
