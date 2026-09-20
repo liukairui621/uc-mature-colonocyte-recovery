@@ -1,0 +1,88 @@
+{
+  "status": "COMPLETE",
+  "role": "post-result exploratory extension",
+  "health": {
+    "healthy_arrays": {
+      "GSE73661": 12,
+      "GSE92415": 21
+    },
+    "healthy_units": {
+      "GSE73661": 11,
+      "GSE92415": 21
+    },
+    "paired_context_n": {
+      "GSE73661_IFX_W4W6": 23,
+      "GSE73661_VDZ_W12": 13,
+      "GSE73661_VDZ_W6": 27,
+      "GSE92415_W6": 65
+    }
+  },
+  "ct_function": {
+    "candidate_score_max_error": 2.1316282072803006e-14,
+    "patients": 16,
+    "remission_patients": 6,
+    "site_pairs": 33,
+    "primary_programs": [
+      {
+        "program": "CT_MARKERS_EXCLUDING_CANDIDATE6",
+        "model": "baseline_ANCOVA",
+        "n": 16,
+        "remission": 6,
+        "estimate": -0.5762021020336241,
+        "se": 0.3807778309558005,
+        "lower": -1.3988225931064227,
+        "upper": 0.24641838903917446,
+        "p": 0.1541491317248768,
+        "df": 13.0,
+        "max_leverage": 0.5061133573124872,
+        "evaluable": true,
+        "reason": "",
+        "BH_primary_n3": 0.3616843772905242,
+        "BH_context_n2": NaN
+      },
+      {
+        "program": "GOBP_INTESTINAL_ABSORPTION",
+        "model": "baseline_ANCOVA",
+        "n": 16,
+        "remission": 6,
+        "estimate": -0.10262639705571486,
+        "se": 0.19517897468516254,
+        "lower": -0.5242849363660846,
+        "upper": 0.3190321422546549,
+        "p": 0.6078758108077345,
+        "df": 13.0,
+        "max_leverage": 0.3538290161930323,
+        "evaluable": true,
+        "reason": "",
+        "BH_primary_n3": 0.6078758108077345,
+        "BH_context_n2": NaN
+      },
+      {
+        "program": "GOBP_BRUSH_BORDER_ASSEMBLY",
+        "model": "baseline_ANCOVA",
+        "n": 16,
+        "remission": 6,
+        "estimate": -0.4986105674659931,
+        "se": 0.4059487056148298,
+        "lower": -1.375609427207912,
+        "upper": 0.37838829227592596,
+        "p": 0.2411229181936828,
+        "df": 13.0,
+        "max_leverage": 0.55770588893859,
+        "evaluable": true,
+        "reason": "",
+        "BH_primary_n3": 0.3616843772905242,
+        "BH_context_n2": NaN
+      }
+    ]
+  },
+  "completed_utc": "2026-09-20T13:35:45.778249+00:00",
+  "environment": {
+    "python": "3.12.3",
+    "numpy": "1.26.4",
+    "pandas": "2.3.3",
+    "scipy": "1.17.1",
+    "statsmodels": "0.14.6"
+  },
+  "plan_sha256": "4b4213df3666d6d98723f2106dc0dfe7ee39bab7b79d3d0f2c54fe91203833b2"
+}

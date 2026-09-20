@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "review_type": "cross-language self-check",
+  "n_checks": 28,
+  "max_error": 3.108624468950438e-14,
+  "BHadjustments": "n3 and n16 verified",
+  "candidate_excluded_from_references": true,
+  "R": "R version 4.3.3 (2024-02-29)"
+}

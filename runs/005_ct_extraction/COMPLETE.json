@@ -1,0 +1,17 @@
+{
+  "status": "COMPLETE",
+  "CT_cells": 16022,
+  "samples_with_CT": 81,
+  "features": 463,
+  "max_rowsum_error": 0.0,
+  "noninteger_counts": 0,
+  "source_path": "/root/projects/UC_Treatment_Recovery/inputs/singlecell/GSE282122_Zenodo14007626/TAURUS_raw_counts_annotated_final.h5ad",
+  "source_bytes": 12708413650,
+  "source_sha256": "60323cd4f8e32881316029ce08425131ca6aa2e64031d1d8ffa23d0f5c4f5028",
+  "plan_sha256": "4b4213df3666d6d98723f2106dc0dfe7ee39bab7b79d3d0f2c54fe91203833b2",
+  "python": "3.12.3",
+  "numpy": "1.26.4",
+  "pandas": "2.3.3",
+  "h5py": "3.16.0",
+  "completed_utc": "2026-09-20T13:34:30.433900+00:00"
+}
