@@ -1,17 +1,21 @@
 cff-version: 1.2.0
 message: "If you use this analysis, please cite the associated manuscript."
-title: "Recovery and incomplete normalization of a colonocyte expression signature in treated ulcerative colitis"
+title: "Longitudinal recovery and incomplete normalization of a six-gene colonocyte signature in treated ulcerative colitis"
 type: software
 authors:
-  - family-names: Liu
-    given-names: Kairui
-  - family-names: Chen
-    given-names: Rong
-  - family-names: Huang
-    given-names: Yipei
+  - family-names: He
+    given-names: Yaobin
   - family-names: Huang
     given-names: Youxing
+  - family-names: Chen
+    given-names: Rong
+  - family-names: He
+    given-names: Wei
+  - family-names: Liu
+    given-names: Kairui
+  - family-names: Huang
+    given-names: Yipei
 repository-code: "https://github.com/liukairui621/uc-mature-colonocyte-recovery"
 license: MIT
 version: 1.0.0
-date-released: 2026-09-11
+date-released: 2026-09-20

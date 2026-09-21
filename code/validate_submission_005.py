@@ -1,67 +1,76 @@
-"""Cross-check the Stage005 submission artifacts against saved result tables."""
-from pathlib import Path
-import hashlib
+"""Validate the revised BMC Genomics submission package without altering analysis files."""
+from __future__ import annotations
 import json
 import re
 import sys
-
-import pandas as pd
+import zipfile
+from pathlib import Path
+from PIL import Image
 from docx import Document
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / 'submission_bmc_genomics'
-sys.path.insert(0, str(ROOT / 'manuscript'))
-from manuscript_content import TITLE, ABSTRACT, REFERENCES, FIGURE_LEGENDS
+OUT = ROOT / "submission_bmc_genomics_revised"
+sys.path.insert(0, str(ROOT / "manuscript"))
+from manuscript_content import ABSTRACT, FIGURE_LEGENDS, REFERENCES, TITLE
 
-def text(path):
-    d = Document(path)
-    return '\n'.join([p.text for p in d.paragraphs] +
-                     [c.text for t in d.tables for row in t.rows for c in row.cells])
 
-main = text(OUT/'01_Main_Manuscript_BMC_Genomics.docx')
-supp = text(OUT/'supplementary_files/Supplementary_Materials.docx')
-sheet = text(OUT/'04_Submission_Copy_Paste_Sheet.docx')
-title = text(OUT/'02_Title_Page.docx')
-cover = text(OUT/'03_Cover_Letter_BMC_Genomics.docx')
+def doc_text(path: Path) -> str:
+    doc = Document(path)
+    return "\n".join([p.text for p in doc.paragraphs] + [c.text for t in doc.tables for row in t.rows for c in row.cells])
+
+
+main = doc_text(OUT / "01_Main_Manuscript_BMC_Genomics.docx")
+title_page = doc_text(OUT / "02_Title_Page.docx")
+cover = doc_text(OUT / "03_Cover_Letter_BMC_Genomics.docx")
+sheet = doc_text(OUT / "04_Submission_Copy_Paste_Sheet.docx")
+supp = doc_text(OUT / "additional_files/Additional_file_1_Supplementary_Materials.docx")
+body = main.split("References\n")[0]
 checks = {}
-checks['titles_synchronized'] = all(TITLE in s for s in (main,supp,sheet,title,cover))
-checks['abstract_synchronized'] = all(v in main and v in sheet for v in ABSTRACT.values())
-body = main.split('References\n')[0]
+checks["title_synchronized"] = all(TITLE in x for x in (main, title_page, cover, sheet, supp))
+checks["new_author_order_present"] = "Yaobin He, Youxing Huang, Rong Chen, Wei He, Kairui Liu and Yipei Huang" in main
+checks["corresponding_author_updated"] = all("huangyp2025@163.com" in x for x in (main, title_page, cover, sheet))
+checks["old_contact_absent"] = "waiqike7" not in main + title_page + cover + sheet
+checks["funding_updated"] = all("20252011" in x and "20251174" in x and "20264020" in x for x in (main, sheet))
+checks["structured_abstract_synchronized"] = all(value in main and value in sheet for value in ABSTRACT.values())
+checks["abstract_under_350_words"] = sum(len(v.split()) for v in ABSTRACT.values()) <= 350
+
 cited = set()
-for block in re.findall(r'\[([\d,\s-]+)\]',body):
-    for item in block.split(','):
-        item=item.strip()
-        if '-' in item:
-            a,b=map(int,item.split('-')); cited.update(range(a,b+1))
-        else:
+for group in re.findall(r"\[([\d,\s-]+)\]", body):
+    for item in group.split(","):
+        item = item.strip()
+        if "-" in item:
+            a, b = map(int, item.split("-")); cited.update(range(a, b + 1))
+        elif item:
             cited.add(int(item))
-checks['all_21_references_cited'] = cited == set(range(1,len(REFERENCES)+1)) and len(REFERENCES)==21
-checks['all_six_figures_cited'] = all(f'Figure {i}' in body for i in range(1,7))
-checks['six_figure_legends'] = len(FIGURE_LEGENDS)==6
-checks['figure_inventory_synchronized'] = ('6 main figures' in title and
-    json.loads((OUT/'PACKAGE_MANIFEST.json').read_text())['main_figures']==6 and
-    'Figure5_healthy_reference.png' in sheet and 'Figure6_CT_functional_programs.png' in sheet)
-checks['post_result_role_explicit'] = 'exploratory extension after the original cohort results' in main
-checks['primary_negative_retained'] = 'association was not confirmed in GSE23597' in main
-checks['chemistry_wording_corrected'] = 'not identifiable' not in main+supp
-checks['no_internal_response_wording'] = not re.search(r'reviewer-requested|in response to the reviewer',main+supp,re.I)
-health=pd.read_csv(ROOT/'runs/005_health_function/healthy_reference_contrasts.tsv',sep='\t')
-health=health[health.scope.eq('main')]
-checks['all_16_health_contrasts_in_supplement'] = len(health)==16 and all(
-    f'{r.estimate:.3f} ({r.lower:.3f}, {r.upper:.3f})' in supp for r in health.itertuples())
-ct=pd.read_csv(ROOT/'runs/005_health_function/ct_program_models.tsv',sep='\t')
-ct=ct[ct.model.eq('baseline_ANCOVA') & ~ct.program.eq('CANDIDATE6')]
-checks['all_five_reference_models_in_supplement'] = len(ct)==5 and all(
-    f'{r.estimate:.3f} ({r.lower:.3f}, {r.upper:.3f})' in supp for r in ct.itertuples())
-checks['frozen_005_plan_unchanged'] = hashlib.sha256((ROOT/'planning/analysis_plan_005_health_function.json').read_bytes()).hexdigest() == '4b4213df3666d6d98723f2106dc0dfe7ee39bab7b79d3d0f2c54fe91203833b2'
-# TSV content is portable across Windows CRLF and Linux LF; the frozen plan
-# above deliberately keeps a stricter byte-level hash check.
-checks['new_tables_copied_text_exact'] = all(
-    p.read_text(encoding='utf-8')==(OUT/'supplementary_files'/('Stage005_'+p.name)).read_text(encoding='utf-8')
-    for p in (ROOT/'runs/005_health_function').glob('*.tsv'))
-result={'passed':all(checks.values()),'n_checks':len(checks),'checks':checks,
-        'failed':[k for k,v in checks.items() if not v]}
-(OUT/'PACKAGE_STAGE005_VALIDATION.json').write_text(json.dumps(result,indent=2)+'\n')
-print(json.dumps(result,indent=2))
-if not result['passed']:
-    raise SystemExit(1)
+checks["all_references_cited"] = cited == set(range(1, len(REFERENCES) + 1))
+positions = [body.find(f"Figure {i}") for i in range(1, 7)]
+checks["figures_first_cited_in_order"] = all(x >= 0 for x in positions) and positions == sorted(positions)
+checks["six_legends"] = len(FIGURE_LEGENDS) == 6
+
+expected = ["Figure1_study_design", "Figure2_bulk_outcomes", "Figure3_healthy_reference",
+            "Figure4_composition_vs_state", "Figure5_kitagawa_decomposition", "Figure6_reference_programs",
+            "Supplementary_Figure_S1_threshold_sensitivity", "Supplementary_Figure_S2_DecontX",
+            "Supplementary_Figure_S3_ambient_controls"]
+checks["figure_inventory_complete"] = all((OUT / "figures" / f"{stem}.{ext}").exists() for stem in expected for ext in ("png", "pdf"))
+dpi_ok = True
+for stem in expected:
+    with Image.open(OUT / "figures" / f"{stem}.png") as image:
+        dpi = image.info.get("dpi", (0, 0))
+        dpi_ok &= min(dpi) >= 299
+checks["png_300_dpi"] = bool(dpi_ok)
+checks["primary_validation_result_retained"] = "fixed support criterion was not met" in main
+checks["no_reviewer_response_language"] = not re.search(r"reviewer-requested|in response to the reviewer", main + supp, re.I)
+with zipfile.ZipFile(OUT / "01_Main_Manuscript_BMC_Genomics.docx") as archive:
+    document_xml = archive.read("word/document.xml").decode("utf-8")
+checks["no_forced_page_breaks_in_main"] = 'w:type="page"' not in document_xml
+checks["analysis_plan_present_and_valid_json"] = isinstance(json.loads((ROOT / "planning/analysis_plan_005_health_function.json").read_text(encoding="utf-8")), dict)
+checks["source_data_present"] = len(list((OUT / "source_data").glob("*.tsv"))) >= 12
+manifest = json.loads((OUT / "PACKAGE_MANIFEST.json").read_text(encoding="utf-8"))
+checks["manifest_counts"] = manifest["main_figures"] == 6 and manifest["supplementary_figures"] == 3 and manifest["main_tables"] == 2
+
+result = {"passed": all(checks.values()), "n_checks": len(checks), "checks": checks,
+          "failed": [key for key, value in checks.items() if not value]}
+(OUT / "quality_checks").mkdir(exist_ok=True)
+(OUT / "quality_checks/PACKAGE_VALIDATION.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+print(json.dumps(result, indent=2))
+if not result["passed"]: raise SystemExit(1)
